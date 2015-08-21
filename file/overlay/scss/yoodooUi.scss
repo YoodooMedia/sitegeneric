@@ -1,0 +1,1252 @@
+//colors
+$ui_color_red_berry_approx: #900;
+$ui_white: #fff;
+$ui_red: #f00;
+$ui_color_solitude_approx: #eaf5ff;
+$ui_color_malibu_approx: #64b5f6;
+$ui_color_denim_approx: #1669bb;
+$ui_color_fuscous_gray_approx: #555;
+$ui_color_mountain_mist_approx: #999;
+$ui_color_pacific_blue_approx: #09c;
+$ui_color_pumice_approx: #c7c7c7;
+$ui_color_picton_blue_approx: #3db1d8;
+$ui_color_alabaster_approx: #fbfbfb;
+$ui_color_wild_sand_approx: #f5f5f5;
+$ui_color_dove_gray_approx: #6f6f6f;
+$ui_color_cornflower_approx: #90caf9;
+$ui_color_japanese_laurel_approx: green;
+$ui_color_cape_cod_approx: #424241;
+$ui_white_50: rgba(255,255,255,0.5);
+$ui_color_pink_swan_approx: #b7b7b7;
+$ui_black_50: rgba(0,0,0,0.5);
+$ui_color_nobel_approx: #b2b2b2;
+$ui_color_alto_approx: #dadada;
+$ui_black: #000;
+$ui_color_atlantis_approx: #99cc33;
+$ui_color_forest_green_approx: #339933;
+$ui_color_chicago_approx: #575757;
+$ui_color_suva_gray_approx: #878787;
+$ui_color_venice_blue_approx: #00528a;
+$ui_color_cobalt_approx: #0052ba;
+$ui_color_iron_approx: rgb(216, 216, 216);
+$ui_color_scooter_approx: rgb(50, 189, 200);
+$ui_color_curious_blue_approx: #1e88e5;
+$ui_color_steel_blue_approx: #3e87bb;
+$ui_color_gamboge_approx: #e09801;
+$ui_color_crimson_approx: #cf1040;
+$ui_black_20: rgba(0,0,0,0.2);
+
+//fonts
+$ui_font_0: Trebuchet MS;
+$ui_font_1: Helvetica;
+$ui_font_2: sans-serif;
+$ui_font_3: robotoregular;
+
+//urls
+$ui_url_0: url(../../icons/png/checkbox.png);
+$ui_url_1: url(../../image/dooits/dragger.gif);
+$ui_url_2: url(images/blank.gif);
+
+//@extend-elements
+//original selectors
+//.yoodooUI_text>input, .yoodooUI_date>input, .yoodooUI_month>input, .yoodooUI_password>input, .yoodooUI_selectbox>select, .yoodooUI_textarea>.textareaSurround>textarea
+%ui_extend_1 {
+	display: block;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+//original selectors
+//.yoodooUItextarea_tester, .yoodooUI_text>input, .yoodooUI_date>input, .yoodooUI_month>input, .yoodooUI_password>input, .yoodooUI_textarea>div>textarea
+%ui_extend_2 {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0;
+	resize: none;
+	font-family: $ui_font_0, $ui_font_1, $ui_font_2;
+	color: $ui_white;
+}
+
+//original selectors
+//.yoodooUI_pages .pageDotPanel>div, #yoodooWidget .yoodooUI_pages .pageDotPanel>button
+%ui_extend_3 {
+	vertical-align: middle;
+	width: 10px;
+	min-width: 10px;
+	height: 10px;
+	//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+	border-radius: 20px;
+	background: $ui_color_cape_cod_approx;
+	display: inline-block;
+	margin: 13px 5px;
+	padding: 0;
+	//Instead of the line below you could use @include box-sizing($ui_bs)
+	box-sizing: content-box;
+	//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+	transition: background 0.3s, border 0.3s;
+	border: 2px solid $ui_white_50;
+}
+
+//original selectors
+//#yoodooWidget button.backButton svg, #yoodooWidget button.backButton img
+%ui_extend_4 {
+	vertical-align: middle;
+	float: left;
+	position: relative;
+	left: 0;
+	//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+	transition: left 0.3s;
+}
+
+//original selectors
+//#yoodooWidget button.ctaButton, #yoodooWidget .dooitDisplay button.ctaButton
+%ui_extend_5 {
+	background: $ui_color_atlantis_approx;
+	color: $ui_white;
+	line-height: 20px;
+}
+
+//original selectors
+//#yoodooWidget button.ctaButton svg, #yoodooWidget button.ctaButton img
+%ui_extend_6 {
+	vertical-align: middle;
+	float: right;
+	position: relative;
+	right: 0;
+	//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+	transition: right 0.3s;
+}
+
+//original selectors
+//#yoodooWidget button:disabled, #yoodooWidget button:disabled:hover
+%ui_extend_7 {
+	opacity: 0;
+	background: $ui_color_chicago_approx;
+	color: $ui_white;
+	cursor: default;
+}
+
+//original selectors
+//.yoodooUI_multiplechoice>button, .yoodooUI_multiplechoiceButton>button
+%ui_extend_8 {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+//original selectors
+//.yoodooUI_multiplechoice>button:disabled, .yoodooUI_multiplechoiceButton>button:disabled
+%ui_extend_9 {
+	color: $ui_white;
+	background: $ui_color_dove_gray_approx;
+	cursor: default;
+}
+
+//original selectors
+//.yoodooUI-calendar button.selectable, .yoodooUI-calendar-title button
+%ui_extend_10 {
+	cursor: pointer;
+	background: $ui_color_cornflower_approx;
+	color: $ui_color_cobalt_approx;
+}
+
+
+.yoodooUI {
+	position: relative;
+	&.stillRequired {
+		color: $ui_red;
+	}
+	label {
+		display: block;
+		color: $ui_color_malibu_approx;
+		width: 80%;
+		margin: 2px auto;
+	}
+	input[type=radio] {
+		display: none;
+		&:checked+label {
+		}
+		&:disabled+label {
+			color: $ui_color_alto_approx;
+			cursor: default;
+		}
+		&:checked+label>span {
+			background: $ui_color_venice_blue_approx;
+			border: 1px solid $ui_color_cobalt_approx;
+		}
+		&:disabled+label>span {
+			border: 1px solid $ui_color_alto_approx;
+		}
+	}
+	label>input[type=radio] {
+		display: inline-block;
+	}
+	input[type=radio]+label {
+	}
+	input[type=radio]+label>span {
+		display: inline-block;
+		height: 8px;
+		width: 8px;
+		background: $ui_color_alto_approx;
+		border: 1px solid $ui_color_suva_gray_approx;
+		vertical-align: middle;
+		//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+		border-radius: 10px;
+		margin-right: 10px;
+		//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+		transition: background 0.3s;
+	}
+	input[type=checkbox] {
+		display: none;
+		&:checked+label {
+		}
+		&:disabled+label {
+			color: $ui_color_alto_approx;
+			cursor: default;
+		}
+		&:checked+label>span {
+			&.checkImage {
+				border: 1px solid $ui_color_cobalt_approx;
+			}
+			&.checkImage>span {
+				background-position: 0 0;
+			}
+		}
+		&:disabled+label>span.checkImage {
+			border: 1px solid $ui_color_alto_approx;
+		}
+	}
+	label>input[type=checkbox] {
+		display: inline-block;
+	}
+	input[type=checkbox]+label {
+	}
+	input[type=checkbox]+label>span {
+		&.checkImage {
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			background: $ui_color_alto_approx;
+			border: 1px solid $ui_color_suva_gray_approx;
+			vertical-align: middle;
+			//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+			border-radius: 3px;
+			margin-right: 10px;
+			//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+			transition: background 0.3s;
+		}
+		&.checkImage>span {
+			display: block;
+			width: 13px;
+			height: 11px;
+			background: $ui_url_0 13px 0 no-repeat;
+			//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+			transition: background-position 0.3s;
+		}
+	}
+}
+.yoodooUI_dialog {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: $ui_black_20;
+	.yoodooUItextarea_tester {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_text>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_date>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_month>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_password>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_selectbox>select {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_textarea>div>textarea {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.ui-helper-hidden-accessible {
+		display: none;
+	}
+	.yoodooUI_textarea>.fixedTextareaSurround>textarea {
+		color: $ui_color_fuscous_gray_approx;
+	}
+}
+.yoodooUI_text {
+	overflow: hidden;
+	label {
+		font-size: 14px;
+	}
+	&.stillRequired input {
+		border-color: $ui_red !important;
+	}
+}
+.yoodooUI_date {
+	overflow: hidden;
+}
+.yoodooUI_month {
+	overflow: hidden;
+	.yoodooUI_selectbox {
+		width: 40%;
+		display: inline-block;
+		margin-left: 10%;
+		margin-right: 0;
+	}
+	.yoodooUI_selectbox+.yoodooUI_selectbox {
+		margin-left: 0;
+		margin-right: 10%;
+	}
+}
+.yoodooUI_password {
+	overflow: hidden;
+	label {
+		font-size: 14px;
+	}
+	&.stillRequired input {
+		border-color: $ui_red !important;
+	}
+}
+.yoodooUI_selectbox {
+	overflow: hidden;
+	position: relative;
+	width: 80%;
+	position: relative;
+}
+.yoodooUI_slider {
+	overflow: hidden;
+}
+.yoodooUIerrorMessage {
+	background: $ui_color_red_berry_approx;
+	color: $ui_white;
+	padding: 2px 5px;
+	white-space: nowrap;
+	right: 0;
+	position: absolute;
+	top: 0;
+	//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+	transition: right 0.5s;
+	opacity: 0;
+	&.yoodooUIerror {
+		right: 10%;
+		opacity: 1;
+	}
+}
+#yoodooWidget {
+	.yoodooUI {
+		button {
+			cursor: pointer;
+			outline: none;
+			//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+			border-radius: 3px;
+			background: $ui_white;
+			margin: 3px;
+			padding: 10px 20px;
+			min-width: 112px;
+			border: none;
+			//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+			transition: background 0.3s, color 0.3s, opacity 0.3s;
+			&:hover {
+				background: $ui_color_solitude_approx;
+			}
+			&.removeButton {
+				position: absolute;
+				background: $ui_color_gamboge_approx;
+				min-width: 0;
+				padding: 5px;
+				//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+				border-radius: 20px;
+				right: 0;
+				bottom: 5px;
+				margin: 0 0 0 5px;
+				&:hover {
+					background: $ui_color_crimson_approx;
+				}
+			}
+			&.addButton:hover {
+				background: $ui_color_forest_green_approx;
+			}
+		}
+		.yoodooUI_list.nomore button.addButton {
+			//Instead of the line below you could use @include transform($ui_scale, $ui_rotate, $ui_transx, $ui_transy, $ui_skewx, $ui_skewy, $ui_originx, $ui_originy)
+			transform: scale(0.1);
+			opacity: 0;
+		}
+	}
+	button {
+		&.backButton {
+			background: $ui_color_nobel_approx;
+			color: $ui_white;
+			line-height: 20px;
+			svg {
+				@extend %ui_extend_4;
+			}
+			img {
+				@extend %ui_extend_4;
+			}
+			&:hover {
+				background: $ui_color_alto_approx;
+				color: $ui_black;
+				svg {
+					left: -10px;
+				}
+				img {
+					left: -10px;
+				}
+			}
+			&:disabled:hover {
+				svg {
+					left: 0;
+				}
+				img {
+					left: 0;
+				}
+			}
+		}
+		&.ctaButton {
+			@extend %ui_extend_5;
+			svg {
+				@extend %ui_extend_6;
+			}
+			img {
+				@extend %ui_extend_6;
+			}
+			&:hover {
+				background: $ui_color_forest_green_approx;
+				color: $ui_white;
+				svg {
+					right: -10px;
+				}
+				img {
+					right: -10px;
+				}
+			}
+			&:disabled:hover {
+				svg {
+					right: 0;
+				}
+				img {
+					right: 0;
+				}
+			}
+		}
+		&:disabled {
+			@extend %ui_extend_7;
+			&:hover {
+				@extend %ui_extend_7;
+			}
+		}
+		&.addButton {
+			background: $ui_color_atlantis_approx;
+			min-width: 0;
+			padding: 5px;
+			//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+			border-radius: 50px;
+			float: right;
+			margin: 0 0 0 5px;
+			//Instead of the line below you could use @include transform($ui_scale, $ui_rotate, $ui_transx, $ui_transy, $ui_skewx, $ui_skewy, $ui_originx, $ui_originy)
+			transform: scale(1);
+			//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+			transition: all 0.3s;
+			opacity: 1;
+		}
+	}
+	.yoodooUI_dialog>div>div>div {
+		a {
+			color: $ui_color_denim_approx;
+			padding: 5px 10px;
+			&:hover {
+				color: $ui_color_malibu_approx;
+			}
+		}
+		button.close_dialog {
+			min-width: 0;
+			padding: 5px;
+			//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+			border-radius: 30px;
+			position: absolute;
+			top: -10px;
+			right: -10px;
+		}
+	}
+	.yoodooUI_textarea>.fixedTextareaSurround textarea {
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: text;
+		//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+		transition: border 0.5s,background 0.3s;
+		background: $ui_white;
+		padding: 2px 0 0;
+		overflow: hidden;
+		width: 100%;
+		//Instead of the line below you could use @include box-sizing($ui_bs)
+		box-sizing: border-box;
+	}
+	.yoodooUI_pages .pageDotPanel>button {
+		@extend %ui_extend_3;
+		&.on {
+			background: $ui_color_pink_swan_approx;
+			border: 2px solid $ui_black_50;
+		}
+		&:hover {
+			background: $ui_color_pink_swan_approx;
+			border: 2px solid $ui_black_50;
+		}
+	}
+	.dooitDisplay button.ctaButton {
+		@extend %ui_extend_5;
+		&:hover {
+			background: $ui_color_forest_green_approx;
+			color: $ui_white;
+		}
+	}
+}
+.yoodooUI_ring {
+	position: relative;
+}
+.yoodooUI_ring>div {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+.yoodooUI_textarea {
+	label {
+		font-size: 14px;
+	}
+	textarea {
+		width: 100%;
+		outline: none;
+		border: none;
+		&:disabled {
+			cursor: default;
+			color: $ui_color_mountain_mist_approx !important;
+			background: $ui_white !important;
+		}
+		&:focus+.textareaBorder {
+			background: $ui_color_pacific_blue_approx;
+		}
+		&:hover+.textareaBorder {
+			background: $ui_color_pacific_blue_approx;
+		}
+	}
+	.textareaSurround {
+		width: 80%;
+		margin: 2px auto;
+		padding: 0;
+		overflow: visible;
+		position: relative;
+		min-height: 20px;
+		margin-bottom: -18px;
+		.textareaBorder {
+			position: absolute;
+			height: 2px;
+			bottom: 18px;
+			background: $ui_color_denim_approx;
+			width: 100%;
+		}
+	}
+	.fixedTextareaSurround {
+		width: 80%;
+		margin: 2px auto;
+		padding: 0;
+		position: static;
+	}
+	&.stillRequired {
+		textarea {
+			border-color: $ui_red !important;
+		}
+		.textareaBorder {
+			background: $ui_red !important;
+		}
+	}
+}
+.yoodooUI_text>input {
+	@extend %ui_extend_1;
+	width: 80%;
+	margin: 2px auto;
+	border-bottom: 2px solid $ui_color_denim_approx;
+	@extend %ui_extend_2;
+	&:focus {
+		border-bottom: 2px solid $ui_color_malibu_approx;
+	}
+	&:hover {
+		border-bottom: 2px solid $ui_color_malibu_approx;
+	}
+}
+.yoodooUI_date>input {
+	@extend %ui_extend_1;
+	width: 80%;
+	margin: 2px auto;
+	border-bottom: 2px solid $ui_color_denim_approx;
+	@extend %ui_extend_2;
+}
+.yoodooUI_month>input {
+	@extend %ui_extend_1;
+	width: 80%;
+	margin: 2px auto;
+	border-bottom: 2px solid $ui_color_denim_approx;
+	@extend %ui_extend_2;
+}
+.yoodooUI_password>input {
+	@extend %ui_extend_1;
+	width: 80%;
+	margin: 2px auto;
+	border-bottom: 2px solid $ui_color_denim_approx;
+	@extend %ui_extend_2;
+	&:focus {
+		border-bottom: 2px solid $ui_color_malibu_approx;
+	}
+	&:hover {
+		border-bottom: 2px solid $ui_color_malibu_approx;
+	}
+}
+.yoodooUI_selectbox>select {
+	@extend %ui_extend_1;
+	width: 80%;
+	margin: 2px auto;
+	border-bottom: 2px solid $ui_color_denim_approx;
+	position: relative;
+	margin: 2px auto;
+	padding: 5px;
+	line-height: 1;
+	font-size: 14px;
+	border: 0;
+	//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+	border-radius: 0;
+	&:focus {
+		border-bottom: 2px solid $ui_color_malibu_approx;
+	}
+	&:hover {
+		border-bottom: 2px solid $ui_color_malibu_approx;
+	}
+}
+.yoodooUI_textarea {
+	&>.textareaSurround>textarea {
+		@extend %ui_extend_1;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		&:focus {
+		}
+		&:hover {
+		}
+	}
+	&>.fixedTextareaSurround {
+		position: relative;
+		padding: 2px 0 6px;
+		textarea {
+			&:hover {
+				background: $ui_color_solitude_approx;
+			}
+			&:focus {
+				overflow: auto;
+				cursor: text;
+				background: $ui_color_solitude_approx;
+				border-bottom: 4px solid $ui_color_denim_approx;
+			}
+		}
+	}
+}
+.yoodooUItextarea_tester {
+	@extend %ui_extend_2;
+}
+.yoodooUI_textarea>div>textarea {
+	@extend %ui_extend_2;
+}
+#sf_admin_content {
+	.yoodooUItextarea_tester {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_text>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_date>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_month>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_password>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_selectbox>select {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_textarea {
+		&>.textareaSurround>textarea {
+			color: $ui_color_fuscous_gray_approx;
+		}
+		&>.fixedTextareaSurround>textarea {
+			color: $ui_color_fuscous_gray_approx;
+		}
+	}
+}
+.dooitDisplay {
+	.yoodooUItextarea_tester {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_text>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_date>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_month>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_password>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_selectbox>select {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_textarea {
+		&>.textareaSurround>textarea {
+			color: $ui_color_fuscous_gray_approx;
+		}
+		&>.fixedTextareaSurround>textarea {
+			color: $ui_color_fuscous_gray_approx;
+		}
+	}
+	.yoodooUI_pages {
+		//Instead of the line below you could use @include box-sizing($ui_bs)
+		box-sizing: border-box;
+		border: 1px solid $ui_color_malibu_approx;
+		.yoodooUI_pages {
+			border: none;
+		}
+		.pagePanel .yoodooUI_page {
+			padding: 5px 5px 80px 5px;
+			overflow: auto;
+			.yoodooUI_page {
+				padding: 0;
+			}
+		}
+	}
+}
+.screen {
+	.yoodooUItextarea_tester {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_text>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_date>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_month>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_password>input {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_selectbox>select {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_textarea>div>textarea {
+		color: $ui_color_fuscous_gray_approx;
+	}
+	.yoodooUI_textarea>.fixedTextareaSurround>textarea {
+		color: $ui_color_fuscous_gray_approx;
+	}
+}
+.ui_slider_block {
+}
+.ui_slider_range {
+	.ui_slider_button {
+		background: $ui_color_fuscous_gray_approx;
+		height: 2px;
+		text-align: right;
+		width: 50%;
+	}
+	.ui_slider_button>div {
+		display: inline-block;
+		background: $ui_color_fuscous_gray_approx;
+		//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+		border-radius: 10px;
+		height: 10px;
+		width: 10px;
+		margin: -4px -5px 0;
+	}
+}
+.ui_slider_hotspot {
+	margin: 0 10px;
+	padding: 20px 0 10px;
+	cursor: pointer;
+	position: relative;
+	&:hover {
+		.ui_slider_button {
+			background: $ui_color_picton_blue_approx;
+		}
+		.ui_slider_button>div {
+			background: $ui_color_picton_blue_approx;
+		}
+	}
+}
+.ui_slider_labels {
+	position: absolute;
+	width: 100%;
+}
+.ui_slider_labels>div {
+	width: 0;
+	position: absolute;
+	bottom: 5px;
+	&.ui_slider_mintxt {
+		width: 50%;
+	}
+	&.ui_slider_maxtxt {
+		width: 50%;
+	}
+	&.ui_slider_mintxt>div {
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+	}
+	&.ui_slider_maxtxt>div {
+		left: auto;
+		right: -10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: right;
+	}
+}
+.ui_slider_labels>div>div {
+	width: 20px;
+	text-align: center;
+	left: -10px;
+	position: relative;
+}
+.ui_slider_bar {
+	height: 2px;
+	background: $ui_color_pumice_approx;
+	position: relative;
+}
+.UIavailable {
+	color: $ui_color_fuscous_gray_approx;
+	background: $ui_color_alabaster_approx;
+	cursor: pointer;
+	&:hover {
+		background: $ui_color_wild_sand_approx;
+	}
+}
+.UIdisabled {
+	color: $ui_white;
+	background: $ui_color_dove_gray_approx;
+	cursor: default;
+}
+.UIselected {
+	color: #red;
+	background-color: $ui_red;
+	cursor: pointer;
+	&:hover {
+		background: $ui_color_cornflower_approx;
+	}
+}
+.UIcorrect {
+	color: $ui_white;
+	background: $ui_color_japanese_laurel_approx;
+	cursor: pointer;
+	//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+	transition: right 0.5s;
+	&:hover {
+		background: $ui_color_japanese_laurel_approx;
+		//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+		transition: right 0.5s;
+	}
+}
+.UIincorrect {
+	color: $ui_white;
+	background: $ui_red;
+	cursor: pointer;
+	//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+	transition: right 0.5s;
+	&:hover {
+		background: $ui_red;
+		//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+		transition: right 0.5s;
+	}
+}
+.yoodooUI_pages {
+	height: 100%;
+	width: 100%;
+	.pagePanel {
+		height: 100%;
+		left: 0;
+		//Instead of the line below you could use @include box-sizing($ui_bs)
+		box-sizing: border-box;
+		white-space: nowrap;
+		position: relative;
+		.yoodooUI_page {
+			height: inherit;
+			width: 100%;
+			display: inline-block;
+			vertical-align: top;
+			white-space: normal;
+			//Instead of the line below you could use @include box-sizing($ui_bs)
+			box-sizing: border-box !important;
+			.ui_episode_keypoint_kppage {
+				padding: 10px;
+				img {
+					margin: 5px auto;
+					display: block;
+				}
+			}
+		}
+		&.dotsAbove {
+			padding-top: 40px;
+		}
+		&.dotsAbove {
+			&+.pageDotPanel {
+				bottom: auto;
+				top: 0;
+			}
+			&+.pageDotPanel+.pageNavPanel {
+				bottom: 10px;
+			}
+		}
+	}
+	.pageDotPanel {
+		height: 40px;
+		width: inherit;
+		position: absolute;
+		line-height: 40px;
+		text-align: center;
+	}
+	.pageDotPanel>div {
+		@extend %ui_extend_3;
+		&.on {
+			background: $ui_color_pink_swan_approx;
+			border: 2px solid $ui_black_50;
+		}
+	}
+	.pageDotPanel {
+		&+.pagePanel {
+			padding-top: 40px;
+		}
+		&+.pageNavPanel {
+			bottom: 40px;
+		}
+	}
+	.pageNavPanel {
+		height: 40px;
+		width: inherit;
+		position: absolute;
+		line-height: 40px;
+		text-align: center;
+		bottom: 0;
+		.backButton {
+			position: absolute;
+			left: 10px;
+		}
+	}
+	.pagePanel+.pageDotPanel {
+		bottom: 0;
+	}
+}
+@media(max-height:400px) {
+	.yoodooUI_pages .pageNavPanel {
+		display: none !important;
+	}
+	button.doneButton {
+		display: none !important;
+	}
+}
+.yoodooUI_selectbox>div {
+	position: relative;
+	margin: 2px auto;
+}
+.yoodooUI_multiplechoice {
+	position: relative;
+	&.centreOdd {
+		text-align: center;
+	}
+	img {
+		width: 50%;
+		margin: 0 auto;
+		display: block;
+		border: 1px solid $ui_color_iron_approx;
+		//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+		border-radius: 10px;
+		margin-bottom: 15px;
+	}
+	input[type="checkbox"]:checked+label {
+	}
+	label input[type="checkbox"]:checked {
+	}
+}
+.yoodooUI_multiplechoiceButton {
+	width: 80%;
+	margin: 1% auto;
+	position: relative;
+	.timeLabel {
+		font-size: 30px;
+		color: $ui_color_scooter_approx!important;
+		border: 1px solid $ui_color_nobel_approx!important;
+	}
+	input[type="checkbox"]:checked+label {
+	}
+	label input[type="checkbox"]:checked {
+	}
+}
+.yoodooUI_multiplechoiceButton>button {
+	margin: 0!important;
+	border: 1px solid $ui_color_iron_approx!important;
+	padding: 0!important;
+	@extend %ui_extend_8;
+	&:disabled {
+		@extend %ui_extend_9;
+	}
+}
+.yoodooUI_multiplechoice>button {
+	@extend %ui_extend_8;
+	&:disabled {
+		@extend %ui_extend_9;
+	}
+}
+.yoodooUI_proportion {
+	padding-bottom: 70px;
+	.proportioner {
+		padding: 0;
+		margin: 0 auto;
+		clear: both;
+	}
+	.proportions {
+		margin: 55px auto;
+		width: 610px;
+		clear: both;
+		.proportion {
+			float: left;
+			position: relative;
+			cursor: e-resize;
+			.handle {
+				background: $ui_url_1 no-repeat;
+				width: 11px;
+				height: 10px;
+				position: absolute;
+			}
+			.label {
+				width: 1px;
+				margin: 0 auto;
+				position: relative;
+				height: 20px;
+			}
+			.label>div {
+				width: 1px;
+			}
+			&.odd {
+				.label>div {
+					padding-bottom: 30px;
+					bottom: 0;
+					position: absolute;
+				}
+				.handle {
+					bottom: -10px;
+					right: -6px;
+				}
+				&:hover .handle {
+					background-position: -11px 0;
+				}
+			}
+			&.even {
+				.label>div {
+					padding-top: 30px;
+					top: 0;
+					position: absolute;
+				}
+				.handle {
+					top: -10px;
+					background-position: 0 -10px;
+					right: -6px;
+				}
+				&:hover .handle {
+					background-position: -11px -10px;
+				}
+			}
+			.label>div>div {
+				width: 100px;
+				margin-left: -50px;
+				text-align: center;
+				font-size: 10px;
+			}
+		}
+	}
+	.odd {
+		background: $ui_color_fuscous_gray_approx;
+	}
+	.even {
+		background: $ui_color_curious_blue_approx;
+	}
+}
+.yoodooUI-blockout {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	//Instead of the line below you could use @include box-sizing($ui_bs)
+	box-sizing: border-box;
+	background: $ui_url_2;
+	z-index: 999;
+}
+.yoodooUI-dialogue {
+}
+.yoodooUI-center {
+	position: relative;
+	height: 1px;
+	width: 1px;
+	top: 50%;
+	left: 50%;
+}
+.yoodooUI-calendar {
+	font-family: $ui_font_3, $ui_font_0, $ui_font_1, $ui_font_2;
+	width: 234px;
+	margin: -100px 0 0 -112px;
+	border: 1px solid $ui_black;
+	background: $ui_white;
+	//Instead of the line below you could use @include box-shadow($ui_shadow-1, $ui_shadow-2, $ui_shadow-3, $ui_shadow-4, $ui_shadow-5, $ui_shadow-6, $ui_shadow-7, $ui_shadow-8, $ui_shadow-9, $ui_shadow-10)
+	box-shadow: 0 0 50px $ui_black;
+	padding: 5px;
+	//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+	border-radius: 5px;
+	td {
+		text-align: center;
+		color: $ui_color_chicago_approx;
+		width: 30px;
+		height: 20px;
+	}
+	button {
+		width: 30px;
+		height: 20px;
+		padding: 0;
+		background: none;
+		color: $ui_color_alto_approx;
+		border: none;
+		outline: none;
+		//Instead of the line below you could use @include transition($ui_transition-1, $ui_transition-2, $ui_transition-3, $ui_transition-4, $ui_transition-5, $ui_transition-6, $ui_transition-7, $ui_transition-8, $ui_transition-9, $ui_transition-10)
+		transition: background 0.3s,color 0.3s;
+		&.selectable {
+			@extend %ui_extend_10;
+			&:hover {
+				background: $ui_color_steel_blue_approx;
+				color: $ui_white;
+			}
+			&.selected {
+				background: $ui_color_forest_green_approx;
+				color: $ui_white;
+				&:hover {
+					background: $ui_color_forest_green_approx;
+					color: $ui_white;
+				}
+			}
+		}
+		&.weekend.selectable {
+			background: $ui_color_cobalt_approx;
+			color: $ui_white;
+		}
+	}
+}
+.yoodooUI-days {
+	font-size: 14px;
+}
+.yoodooUI-calendar-title {
+	font-size: 14px;
+	button {
+		@extend %ui_extend_10;
+		&:hover {
+			background: $ui_color_steel_blue_approx;
+			color: $ui_white;
+		}
+	}
+}
+.yoodooUI_list {
+	overflow: auto;
+	margin: 0 auto;
+	width: 90%;
+}
+.yoodooUI_list_row {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	//Instead of the line below you could use @include box-sizing($ui_bs)
+	box-sizing: border-box;
+	position: relative;
+}
+.yoodooUI_dialog>div {
+	padding: 0;
+	position: relative;
+	top: 50%;
+	//Instead of the line below you could use @include box-sizing($ui_bs)
+	box-sizing: border-box;
+	text-align: center;
+	height: 0;
+}
+.yoodooUI_dialog>div>div {
+	position: relative;
+	display: inline-block;
+	margin: 0 20px;
+}
+.yoodooUI_dialog>div>div>div {
+	display: inline-block;
+	background: $ui_white;
+	//Instead of the line below you could use @include box-shadow($ui_shadow-1, $ui_shadow-2, $ui_shadow-3, $ui_shadow-4, $ui_shadow-5, $ui_shadow-6, $ui_shadow-7, $ui_shadow-8, $ui_shadow-9, $ui_shadow-10)
+	box-shadow: 0 0 50px $ui_white;
+	//Instead of the line below you could use @include border-radius($ui_radius, $ui_vertical-radius)
+	border-radius: 10px;
+	padding: 20px;
+	//Instead of the line below you could use @include box-sizing($ui_bs)
+	box-sizing: border-box;
+}
+.yoodooUI_linegraph {
+	//Instead of the line below you could use @include text-shadow($ui_shadow-1, $ui_shadow-2, $ui_shadow-3, $ui_shadow-4, $ui_shadow-5, $ui_shadow-6, $ui_shadow-7, $ui_shadow-8, $ui_shadow-9, $ui_shadow-10)
+	text-shadow: -1px -1px 0 $ui_white, 1px -1px 0 $ui_white, -1px 1px 0 $ui_white, 1px 1px 0 $ui_white;
+}
+.yoodooUI_slider>.ui_slider_block {
+	width: 80%;
+	margin: 2px auto;
+}
+#yoodooContainerContent .dooitDisplay .yoodooUI_pages {
+	border: none;
+}
+.isTouch .dooitDisplay .yoodooUI_pages .pagePanel .yoodooUI_page {
+	overflow: hidden;
+}
+.yoodooUI_radio label {
+	cursor: pointer;
+}
+.yoodooUI_checkbox label {
+	cursor: pointer;
+}
+.yoodooUI_list_row+.yoodooUI_list_row {
+}
+ul.ui-autocomplete {
+	position: absolute;
+	background: $ui_white;
+	padding: 2px 5px 5px;
+	margin: 0;
+	text-align: left;
+	//Instead of the line below you could use @include box-shadow($ui_shadow-1, $ui_shadow-2, $ui_shadow-3, $ui_shadow-4, $ui_shadow-5, $ui_shadow-6, $ui_shadow-7, $ui_shadow-8, $ui_shadow-9, $ui_shadow-10)
+	box-shadow: 0 2px 2px $ui_black;
+	font-family: $ui_font_2;
+	padding: 0;
+	li {
+		list-style: none;
+		white-space: nowrap;
+		cursor: pointer;
+		font-size: 12px;
+		line-height: 18px;
+		padding: 2px 5px;
+		&:hover {
+			background: $ui_color_solitude_approx;
+		}
+	}
+}

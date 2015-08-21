@@ -1,0 +1,921 @@
+//colors
+$comments_black_20: rgba(0,0,0,0.2);
+$comments_white_20: rgba(255,255,255,0.2);
+$comments_color_celeste_approx: #cccccc;
+$comments_color_alto_approx: #dddddd;
+$comments_color_casper_approx: #a8c2d1;
+$comments_color_steel_blue_approx: #3e84ac;
+$comments_color_link_water_approx: #d4e7f2;
+$comments_color_picton_blue_approx: #3bb7fd;
+$comments_white: #fff;
+$comments_color_mountain_mist_approx: #999;
+$comments_color_fuscous_gray_approx: #555;
+$comments_color_mantis_approx: rgb(117,202,82);
+$comments_color_apple_approx: rgb(84,169,49);
+$comments_black_60: rgba(0,0,0,0.6);
+$comments_black_10: rgba(0,0,0,0.1);
+$comments_mercury: #e5e5e5;
+$comments_white_80: rgba(255,255,255,0.8);
+$comments_black: #000;
+$comments_color_dodger_blue_50_approx: rgba(18,164,248,0.5);
+$comments_color_mine_shaft_approx: #333;
+$comments_color_half_baked_approx: #7fbccd;
+$comments_color_gallery_approx: #eee;
+$comments_color_rock_blue_approx: #9bbed3;
+$comments_color_hippie_blue_approx: #5d93b3;
+$comments_color_storm_dust_approx: #666666;
+$comments_color_tapa_approx: #777;
+$comments_color_silver_chalice_approx: #aaa;
+$comments_white_50: rgba(255,255,255,0.5);
+$comments_black_50: rgba(0,0,0,0.5);
+$comments_color_gray_approx: #7f7f7f;
+$comments_color_lochmara_approx: #0086d3;
+$comments_red: #f00;
+$comments_color_steel_gray_approx: #242634;
+
+//urls
+$comments_url_0: url(../../image/reply_arrow.png);
+$comments_url_1: url(../../../../images/icons/comment_respond_on.png);
+$comments_url_2: url(../../../../images/icons/comment_privacy.png);
+$comments_url_3: url(../../image/snapshot_camera.png);
+$comments_url_4: url(../../image/micro_info.png);
+$comments_url_5: url(../../image/snapshot_tick.png);
+$comments_url_6: url(../../../../images/icons/content-fragment-types.png);
+$comments_url_7: url(../../image/playa_comments.png);
+$comments_url_8: url(../../image/large_comments.png);
+$comments_url_9: url(../../image/snapshot_attached.png);
+
+//@extend-elements
+//original selectors
+//#yoodooWidget.isMouse .overlayFooter button.done.unavailable, #yoodooWidget.isMouse .overlayFooter button.done.unavailable:hover
+%comments_extend_1 {
+	background: $comments_black_20;
+	color: $comments_white_20;
+	cursor: default;
+}
+
+//original selectors
+//.commentsInputUI button.sendComment, .commentsInputUI button.cancelReply
+%comments_extend_2 {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+	height: 34px;
+	line-height: 34px;
+	padding: 0 15px;
+	margin: 0;
+	background: $comments_black_20;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 3px 3px 0 0;
+	border: none;
+	cursor: pointer;
+	color: $comments_color_fuscous_gray_approx;
+	//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+	transition: background 0.2s;
+}
+
+//original selectors
+//.commentsInputUI button.sendComment.unavailable, .commentsInputUI button.sendComment.unavailable:hover
+%comments_extend_3 {
+	background: $comments_black_10;
+	color: $comments_color_mountain_mist_approx;
+	cursor: default;
+}
+
+//original selectors
+//span.shareNone, span.shareAll, span.shareOne, span.shareSome
+%comments_extend_4 {
+	background: $comments_url_2;
+	display: inline-block;
+	height: 10px;
+	margin: 3px 3px 7px 0;
+	vertical-align: middle;
+}
+
+//original selectors
+//.commentsListUI .commentItem .responseBlock>a, .commentsListUI .commentItem .responseBlock>span
+%comments_extend_5 {
+	display: inline-block;
+	height: 21px;
+	line-height: 21px;
+}
+
+//original selectors
+//a.gotoDooit, a.gotoFile, a.gotoEpisode, a.gotoChapter, a.gotoKeypoint
+%comments_extend_6 {
+	padding: 0 1px 0 28px;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	white-space: nowrap;
+	background: $comments_url_6 no-repeat 0 0;
+	border-bottom: 1px solid $comments_color_lochmara_approx;
+}
+
+
+#yoodooWidget {
+	&.isMouse {
+		.overlayFooter button.done.unavailable {
+			@extend %comments_extend_1;
+			&:hover {
+				@extend %comments_extend_1;
+			}
+		}
+		&.Explorer8 .overlayFooter button.done.unavailable {
+			background: $comments_color_celeste_approx;
+			color: $comments_color_alto_approx;
+			&:hover {
+				background: $comments_color_celeste_approx;
+				color: $comments_color_alto_approx;
+			}
+		}
+	}
+	#fullComments {
+		padding: 4px;
+		z-index: 500;
+		.commentsListUI {
+		}
+	}
+	.commentsListUI {
+		.moreButton {
+			//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+			border-radius: 0 0 5px 5px;
+			border: 1px solid $comments_color_casper_approx;
+			color: $comments_color_steel_blue_approx;
+			border-top: none;
+			cursor: pointer;
+			position: relative;
+			margin-top: 10px;
+			top: 0;
+			left: 10px;
+			background: $comments_color_link_water_approx;
+			z-index: 501;
+			//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+			transition: background 0.3s, color 0.3s;
+			font-size: 12px;
+			&:hover {
+				background: $comments_color_picton_blue_approx;
+				color: $comments_white;
+			}
+		}
+		.commentsWindow {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			background: $comments_color_steel_gray_approx;
+		}
+		button.snapshot {
+			width: 36px;
+			height: 30px;
+			background: $comments_url_9 left top no-repeat;
+			padding: 0;
+			border: none;
+			cursor: pointer;
+			position: relative;
+			top: -9px;
+			right: -1px;
+			//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+			transition: width 0.3s;
+			&:hover {
+				width: 45px;
+			}
+		}
+	}
+	&.Explorer8 .commentsListUI .moreButton {
+		margin-top: 0;
+	}
+	#framed .filterByUser a.authorFilterButton {
+		text-decoration: none;
+		cursor: default;
+		color: $comments_color_mountain_mist_approx;
+		&:hover {
+			color: $comments_color_mountain_mist_approx;
+		}
+	}
+}
+* {
+	&>.whenNoHover {
+		visibility: visible;
+	}
+	&>.whenHover {
+		visibility: hidden;
+	}
+}
+.commentsListUI {
+	overflow: hidden;
+	position: relative;
+	cursor: hand;
+	padding-top: 12px;
+	.commentItem {
+		.createdBlock {
+			float: right;
+			display: block;
+			white-space: nowrap;
+			color: $comments_color_mountain_mist_approx;
+			font-size: 11px;
+		}
+		.authorBlock {
+			color: $comments_color_mine_shaft_approx;
+			min-height: 16px;
+			display: block;
+			a {
+				font-size: 12px;
+			}
+			.shareContent {
+				display: inline-block;
+				margin-right: 4px;
+				span {
+					background: $comments_url_2;
+					display: inline-block;
+					height: 10px;
+				}
+				&.isShared {
+					span {
+						width: 10px;
+						background-position: -10px 0;
+					}
+					span+span {
+						margin-left: -5px;
+					}
+				}
+				&.isprivate span {
+					width: 10px;
+				}
+				&.isSharedAll span {
+					background-position: -20px 0;
+					width: 18px;
+				}
+			}
+			.respondButton:hover {
+				background-image: $comments_url_1;
+			}
+		}
+		.commentBlock {
+			color: $comments_color_mine_shaft_approx;
+			font-size: 12px;
+			background: $comments_color_link_water_approx;
+			//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+			border-radius: 5px;
+			padding: 5px;
+			margin: 2px 0;
+		}
+		.responseBlock {
+			clear: both;
+			color: $comments_color_mine_shaft_approx;
+			font-size: 11px;
+			color: $comments_color_half_baked_approx;
+			min-height: 21px;
+			position: relative;
+			.respondButton {
+				background: $comments_url_0 no-repeat right center;
+				display: block;
+				height: 21px;
+				line-height: 21px;
+				padding: 0 22px 0 0;
+				right: 0;
+				//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+				transition: right 0.3s;
+				position: absolute;
+			}
+			.responseItem {
+				border-top: 1px solid $comments_color_half_baked_approx;
+				padding-left: 20px;
+			}
+		}
+		.responseBlock>a {
+			@extend %comments_extend_5;
+		}
+		.responseBlock>span {
+			@extend %comments_extend_5;
+		}
+	}
+}
+.commentsListUI>button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.commentsInputUI {
+	position: relative;
+	margin-left: 5px;
+	background: $comments_white_80;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 5px;
+	button {
+		&.sendComment {
+			@extend %comments_extend_2;
+			background: $comments_color_mantis_approx;
+			&:hover {
+				background: $comments_color_apple_approx;
+				color: $comments_white;
+			}
+			&.unavailable {
+				@extend %comments_extend_3;
+				&:hover {
+					@extend %comments_extend_3;
+				}
+			}
+		}
+		&.cancelReply {
+			@extend %comments_extend_2;
+			right: 85px;
+			&:hover {
+				background: $comments_black_60;
+				color: $comments_white;
+			}
+		}
+	}
+	.textareaContainer {
+		font-size: 12px;
+		background: $comments_black_20;
+		margin: 0 3px;
+		//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+		border-radius: 5px;
+		width: 100%;
+		//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+		transition: background 0.2s;
+		&.focus {
+			background: $comments_black_60;
+			color: $comments_white;
+			textarea {
+				color: $comments_white;
+			}
+		}
+		.sendSnapshot {
+			line-height: 23px;
+			padding: 0 5px;
+			text-align: right;
+			label {
+				cursor: pointer;
+			}
+			input[type=checkbox] {
+				display: none;
+			}
+			span {
+				&.camera {
+					display: inline-block;
+					background: $comments_url_3;
+					width: 29px;
+					height: 23px;
+					vertical-align: middle;
+				}
+				&.infoBubble {
+					background: $comments_url_4 5px 5px no-repeat;
+					width: 23px;
+					height: 23px;
+					display: inline-block;
+					vertical-align: middle;
+					cursor: pointer;
+					position: relative;
+					//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+					transition: background-position 0.3s;
+					&:hover {
+						background-position: 5px 2px;
+					}
+					&:hover>div {
+					}
+				}
+				&.infoBubble>div {
+					display: none;
+					position: absolute;
+					width: 200px;
+					left: -88px;
+					bottom: 23px;
+					//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+					border-radius: 3px;
+					background: $comments_color_mine_shaft_approx;
+				}
+				&.infoBubble>div>div {
+					color: $comments_white;
+					font-size: 12px;
+					line-height: 18px;
+					text-align: center;
+					padding: 5px;
+				}
+			}
+			input {
+				&:checked+label>span.camera>span {
+					background-position: 5px 0;
+				}
+				&:checked+label:hover>span.camera>span {
+					background-position: 0 0;
+				}
+			}
+			input+label>span.camera>span {
+				display: block;
+				background: $comments_url_5 -21px 0 no-repeat;
+				width: 27px;
+				height: 23px;
+				margin: 0 0 0 2px;
+				//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+				transition: background-position 0.3s;
+			}
+			input+label:hover>span.camera>span {
+				background-position: -8px 0;
+			}
+		}
+	}
+	textarea {
+		color: $comments_black;
+		font-size: 12px;
+		background: none;
+		padding: 5px;
+		resize: none;
+		height: 100px;
+		width: 100%;
+		display: block;
+		outline: none;
+		border: none;
+		//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+		transition: background 0.2s;
+		&:focus {
+		}
+		&:focus+.groupSelector>button {
+			&.on {
+				background: $comments_black_60;
+				color: $comments_white;
+				cursor: default;
+			}
+			&.groupSelectButton+div {
+				background: $comments_black_60;
+				//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+				border-radius: 3px;
+			}
+		}
+		&.emptyTextarea.groupSelector>button.on {
+			color: $comments_color_tapa_approx;
+		}
+	}
+	.groupSelector {
+		padding: 0 10px;
+		margin-top: 0;
+	}
+	.groupSelector>button {
+		//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+		border-radius: 0 0 3px 3px;
+		margin: 0 3px 3px 0;
+		background: $comments_black_10;
+		border: none;
+		border-top: none;
+		font-size: 12px !important;
+		font-weight: normal;
+		cursor: pointer;
+		color: $comments_color_silver_chalice_approx;
+		//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+		transition: background 0.2s,margin 0.2s;
+		vertical-align: top;
+		display: inline-block;
+		&:hover {
+			background: $comments_black_20;
+			color: $comments_black;
+		}
+		&.on {
+			background: $comments_black_20;
+			color: $comments_black;
+			&:hover {
+				background: $comments_black_20;
+				color: $comments_black;
+			}
+		}
+		&.groupSelectButton.on {
+			//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+			border-radius: 0;
+			padding-bottom: 4px;
+			margin-bottom: 0;
+		}
+	}
+	.groupSelector>div {
+		background: $comments_black_20;
+		color: $comments_black;
+		padding: 5px;
+	}
+	.groupSelector>div>button {
+		background: $comments_white_50;
+		color: $comments_black_50;
+		cursor: pointer;
+		//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+		border-radius: 3px;
+		font-size: 12px !important;
+		border: none;
+		//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+		transition: background 0.2s, top 0.2s !important;
+		position: relative;
+		top: 0;
+		margin: 1px;
+		max-width: 50%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&.on {
+			background: $comments_black_50;
+			color: $comments_white;
+			&:hover {
+				top: 2px;
+			}
+		}
+		&:hover {
+			top: -2px;
+		}
+	}
+	.emptyTextarea textarea {
+		color: $comments_color_tapa_approx;
+	}
+	textarea+.groupSelector>button.groupSelectButton+div {
+		background: $comments_black_20;
+		//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+		border-radius: 3px;
+		webkit-transition: background 0.2s;
+		//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+		transition: background 0.2s;
+	}
+}
+.Explorer8 {
+	.commentsInputUI {
+		background: $comments_white;
+		button {
+			&.sendComment {
+				background: $comments_color_celeste_approx;
+				background: $comments_color_mantis_approx;
+				&:hover {
+					background: $comments_color_apple_approx;
+					color: $comments_white;
+				}
+				&.unavailable {
+					background: $comments_mercury;
+					&:hover {
+						background: $comments_mercury;
+					}
+				}
+			}
+			&.cancelReply {
+				background: $comments_color_celeste_approx;
+				&:hover {
+					background: $comments_color_celeste_approx;
+				}
+			}
+		}
+		.textareaContainer {
+			background: $comments_color_celeste_approx;
+			&.focus {
+				background: $comments_color_storm_dust_approx;
+			}
+		}
+		.groupSelector>button {
+			&:hover {
+				background: $comments_color_celeste_approx;
+			}
+			&.on {
+				background: $comments_color_celeste_approx;
+				&:hover {
+					background: $comments_color_celeste_approx;
+				}
+			}
+		}
+		.groupSelector>div {
+			background: $comments_color_celeste_approx;
+		}
+		.groupSelector>div>button {
+			background: $comments_color_gray_approx;
+			&.on {
+				background: $comments_color_gray_approx;
+			}
+		}
+		textarea:focus+.groupSelector>button {
+			&.on {
+				background: $comments_color_storm_dust_approx;
+			}
+			&.groupSelectButton+div {
+				background: $comments_color_storm_dust_approx;
+			}
+		}
+		textarea+.groupSelector>button.groupSelectButton+div {
+			background: $comments_color_celeste_approx;
+		}
+	}
+	.commentsListUI>div>div>.commentItem {
+		top: 0 !important;
+		margin-bottom: 0 !important;
+		background: $comments_white;
+		border: 1px solid $comments_color_mountain_mist_approx;
+	}
+}
+.commentsInputUI>div {
+	margin: 0;
+	padding: 2px;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 5px;
+	&.textareaTitle {
+		line-height: 30px;
+		height: 30px;
+		white-space: nowrap;
+		overflow: hidden;
+		padding-right: 75px;
+		text-overflow: ellipsis;
+	}
+}
+span {
+	&.shareNone {
+		@extend %comments_extend_4;
+		width: 10px;
+	}
+	&.shareAll {
+		@extend %comments_extend_4;
+		background-position: -20px 0;
+		width: 18px;
+	}
+	&.shareOne {
+		@extend %comments_extend_4;
+		width: 10px;
+		background-position: -10px 0;
+	}
+	&.shareSome {
+		@extend %comments_extend_4;
+		width: 10px;
+		background-position: -10px 0;
+	}
+}
+.listScroller {
+	float: right;
+	width: 20px;
+	height: 100%;
+	background: $comments_color_gallery_approx;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 3px;
+	border: 1px solid $comments_color_mountain_mist_approx;
+	//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+	box-shadow: 0 0 5px $comments_black;
+}
+.listScroller>div {
+	cursor: n-resize;
+	position: relative;
+	width: 20px;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 2px;
+	background: $comments_color_rock_blue_approx;
+	//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+	box-shadow: 0 0 0 $comments_black;
+	//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+	transition: background 0.3s,box-shadow 0.3s;
+	&.ui-draggable-dragging {
+		//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+		box-shadow: 0 0 5px $comments_black;
+		background: $comments_color_hippie_blue_approx;
+	}
+	&.ui-draggable:hover {
+		//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+		box-shadow: 0 0 5px $comments_black;
+		background: $comments_color_hippie_blue_approx;
+	}
+}
+a {
+	&.gotoDooit {
+		@extend %comments_extend_6;
+		background-position: 0 -72px;
+		&:hover {
+			background-position: 0 -48px;
+		}
+	}
+	&.gotoFile {
+		@extend %comments_extend_6;
+		background-position: 0 -120px;
+		&:hover {
+			background-position: 0 -92px;
+		}
+	}
+	&.gotoEpisode {
+		@extend %comments_extend_6;
+		background-position: 0 -24px;
+		&:hover {
+			background-position: 0 -0px;
+		}
+	}
+	&.gotoChapter {
+		@extend %comments_extend_6;
+		background-position: 0 -168px;
+		&:hover {
+			background-position: 0 -144px;
+		}
+	}
+	&.gotoKeypoint {
+		@extend %comments_extend_6;
+		background-position: 0 -216px;
+		&:hover {
+			background-position: 0 -192px;
+		}
+	}
+}
+.filterWindow {
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	vertical-align: top;
+	display: block;
+}
+.filterWindow>div {
+	line-height: 30px;
+}
+.filterWindow>div {
+	&>.commentIcon {
+		height: 24px;
+		line-height: 24px;
+		//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+		border-radius: 0 10px 10px 0;
+		border: 1px solid $comments_color_fuscous_gray_approx;
+		display: inline-block;
+		padding: 0 20px 0 25px;
+		margin: 2px 2px 2px 20px;
+		vertical-align: bottom;
+		//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+		box-shadow: 0 0 3px $comments_black_50;
+		position: relative;
+		background: $comments_white;
+	}
+	&>.commentIcon>span {
+		background: $comments_url_7 no-repeat left center;
+		width: 38px;
+		height: 35px;
+		display: block;
+		position: absolute;
+		top: -5px;
+		left: -20px;
+		z-index: 999;
+	}
+}
+.commentFilter {
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 0 10px 10px 0;
+	border: 1px solid $comments_color_fuscous_gray_approx;
+	max-width: 20%;
+	background: $comments_white;
+	display: inline-block;
+	padding: 0 5px;
+	margin: 2px 0;
+	height: 24px;
+	line-height: 24px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: $comments_color_fuscous_gray_approx !important;
+	text-decoration: none;
+	z-index: 505;
+	//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+	box-shadow: 0 0 3px $comments_black_50;
+	position: relative;
+	//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+	transition: padding 0.2s,background 0.2s;
+	vertical-align: middle;
+	margin-left: -11px;
+	padding-left: 5px;
+	vertical-align: bottom;
+	&:hover {
+		padding-left: 15px;
+		background: $comments_color_alto_approx;
+	}
+	&.on {
+		background: $comments_color_fuscous_gray_approx;
+		color: $comments_white !important;
+		cursor: default;
+		&:hover {
+			padding-left: 5px;
+			background: $comments_color_fuscous_gray_approx;
+		}
+	}
+}
+.commentFilter {
+	&+.commentFilter {
+		margin-left: -11px;
+		padding-left: 15px;
+		z-index: 504;
+		&:hover {
+			padding-left: 20px;
+		}
+		&.on:hover {
+			padding-left: 15px !important;
+		}
+	}
+	&+.commentFilter {
+		&+.commentFilter {
+			z-index: 503;
+		}
+		&+.commentFilter+.commentFilter {
+			z-index: 502;
+		}
+	}
+}
+.commentFilter>span {
+	padding: 0 1px 0 28px;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	white-space: nowrap;
+	background: $comments_url_6 no-repeat 0 0;
+	&.filterepisode {
+		background-position: 0 -24px;
+	}
+	&.filtervideo {
+		background-position: 0 -168px;
+	}
+	&.filterdooit {
+		background-position: 0 -72px;
+	}
+	&.filterfile {
+		background-position: 0 -120px;
+	}
+	&.filterkey_point {
+		background-position: 0 -216px;
+	}
+}
+.unreadButtonCount {
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	border: 2px solid $comments_white;
+	//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+	box-shadow: 0 0 5px $comments_black;
+	background: $comments_red;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 20px;
+	width: 20px !important;
+	height: 20px !important;
+	line-height: 20px !important;
+	text-align: center;
+	color: $comments_white;
+	font-size: 12px;
+}
+.commentIconOnly {
+	background: $comments_url_8 no-repeat;
+	width: 76px;
+	height: 79px;
+	position: relative;
+	margin: 0 auto;
+	cursor: pointer;
+	.unreadButtonCount {
+		//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+		transition: top 0.2s;
+	}
+	&:hover .unreadButtonCount {
+		top: -5px;
+	}
+}
+*:hover {
+	&>.whenNoHover {
+		visibility: hidden;
+	}
+	&>.whenHover {
+		visibility: visible;
+	}
+}
+.commentsListUI>div>div>.commentItem {
+	background: $comments_white;
+	//Instead of the line below you could use @include box-shadow($comments_shadow-1, $comments_shadow-2, $comments_shadow-3, $comments_shadow-4, $comments_shadow-5, $comments_shadow-6, $comments_shadow-7, $comments_shadow-8, $comments_shadow-9, $comments_shadow-10)
+	box-shadow: 0 0 5px $comments_black;
+	margin: 3px;
+	padding: 2px;
+	margin-bottom: -12px;
+	top: 0;
+	//Instead of the line below you could use @include border-radius($comments_radius, $comments_vertical-radius)
+	border-radius: 5px;
+	//Instead of the line below you could use @include transition($comments_transition-1, $comments_transition-2, $comments_transition-3, $comments_transition-4, $comments_transition-5, $comments_transition-6, $comments_transition-7, $comments_transition-8, $comments_transition-9, $comments_transition-10)
+	transition: top 0.2s,background 0.2s;
+	position: relative;
+	z-index: 502;
+	border: 3px solid rgba(0,0,0,0);
+	&.on {
+		border: 3px solid $comments_color_dodger_blue_50_approx;
+	}
+}
+.isMouse .commentsListUI .commentItem {
+	&:first-child {
+		&:hover {
+			top: 0;
+		}
+		&:hover+.commentItem {
+			top: 10px;
+		}
+	}
+	&:hover {
+		top: -10px;
+	}
+	&:last-child:hover {
+		top: 0;
+	}
+	.responseBlock .respondButton:hover {
+		right: 10px;
+	}
+}
+.isTouch .commentsListUI .commentItem.hover {
+	top: -10px;
+	&:first-child {
+		top: 0;
+	}
+	&:last-child {
+		top: 0;
+	}
+	&:first-child+.commentItem {
+		top: 10px;
+	}
+}
+.Explorer .filterWindow>div>.commentIcon {
+	background: $comments_color_gray_approx;
+}

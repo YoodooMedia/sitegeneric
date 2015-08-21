@@ -1,0 +1,2284 @@
+
+
+
+//colors
+$white: #fff;
+$color_silver_chalice_approx: #aaaaaa;
+$red: #f00;
+$black: #000;
+$color_carnation_approx: #f55;
+$color_fuscous_gray_approx: #555;
+$color_wild_sand_approx: rgb(242,245,246);
+$color_mystic_approx: rgba(220,235,242,1);
+$color_bon_jour_approx: rgb(226,226,226);
+$alto_100: rgba(219,219,219,1);
+$color_celeste_approx: rgba(209,209,209,1);
+$color_romance_approx: rgba(254,254,254,1);
+$color_storm_dust_approx: #666;
+$color_catskill_white_approx: rgb(242,246,248);
+$color_geyser_approx: rgba(216,225,231,1);
+$color_heather_approx: rgba(181,198,208,1);
+$color_pattens_blue_approx: rgba(224,239,249,1);
+$color_picton_blue_approx: rgb(50,182,243);
+$color_lochmara_approx: rgba(1,132,194,1);
+$color_chambray_approx: #3e5a91;
+$color_nile_blue_approx: #182e4f;
+$color_iron_approx: rgba(215,215,215,1);
+$color_mantis_80_approx: rgba(100,200,100,0.8);
+$color_pumice_80_approx: rgba(200,200,200,0.8);
+$color_pumice_70_approx: rgba(200,200,200,0.7);
+$color_pumice_60_approx: rgba(200,200,200,0.6);
+$color_pumice_50_approx: rgba(200,200,200,0.5);
+$color_pumice_40_approx: rgba(200,200,200,0.4);
+$color_pumice_30_approx: rgba(200,200,200,0.3);
+$color_pumice_20_approx: rgba(200,200,200,0.2);
+$color_pumice_10_approx: rgba(200,200,200,0.1);
+$color_mantis_approx: rgb(100,200,100);
+$color_quill_gray_approx: rgb(210,210,210);
+$color_alto_approx: rgb(220,220,220);
+$color_mercury_approx: rgb(230,230,230);
+$color_cararra_approx: rgb(235,235,235);
+$color_gallery_approx: rgb(240,240,240);
+$color_cocoa_bean_approx: #4c1a1a;
+$color_cerulean_approx: #11bade;
+$color_blue_dianne_approx: #1a434c;
+$color_mountain_mist_approx: #999999;
+$color_dove_gray_approx: #6e6e6e;
+$color_pumice_approx: rgb(198,198,198);
+$white_100: rgba(255,255,255,1);
+$color_silver_approx: rgb(188,188,188);
+$color_boulder_approx: rgba(121,121,121,1);
+$white_90: rgba(255,255,255,0.9);
+$color_black_rock_approx: #000033;
+$color_tapa_approx: #777;
+$yellow: #ffff00;
+$white_50: rgba(255,255,255,0.5);
+$color_san_juan_approx: rgb(43,73,120);
+$color_lima_approx: #6ac100;
+$color_lynch_approx: #6c7f9a;
+$color_fiord_approx: #445772;
+$color_big_stone_approx: #1a2d48;
+$color_pickled_bluewood_approx: #2e415c;
+$color_curious_blue_approx: #329bde;
+$color_pastel_green_approx: #8ee468;
+$color_apple_approx: #53a830;
+$color_tom_thumb_approx: #436830;
+$color_regent_gray_approx: #8494aa;
+$color_pale_sky_approx: #627289;
+$color_blue_bayoux_approx: #506076;
+$color_cloud_burst_approx: #1d304b;
+$color_link_water_approx: #d1ebf6;
+$color_nepal_approx: #8db4c5;
+$color_zircon_approx: #f4fafd;
+$color_snow_flurry_approx: #ddfdd2;
+$color_envy_approx: #8baa80;
+$white_10: rgba(255,255,255,0.1);
+$color_blue_zodiac_approx: #152d4d;
+$black_10: rgba(0,0,0,0.1);
+$color_dodger_blue_approx: #00aefe;
+$color_rhino_approx: #26426a;
+$color_periwinkle_approx: #c1ceff;
+$color_cello_approx: #233d63;
+$color_botticelli_approx: #cfd9e9;
+$color_yellow_orange_approx: rgb(255,175,75);
+$color_west_side_approx: rgba(255,146,10,1);
+$mercury_100: rgba(229,229,229,1);
+$mercury: #e5e5e5;
+$color_starship_approx: rgb(210,255,82);
+$color_conifer_approx: rgba(145,232,66,1);
+$color_gravel_approx: rgb(69,72,77);
+$black_100: rgba(0,0,0,1);
+$color_deco_approx: rgb(205,235,142);
+$color_celery_approx: rgba(165,201,86,1);
+$color_mine_shaft_approx: #333;
+$color_concord_approx: rgb(125,126,125);
+$color_woodsmoke_approx: rgba(14,14,14,1);
+$color_tower_gray_approx: rgb(174,188,191);
+$color_marshland_approx: rgba(10,14,10,1);
+$color_cod_gray_approx: rgba(10,8,9,1);
+$black_50: rgba(0,0,0,0.5);
+$black_80: rgba(0,0,0,0.8);
+$color_green_approx: #00ff0a;
+$color_navy_blue_approx: #000077;
+$color_cape_cod_approx: #434343;
+$color_japanese_laurel_approx: #090;
+$color_red_berry_approx: #900;
+$color_suva_gray_approx: #888;
+$color_pink_swan_approx: #bbb;
+
+//fonts
+$font_0: Trebuchet MS;
+$font_1: Helvetica;
+$font_2: sans-serif;
+$font_3: Courier New;
+$font_4: Courier;
+$font_5: monospace;
+
+//urls
+$url_0: url(../../image/userCompleted.png);
+$url_1: url(../../image/advisorCompleted.png);
+$url_2: url(../../image/promptRight.png);
+$url_3: url(../../image/promptDown.png);
+$url_4: url(../../image/button.gif);
+$url_5: url(../../image/dragRight.png);
+$url_6: url(../../image/swipeRight.png);
+$url_7: url(../../image/dragLeft.png);
+$url_8: url(../../image/swipeLeft.png);
+$url_9: url(../../image/rotate.png);
+$url_10: url(../../image/yoodoo-medium.gif);
+$url_11: url(images/speedo5.png);
+$url_12: url(images/blank.gif);
+$url_13: url(../../image/loading.gif);
+$url_14: url(../../image/dooit.png);
+$url_15: url(../../image/widget_buttons.png);
+$url_16: url(../../image/buttonred.gif);
+$url_17: url(../../image/med-button.gif);
+$url_18: url(../../image/del.gif);
+$url_19: url(../../image/footer.gif);
+$url_20: url(../../image/done.gif);
+$url_21: url(../../image/undone-bg.gif);
+$url_22: url(../../image/snapshot.png);
+$url_23: url(addons/snapshot-comment.png);
+$url_24: url(../../image/progress.png);
+$url_25: url(../../image/go.gif);
+$url_26: url(../../image/excel.png);
+$url_27: url(../../image/dooit_scrapbook.png);
+$url_28: url(../../image/dooit_scrapbook_add.png);
+$url_29: url(../../image/dooit_comments.png);
+$url_30: url(../../image/dooit_snapshot.png);
+$url_31: url(../../image/snapshot_bin.png);
+$url_32: url(../../image/snapshot_bin_over.png);
+$url_33: url(../../image/file_icon.png);
+$url_34: url(../../image/dooit_help.png);
+$url_35: url(../../image/dooit_play.png);
+$url_36: url(../../image/dooit_pause.png);
+$url_37: url(../../image/slidegrip.png);
+
+//@extend-elements
+//original selectors
+//#yoodooWidget .login center, #yoodooContainerContent .welcome center
+%extend_1 {
+	text-align: center;
+	padding: 5px;
+	clear: both;
+}
+
+//original selectors
+//#yoodooWidget .login button, #yoodooWidget .welcome center button, #yoodooWidget .welcome button.logout, #yoodooWidget button.green, #yoodooWidget button.red, #yoodooWidget a.green, #yoodooWidget a.red
+%extend_2 {
+	min-width: 120px;
+	height: 33px;
+	line-height: 33px;
+	color: $white !important;
+	font-weight: bold;
+	padding: 0 10px;
+	margin: 10px;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 5px $black;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+}
+
+//original selectors
+//#yoodooWidget .login>div input, #yoodooWidget .welcome input
+%extend_3 {
+	float: left;
+	width: 250px;
+	background: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	padding: 3px;
+	color: $color_black_rock_approx;
+	font-size: 18px;
+	outline: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 5px $color_tapa_approx;
+	border: none;
+}
+
+//original selectors
+//#yoodooWidget .welcome .error, #yoodooWidget .login .error
+%extend_4 {
+	font-size: 14px;
+	width: 100%;
+	line-height: 20px;
+	color: $yellow;
+	padding: 0 !important;
+}
+
+//original selectors
+//#yoodooContainerContent, #yoodooWhiteout, #yoodooWait
+%extend_5 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 501;
+}
+
+//original selectors
+//#yoodooWidget button.medium, #yoodooContainerContent a.medium
+%extend_6 {
+	height: 24px !important;
+	line-height: 24px !important;
+	margin-bottom: 2px;
+	font-size: 14px !important;
+	font-weight: normal !important;
+	display: inline-block;
+	text-align: center;
+}
+
+//original selectors
+//#yoodooWidget .tip .Notice>div, #yoodooWidget .tip .warningNotice>div
+%extend_7 {
+	font-size: 12px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 2px 5px $black;
+}
+
+//original selectors
+//#yoodooWidget .yoodoohelp, #yoodooWidget .scrapbookOptions, #yoodooWidget .exportTypes
+%extend_8 {
+	display: none;
+	position: absolute;
+	bottom: -1px;
+	border: 1px solid $color_cello_approx;
+	border-bottom: none;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px 3px 0 0;
+	padding: 15px 20px;
+	max-width: 200px;
+	font-size: 14px;
+	text-align: center;
+	background: $white;
+	background: linear-gradient(top, $white 0,$color_regent_gray_approx 100%);
+}
+
+
+.cssDetector_yoodooMetaphorOne_3 {
+	display: none;
+}
+#yoodooWidget {
+	font: 100 14px/16px $font_0, $font_1, $font_2;
+	line-height: 16px;
+	font-size: 14px;
+	position: relative;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font-family: $font_0, $font_1, $font_2;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 7px;
+	button {
+		font-size: 14px;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		outline: none;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: background-color 0.2s;
+		font-family: $font_0, $font_1, $font_2;
+		vertical-align: middle;
+		&.green {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			&:hover {
+			}
+		}
+		&.red {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			background: $url_16 repeat-x;
+			&:hover {
+			}
+		}
+		&.medium {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_6;
+			&:hover {
+			}
+		}
+		&:active {
+			outline: none;
+		}
+		&:focus {
+			outline: none;
+		}
+		&.reversed {
+			background-position: 0 -33px !important;
+		}
+		&.del {
+			background: $url_18 no-repeat;
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+			border: none;
+			margin: 2px 2px 5px 5px;
+			vertical-align: bottom;
+			&:hover {
+				background-position: 0 -18px;
+			}
+		}
+		&.go {
+			background: $url_25 no-repeat;
+			width: 22px;
+			height: 22px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			border: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 5px $black;
+			margin: 0 0 0 5px;
+			cursor: pointer;
+			&:hover {
+				background-position: 0 -22px;
+			}
+		}
+		&.closeBySlide {
+			border: none;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px 0 0 5px;
+			background: linear-gradient(to right, $white_100 0,rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+			cursor: pointer;
+			font-size: 12px;
+			line-height: 20px;
+			padding: 2px 2px 2px 10px;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: padding 0.3s !important;
+			&:hover {
+				padding-left: 2px;
+			}
+		}
+		&.closeBySlide>span {
+			display: inline-block;
+			vertical-align: middle;
+			background: $url_37 no-repeat center center;
+			width: 20px;
+			height: 20px;
+		}
+	}
+	input {
+		font-size: 14px;
+		vertical-align: middle;
+	}
+	select {
+		font-size: 14px;
+	}
+	textarea {
+		font-size: 14px;
+		font-family: $font_0, $font_1, $font_2;
+	}
+	i {
+		font-style: italic;
+	}
+	cite {
+		font-style: italic;
+	}
+	em {
+		font-style: italic;
+	}
+	var {
+		font-style: italic;
+	}
+	address {
+		font-style: italic;
+	}
+	dfn {
+		font-style: italic;
+	}
+	p {
+		color: $white;
+	}
+	* {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: content-box;
+		letter-spacing: 0;
+	}
+	h2 {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: content-box;
+		letter-spacing: 0;
+		font: 200 24px/26px $font_0, $font_1, $font_2;
+		color: $color_dodger_blue_approx;
+		font-size: 24px;
+		font-weight: normal;
+		margin: 20px 0;
+	}
+	#advisorPanel {
+		background: $white;
+		margin: 10px;
+		padding: 5px;
+		overflow: auto;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		.adviseeDooit {
+			border-top: 1px solid $color_silver_chalice_approx;
+			color: $color_silver_chalice_approx;
+			cursor: pointer;
+			padding: 2px;
+			height: 35px;
+			line-height: 35px;
+			div {
+				display: block;
+				white-space: nowrap;
+				overflow: hidden;
+				height: 35px;
+				line-height: 35px;
+				padding-left: 40px;
+				background: $url_2 5px center no-repeat;
+				span {
+					width: 26px;
+					height: 35px;
+					display: inline-block;
+					margin-right: 3px;
+				}
+			}
+			&.userCompleted {
+				color: $black;
+				div span {
+					background: $url_0 center center no-repeat;
+				}
+			}
+			&.completed {
+				color: $black;
+				div span {
+					background: $url_1 center center no-repeat;
+				}
+			}
+			&:hover {
+				color: $red;
+			}
+			nobr {
+				float: right;
+			}
+			&.open div {
+				background: $url_3 left 5px no-repeat;
+			}
+			&.unread nobr {
+				color: $color_carnation_approx !important;
+			}
+		}
+		.advisorMessage {
+			border: 1px solid $color_silver_chalice_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			margin: 2px;
+			font-size: 11px;
+			padding: 2px;
+			background: $white;
+			overflow: auto;
+			&.unread {
+				color: $color_carnation_approx;
+			}
+			nobr {
+				float: right;
+				color: $color_fuscous_gray_approx;
+				margin-left: 10px;
+			}
+			&.fromUser {
+			}
+			&.fromMe {
+			}
+		}
+		.dooitMessages {
+			border: 1px solid $color_silver_chalice_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			margin: 2px;
+			font-size: 12px;
+			padding: 2px;
+			background: $color_wild_sand_approx;
+			background: linear-gradient(to bottom, $color_wild_sand_approx 0,$color_mystic_approx 100%);
+			filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_wild_sand_approx', endcolorstr='$color_mystic_approx',gradienttype=0 );
+			.advisorMessageHeader {
+				height: 30px;
+				line-height: 30px;
+				button {
+					float: right;
+				}
+			}
+		}
+		button {
+			background: $color_bon_jour_approx;
+			background: linear-gradient(to bottom, $color_bon_jour_approx 0,$alto_100 50%,$color_celeste_approx 51%,$color_romance_approx 100%);
+			filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_bon_jour_approx', endcolorstr='$color_romance_approx',gradienttype=0 );
+			border: 1px solid $color_storm_dust_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			cursor: pointer;
+			margin: 2px;
+			&:hover {
+				background: $color_catskill_white_approx;
+				background: linear-gradient(to bottom, $color_catskill_white_approx 0,$color_geyser_approx 50%,$color_heather_approx 51%,$color_pattens_blue_approx 100%);
+				filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_catskill_white_approx', endcolorstr='$color_pattens_blue_approx',gradienttype=0 );
+			}
+		}
+		h2 {
+			margin-top: 0;
+		}
+		h3 {
+			color: $color_fuscous_gray_approx;
+		}
+		.advisorCommenter textarea {
+			border: 1px solid $color_silver_chalice_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			margin: 2px;
+			font-size: 12px;
+			padding: 2px;
+			resize: none;
+			display: block;
+			width: 50%;
+		}
+	}
+	.advisorBubble {
+		position: absolute;
+		z-index: 100;
+		right: 0;
+		top: 32px;
+		padding: 5px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		background: $color_picton_blue_approx;
+		background: linear-gradient(to bottom, $color_picton_blue_approx 0,$color_lochmara_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_picton_blue_approx', endcolorstr='$color_lochmara_approx',gradienttype=0 );
+	}
+	.advisorBubble>div {
+		white-space: nowrap;
+		color: $white;
+		position: relative;
+	}
+	.login {
+		padding: 20px;
+		text-align: left;
+		nobr {
+			float: right;
+		}
+		center {
+			@extend %extend_1;
+		}
+		button {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			&:hover {
+			}
+		}
+		.error {
+			@extend %extend_4;
+		}
+		.forgotten div {
+			float: none;
+			width: auto;
+			text-align: center;
+		}
+	}
+	.login>div>div {
+		clear: both;
+		padding: 10px;
+		margin: 0 auto;
+		width: 400px;
+	}
+	.login>div>div>div {
+		float: left;
+		text-align: right;
+		width: 120px;
+		font-size: 18px;
+		padding: 3px 20px 0 0;
+	}
+	.welcome {
+		&.noContinue {
+			.onlyContinue {
+				display: none !important;
+			}
+			.notContinue {
+				display: inline-block !important;
+			}
+		}
+		input {
+			@extend %extend_3;
+			float: left;
+			&:focus {
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 5px $black;
+			}
+		}
+		label {
+			width: 200px;
+			float: left;
+		}
+		.error {
+			@extend %extend_4;
+		}
+		.widgetMoving {
+			z-index: 999;
+		}
+		.tabs {
+			height: 24px !important;
+			position: absolute;
+			top: -24px;
+			right: 10px;
+			white-space: nowrap;
+			button {
+				border: none;
+				background: none;
+				padding: 0 4px;
+				margin: 0 3px;
+				line-height: 24px;
+				height: 24px;
+				cursor: pointer;
+				&.on {
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 3px 3px 0 0;
+					background: $white_50;
+				}
+			}
+		}
+		.messenger {
+			font-size: 14px;
+		}
+		center button {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			&:hover {
+			}
+		}
+		button.logout {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			&:hover {
+			}
+		}
+	}
+	a {
+		color: $color_celeste_approx;
+		&.green {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			&:hover {
+			}
+		}
+		&.red {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_2;
+			&:hover {
+			}
+		}
+		&:hover {
+			color: $white;
+		}
+		img {
+			border: none;
+		}
+	}
+	.notContinue {
+		display: none !important;
+	}
+	.progressBlock {
+		margin: 5px auto;
+		display: block;
+		width: 90%;
+		padding: 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		background: $color_romance_approx;
+		border: 1px inset $black;
+		background: linear-gradient(to bottom, $color_romance_approx 0,$color_iron_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_romance_approx', endcolorstr='$color_iron_approx',gradienttype=0 );
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 5px $black;
+		height: 20px;
+		line-height: 20px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		&:hover>span {
+			top: 0;
+		}
+	}
+	.progressBlock>span {
+		height: 20px;
+		line-height: 20px;
+		display: block;
+		position: absolute;
+		top: 20px;
+		text-align: center;
+		width: 100%;
+		white-space: nowrap;
+		font-size: 12px;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: top 0.3s;
+		color: $white;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 0 5px $black;
+		z-index: 1;
+	}
+	.progressBlock>div {
+		float: left;
+		width: 2px;
+		height: 20px;
+		margin: 0 0 0 1px;
+		background: $color_fuscous_gray_approx;
+		&.complete {
+			background: $color_mantis_80_approx;
+		}
+		&.hidden {
+			background: $color_pumice_80_approx;
+			&+.hidden {
+				background: $color_pumice_70_approx;
+				&+.hidden {
+					background: $color_pumice_60_approx;
+					&+.hidden {
+						background: $color_pumice_50_approx;
+						&+.hidden {
+							background: $color_pumice_40_approx;
+							&+.hidden {
+								background: $color_pumice_30_approx;
+								&+.hidden {
+									background: $color_pumice_20_approx;
+									&+.hidden {
+										background: $color_pumice_10_approx;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.countdown {
+		font-family: $font_3, $font_4, $font_5;
+		font-size: 16px;
+		text-align: center;
+		white-space: nowrap;
+	}
+	.tipContainer {
+		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		.tipContent {
+			white-space: normal;
+		}
+		.noticesContainer {
+			white-space: nowrap;
+			overflow: visible;
+		}
+		.warningNotice>div {
+			margin: 5px;
+			margin-right: 0;
+			border: 1px solid $red;
+			background: $color_cocoa_bean_approx;
+			color: $white;
+			font-size: 12px;
+		}
+		.Notice>div {
+			margin: 5px;
+			margin-right: 0;
+			border: 1px solid $color_cerulean_approx;
+			background: $color_blue_dianne_approx;
+			color: $white;
+			font-size: 12px;
+		}
+	}
+	.noticesContainer>div {
+		display: inline-block;
+		vertical-align: top;
+		white-space: normal;
+	}
+	.noticesContainer>div>div {
+		overflow-x: hidden;
+		overflow-y: auto;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 5px $black;
+	}
+	.scrollStyle::-webkit-scrollbar {
+		width: 5px;
+		display: block;
+	}
+	.scrollStyle::-webkit-scrollbar-button {
+		width: 5px;
+		height: 10px;
+		background: $color_dove_gray_approx;
+	}
+	.scrollStyle::-webkit-scrollbar-track-piece {
+		width: 5px;
+		background: $color_pumice_approx;
+		background: linear-gradient(to right, $color_pumice_approx 0,$white_100 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_pumice_approx', endcolorstr='$white',gradienttype=1 );
+	}
+	.scrollStyle::-webkit-scrollbar-thumb {
+		width: 5px;
+		background: $color_silver_approx;
+		background: linear-gradient(to right, $color_silver_approx 0,$color_boulder_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_silver_approx', endcolorstr='$color_boulder_approx',gradienttype=1 );
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px;
+	}
+	.scrollStyle::-webkit-scrollbar-corner {
+		width: 5px;
+		background: $color_fuscous_gray_approx;
+	}
+	.scrollStyle::-webkit-resizer {
+		width: 5px;
+		background: $black;
+	}
+	.widgetContainer {
+		padding: 5px;
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.widgetContainer>div {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 5px $black;
+		padding: 5px;
+		margin-right: 0;
+		background: $white;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		height: 100%;
+	}
+	.widgetLeft {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 70px;
+		height: 100%;
+		z-index: 100;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.3s;
+		color: $black;
+		overflow: hidden;
+		background: linear-gradient(to right, $white_90 0,$white_90 79%,rgba(255,255,255,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6ffffff', endColorstr='#00ffffff',GradientType=1 );
+		&.off {
+			width: 0;
+		}
+	}
+	.widgetLeft>div {
+		width: 100%;
+		height: 100%;
+		background: $url_5 no-repeat center center;
+		white-space: nowrap;
+	}
+	&.isTouch {
+		.widgetLeft>div {
+			background: $url_6 no-repeat center center;
+		}
+		.widgetRight>div {
+			background: $url_8 no-repeat center center;
+		}
+	}
+	.widgetLeft>div>div {
+		padding: 5px;
+		text-align: left;
+		font-size: 10px;
+		line-height: 14px;
+	}
+	.widgetRight {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 70px;
+		height: 100%;
+		z-index: 100;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.3s;
+		color: $black;
+		overflow: hidden;
+		background: linear-gradient(to right, rgba(255,255,255,0) 0,$white_90 21%,$white_90 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#e6ffffff',GradientType=1 );
+		&.off {
+			width: 0;
+		}
+	}
+	.widgetRight>div {
+		width: 100%;
+		height: 100%;
+		background: $url_7 no-repeat center center;
+		white-space: nowrap;
+	}
+	.widgetRight>div>div {
+		padding: 5px;
+		text-align: right;
+		font-size: 10px;
+		line-height: 14px;
+	}
+	#framed {
+		background: $white !important;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		margin: 4px !important;
+		padding: 4px;
+		position: relative;
+		a {
+			color: $color_storm_dust_approx;
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+	&.isApp {
+		margin: 0 auto !important;
+		.overlayFooter {
+		}
+		#exercise_content {
+			padding-bottom: 30px;
+		}
+	}
+	.clear {
+		clear: both;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		visibility: visible;
+	}
+	.right {
+		float: right;
+		margin: 5px;
+	}
+	.left {
+		float: left;
+	}
+	.error {
+		text-align: center;
+	}
+	.overlayFooter {
+		background: $color_lynch_approx;
+		background: linear-gradient(top, $color_lynch_approx 0,$color_fiord_approx 49%,$color_big_stone_approx 51%,$color_pickled_bluewood_approx 100%);
+		height: 28px;
+		line-height: 28px;
+		position: absolute;
+		width: 100%;
+		left: -4px;
+		bottom: -4px;
+		margin: 0 4px 4px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0 0 3px 3px;
+		z-index: 10;
+		button {
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: background 0.3s,color 0.3s;
+			&.footerbutton {
+				height: 28px;
+				border: none;
+				margin: 0;
+				padding: 0 15px;
+				cursor: pointer;
+				color: $color_alto_approx;
+				float: left;
+			}
+			&.asyncSave {
+				height: 28px;
+				border: none;
+				margin: 0;
+				padding: 0 20px;
+				cursor: pointer;
+				float: right;
+				font-size: 16px;
+				background: none;
+				opacity: 0.5;
+				position: relative;
+				background: $color_curious_blue_approx;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: opacity 0.3s,background 0.3s,color 0.3s !important;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			&.done {
+				background: $color_pastel_green_approx;
+				background: linear-gradient(top, $color_pastel_green_approx 0,$color_mantis_approx 49%,$color_apple_approx 51%,$color_apple_approx 100%);
+				float: right;
+				font-size: 16px;
+				color: $white;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0 0 3px 0;
+				height: 28px;
+				border: none;
+				margin: 0;
+				padding: 0 20px;
+				cursor: pointer;
+				&:hover+button {
+					&.asyncSave {
+						opacity: 1;
+					}
+					&.asyncSave>span.ambersand {
+						right: -10px;
+						opacity: 1;
+					}
+				}
+			}
+			&.scrapbookDooit {
+				overflow: hidden;
+				position: relative;
+				width: 50px;
+				padding: 0;
+				&:hover>div {
+					top: 0;
+				}
+				&.scrapbookDooitAdd>div+div {
+					background-image: $url_28;
+				}
+				&:hover>div+div {
+					top: 3px;
+				}
+			}
+			&.scrapbookDooit>div {
+				top: -10px;
+				height: 10px;
+				line-height: 10px;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+				font-size: 9px;
+				position: absolute;
+				width: 50px;
+				text-align: center;
+			}
+			&.scrapbookDooit>div+div {
+				position: relative;
+				top: 0;
+				width: 17px;
+				height: 15px;
+				background: $url_27 center center no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+			}
+			&.dooitComments {
+				overflow: hidden;
+				position: relative;
+				width: 50px;
+				padding: 0;
+				&:hover>div {
+					top: 0;
+				}
+				&:hover>div+div {
+					top: 3px;
+				}
+			}
+			&.dooitComments>div {
+				top: -10px;
+				height: 10px;
+				line-height: 10px;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+				font-size: 9px;
+				position: absolute;
+				width: 50px;
+				text-align: center;
+			}
+			&.dooitComments>div+div {
+				position: relative;
+				top: 0;
+				width: 21px;
+				height: 17px;
+				background: $url_29 center center no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+			}
+			&.dooitComments>div+div>div {
+				position: absolute;
+				background: $black_50;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 3px;
+				padding: 0 1px;
+				//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				text-shadow: 0 0 2px $black;
+				color: $white;
+				text-align: right;
+				left: 12px;
+				bottom: -2px;
+			}
+			&.dooitSnapshots {
+				overflow: hidden;
+				position: relative;
+				width: 50px;
+				padding: 0;
+				&:hover>div {
+					top: 0;
+				}
+				&:hover>div+div {
+					top: 3px;
+				}
+			}
+			&.dooitSnapshots>div {
+				top: -12px;
+				height: 10px;
+				line-height: 10px;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+				font-size: 9px;
+				position: absolute;
+				width: 50px;
+				text-align: center;
+			}
+			&.dooitSnapshots>div+div {
+				position: relative;
+				top: 0;
+				width: 21px;
+				height: 17px;
+				background: $url_30 center center no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+			}
+			&.dooitSnapshots>div+div>div {
+				position: absolute;
+				background: $black_50;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 3px;
+				padding: 0 1px;
+				//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				text-shadow: 0 0 2px $black;
+				color: $white;
+				text-align: right;
+				left: 12px;
+				bottom: -2px;
+			}
+			&.dooitHelp {
+				overflow: hidden;
+				position: relative;
+				width: 50px;
+				padding: 0;
+				&:hover>div {
+					top: 0;
+				}
+				&:hover>div+div {
+					top: 3px;
+				}
+			}
+			&.dooitHelp>div {
+				top: -10px;
+				height: 10px;
+				line-height: 10px;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+				font-size: 9px;
+				position: absolute;
+				width: 50px;
+				text-align: center;
+			}
+			&.dooitHelp>div+div {
+				position: relative;
+				top: 0;
+				width: 21px;
+				height: 17px;
+				background: $url_34 center center no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: top 0.2s;
+			}
+			&#voiceoverbutton {
+				background: $url_35 center center no-repeat !important;
+				background-position: center 5px;
+				background-repeat: no-repeat;
+				width: 50px;
+				overflow: hidden;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: background 0.2s,width 0.2s;
+				&.isPlaying {
+					background-image: $url_36 !important;
+					width: 100px;
+				}
+				&.isPlaying>div {
+					display: block;
+				}
+			}
+			&#voiceoverbutton>div {
+				display: none;
+			}
+			&.asyncSave>span.ambersand {
+				position: absolute;
+				right: 0;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: opacity 0.3s,right 0.3s;
+				opacity: 0;
+			}
+		}
+		.finishCheck {
+			position: absolute;
+			background: $color_tom_thumb_approx;
+			background: linear-gradient(top, $color_tom_thumb_approx 0,$color_pastel_green_approx 100%);
+			bottom: -1px;
+			right: 0;
+			border-right: none;
+			border-bottom: none;
+			color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px 0 0 0 !important;
+			a {
+				color: $white !important;
+				&:hover {
+					color: $black !important;
+				}
+			}
+		}
+		.scrapbookOptions {
+			button {
+				display: block;
+				padding-left: 50px;
+				background: $url_22 no-repeat;
+				color: $color_cloud_burst_approx;
+				float: none;
+				&#scrapbookaddsnapshot {
+					background-position: 0 0;
+					&:hover {
+						background-position: 0 -28px;
+					}
+				}
+				&#scrapbookadd {
+					background-position: 0 -56px;
+					&:hover {
+						background-position: 0 -84px;
+					}
+				}
+				&#scrapbookcomments {
+					background-position: 0 -112px;
+					&:hover {
+						background-position: 0 -140px;
+					}
+				}
+			}
+			.comment {
+				font-size: 10px;
+				text-align: left;
+				line-height: 14px;
+				padding: 2px;
+				.when {
+					text-align: right;
+				}
+				&.inbox {
+					background: $color_link_water_approx;
+					color: $color_nepal_approx;
+					border-top: 1px solid $color_nepal_approx;
+				}
+				&.outbox {
+					background: $color_zircon_approx;
+					color: $color_nepal_approx;
+					border-top: 1px solid $color_nepal_approx;
+				}
+				&.hasSnapshot {
+					background-image: $url_23;
+					background-position: 3px 3px;
+					background-repeat: no-repeat;
+					cursor: pointer;
+					&:hover {
+						background-color: $color_snow_flurry_approx;
+						color: $color_envy_approx;
+					}
+				}
+			}
+			.commenter textarea {
+				float: none;
+				width: 100%;
+				height: 32px;
+				border: 1px solid $color_mountain_mist_approx;
+				display: block;
+				margin: 2px 0;
+			}
+		}
+		#voiceoverbutton {
+			.progressContainer {
+				position: relative;
+				height: 100%;
+				line-height: 28px;
+			}
+			.progress {
+				position: absolute;
+				top: 3px;
+				height: 2px;
+				width: 70px;
+				background: $black;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 5px $white;
+				.bar {
+					height: 2px;
+					background: $color_botticelli_approx;
+				}
+			}
+		}
+		.footerWarning {
+			position: absolute;
+			bottom: 0;
+			background: $color_gravel_approx;
+			background: linear-gradient(to bottom, $color_gravel_approx 0,$black_100 100%);
+			filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_gravel_approx', endcolorstr='$black',gradienttype=0 );
+			color: $white;
+			width: 100%;
+			line-height: 28px;
+			text-align: center;
+			z-index: 999;
+			&.saveWarning {
+				background: $color_deco_approx;
+				background: linear-gradient(to bottom, $color_deco_approx 0,$color_celery_approx 100%);
+				filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_deco_approx', endcolorstr='$color_celery_approx',gradienttype=0 );
+				color: $color_mine_shaft_approx;
+				border-top: 1px solid $color_mine_shaft_approx;
+				button {
+					//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: 0 0 3px $black;
+					&:hover {
+						//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: 0 0 6px $black;
+					}
+				}
+			}
+			button {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 3px;
+				height: 20px;
+				line-height: 20px;
+				margin: 4px 5px;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 3px $white;
+				background: $color_concord_approx;
+				background: linear-gradient(to bottom, $color_concord_approx 0,$color_woodsmoke_approx 100%);
+				filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_concord_approx', endcolorstr='$color_woodsmoke_approx',gradienttype=0 );
+				float: none;
+				color: $white;
+				&:hover {
+					//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: 0 0 6px $white;
+					background: $color_tower_gray_approx;
+					background: linear-gradient(to bottom, $color_tower_gray_approx 0,$color_tapa_approx 50%,$color_marshland_approx 51%,$color_cod_gray_approx 100%);
+					filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_tower_gray_approx', endcolorstr='$color_cod_gray_approx',gradienttype=0 );
+				}
+			}
+		}
+		.coverall {
+			display: none;
+			position: absolute;
+			bottom: -28px;
+			width: 100%;
+			z-index: 998;
+			background: $white;
+			opacity: 0;
+		}
+		.dialog {
+			position: absolute;
+			bottom: 0;
+			width: inherit;
+			background: $color_navy_blue_approx;
+			width: 100%;
+			z-index: 999;
+			display: none;
+		}
+		.dialog>div {
+			padding: 10px 74px 10px 10px;
+		}
+		.dialog>div>button {
+			border: none;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			background: $color_tapa_approx;
+			color: $white;
+			cursor: pointer;
+			margin: 0 5px;
+			&:hover {
+				background: $color_cape_cod_approx;
+			}
+		}
+	}
+	.overlayFooter>button {
+		background: $color_lynch_approx;
+		background: linear-gradient(top, $color_lynch_approx 0,$color_fiord_approx 49%,$color_big_stone_approx 51%,$color_pickled_bluewood_approx 100%);
+	}
+	.overlayFooter>*>button {
+		background: $color_lynch_approx;
+		background: linear-gradient(top, $color_lynch_approx 0,$color_fiord_approx 49%,$color_big_stone_approx 51%,$color_pickled_bluewood_approx 100%);
+	}
+	.progressBack {
+		background: $url_24 left -42px;
+		width: 200px;
+		height: 41px;
+		margin: 10px 10px 10px 0;
+		float: left;
+	}
+	.progress {
+		height: 41px;
+		background: $url_24 left 0;
+		float: left;
+	}
+	.progressText {
+		font-size: 18px;
+		float: left;
+		line-height: 41px;
+		margin: 10px 10px 10px 0;
+	}
+	.half {
+		width: 50%;
+		float: left;
+		clear: none;
+		&.halfLeft>div {
+			padding: 5px;
+		}
+		&.halfLeft {
+			background: linear-gradient(to right, rgba(255,255,255,0) 0,$white_10 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#1affffff',GradientType=1 );
+		}
+	}
+	.half>div {
+		padding: 0 5px;
+	}
+	.tip {
+		.Notice {
+			padding: 3px;
+		}
+		.warningNotice {
+			padding: 3px;
+		}
+		.Notice>div {
+			@extend %extend_7;
+			padding: 5px;
+		}
+		.warningNotice>div {
+			@extend %extend_7;
+			padding: 5px;
+			font-size: 14px;
+		}
+		.noticeScroller {
+			float: right;
+			width: 20px;
+			position: relative;
+			background: linear-gradient(to right, rgba(255,255,255,0) 0,$white_10 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#1affffff',GradientType=1 );
+		}
+		.noticeContainer {
+			overflow: hidden;
+		}
+		.scrollButton {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			width: 20px;
+			cursor: row-resize;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.tipContent {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			background: $color_blue_zodiac_approx;
+			background: $black_10;
+			padding: 20px;
+			margin: 0 10px;
+		}
+	}
+	h3 {
+		color: $white;
+		font-size: 18px;
+		margin: 0 0 5px 0;
+	}
+	#exercise_content {
+		h2 {
+			color: $color_dodger_blue_approx;
+		}
+		h3 {
+			color: $color_rhino_approx !important;
+		}
+	}
+	.episodeText {
+		padding: 2px 10px;
+		color: $color_fuscous_gray_approx;
+		font-size: 14px;
+		margin: 3px;
+		b {
+			color: $black;
+		}
+	}
+	#progress {
+		margin: 10px;
+	}
+	.alert {
+		color: $yellow;
+		font-size: 14px;
+	}
+	.tabset_content_container {
+		clear: both;
+		border: 2px solid $color_rhino_approx;
+		a {
+			display: inline-block;
+			border: 1px solid $color_periwinkle_approx;
+			margin: 3px;
+			padding: 2px 4px;
+			text-align: center;
+			cursor: pointer;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			text-decoration: none;
+		}
+	}
+	.yoodoohelp {
+		@extend %extend_8;
+		line-height: 16px;
+	}
+	.scrapbookOptions {
+		@extend %extend_8;
+	}
+	.exportTypes {
+		@extend %extend_8;
+		button {
+			background: $url_26 no-repeat !important;
+			width: 38px;
+			height: 37px;
+			margin: 0 5px;
+			padding: 0;
+			&.xls {
+				background-position: 0 0;
+				&:hover {
+					background-position: 0 -37px;
+				}
+			}
+			&.csv {
+				background-position: -38px 0;
+				&:hover {
+					background-position: -38px -37px;
+				}
+			}
+		}
+	}
+	.dooitclosewarning {
+		background: $color_apple_approx;
+		background: $color_lynch_approx;
+		a {
+			color: $white !important;
+			white-space: nowrap;
+			text-decoration: none;
+			display: block;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.top_comment {
+		padding: 5px;
+		clear: both;
+		button {
+			float: right;
+		}
+	}
+	.sub_comment {
+		padding-left: 30px;
+		clear: both;
+		button {
+			float: right;
+		}
+	}
+	.comment_author {
+		font-size: 13px;
+		font-weight: bold;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+	.comment_body {
+		color: $color_mountain_mist_approx;
+		overflow: auto;
+	}
+	.comment_form {
+		clear: both;
+	}
+	.comment_text {
+		width: 500px;
+		height: 100px;
+		border: 2px solid $color_lima_approx;
+	}
+	#scrapbook {
+		.boxnt_left_title {
+			color: $color_cello_approx;
+			font-size: 20px;
+			margin: 2px 0;
+			padding: 0 10px;
+		}
+		.boxnt_right_subtitle {
+			color: $color_apple_approx;
+			font-size: 16px;
+			float: right;
+		}
+		.scrapbookDescription {
+			clear: both;
+			font-size: 14px;
+			color: $color_storm_dust_approx;
+		}
+		.filter {
+			.float_right {
+				float: right;
+			}
+			.ddContainerSmall {
+				white-space: nowrap;
+				width: 300px;
+				text-align: left;
+				height: 24px;
+				div {
+					float: left;
+					float: left;
+				}
+			}
+		}
+		.scrapbookEntry {
+			clear: both;
+			border-top: 1px solid $color_gallery_approx;
+			padding: 10px 0;
+			.scrapbookImage {
+				float: left;
+				margin: 0 5px 5px 0;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	.float_left {
+		float: left;
+	}
+	.float_right {
+		float: right;
+	}
+	#yoodooAlert {
+		text-align: center;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		background: $color_yellow_orange_approx;
+		background: linear-gradient(to bottom, $color_yellow_orange_approx 0,$color_west_side_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_yellow_orange_approx', endcolorstr='$color_west_side_approx',gradienttype=0 );
+		font-size: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		.alertButtons button {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			background: $white;
+			background: linear-gradient(to bottom, $white_100 0,$mercury_100 100%);
+			filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$white', endcolorstr='$mercury',gradienttype=0 );
+			border: 1px solid $color_silver_chalice_approx;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 5px $black;
+			font-size: 18px;
+			margin: 5px;
+			padding: 5px 10px;
+			cursor: pointer;
+			&:hover {
+				background: $color_starship_approx;
+				background: linear-gradient(to bottom, $color_starship_approx 0,$color_conifer_approx 100%);
+				filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_starship_approx', endcolorstr='$color_conifer_approx',gradienttype=0 );
+			}
+		}
+	}
+	.snapshotList {
+		min-height: 120px;
+		.snapshotBin {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 74px;
+			height: 100%;
+			background: $url_31 center center no-repeat $black_80;
+			color: $white_50;
+			text-align: center;
+			min-height: 120px;
+			&.hover {
+				background-image: $url_32;
+			}
+		}
+	}
+	.snapshotList {
+		&>.buttonDiv {
+			display: inline-block;
+			font-size: 8px;
+			line-height: 12px;
+			text-align: center;
+			width: 60px;
+			height: 40px;
+			white-space: nowrap;
+			cursor: pointer;
+			overflow: hidden;
+			border: none;
+			background: none;
+			margin: 2px;
+			padding: 0;
+			&.ui-draggable-dragging {
+				z-index: 999;
+			}
+			&.inComment>span {
+				background-position: -20px 0;
+			}
+			&.viewing>span {
+				background-position: 0 -48px;
+			}
+			&.inComment {
+				&.viewing>span {
+					background-position: -20px -48px;
+				}
+				&:hover>span {
+					background-position: -20px -24px;
+				}
+				&.viewing:hover>span {
+					background-position: -20px -48px;
+				}
+			}
+			&:hover>span {
+				background-position: 0 -24px;
+			}
+			&.addSnapshot {
+				&.saving {
+					color: rgba(0,0,0,0);
+					&:hover {
+						color: rgba(0,0,0,0);
+					}
+				}
+				&.saving>span {
+					color: rgba(0,0,0,0);
+					background: $url_13 no-repeat center center $white;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 3px;
+				}
+			}
+			&.addSnapshot>span {
+				background: $url_30 center center no-repeat;
+				color: $color_green_approx;
+				text-align: right;
+				font-size: 18px;
+				//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				text-shadow: 0 0 1px $black;
+			}
+			&.viewing:hover>span {
+				background-position: 0 -48px;
+			}
+		}
+		&.buttonDiv>span {
+			display: block;
+			margin: 0 auto;
+			width: 20px;
+			height: 24px;
+			background: $url_33 no-repeat 0 0;
+		}
+	}
+	.yd_mobileOptions {
+		margin: 5px 20px;
+		padding: 5px;
+		text-align: center;
+		background: $black_10;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+	}
+	.yd_moviePlaybutton {
+		background: rgba(0,0,0,0);
+	}
+	.clipboard {
+		max-height: inherit;
+		h2 {
+			margin: 0 0 10px 0;
+			color: $color_fuscous_gray_approx;
+			position: absolute;
+			top: 0;
+		}
+		button {
+			width: 100%;
+			min-width: 200px;
+			line-height: 22px;
+			text-align: left;
+			margin: 0;
+		}
+		button>div {
+			font-size: 10px;
+			line-height: 14px;
+			color: $color_mountain_mist_approx;
+			clear: both;
+		}
+		button>span {
+			float: right;
+			white-space: nowrap;
+			font-size: 11px;
+			display: block;
+		}
+		button>span>button {
+			width: auto;
+			padding: 2px;
+			margin: 0 0 0 10px;
+			min-width: 0;
+			&:hover {
+				background: $red;
+			}
+		}
+	}
+	.advisorBubble>div>.spike {
+		width: 10px;
+		height: 7px;
+		position: absolute;
+		right: 0;
+		top: -12px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px 5px 0 0;
+		background: $color_picton_blue_approx;
+	}
+	&.Explorer8 .progressBlock>div {
+		&.complete {
+			background: $color_mantis_approx;
+		}
+		&.hidden {
+			background: $color_quill_gray_approx;
+		}
+		&.hidden{
+			&+.hidden {
+				background: $color_iron_approx;
+				&+.hidden {
+					background: $color_alto_approx;
+					&+.hidden {
+						background: $color_bon_jour_approx;
+						&+.hidden {
+							background: $color_mercury_approx;
+							&+.hidden {
+								background: $color_cararra_approx;
+								&+.hidden {
+									background: $color_gallery_approx;
+									&+.hidden {
+										background: $color_wild_sand_approx;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.notwebkit .scrollStyle {
+		scrollbar-track-color: $white;
+		scrollbar-face-color: $color_mountain_mist_approx;
+	}
+	.scrollStyle:hover::-webkit-scrollbar {
+		display: block;
+	}
+	.login>div input {
+		@extend %extend_3;
+		&:focus {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 5px $black;
+		}
+	}
+	&.isMouse .overlayFooter button.footerbutton:hover {
+		background: $color_regent_gray_approx;
+		background: linear-gradient(top, $color_regent_gray_approx 0,$color_pale_sky_approx 49%,$color_fiord_approx 51%,$color_blue_bayoux_approx 100%);
+		color: $white;
+	}
+	.tip>div p {
+		color: $white;
+		font-size: 16px;
+	}
+	ul.tabset_tabs li {
+		background: none;
+		height: 28px;
+		line-height: 28px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px 3px 0 0;
+		list-style: none;
+		float: left;
+		a {
+			padding: 0 10px;
+			text-decoration: none;
+			font-size: 18px;
+		}
+		&.active {
+			background: $url_19 repeat-x;
+			border: 1px solid $color_rhino_approx;
+			border-bottom: none;
+			a {
+				color: $white !important;
+			}
+		}
+	}
+}
+#yoodooContainerContent {
+	@extend %extend_5;
+	.welcome {
+		padding: 20px;
+		text-align: left;
+		color: $white;
+		center {
+			@extend %extend_1;
+		}
+	}
+	a {
+		&.medium {
+			background: $color_chambray_approx;
+			background: linear-gradient(top, $color_chambray_approx 0,$color_nile_blue_approx 100%);
+			@extend %extend_6;
+			&:hover {
+			}
+		}
+		&.red {
+			background: $url_16 repeat-x;
+		}
+	}
+	.inputline {
+		padding: 5px 50px;
+		height: 32px;
+		label {
+			line-height: 32px;
+		}
+	}
+	.yoodoo-title {
+		font-size: 24px;
+		color: $white;
+		line-height: 28px;
+		display: inline-block;
+	}
+	.yoodoo-medium {
+		background: $url_10 no-repeat;
+		width: 82px;
+		height: 28px;
+		margin: 2px 0 0 10px;
+	}
+	p {
+		margin: 2px 0;
+	}
+	.login {
+		color: $white;
+	}
+	.dashboardLogo {
+		background: $url_11 bottom right no-repeat;
+	}
+	.login>div {
+	}
+	img {
+	}
+	.footerLinks {
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		a {
+			font-size: 10px;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.yd_overlay {
+	background: $white_50;
+}
+@media screen and(orientation : landscape) {
+	.devicePortrait {
+		display: none !important;
+	}
+}
+@media screen and(orientation : portrait) {
+	.deviceLandscape {
+		display: none !important;
+	}
+}
+button::-moz-focus-inner {
+	border: 1px dotted transparent;
+}
+input[type="reset"]::-moz-focus-inner {
+	border: 1px dotted transparent;
+}
+input[type="button"]::-moz-focus-inner {
+	border: 1px dotted transparent;
+}
+input[type="submit"]::-moz-focus-inner {
+	border: 1px dotted transparent;
+}
+button {
+	&:focus::-moz-focus-inner {
+	}
+	&.asLink {
+		background: none;
+		border: none;
+		margin: 0;
+		display: inline;
+		padding: 0;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+.portrait {
+	#yoodooWidgetPortrait {
+		display: block;
+	}
+	#yoodooWidget.isApp {
+		display: none;
+	}
+}
+#yoodooWidgetPortrait {
+	display: none;
+	text-align: center;
+	vertical-align: middle;
+}
+.eezshortlist {
+	font-family: $font_0, $font_1, $font_2;
+}
+.dropdown {
+	font-family: $font_0, $font_1, $font_2;
+}
+#yoodooWhiteout {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 7px;
+	@extend %extend_5;
+	background: $white_50;
+}
+#yoodooWait {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 7px;
+	@extend %extend_5;
+	z-index: 999;
+	height: 80px;
+	text-align: center;
+	background: $url_12;
+	.loading {
+		width: 28px;
+		height: 28px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 14px;
+		background: $url_13 center center no-repeat $white;
+		margin: 10px auto;
+	}
+	.oops {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		padding: 20px;
+		border: 1px solid $white;
+		background: $color_san_juan_approx;
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+#yoodooWait>div {
+	background: $white_90;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 50px $black;
+	padding: 10px;
+	display: inline-block;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: width 0.3s;
+	white-space: nowrap;
+	color: $black;
+}
+.hideFrame {
+	display: none;
+	width: 400px;
+	height: 400px;
+	border: none;
+}
+.dooitBox {
+	padding: 4px;
+	.dooitBoxBack {
+		background: $white;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px;
+		padding: 10px;
+		color: $color_black_rock_approx;
+		overflow: auto;
+	}
+}
+.dooitLogo {
+}
+#exercise_content {
+	width: auto !important;
+	float: none !important;
+}
+.yoodoo_debugger {
+	position: fixed;
+	border-left: 1px solid $color_fuscous_gray_approx;
+	padding: 0;
+	top: 0;
+	right: 0;
+	background: $white_50;
+	color: $color_fuscous_gray_approx;
+	min-width: 100px;
+	max-width: 300px;
+	height: 100%;
+	font-family: $font_3, $font_4, $font_5;
+	overflow: auto;
+	z-index: 999;
+	.tag_debug>div {
+		padding: 0 5px;
+		line-height: 16px;
+		background: $white;
+		color: $color_fuscous_gray_approx;
+		font-size: 11px;
+		white-space: nowrap;
+		&.addTag {
+			color: $color_japanese_laurel_approx;
+		}
+		&.removeTag {
+			color: $color_red_berry_approx;
+		}
+	}
+	.meta_debug>div {
+		padding: 0 5px;
+		line-height: 16px;
+		background: $white;
+		color: $color_fuscous_gray_approx;
+		font-size: 11px;
+		white-space: nowrap;
+		&.cachedMeta {
+			color: $color_japanese_laurel_approx;
+		}
+	}
+	.post_debug>div {
+		padding: 0 5px;
+		line-height: 16px;
+		background: $white;
+		color: $color_fuscous_gray_approx;
+		font-size: 11px;
+		white-space: nowrap;
+	}
+	.post_debug>div+div {
+		color: $color_storm_dust_approx;
+	}
+	.post_debug>div+div+div {
+		color: $color_tapa_approx;
+	}
+	.post_debug>div+div+div+div {
+		color: $color_suva_gray_approx;
+	}
+	.post_debug>div+div+div+div+div {
+		color: $color_mountain_mist_approx;
+	}
+	.post_debug>div+div+div+div+div+div {
+		color: $color_silver_chalice_approx;
+	}
+	.post_debug>div+div+div+div+div+div+div {
+		color: $color_pink_swan_approx;
+	}
+	.post_debug>div+div+div+div+div+div+div+div {
+		color: $color_celeste_approx;
+	}
+	.post_debug>div+div+div+div+div+div+div+div+div {
+		color: $color_alto_approx;
+	}
+	.post_debug>div+div+div+div+div+div+div+div+div+div {
+		color: $color_gallery_approx;
+	}
+}
+.yoodoo_debugger>button {
+	margin: 0;
+	border: none;
+	border-left: 1px solid $color_fuscous_gray_approx;
+	padding: 2px 5px;
+	cursor: pointer;
+	background: $color_fuscous_gray_approx;
+	color: $white;
+	width: 100%;
+	&:hover {
+		background: $color_mountain_mist_approx;
+		color: $white;
+	}
+}
+.yoodoo_debugger>div {
+	clear: both;
+	white-space: nowrap;
+	background: $color_fuscous_gray_approx;
+	color: $white;
+	padding: 1px 3px;
+}
+.yoodooBubble {
+	z-index: 999;
+	position: absolute;
+	max-width: 200px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	background: $color_fuscous_gray_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 10px $black;
+	color: $white;
+	border: 1px solid $black;
+	font: 100 12px/14px $font_0, $font_1, $font_2;
+}
+.clipboardArena {
+	padding: 36px 0 0;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box !important;
+	position: relative;
+	max-height: inherit;
+	min-height: 100px;
+	min-width: 200px;
+}
+.clipboardList {
+	max-height: inherit;
+	overflow-y: auto;
+}
+.loading {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.loading>div {
+	height: 0;
+	top: 50%;
+	position: absolute;
+	width: 100%;
+}
+.loading>div>div {
+	background: $url_13 center center no-repeat $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50px;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top: -12px;
+	margin: 0 auto;
+}
+input[type="file"] > {
+	input[type="button"]::-moz-focus-inner {
+		border: 1px dotted transparent;
+	}
+	input[type="button"]:focus::-moz-focus-inner {
+	}
+}
+input[type="reset"]:focus::-moz-focus-inner {
+}
+input[type="button"]:focus::-moz-focus-inner {
+}
+input[type="submit"]:focus::-moz-focus-inner {
+}
+body.portrait {
+	background-image: $url_9;
+	background-position: center center;
+}
+.landscape #yoodooWidget.isApp {
+	display: block;
+}
+.hide #yoodooWidget.isApp .hide #yoodooWidgetPortrait {
+	display: none;
+}
+iframe#yoodooPoster {
+	display: none;
+}
+.Explorer8 #yoodooWait>div {
+	background: $white;
+}
+span.doo {
+	color: $color_lima_approx;
+}
+
+@import "yoodooObject.scss";
+@import "yoodooGroups.scss";
+@import "yoodooComments.scss";
+@import "yoodooUi.scss";

@@ -1,0 +1,479 @@
+//colors
+$groups_white_90: rgba(255,255,255,0.9);
+$groups_black: #000;
+$groups_white: #fff;
+$groups_color_steel_blue_approx: #5187b3;
+$groups_color_apple_approx: #38b916;
+$groups_color_fuscous_gray_approx: #555;
+$groups_color_malibu_approx: rgb(122,188,255);
+$groups_color_mountain_mist_approx: #999;
+$groups_red: #ff0000;
+$groups_white_95: rgba(255,255,255,0.95);
+$groups_color_onahau_50_approx: rgba(203,235,255,0.5);
+$groups_black_11: rgba(0,0,0,0.11);
+$groups_black_5: rgba(0,0,0,0.05);
+$groups_black_50: rgba(0,0,0,0.5);
+$groups_black_20: rgba(0,0,0,0.2);
+$groups_black_40: rgba(0,0,0,0.4);
+$groups_color_pink_swan_approx: #bbb;
+$groups_color_waterloo__approx: rgb(124,136,147);
+$groups_color_vulcan_approx: rgba(17,22,25,1);
+$groups_color_ziggurat_approx: rgb(189,218,237);
+$groups_color_lochmara_approx: rgba(3,125,191,1);
+
+//urls
+$groups_url_0: url(images/blank.gif);
+$groups_url_1: url(../../image/user_group_leave.png);
+$groups_url_2: url(../../image/user_group_join.png);
+$groups_url_3: url(../../image/blank_avatar.png);
+$groups_url_4: url(images/white50.png);
+
+//@extend-elements
+//original selectors
+//.yoodooGroupsMember, .yoodooGroupsOptional, .yoodooGroupsViewer
+%groups_extend_1 {
+	min-width: 30%;
+	height: 100%;
+	background: $groups_white_90;
+	visibility: hidden;
+	position: absolute;
+	//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+	box-shadow: 0 0 50px $groups_black;
+}
+
+//original selectors
+//.groupActivityGraph, .groupSyllabusGraph
+%groups_extend_2 {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 20px 0 0;
+	background: $groups_color_onahau_50_approx;
+	border-top: 1px solid $groups_color_mountain_mist_approx;
+	border-bottom: 1px solid $groups_color_mountain_mist_approx;
+}
+
+//original selectors
+//.dooit_activity, .episode_activity
+%groups_extend_3 {
+	margin: 1px 0 0;
+	height: 2px;
+	background: $groups_black_20;
+}
+
+//original selectors
+//.dooit_activity.activity_complete, .episode_activity.activity_complete
+%groups_extend_4 {
+	height: 5px;
+	background: $groups_color_waterloo__approx;
+	background: linear-gradient(to bottom, $groups_color_waterloo__approx 0,$groups_color_vulcan_approx 100%);
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$groups_color_waterloo__approx', endcolorstr='$groups_color_vulcan_approx',gradienttype=0 );
+}
+
+//original selectors
+//.dooit_activity.activity_complete:hover, .episode_activity.activity_complete:hover
+%groups_extend_5 {
+	background: $groups_color_ziggurat_approx;
+	background: linear-gradient(to bottom, $groups_color_ziggurat_approx 0,$groups_color_lochmara_approx 100%);
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$groups_color_ziggurat_approx', endcolorstr='$groups_color_lochmara_approx',gradienttype=0 );
+}
+
+
+.yoodooGroups {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	margin: 4px;
+	background: $groups_url_0;
+}
+.yoodooGroupsMember {
+	@extend %groups_extend_1;
+	max-width: 50%;
+	left: 0;
+	top: 0;
+}
+.yoodooGroupsOptional {
+	@extend %groups_extend_1;
+	max-width: 50%;
+	right: 0;
+	top: 0;
+}
+.yoodooGroupsViewer {
+	@extend %groups_extend_1;
+	right: 0;
+	top: 0;
+	.groupuser {
+		width: 80px;
+		height: 80px;
+		margin: 13px;
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+		.groupusername {
+			position: absolute;
+			bottom: -10px;
+			text-align: center;
+			width: 100%;
+			//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+			border-radius: 3px;
+			font-size: 12px;
+			background: $groups_white;
+			border: 1px solid $groups_color_malibu_approx;
+			//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+			box-shadow: 0 0 20px $groups_color_mountain_mist_approx;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			left: -1px;
+		}
+		.groupuserscore {
+			position: absolute;
+			top: 5px;
+			text-align: left;
+			width: 100%;
+			font-size: 18px;
+			color: $groups_black;
+		}
+		.groupuserscore>span {
+			display: inline-block;
+			background: $groups_white;
+			//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+			border-radius: 40px;
+			text-align: center;
+			height: 20px;
+			min-width: 12px;
+			line-height: 20px;
+			padding: 0 4px;
+			//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+			box-shadow: 0 0 5px $groups_color_mountain_mist_approx;
+		}
+		.groupusercircle {
+			width: 74px;
+			height: 74px;
+			//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+			border-radius: 40px;
+			background: $groups_white;
+			border: 3px solid $groups_color_malibu_approx;
+			overflow: hidden;
+			display: inline-block;
+			//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+			box-shadow: 0 0 10px $groups_color_mountain_mist_approx;
+			//Instead of the line below you could use @include transition($groups_transition-1, $groups_transition-2, $groups_transition-3, $groups_transition-4, $groups_transition-5, $groups_transition-6, $groups_transition-7, $groups_transition-8, $groups_transition-9, $groups_transition-10)
+			transition: background-color 0.3s,border-color 0.3s,box-shadow 0.3s;
+		}
+		.groupuserawaiting {
+			position: absolute;
+			top: 5px;
+			text-align: right;
+			width: 100%;
+			font-size: 14px;
+			color: $groups_black;
+		}
+		.groupuserawaiting>span {
+			display: inline-block;
+			background: $groups_white;
+			text-align: center;
+			//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+			border-radius: 40px;
+			height: 20px;
+			min-width: 12px;
+			line-height: 20px;
+			padding: 0 4px;
+			//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+			box-shadow: 0 0 5px $groups_color_mountain_mist_approx;
+			//Instead of the line below you could use @include text-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+			text-shadow: 0 0 2px $groups_black;
+			color: $groups_white;
+		}
+		.groupusercircle>div {
+			width: 74px;
+			height: 74px;
+			//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+			border-radius: 40px;
+			background: $groups_url_3 center center no-repeat;
+			background-size: cover;
+		}
+		&:hover .groupusercircle {
+			background: $groups_white;
+			border-color: $groups_red;
+			//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+			box-shadow: 0 0 20px $groups_black;
+		}
+	}
+}
+.Explorer8 {
+	.yoodooGroupsMember {
+		background: $groups_white;
+	}
+	.yoodooGroupsOptional {
+		background: $groups_white;
+	}
+	.yoodooGroupsViewer {
+		background: $groups_white;
+		.groupuser {
+			.groupuserscore {
+				top: 0;
+			}
+			.groupuserscore>span {
+				border: 1px solid $groups_color_mountain_mist_approx;
+			}
+		}
+	}
+	.groupActivityGraph {
+		background: $groups_url_4;
+	}
+	.groupSyllabusGraph {
+		background: $groups_url_4;
+	}
+	.dooit_activity {
+		background: $groups_color_pink_swan_approx;
+		&:hover {
+			background: $groups_color_mountain_mist_approx;
+		}
+	}
+	.groupuserdetails.showingDetails {
+		background-color: $groups_white;
+	}
+}
+.yoodooGroupsMemberTitle {
+	padding: 10px;
+	position: relative;
+	button.closeGroups {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		cursor: pointer;
+	}
+}
+.yoodooGroupsOptionalTitle {
+	padding: 10px;
+}
+.yoodooGroupsMemberList {
+	padding: 10px;
+	overflow-y: auto;
+}
+.yoodooGroupsOptionalList {
+	padding: 10px;
+	overflow-y: auto;
+}
+.yoodooGroupsViewerList {
+	padding: 10px;
+	overflow-y: auto;
+}
+.yoodooGroupsViewerTitle {
+	padding: 10px;
+	position: relative;
+}
+.yoodooGroupsViewerTitle>label {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.yoodooGroupsViewerTitle>label>select {
+	display: block;
+}
+.yoodooGroupsMemberTitle>div {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.yoodooGroupsViewerTitle>div {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.yoodooGroupsOptionalTitle>div {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.yoodooGroupsMemberList>div {
+	//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+	border-radius: 3px;
+	background: $groups_color_steel_blue_approx;
+	color: $groups_white;
+	font-size: 12px;
+	line-height: 22px;
+	padding: 0 10px;
+	margin: 2px;
+	//Instead of the line below you could use @include transition($groups_transition-1, $groups_transition-2, $groups_transition-3, $groups_transition-4, $groups_transition-5, $groups_transition-6, $groups_transition-7, $groups_transition-8, $groups_transition-9, $groups_transition-10)
+	transition: background 0.3s;
+	cursor: pointer;
+	&:hover {
+		background: $groups_color_apple_approx;
+	}
+	&.canLeave>button {
+		background: $groups_url_1 0 0 no-repeat;
+		cursor: pointer;
+		width: 19px;
+		height: 19px;
+		float: right;
+		border: none;
+		padding: 0;
+		margin: 1px;
+		&:hover {
+			background-position: 0 -19px;
+		}
+	}
+	&.busy {
+		opacity: 0.3;
+	}
+	&.viewing {
+		background: $groups_color_fuscous_gray_approx;
+	}
+}
+.yoodooGroupsOptionalList>div {
+	//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+	border-radius: 3px;
+	background: $groups_color_fuscous_gray_approx;
+	color: $groups_white;
+	font-size: 12px;
+	line-height: 22px;
+	padding: 0 10px;
+	margin: 2px;
+	&.canJoin>button {
+		background: $groups_url_2 0 0 no-repeat;
+		cursor: pointer;
+		width: 19px;
+		height: 19px;
+		float: right;
+		border: none;
+		padding: 0;
+		margin: 1px;
+		&:hover {
+			background-position: 0 -19px;
+		}
+	}
+	&.busy {
+		opacity: 0.3;
+	}
+	&.viewing {
+		background: $groups_color_fuscous_gray_approx;
+	}
+}
+.groupuserdetails {
+	cursor: default;
+	z-index: 600;
+	border: 3px solid $groups_red;
+	width: 74px;
+	height: 74px;
+	//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+	border-radius: 40px;
+	position: absolute;
+	background: rgba(255,255,255,0);
+	top: 0;
+	left: 0;
+	//Instead of the line below you could use @include transition($groups_transition-1, $groups_transition-2, $groups_transition-3, $groups_transition-4, $groups_transition-5, $groups_transition-6, $groups_transition-7, $groups_transition-8, $groups_transition-9, $groups_transition-10)
+	transition: background-color 0.5s,border-color 0.5s,border-radius 0.5s;
+	.groupuseravatar {
+		float: right;
+		width: 74px;
+		height: 74px;
+		//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+		border-radius: 40px;
+		background: $groups_white;
+		border: 3px solid $groups_color_malibu_approx;
+		overflow: hidden;
+		display: inline-block;
+		//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+		box-shadow: 0 0 10px $groups_color_mountain_mist_approx;
+		background: $groups_url_3 center center no-repeat;
+		background-size: cover;
+	}
+	&.showingDetails {
+		//Instead of the line below you could use @include border-radius($groups_radius, $groups_vertical-radius)
+		border-radius: 5px;
+		border-color: $groups_color_malibu_approx;
+		background-color: $groups_white_95;
+	}
+}
+#yoodooWidget {
+	.groupuserdetails h2 {
+		color: $groups_color_malibu_approx;
+		margin: 0 0 10px 0;
+	}
+	.yoodooGroups button.closeBySlide {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+	}
+}
+.yd_blockout {
+	z-index: 599;
+	cursor: default;
+	position: absolute;
+	background: rgba(0,0,0,0);
+}
+.groupGraphs {
+	width: 85%;
+	margin: 5px auto;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 1px solid $groups_color_fuscous_gray_approx;
+	//Instead of the line below you could use @include box-shadow($groups_shadow-1, $groups_shadow-2, $groups_shadow-3, $groups_shadow-4, $groups_shadow-5, $groups_shadow-6, $groups_shadow-7, $groups_shadow-8, $groups_shadow-9, $groups_shadow-10)
+	box-shadow: 0 0 5px $groups_color_mountain_mist_approx;
+	position: relative;
+}
+.groupActivityGraph {
+	height: 100px;
+	@extend %groups_extend_2;
+}
+.groupSyllabusGraph {
+	@extend %groups_extend_2;
+}
+.groupActivityGraphBars {
+	white-space: nowrap;
+	height: inherit;
+	overflow: visible;
+	position: absolute;
+}
+.groupActivityGraphBars>div {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.groupActivityGraphMonths {
+	white-space: nowrap;
+	height: 100%;
+	position: absolute;
+	overflow: visible;
+	top: 0;
+}
+.groupActivityGraphMonths>div {
+	height: inherit;
+	background: linear-gradient(to right, $groups_black_11 0,$groups_black_5 53%,rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c000000', endColorstr='#00000000',GradientType=1 );
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+}
+.groupActivityGraphMonths>div>div {
+	white-space: normal;
+	font-size: 10px;
+	color: $groups_black_50;
+	margin: 2px;
+	line-height: auto;
+}
+.dooit_activity {
+	@extend %groups_extend_3;
+	&.activity_complete {
+		@extend %groups_extend_4;
+		&:hover {
+			@extend %groups_extend_5;
+		}
+	}
+	&:hover {
+		background: $groups_black_40;
+	}
+}
+.episode_activity {
+	@extend %groups_extend_3;
+	background: $groups_color_pink_swan_approx;
+	&.activity_complete {
+		@extend %groups_extend_4;
+		&:hover {
+			@extend %groups_extend_5;
+		}
+	}
+	&:hover {
+		background: $groups_black_40;
+		background: $groups_color_mountain_mist_approx;
+	}
+}
