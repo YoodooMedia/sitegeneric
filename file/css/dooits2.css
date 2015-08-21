@@ -1,0 +1,202 @@
+.cssDetector_dooits2{display:none;}
+.cssDetector_dooits{display:none;}
+#yoodooWidget .dooitBox h2{
+	/*color:#233d63;
+	font-size:20px;*/
+	margin:2px 0px 20px 0px;
+}
+#yoodooWidget .dooitBox .teaser{
+	color:#53a830;
+	font-size:16px;
+	width:80%;
+}
+#yoodooWidget .dooitBox h3{
+	color:#233d63;
+	font-size:16px;
+	margin:2px 0px;
+}
+.dooitBox h1,.dooitBox h2,.dooitBox h3,.dooitBox h4{
+	text-shadow:0px 0px 1px rgba(0,0,0,0.5);
+}
+#yoodooWidget .dooitBox h4{
+	margin:1px;
+}
+.eezshortlist{
+	position:absolute;
+	-webkit-border-radius:0px 0px 5px 5px;
+	-o-border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	border-radius:0px 0px 5px 5px;
+	border:1px solid #949494;
+	background:#e9e9e9;
+	color:#474c3a;
+	max-height:150px;
+	overflow:auto;
+	width:200px;
+	z-index:999;
+	display:none;
+}
+.eezshortlist ul{
+	padding:3px 5px 5px 5px;
+	margin:3px 5px 5px 5px;
+}
+.eezshortlist li{
+	list-style:none;
+	font-size:12px;
+	color:#474c3a;
+	cursor:pointer;
+	padding:2px 2px;
+}
+.eezshortlist li.over{
+	background:#949494;
+	color:#fff;
+}
+.arrow{
+	background:url(../../image/arrow.png) no-repeat;
+	width:30px;
+	height:30px;
+	position:absolute;
+	z-index:502;
+}
+.dooitBox a.select{
+	text-decoration:none;
+	display:inline-block;
+	/*background:url(../../image/dooits/select.gif) no-repeat center right;*/
+	line-height:22px;
+	height:22px;
+	padding:0px 22px 0px 2px;
+	overflow:hidden;
+	border:1px solid #949494;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	vertical-align:bottom;
+	min-width:40px;
+background:url(../../image/select.gif) no-repeat top right;
+}
+.dooitBox a.select:hover{
+	background-position:right -22px;
+}
+.dropdown{
+	position:absolute;
+	border:1px solid #000;
+	border-top:none;
+	border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	-webkit-border-radius:0px 0px 5px 5px;
+	-o-border-radius:0px 0px 5px 5px;
+	background:#fff;
+	display:none;
+	z-index:503;
+	max-height:150px;
+	overflow:auto;
+	font-size:12px;
+}
+.blockout{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:502;
+}
+.dropdown ul{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.dropdown li{
+	list-style:none;
+	cursor:pointer;
+	padding:2px;
+	margin:0px;
+	color:#555;
+}
+.dropdown li:hover,.dropdown li.over{
+	list-style:none;
+	cursor:pointer;
+	padding:2px;
+	margin:0px;
+	background:#333333;
+	color:#fff;
+}
+.dooitBox input,.dooitBox a.select{
+	vertical-align:bottom;
+	margin:2px;
+	white-space:nowrap;
+}
+.dooitBox button.tab{
+	background:url(../../image/dooits/tab.gif) no-repeat;
+	padding:0px 10px;
+	width:135px;
+	height:33px;
+	line-height:33px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-align:center;
+	cursor:pointer;
+	border:none;
+	outline:none;
+	color:#fff;
+}
+.dooitBox button.tab.on,.dooitBox button.tab:hover{
+	background-position:0px -33px;
+	color:#000;
+}
+.dooitBox button.tab.on{
+	cursor:default;
+}
+.dooitBox .fields textarea{
+	float:right;
+	margin:0px;
+	border:3px solid #5cb30b;
+	width:300px;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+	resize:none;
+	outline:none;
+	height:80px;
+}
+.dooitBox .fields textarea:focus{
+	-o-box-shadow:0px 0px 5px #999;
+	-moz-box-shadow:0px 0px 5px #999;
+	-webkit-box-shadow:0px 0px 5px #999;
+	-khtml-box-shadow:0px 0px 5px #999;
+	box-shadow:0px 0px 5px #999;
+}
+.dooitBox .fields input[type=text],.dooitBox .fields .answer textarea{
+	/*background:url(../../image/input_bg.gif) repeat-x;*/
+	height:22px;
+	line-height:22px;
+	padding:1px 4px;
+	border:1px solid #949494;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	/*vertical-align:bottom;*/
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(243,243,243,1)), color-stop(51%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	outline:none;
+}
+.dooitBox .fields .answer textarea{
+	width:300px;
+	height:80px;
+}
+.dooitBox .fields input[type=text]:focus,.dooitBox .fields .answer textarea:focus{
+	-o-box-shadow:0px 0px 5px #999;
+	-moz-box-shadow:0px 0px 5px #999;
+	-webkit-box-shadow:0px 0px 5px #999;
+	-khtml-box-shadow:0px 0px 5px #999;
+	box-shadow:0px 0px 5px #999;
+}

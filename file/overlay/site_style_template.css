@@ -1,0 +1,202 @@
+.cssDetector_diabetes{display:none;}
+
+#yoodooScrolledArea{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(219,240,242,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(219,240,242,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(219,240,242,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(219,240,242,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(219,240,242,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(219,240,242,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbf0f2',GradientType=0 ); /* IE6-9 */
+}
+.dooitDisplay{
+	position:relative;
+}
+#yoodooWidget .dooitDisplay .arena{
+	position:relative;
+	overflow-y:auto;
+}
+#yoodooWidget .dooitDisplay h2{
+	color:#395f87 !important;
+	font-size:24px;
+	margin:0px 0px 5px 5px !important;
+}
+#yoodooWidget .dooitDisplay h3{
+	color:#6696c9 !important;
+	font-size:18px;
+	margin:2px 0px 5px 5px !important;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay p{
+	color:#585858 !important;
+	margin:0px;
+	padding:5px;
+}
+#yoodooWidget .dooitDisplay button{
+	border-radius:5px;
+	padding:4px;
+	min-width:125px;
+	margin:10px;
+	background:#a4d1d6;
+	color:#457577;
+	border:1px solid #2f9da7;
+	box-shadow:0px 0px 4px rgba(0,0,0,0.5);
+	transition:background-color 0.5s,color 0.5s,box-shadow 0.5s !important;
+	cursor:pointer;
+}
+#yoodooWidget .dooitDisplay button:hover{
+	background:#34e1f4;
+	box-shadow:0px 0px 10px #000;
+}
+#yoodooWidget .dooitDisplay button.cta{
+	background:#a5d6a4;
+	color:#467745;
+	border:1px solid #38a72f;
+}
+#yoodooWidget .dooitDisplay button.cta:hover{
+	background:#20f61b;
+	color:#467745;
+	border:1px solid #38a72f;
+}
+#yoodooWidget .dooitDisplay button.off{
+	background:#e8e8e8;
+	color:#959595;
+	border:1px solid #959595;
+}
+#yoodooWidget .dooitDisplay button.off:hover{
+	background:#d0eccf;
+	color:#618860;
+	border:1px solid #38a72f;
+}
+#yoodooWidget .dooitDisplay button.on{
+	background:#6ff76c;
+	color:#3a8739;
+	border:1px solid #61a060;
+}
+#yoodooWidget .dooitDisplay button.on:hover{
+	background:#5ad757;
+	color:#3a8739;
+	border:1px solid #61a060;
+}
+#yoodooWidget .dooitDisplay button.rem{
+	background:#f0d4d4;
+	color:#774545;
+	border:1px solid #d6a4a4;
+	height:auto;
+}
+#yoodooWidget .dooitDisplay button.rem:hover{
+	background:#fd8888;
+	color:#a03a3a;
+	border:1px solid #ef6060;
+}
+#yoodooWidget .dooitDisplay button.disabled,#yoodooWidget .dooitDisplay button:disabled,#yoodooWidget .dooitDisplay button.disabled:hover{
+	cursor:default;
+	background:#ffffff;
+	color:#cacaca;
+	border:1px solid #dddddd;
+	box-shadow:0px 0px 0px #000;
+}
+#yoodooWidget .dooitDisplay button.back{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#f3f3f3;
+	color:#959595;
+	border:1px solid #dbdbdb;
+	box-shadow:0px 0px 1px #000;
+	min-width:70px;
+}
+#yoodooWidget .dooitDisplay button.back:hover{
+	box-shadow:0px 0px 4px #000;
+	background:#f3dfb8;
+	color:#918348;
+	border:1px solid #c9b76d;
+}
+#yoodooWidget .dooitDisplay button.next{
+	display:block;
+	margin:4px auto;
+	background:#a5d6a4;
+	color:#467745;
+	border:1px solid #38a72f;
+}
+#yoodooWidget .dooitDisplay button.next:hover{
+	background:#20f61b;
+	color:#467745;
+	border:1px solid #38a72f;
+}
+#yoodooWidget .dooitDisplay input[type=text],#yoodooWidget .dooitDisplay textarea{
+	margin:4px;
+	color:#585858;
+	border:1px solid #ababab;
+	border-radius:5px;
+	font-size:14px;
+	box-shadow:0px 0px 4px rgba(0,0,0,0.5);
+	transition:box-shadow 0.5s;
+	outline:none;
+}
+#yoodooWidget .dooitDisplay textarea{
+	padding:5px;
+}
+#yoodooWidget .dooitDisplay input[type=text]{
+	padding:0px 5px;
+	line-height:23px;
+}
+#yoodooWidget .dooitDisplay input[type=text]:focus,#yoodooWidget .dooitDisplay textarea:focus{
+	box-shadow:0px 0px 10px rgba(0,0,0,1);
+}
+#yoodooWidget .dooitDisplay input[type=text].required,#yoodooWidget .dooitDisplay textarea.required{
+	border:1px solid #ff3131;
+	box-shadow:0px 0px 4px #ff3131;
+}
+#yoodooWidget .dooitDisplay input[type=text],#yoodooWidget .dooitDisplay textarea{
+	width:50%;
+}
+#yoodooWidget .dooitDisplay div.sectioned{
+	border-radius:10px;
+	padding:5px;
+	margin:5px;
+	background:#fff;
+	border:2px solid #c3dce0;
+}
+#yoodooWidget .dooitDisplay input[type=radio]{
+	display:none;
+}
+#yoodooWidget .dooitDisplay input[type=radio]+label{
+	background:url(images/radio.png) left center no-repeat;
+	line-height:24px;
+	padding:0px 0px 0px 30px;
+	margin:1px 4px;
+	cursor:pointer;
+	display:inline-block;
+}
+#yoodooWidget .dooitDisplay input[type=radio]+label.required{
+	background:url(images/radio-required.png) left center no-repeat;
+}
+#yoodooWidget .dooitDisplay input[type=radio]:checked+label{
+	background:url(images/radio-on.png) left center no-repeat !important;
+}
+#yoodooWidget .dooitDisplay input[type=radio]:checked~input[type=radio]+label.required{
+	background:url(images/radio.png) left center no-repeat !important;
+}
+#yoodooWidget .dooitDisplay input[type=checkbox]{
+	display:none;
+}
+#yoodooWidget .dooitDisplay input[type=checkbox]+label{
+	background:url(images/check.png) left center no-repeat;
+	line-height:24px;
+	padding:0px 0px 0px 30px;
+	margin:1px 4px;
+	cursor:pointer;
+	display:inline-block;
+}
+#yoodooWidget .dooitDisplay input[type=checkbox]+label.required{
+	background:url(images/check-required.png) left center no-repeat;
+}
+#yoodooWidget .dooitDisplay input[type=checkbox]:checked+label{
+	background:url(images/check-on.png) left center no-repeat !important;
+}
+
+
+
+
+

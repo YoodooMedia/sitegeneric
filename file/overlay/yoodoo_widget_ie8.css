@@ -1,0 +1,34 @@
+.cssDetector_yoodoo_widget_ie8{display:none;}
+.#yoodooWait{
+	z-index:999;
+	/*height:466px;*/
+	height:80px;
+	text-align:center;
+	color:#fff;
+	background:url(../../image/working.gif) center center no-repeat rgb(43,73,120) !important;
+}
+#yoodooWidget .overlayFooter button:hover{
+	background-position:0px -28px;
+}
+#yoodooWidget .overlayFooter,#yoodooWidget .overlayFooter button{
+	background:url(../../image/footer.gif) repeat-x;
+}
+#yoodooWidget .yoodoohelp,#yoodooWidget .dooitclosewarning,#yoodooWidget .finishCheck, #yoodooWidget .exportTypes{
+	background:url(../../image/help_bg.gif) repeat-x top left #889ebc;
+}
+#yoodooWidget .overlayFooter button.done{
+	background:url(../../image/done.gif) repeat-x;
+}
+#yoodooWidget .overlayFooter .finishCheck{
+	background:url(../../image/undone-bg.gif) repeat-x left bottom #53a830;
+}
+
+#yoodooWidget .login center button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red{
+	background:url(../../image/button.gif) repeat-x;
+}
+#yoodooWidget .login center button:hover,#yoodooWidget .welcome center button:hover,#yoodooWidget .welcome button.logout:hover,#yoodooWidget button.green:hover,#yoodooWidget button.red:hover,#yoodooWidget a.green:hover,#yoodooWidget a.red:hover{
+	background-position:0px -33px;
+}
+#yoodooWidget button.medium,#yoodooContainerContent a.medium{
+	background:url(../../image/med-button.gif) repeat-x !important;
+}

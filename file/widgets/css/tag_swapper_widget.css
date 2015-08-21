@@ -1,0 +1,82 @@
+.cssDetector_tag_swapper_widget{display:none;}
+.tag_swapper_widget{
+	font-size:14px;
+	text-align:center;
+	height:100%;
+	position:relative;
+}
+.tag_swapper_widget .updater{
+	width:100%;
+	position:absolute;
+	bottom:0px;
+}
+#yoodooWidget .tag_swapper_widget input{
+	font-size:12px;
+	text-align:right;
+	float:none;
+	width:50%;
+}
+.tag_swapper_widget_parent .scrollStyle{
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.tag_swapper_widget_parent .scrollStyle>div{
+	height:inherit;
+}
+
+#yoodooWidget .tag_swapper_widget a{
+	text-shadow:0px 0px 5px #fff;
+	text-decoration:none;
+	color:#000;
+	display:block;
+	padding:20px 0px 5px 0px;
+	transition:padding 0.5s,color 0.5s;
+	text-align:center;
+}
+#yoodooWidget .tag_swapper_widget a b{
+	display:block;
+	margin-top:7px;
+	font-weight:400;
+	text-shadow:0px 0px 3px rgba(0,0,0,0.4);
+}
+#yoodooWidget.Explorer8 .tag_swapper_widget a{
+}
+#yoodooWidget .selecting .tag_swapper_widget a{
+	padding:5px 0px;
+}
+#yoodooWidget .tag_swapper_widget button{
+	margin-top:10px;
+	font-size:14px !important;
+	height:91px;
+	border:none;
+	cursor:pointer;
+	padding:0px 0px 0px 100px;
+	width:190px;
+	color:#000;
+	background:url(images/ap_button.png) no-repeat 0px 0px;
+	font-weight:normal;
+}
+#yoodooWidget .tag_swapper_widget button:hover{
+	background-position:0px -91px;
+	-moz-text-shadow:0px 2px 3px rgba(0,0,0,0.4);
+	-o-text-shadow:0px 2px 3px rgba(0,0,0,0.4);
+	-khtml-text-shadow:0px 2px 3px rgba(0,0,0,0.4);
+	-webkit-text-shadow:0px 2px 3px rgba(0,0,0,0.4);
+	text-shadow:0px 2px 3px rgba(0,0,0,0.4);
+}
+.tag_swapper_widget_parent .scrollStyle{
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.processing{
+	background:url(../../../../../sitegeneric/image/loading.gif) center center no-repeat;
+}
+.processing select{
+	/*display:none;*/
+}

@@ -1,0 +1,139 @@
+.cssDetector_cv_career{display:none;}
+.career{
+	background:url(../../../image/dooits/information/career.gif) no-repeat top right;
+	color:#000;
+	position:relative;
+	font-size:14px;
+}
+.career .job{
+	width:253px;
+	height:53px;
+	background:url(../../../image/dooits/information/item.png) no-repeat top right;
+	cursor:pointer;
+	color:#333;
+	position:relative;
+}
+.career .job .count{
+	position:absolute;
+	top:3px;
+	right:8px;
+	color:#666666;
+	font-size:9px;
+	text-align:right;
+}
+.career .job.on .count,.career .job:hover .count{
+	color:#FFFF99;
+}
+.career #toedit{
+	display:none;
+	font-size:12px;
+	padding:2px 20px;
+}
+.career .job>div{
+	width:246px;
+	height:45px;
+	padding:2px 5px 6px 4px;
+	position:relative;
+}
+.career .job .dates{
+	line-height:22px;
+	float:left;
+	width:70px;
+	padding:0px 0px 0px 5px;
+}
+.career .detail{
+	line-height:22px;
+	float:left;
+	width:160px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.career .job.on,.career .job:hover{
+	background-position:0px -53px;
+	color:#fff;
+}
+.career .job .fader{
+	background:url(../../../image/dooits/information/item-fader.png) no-repeat;
+	width:19px;
+	height:45px;
+	position:absolute;
+	right:6px;
+	top:2px;
+}
+.career .job.on .fader,.career .job:hover .fader{
+	background-position:0px -53px;
+}
+.career .list{
+	width:30%;
+	float:left;
+	min-height:100px;
+	min-width:275px;
+	padding:5px;
+}
+.career #experienceList{
+	max-height:258px;
+	overflow:auto;
+	padding:0px;
+}
+.career #experienceList div{
+	margin:2px;
+	height:30px;
+}
+.career .jobList{
+	overflow: auto;
+	max-height:265px;
+}
+.career .details{
+	float:left;
+	min-height:100px;
+	border:1px solid #CCCCCC;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	padding:5px;
+	width:55%;
+	background:#fff;
+}
+.career .details>div{
+	padding:3px 0px;
+}
+.career input{
+	padding:0px 10px;
+	width:320px;
+	border:none;
+	margin:3px 0px !important;
+}
+
+.career a.select{
+	background:url(../../../image/dooits/information/miniselect.gif) no-repeat top right;
+	height:25px;
+	line-height:25px;
+	width:66px;
+	padding:0px 19px 0px 5px;
+	margin:2px 5px 2px 0px;
+	float:left;
+	text-decoration:none;
+	color:#333333 !important;
+}
+.career a.select:hover{
+	background-position:0px -25px;
+	color:#000 !important;
+}
+.career button.green,.career button.red{
+	margin:10px!important;
+}
+.career h2{
+	padding:0px;
+	margin:0px;
+}
+.dooitBox .career textarea{
+	width:90%;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #81adc3;
+	height:24px;
+	line-height:24px;
+	float:none;
+}

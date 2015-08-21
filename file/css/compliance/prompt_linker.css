@@ -1,0 +1,630 @@
+.cssDetector_prompt_linker{display:none;}
+#yoodooWidget .dooitBox{
+	padding:0px 0px 4px 0px;
+}
+#yoodooWidget .dooitBox,#yoodooWidget .dooitBox>div,#yoodooWidget .dooitBox .dooitDisplay{
+	height:100%;
+	box-sizing:border-box;
+}
+#yoodooWidget .dooitBox .dooitDisplay{
+	position:relative;
+	overflow:hidden;
+}
+#yoodooWidget .dooitBox button{
+	cursor:pointer;
+}
+.linkage_editor{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.1);
+}
+.linkage_selection{
+	position:absolute;
+	left:-330px;
+	top:0px;
+	width:350px;
+	height:100%;
+	background:#2F2F2F;
+	transition:left 1s;
+	z-index:1000;
+}
+.linkage_selection.loading:before{
+	content:'Loading...';
+	background:url(../../../image/loading.gif) center 30px no-repeat #fff;
+	width:60px;
+	height:70px;
+	border-radius:5px 5px 100px 100px;
+	padding:5px;
+	box-sizing:border-box;
+	margin:0px auto;
+	text-align:center;
+	display:block;
+	font-size:11px;
+	position:absolute;
+	left:20px;
+}
+.linkage_selection .selection_editor{
+	position:absolute;
+	top:0px;
+	left:349px;
+	color:#2f2f2f;
+	padding:1px 3px 1px 0px;
+	border-radius:0px 3px 3px 0px;
+}
+.linkage_selection .selection_editor:before{
+	content:'Threads';
+}
+.linkage_selection>button{
+	float:right;
+	height:100%;
+	width:20px;
+	padding:0px;
+	cursor:pointer;
+}
+.linkage_selection>button:before{
+	content:'>';
+}
+.linkage_selection.on>button:before{
+	content:'<';
+}
+.linkage_selection>button,.linkage_selection .selection_editor{
+	background:#fff;
+	border:1px solid #2f2f2f;
+	color:#2f2f2f;
+}
+.linkage_selection .selection_editor{
+	border-left:none;
+}
+.linkage_selection.on{
+	left:0px;
+}
+.prompt_selection{
+	position:absolute;
+	right:-180px;
+	top:0px;
+	width:200px;
+	height:100%;
+	background:#2F2F2F;
+	transition:right 1s;
+	z-index:1000;
+}
+.prompt_selection .selection_editor{
+	position:absolute;
+	top:0px;
+	right:199px;
+	color:#2f2f2f;
+	padding:1px 0px 1px 3px;
+	border-radius:3px 0px 0px 3px;
+}
+.prompt_selection .selection_editor:before{
+	content:'Prompts';
+}
+.prompt_selection>button{
+	position:absolute;
+	height:100%;
+	width:20px;
+	padding:0px;
+	cursor:pointer;
+}
+.prompt_selection>button:before{
+	content:'<';
+}
+.prompt_selection.on>button:before{
+	content:'>';
+}
+.prompt_selection>button,.prompt_selection .selection_editor{
+	background:#fff;
+	border:1px solid #2f2f2f;
+	color:#2f2f2f;
+}
+.prompt_selection .selection_editor{
+	border-right:none;
+}
+.prompt_selection.on{
+	right:0px;
+}
+.linkage_selector_div{
+	height:100%;
+	margin:0px 20px 0px 0px;
+}
+.linkage_selector_div button{
+	border:none;	
+}
+.linkage_selector_div>.linkage_item{
+	line-height:24px;
+	min-height:24px;
+	position:relative;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button{
+	display:block;
+	width:100%;
+	margin:0px;
+	min-height:30px;
+	text-align:left;
+	padding:2px 24px;
+	background:#2f2f2f;
+	color:#ddd;
+	cursor:pointer;
+	transition:background 0.5s,color 0.5s;
+}
+.linkage_selector_div>.linkage_item.on>button.linkage_button{
+	background:url(images/tick.png) right center no-repeat #2f2f2f;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button:hover{
+	background:#9dc0e0;
+	color:#2f2f2f;
+}
+.linkage_selector_div>.linkage_item.on>button.linkage_button:hover{
+	background:url(images/tick.png) right center no-repeat #9dc0e0;
+}
+.linkage_selector_div .addButton{
+	width:30px;
+	height:30px;
+	cursor:pointer;
+}
+.linkage_edit_button,.linkage_delete_button{
+	position:absolute;
+	top:5px;
+	border-radius:30px;
+	width:20px;
+	height:20px;
+	background:#9dc0e0;
+	padding:4px;
+	border:none;
+	transition:left 1s,right 1s !important;
+}
+.linkage_edit_button{
+	left:-20px;
+}
+.linkage_delete_button{
+	background:#C30;
+	right:-20px;
+}
+.linkage_item{
+	overflow:hidden;
+}
+.linkage_item:hover .linkage_edit_button{
+	left:1px;
+}
+.linkage_item:hover .linkage_delete_button{
+	right:1px;
+}
+#yoodooWidget .linkage_editor{
+	padding:0px 20px;
+	box-sizing:border-box;
+}
+.linkage_editor .map,.linkage_editor .sequence,.linkage_input{
+	height:100%;
+	overflow-y:auto;
+	padding-top:30px;
+	box-sizing:border-box !important;
+}
+#yoodooWidget .linkage_editor h2{
+	padding:0px 100px;
+	margin:0px;
+	position:absolute;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay .linkage_editor h2{
+	color:rgba(0,0,0,0.3);
+}
+.linkage_input{
+	width:100%;
+	/*position:absolute;*/
+	z-index:1;
+	
+}
+.linkage_input label{
+	display:none;
+}
+.linkage_input .link{
+	text-align:center;
+}
+.sequence_position{
+	width:50px;
+	height:50px;
+	position:relative;
+	margin:-5px auto;
+}
+.linkage_input.ui-sortable .link .sequence_handle{
+	cursor:move;
+}
+.linkage_input .link:first-child>.yoodooUI_textarea{
+	/*display:none;*/
+}
+.linkage_input .link .sequence_handle{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	background:#FFF;
+	line-height:50px;
+}
+.linkage_input{
+	background:rgba(255,255,255,0);
+	transition:background 0.3s;
+}
+.linkage_input.dropping{
+	background:rgba(255,255,255,0.5);
+}
+#yoodooWidget .linkage_editor .map .editor,#yoodooWidget .linkage_editor .sequence .editor{
+	text-align:center;
+	height:100%;
+	padding-top:10%;
+	box-sizing:border-box;
+}
+.linkage_editor label{
+	text-align:left;
+}
+.prompt_list{
+	padding:0px 0px 0px 20px;
+	box-sizing:border-box;
+	color:#eee;
+	height:100%;
+}
+.promptSelector{
+	overflow-y:auto;
+	height:100%;
+}
+.promptDragger{
+	padding:2px 5px;
+	cursor:move;
+	background:#2f2f2f;
+	transition:background 0.5s,color 0.5s;
+}
+.promptDragger>div{
+	font-size:11px;
+	color:#ccc;
+	line-height:16px;
+	max-height:32px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:0px 0px 0px 5px;
+}
+.promptDragger:hover{
+	background:#fff;
+	color:#2f2f2f;
+}
+.promptDragger.ui-draggable-dragging{
+	background:#fff;
+	border:1px solid #555;
+	border-radius:3px;
+	padding:3px;
+}
+.promptDragger.ui-draggable-dragging>div{
+	display:none;
+}
+.ui-sortable-helper .yoodooUI_textarea{
+	visibility:hidden;
+}
+.sequence_info{
+	border:1px solid #ddd;
+	background:#fff;
+	width:200px;
+	position:absolute;
+	left:45px;
+	top:5px;
+	display:none;
+	z-index:1001;
+	padding:3px;
+	border-radius:3px;
+	opacity:0;
+	transition:opacity 0.3s;
+}
+.ui-sortable-helper .sequence_info{
+	display:none !important;
+}
+.sequence_handle:hover+.sequence_info{
+	display:block;
+	opacity:1;
+}
+.sequence_info:hover{
+	display:block;
+	opacity:1;
+}
+#yoodooWidget .sequence_info button.delButton,#yoodooWidget .contextmenu button.delButton{
+	float:right;
+	margin:2px;
+	padding:0px 5px;
+	background:#700;
+	color:#fff;
+	border:none;
+	border-radius:20px;
+	font-size:10px;
+	height:20px;
+	line-height:20px;
+}
+#yoodooWidget .sequence_info button.delButton:hover,#yoodooWidget .contextmenu button.delButton:hover{
+	background:#d00;
+}
+.mapItem{
+	position:relative;
+	width:0px;
+	height:0px;
+	text-align:center;
+}
+.linkage_input .mapItem .mapItemDetail{
+	position:absolute;
+	left:-25px;
+	top:-25px;
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	background:#FFF;
+	line-height:50px;
+	z-index:10;
+	cursor:move;
+	box-shadow:0px 0px 3px rgba(0,0,0,0.0);
+	border:1px solid rgba(0,0,0,0.2);
+	transition:box-shadow 0.3s;
+}
+.linkage_input .mapItem.ui-draggable-dragging .mapItemDetail{
+	z-index:20;
+	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+}
+.mapItem .mapItemRing{
+	position:absolute;
+	left:-100px;
+	top:-100px;
+	width:200px;
+	height:200px;
+	border-radius:200px;
+	border:1px solid rgba(255,255,255,0.3);
+	transition:border 0.3s;
+	box-sizing:border-box;
+}
+.mapItem .mapItemDetail:hover+.mapItemRing{
+	border:1px solid #9DC0E0;
+}
+.contextmenu{
+	width:200px;
+	height:200px;
+	border-radius:5px;
+	padding:5px;
+	background:#fff;
+	border:1px solid #bbb;
+	position:absolute;
+	left:-75px;
+	top:-75px;
+	z-index:1001;
+}
+.responseCount{
+	position:absolute;
+	border-radius:20px;
+	font-size:12px;
+	left:-10px;
+	top:-5px;
+	min-width:20px;
+	height:20px;
+	line-height:20px;
+	background:#fff;
+	border:1px solid #06F;
+	color:#06f;
+}
+.responseCount.noResponses{
+	border:1px solid #F00;
+	color:#f00;
+}
+#yoodooWidget .responseCount button{
+	cursor:pointer;
+	border-radius:20px;
+	background:#090;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	line-height:12px;
+	height:100%;
+	width:100%;
+	position:absolute;
+	border:none;
+	left:0px;
+	top:0px;
+	padding:0px;
+	opacity:0;
+	transform:scale(0.01);
+	transition:transform 0.3s,opacity 0.3s;
+	padding:4px;
+}
+#yoodooWidget .responseCount:hover button{
+	opacity:1;
+	transform:scale(1);
+}
+.columns2,.columnLike{
+	margin:10px 0px;
+}
+.columns2>div{
+	display:inline-block;
+	vertical-align:top;
+	width:50%;
+}
+#yoodooWidget .TagSelector button{
+	border:1px solid #eee;
+}
+#yoodooWidget .TagSelector button.on{
+	background:#eaf5ff;
+}
+#yoodooWidget .evidenceSummary button,#yoodooWidget .actionPlanSummary button{
+	width:100%;
+	position:relative;
+}
+.evidenceSummary button>div,.actionPlanSummary button>div{
+	font-size:24px;
+}
+.evidenceSummary button>div>svg{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.actionPlanSummary button>div>svg{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.kloe_response_dialog label{
+	text-align:left;
+}
+.losenge{
+	text-align:left;
+}
+#yoodooWidget .yoodooUI .kloe_response_dialog button{
+	min-width:0px;
+}
+#yoodooWidget .kloe_response_dialog button.backButton{
+	border:none;
+	border-radius:50px 0px 0px 50px;
+	height:30px;
+	-webkit-transition:background 0.3s,opacity 0.3s;
+	-moz-transition:background 0.3s,opacity 0.3s;
+	-o-transition:background 0.3s,opacity 0.3s;
+	transition:background 0.3s,opacity 0.3s;
+	color:#fff;
+	font-size:12px;
+	line-height:30px;
+	padding:0px 10px;
+	margin: 0px 0px 10px 0px;
+}
+#yoodooWidget .kloe_response_dialog button.backButton svg,#yoodooWidget .kloe button.backButton img{
+	vertical-align:middle;
+	margin:5px 0px;
+}
+#yoodooWidget .kloe_response_dialog h3{
+	display:inline-block;
+	vertical-align:middle;
+	line-height:30px;
+	height:30px;
+	margin:0px 0px 10px 0px;
+	padding:0px 30px 0px 30px;
+	background:#084d84;
+	color:#fff;
+	border-radius:0px 50px 50px 0px;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button{
+	width:100%;
+	text-align:left;
+	border-bottom:1px solid #eee;
+	position:relative;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button>button{
+	position:absolute;
+	background:#8D3737;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button>button{
+	position:absolute;
+	right:5px;
+	top:0px;
+	background:#8D3737;
+	color:#fff;
+	border-radius:30px;
+	padding:5px;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button>button:hover{
+	background:#E71515;
+	color:#fff;
+}
+#yoodooWidget .kloe_response_dialog button.addButton{
+	padding:10px;
+}
+
+#yoodooWidget .yoodooUI_text>input[type=text]{	
+	border:none;
+	border-radius:0px !important;
+	border-bottom:0px solid #fff;
+	box-shadow:0px 0px 0px #fff;
+	background:#eaf5ff;
+	padding:0px 2px;
+	transition:background 0.3s,border 0.3s, box-shadow 0.3s;
+}
+#yoodooWidget .yoodooUI_text>input[type=text]:hover{
+	box-shadow:0px 0px 5px #999;
+}
+#yoodooWidget .yoodooUI_text>input[type=text]:focus{
+	box-shadow:0px 3px 20px #999;
+	background:#fff;
+	border-radius:0px;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea{	
+	border:none;
+	border-radius:0px;
+	border-bottom:0px solid #fff;
+	box-shadow:0px 0px 0px #fff;
+	background:#eaf5ff;
+	padding:0px 2px;
+	transition:background 0.3s,border 0.3s, box-shadow 0.3s;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea:hover{
+	box-shadow:0px 0px 5px #999;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea:focus{
+	box-shadow:0px 3px 20px #999;
+	background:#fff;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton{
+	width:100%;
+	margin:2px 0px;
+	text-align:left;
+	border:1px solid #eee;
+	background:#fff;
+	position:relative;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton:hover{
+	background:#eaf5ff !important;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton>div{
+	margin-right:120px;
+	height:40px;
+	line-height:20px;
+	font-size:14px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton svg,#yoodooWidget .kloe_response_dialog button.recordButton img{
+	float:right;
+	margin-left:10px;
+}
+#yoodooWidget .losenge+div>button.delButton{
+	background:#8D3737;
+	color:#fff;
+	border-radius:30px;
+	padding:5px;
+	position:relative;
+	top:-20px;
+}
+#yoodooWidget .losenge+div>button.delButton:hover{
+	background:#E71515;
+	color:#fff;
+}
+.deleteConfirm{
+	position: absolute;
+	right: 0px;
+	z-index: 1000;
+	background: #fff;
+	padding: 5px;
+	display:none;
+	top:20px;
+	/*top:-30px;
+	transition:top 0.4s;*/
+}
+.deleteConfirm.on{
+	/*top:20px;*/
+	display:block;
+}
+.kloe_response_dialog{
+	overflow:hidden;
+}
+#yoodooWidget .yoodooUI .recordButton button.clipboardCopy{
+	display:none;
+	border:none;
+	background:url(/images/cms/icons/copy.png) no-repeat center center;
+	width:21px;
+	height:23px;
+	position:absolute;
+	top:-3px;
+	left:5px;
+	min-width:0px;
+	padding:0px;
+	margin:0px;
+}
+#yoodooWidget .yoodooUI .recordButton:hover button.clipboardCopy{
+	display:block;
+}

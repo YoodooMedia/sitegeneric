@@ -1,0 +1,83 @@
+.cssDetector_yoodoo_widget_ie9{display:none;}
+.#yoodooWait{
+	z-index:999;
+	/*height:466px;*/
+	height:80px;
+	text-align:center;
+	color:#fff;
+	background:url(../../image/working.gif) center center no-repeat rgb(43,73,120) !important;
+}
+#yoodooWidget .overlayFooter,#yoodooWidget .overlayFooter button.footerbutton{
+	background:url(../../image/footer.gif) repeat-x  !important;
+}
+#yoodooWidget .yoodoohelp,#yoodooWidget .dooitclosewarning, #yoodooWidget .exportTypes{
+	background:url(../../image/help_bg.gif) repeat-x top left #889ebc  !important;
+}
+#yoodooWidget .overlayFooter button.done{
+	background:url(../../image/done.gif) repeat-x  !important;
+}
+#yoodooWidget .overlayFooter button.footerbutton:hover,#yoodooWidget .overlayFooter button.done:hover{
+	background:url(../../image/footer.gif) repeat-x  !important;
+	background-position:0px -28px  !important;
+}
+#yoodooWidget .overlayFooter .finishCheck{
+	background:#53a830 !important;
+}
+#yoodooWidget .overlayFooter .dooitclosewarning{
+	background:#6C7F9A !important;
+}
+
+
+#yoodooContainerContent,#yoodooWhiteout,#yoodooWait{
+	border-radius:7px;
+	-o-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	-webkit-border-radius:7px;
+}
+#yoodooWidget .login center button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red{
+	background:url(../../image/button.gif) repeat-x !important;
+}
+#yoodooWidget .login center button:hover,#yoodooWidget .welcome center button:hover,#yoodooWidget .welcome button.logout:hover,#yoodooWidget button.green:hover,#yoodooWidget button.red:hover,#yoodooWidget a.green:hover,#yoodooWidget a.red:hover{
+	background:url(../../image/button.gif) repeat-x !important;
+	background-position:0px -33px !important;
+}
+#yoodooWidget button.medium,#yoodooContainerContent a.medium{
+	background:url(../../image/med-button.gif) repeat-x !important;
+}
+#yoodooWidget button.reversed:hover{
+	background:url(../../image/med-button.gif) repeat-x !important;
+	background-position:0px 0px !important;
+}
+#yoodooWidget  button.medium:hover,#yoodooWidget  a.medium:hover{
+	background:url(../../image/med-button.gif) repeat-x !important;
+	background-position:0px -24px !important;
+}
+#yoodooWidget  button.medium.reversed,#yoodooWidget a.medium.reversed{
+	background:url(../../image/med-button.gif) repeat-x !important;
+	background-position:0px -24px !important;
+}
+#yoodooWidget  button.medium.reversed:hover,#yoodooWidget a.medium.reversed:hover{
+	background:url(../../image/med-button.gif) repeat-x !important;
+	background-position:0px 0px !important;
+}
+#yoodooWidget .exportTypes button{
+	background:url(../../image/excel.png) no-repeat !important;
+	width:38px;
+	height:37px;
+	margin:0px 5px;
+	padding:0px;
+
+}
+#yoodooWidget .exportTypes button.xls{
+	background-position:0px 0px !important;
+}
+#yoodooWidget .exportTypes button.csv{
+	background-position:-38px 0px !important;
+}
+#yoodooWidget .exportTypes button.xls:hover{
+	background-position:0px -37px !important;
+}
+#yoodooWidget .exportTypes button.csv:hover{
+	background-position:-38px -37px !important;
+}

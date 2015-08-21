@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="../../overlay/jquery-1-7-1.js" type="text/javascript"></script>
+ <script src="tagCloud.js" type="text/javascript"></script>
+</head>
+<body>
+<canvas width="300" height="300" id="myCanvas">
+  <p>Anything in here will be replaced on browsers that support the canvas element</p>
+  <ul>
+<li><a href="/fish">Communication</a></li>
+<li><a href="/fish">Reliability</a></li>
+<li><a href="/fish">Creativity</a></li>
+<li><a href="/fish">Numeracy</a></li>
+<li><a href="/fish">Leadership</a></li>
+  </ul>
+ </canvas>
+<script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#myCanvas').tagcanvas({
+     textColour : '#000066',
+     outlineThickness : 1,
+     maxSpeed : 0.05,
+     depth : 0.75,
+     textHeight:30
+   })) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
+</body>
+</html>

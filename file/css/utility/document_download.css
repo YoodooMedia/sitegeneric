@@ -1,0 +1,73 @@
+.cssDetector_document_download{display:none;}
+.docDown{
+	
+}
+.docDown h2{
+	margin-top:0px !important;
+}
+#yoodooWidget #framed{
+background: rgb(254,255,255) !important; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(254,255,255,1) 0%, rgba(221,241,249,1) 100%) !important; /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(221,241,249,1))) !important; /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(221,241,249,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(221,241,249,1) 100%) !important; /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(221,241,249,1) 100%) !important; /* IE10+ */
+background: linear-gradient(to bottom,  rgba(254,255,255,1) 0%,rgba(221,241,249,1) 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#ddf1f9',GradientType=0 ) !important; /* IE6-9 */
+
+}
+.docDown .fileDownload{
+	width:50%;
+	display:inline-block;
+	vertical-align:top;
+}
+.docDown .fileDownload a{
+	display:block;
+	text-decoration:none;
+	vertical-align:top;
+	margin:5px;
+	border:1px solid #999;
+	-o-box-shadow:0px 0px 5px #999;
+	-moz-box-shadow:0px 0px 5px #999;
+	-khtml-box-shadow:0px 0px 5px #999;
+	-webkit-box-shadow:0px 0px 5px #999;
+	box-shadow:0px 0px 5px #999;
+	padding:5px;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	min-height:50px;
+	background: rgb(242,245,246); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+
+}
+.docDown .fileDownload a:hover{
+	background: rgb(242,245,246); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 83%, rgba(181,228,242,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(83%,rgba(200,215,220,1)), color-stop(100%,rgba(181,228,242,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 83%,rgba(181,228,242,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 83%,rgba(181,228,242,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 83%,rgba(181,228,242,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 83%,rgba(181,228,242,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#b5e4f2',GradientType=0 ); /* IE6-9 */
+
+}
+.docDown .fileIcon{
+	padding-left:55px;
+	background-position:top left !important;
+	min-height:48px;
+}
+.docDown .filetitle{
+	font-size:18px;
+}
+.docDown .filedescription{
+	font-size:12px;
+}

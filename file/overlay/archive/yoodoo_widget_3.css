@@ -1,0 +1,750 @@
+.cssDetector_yoodoo_widget_3{display:none;}
+.
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 1px dotted transparent;
+}
+
+button:focus::-moz-focus-inner,
+input[type="reset"]:focus::-moz-focus-inner,
+input[type="button"]:focus::-moz-focus-inner,
+input[type="submit"]:focus::-moz-focus-inner,
+input[type="file"] > input[type="button"]:focus::-moz-focus-inner {
+    padding: 3px;
+    border-color: #F3F3F3;
+}
+
+#yoodooWidget{
+	position:relative;
+	clear:both;
+	margin:0;
+	padding:0;
+}
+#yoodooWidget button{
+	outline:none;
+}
+#yoodooWidget,.eezshortlist,#yoodooWidget textarea,.dropdown,#yoodooWidget button{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+.clear{
+	clear:both;
+}
+iframe#yoodooPoster{
+	display:none;
+}
+#yoodooContainerContent,#yoodooWhiteout,#yoodooWait{
+	background: #16273f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #16273f 0%, #26426a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#16273f), color-stop(100%,#26426a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #16273f 0%,#26426a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #16273f 0%,#26426a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #16273f 0%,#26426a 100%); /* IE10+ */
+	background: linear-gradient(top,  #16273f 0%,#26426a 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16273f', endColorstr='#26426a',GradientType=0 ); */ /* IE6-9 */
+
+	border-radius:7px;
+	-o-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	-webkit-border-radius:7px;
+	position:absolute;
+	/*width:788px;*/
+	top:0px;
+	left:0px;
+	z-index:501;
+}
+#yoodooContainerContent .yoodoo-title{
+	font-size:24px;
+	color:#fff;
+	line-height:28px;
+}
+#yoodooContainerContent .yoodoo-medium{
+	background:url(../../image/yoodoo-medium.gif) no-repeat;
+	width:82px;
+	height:28px;
+	margin:2px 0 0 10px;
+}
+#yoodooContainerContent .inputline{
+	margin:5px 50px;
+	height:32px;
+}
+#yoodooContainerContent .inputline label{
+	line-height:32px;
+}
+#yoodooContainerContent p{
+	margin:2px 0 2px 0;
+}
+#yoodooContainerContent .login,#yoodooContainerContent .welcome{
+	color:#fff;
+}
+#yoodooWait{
+	z-index:999;
+	/*height:466px;*/
+	height:80px;
+	text-align:center;
+	color:#fff;
+	background:url(../../image/working.gif) center center no-repeat rgba(43,73,120,0.8);
+}
+#yoodooWait .oops{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:20px;
+	border:1px solid #fff;
+	background:rgb(43,73,120);
+	width:400px;
+	margin:0 auto;
+}
+#yoodooContainerContent img{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#yoodooContainerContent .footerLinks{
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+#yoodooContainerContent .footerLinks a{
+	font-size:10px;
+	text-decoration:none;
+}
+#yoodooContainerContent .footerLinks a:hover{
+	text-decoration:underline;
+}
+#yoodooWhiteout{
+	background:rgba(255,255,255,0.5);
+}
+.hideFrame{
+	display:none;
+}
+.dooitBox{
+	padding:4px;
+}
+.dooitLogo{
+	/*background:url(../../image/dooit.png) no-repeat;
+	width:56px;
+	height:24px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:999;*/
+}
+/*
+#saveDooit,#scrapbookadd{
+	position:absolute;
+	bottom:0px;
+	left:20px;
+	background:url(../../image/widget_buttons.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:97px;
+	height:31px;
+}
+#scrapbookadd{
+	left:200px;
+	float:right;
+	background-position:-97px 0px;
+	width:169px;
+}
+#scrapbookadd:hover{
+	background-position:-97px -31px;
+}
+#saveDooit:hover{
+	background-position:0px -31px;
+}
+*/
+.dooitBox .dooitBoxBack{
+	background:#fff;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:10px;
+	color:#000033;
+	overflow:auto;
+}
+.hideFrame{
+	width:400px;
+	height:400px;
+	border:none;
+}
+#yoodooContainerContent{
+	/*display:none;*/
+}
+#yoodooWidget .login,#yoodooContainerContent .welcome{
+	padding:20px;
+}
+#yoodooWidget .login nobr{
+	float:right;
+}
+#yoodooWidget .login>div{
+	clear:both;
+	padding:10px;
+}
+#yoodooWidget .login>div>div{
+	float:left;
+	text-align:right;
+	width:220px;
+	font-size:18px;
+	padding:3px 20px 0px 0px;
+}
+#yoodooWidget .login center,#yoodooContainerContent .welcome center{
+	text-align:center;
+	padding:5px;
+	clear:both;
+}
+#yoodooWidget .login center button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red,#yoodooWidget button.medium,#yoodooContainerContent a.medium{
+	/*background:url(../../image/button.gif) repeat-x;*/
+	background: #3e5a91; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3e5a91 0%, #182e4f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e5a91), color-stop(100%,#182e4f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* IE10+ */
+	background: linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e5a91', endColorstr='#182e4f',GradientType=0 );*/ /* IE6-9 */
+}
+#yoodooWidget .login center button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red{
+	min-width:120px;
+	height:33px;
+	line-height:33px;
+	color:#fff !important;
+	font-weight:bold;
+	padding:0 10px;
+	margin:10px;
+	cursor:pointer;
+	border:none;
+	font-size:16px;
+	/*text-shadow:1px 1px 1px #fff;*/
+	-o-box-shadow: 0px 0px 5px #000;
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#yoodooWidget button.red,#yoodooContainerContent a.red{
+	background:url(../../image/buttonred.gif) repeat-x;
+}
+#yoodooWidget button.medium,#yoodooContainerContent a.medium{
+	/*background:url(../../image/med-button.gif) repeat-x !important;*/
+	height:24px !important;
+	line-height:24px !important;
+	/*min-width:80px !important;*/
+	margin-bottom:2px;
+	font-size:14px !important;
+	font-weight:normal !important;
+	display:inline-block;
+	text-align:center;
+}
+#yoodooWidget button.reversed{
+	background-position:0px -33px !important;
+}
+#yoodooWidget .login center button:hover,#yoodooWidget .welcome center button:hover,#yoodooWidget .welcome button.logout:hover,#yoodooWidget button.green:hover,#yoodooWidget button.red:hover,#yoodooWidget a.green:hover,#yoodooWidget a.red:hover,#yoodooWidget button.medium:hover,#yoodooContainerContent a.medium:hover{
+	/*background-position:0px -33px;*/
+background: #7cbf02; /* Old browsers */
+background: -moz-linear-gradient(top,  #7cbf02 0%, #41ad02 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7cbf02), color-stop(100%,#41ad02)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #7cbf02 0%,#41ad02 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #7cbf02 0%,#41ad02 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #7cbf02 0%,#41ad02 100%); /* IE10+ */
+background: linear-gradient(top,  #7cbf02 0%,#41ad02 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbf02', endColorstr='#41ad02',GradientType=0 );*/ /* IE6-9 */
+
+}
+/*#yoodooWidget button.reversed:hover{
+	background-position:0px 0px !important;
+}
+#yoodooWidget  button.medium:hover,#yoodooWidget  a.medium:hover{
+	background-position:0px -24px !important;
+}
+#yoodooWidget  button.medium.reversed,#yoodooWidget a.medium.reversed{
+	background-position:0px -24px !important;
+}
+#yoodooWidget  button.medium.reversed:hover,#yoodooWidget a.medium.reversed:hover{
+	background-position:0px 0px !important;
+}*/
+#yoodooWidget button.del{
+	background:url(../../image/del.gif) no-repeat;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	border:none;
+	margin:2px 2px 5px 5px;
+	vertical-align:bottom;
+}
+#yoodooWidget button.del:hover{
+	background-position:0px -18px;
+}
+#yoodooWidget .right{
+	float:right;
+	margin:5px;
+}
+#yoodooWidget .left{
+	float:left;
+}
+#yoodooWidget .error{
+	text-align:center;
+}
+/*#yoodooContainerContent .login center button:hover,#yoodooContainerContent .welcome center button:hover,#yoodooContainerContent .welcome button.logout:hover{
+	background:#6bb800;
+	color:#fff;
+	border:1px solid #fff;
+}*/
+#yoodooWidget .login>div input,#yoodooWidget .welcome input{
+	float:left;
+	width:250px;
+	background:#fff;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-o-border-radius:5px;
+	-khtml-border-radius:5px;
+	padding:3px;
+	color:#000033;
+	border:none;
+	font-size:18px;
+}
+#yoodooWidget .welcome input{
+	float:left;
+}
+#yoodooWidget .welcome label{
+	width:200px;
+	float:left;
+}
+span.doo{
+	color:#6ac100;
+}
+#exercise_content{
+	width:auto !important;
+	float:none !important;
+}
+#yoodooWidget #framed{
+	background:#fff !important;
+	border-radius:5px !important;
+	-moz-border-radius:5px !important;
+	-webkit-border-radius:5px !important;
+	/*width:auto !important;*/
+	margin:4px !important;
+	padding:4px;
+	position:relative;
+}
+#yoodooWidget .welcome .error{
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+	color:#FFFF00;
+}
+#yoodooWidget .welcome .messenger{
+	font-size:14px;
+}
+#yoodooWidget a{
+	color:#CCCCCC;
+}
+#yoodooWidget a:hover{
+	color:#FFFFFF;
+}
+#yoodooWidget a img{
+	border:none;
+}
+#yoodooWidget #framed a{
+	color:#666666;
+}
+#yoodooWidget #framed a:hover{
+	color:#000000;
+}
+#yoodooWidget .overlayFooter,#yoodooWidget .overlayFooter button{
+	background: #6c7f9a; /* Old browsers */
+	background: -moz-linear-gradient(top, #6c7f9a 0%, #445772 49%, #1a2d48 51%, #2e415c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6c7f9a), color-stop(49%,#445772), color-stop(51%,#1a2d48), color-stop(100%,#2e415c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* IE10+ */
+	background: linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c7f9a', endColorstr='#2e415c',GradientType=0 );*/ /* IE6-9 */
+}
+#yoodooWidget .overlayFooter{
+
+	/*background:url(../../image/footer.gif) repeat-x;*/
+	height:28px;
+	line-height:28px;
+	position:absolute;
+	width:100%;
+	left:-4px;
+	bottom:-4px;
+	margin:0px 4px 4px 4px;
+	border-radius:0px 0px 3px 3px !important;
+	-o-border-radius:0px 0px 3px 3px !important;
+	-moz-border-radius:0px 0px 3px 3px !important;
+	-webkit-border-radius:0px 0px 3px 3px !important;
+	z-index:10;
+}
+#yoodooWidget .overlayFooter button{
+	/*background:url(../../image/footer.gif) repeat-x;*/
+	height:28px;
+	border:none;
+	/*margin:0px 10px;*/
+	margin:0px;
+	padding:0px 20px;
+	cursor:pointer;
+	color:#ddd;
+	float:left;
+}
+#yoodooWidget .overlayFooter button.done{
+	/*background:url(../../image/done.gif) repeat-x;*/
+	background: #8ee468; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8ee468 0%, #71c64e 49%, #53a830 51%, #5eb83c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8ee468), color-stop(49%,#71c64e), color-stop(51%,#53a830), color-stop(100%,#5eb83c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* IE10+ */
+	background: linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ee468', endColorstr='#5eb83c',GradientType=0 ); *//* IE6-9 */
+
+	float:right;
+	font-size:16px;
+	color:#fff;
+	border-radius:0px 0px 3px 0px !important;
+	-o-border-radius:0px 0px 3px 0px !important;
+	-moz-border-radius:0px 0px 3px 0px !important;
+	-webkit-border-radius:0px 0px 3px 0px !important;
+}
+#yoodooWidget .overlayFooter .finishCheck{
+	/*background:url(../../image/undone-bg.gif) repeat-x left bottom #53a830;*/
+	position:absolute;
+	background: #436830; /* Old browsers */
+	background: -moz-linear-gradient(top,  #436830 0%, #8ee468 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#436830), color-stop(100%,#8ee468)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #436830 0%,#8ee468 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #436830 0%,#8ee468 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #436830 0%,#8ee468 100%); /* IE10+ */
+	background: linear-gradient(top,  #436830 0%,#8ee468 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#436830', endColorstr='#8ee468',GradientType=0 );*/ /* IE6-9 */
+
+	bottom:-1px;
+	right:0px;
+	border-right:none;
+	border-bottom:none;
+	color:#fff;
+	border-radius:3px 0px 0px 0px !important;
+	-o-border-radius:3px 0px 0px 0px !important;
+	-moz-border-radius:3px 0px 0px 0px !important;
+	-webkit-border-radius:3px 0px 0px 0px !important;
+}
+#yoodooWidget .overlayFooter .finishCheck a{
+	color:#fff !important;
+}
+#yoodooWidget .overlayFooter .finishCheck a:hover{
+	color:#000 !important;
+}
+#yoodooWidget .overlayFooter button:hover{
+	background: #8494aa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8494aa 0%, #627289 49%, #3f4f65 51%, #506076 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8494aa), color-stop(49%,#627289), color-stop(51%,#3f4f65), color-stop(100%,#506076)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* IE10+ */
+	background: linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8494aa', endColorstr='#506076',GradientType=0 );*/ /* IE6-9 */
+	color:#fff;
+}
+#yoodooWidget .progressBack{
+	background:url(../../image/progress.png) left -42px;
+	width:200px;
+	height:41px;
+	margin:10px 10px 10px 0;
+	/*background:rgba(255,255,255,0.1);*/
+	float:left;
+}
+#yoodooWidget .progress{
+	height:41px;
+	background:url(../../image/progress.png) left 0px;
+	/*background:#008001;*/
+	float:left;
+}
+#yoodooWidget .progressText{
+	font-size:18px;
+	float:left;
+	line-height:41px;
+	margin:10px 10px 10px 0;
+}
+#yoodooWidget .half{
+	width:50%;
+	float:left;
+	clear:none;
+}
+#yoodooWidget .tip>div{
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #6d88a6;
+	padding:30px;
+	background:#2a436b;
+	color:#d5d3d4;
+	font-size:14px;
+}
+#yoodooWidget .tip>div p{
+	color:#fff;
+	font-size:16px;
+}
+#yoodooWidget h2{
+	color:#00aefe;
+	font-size:24px;
+	font-weight:normal;
+	margin:20px 0;
+}
+#yoodooWidget h3{
+	color:#fff;
+	font-size:18px;
+	margin:0 0 5px 0;
+}
+#yoodooWidget #exercise_content h3{
+	color:#26426a !important;
+}
+#yoodooWidget .episodeText{
+	/*background:#172b47;
+	padding:10px;*/
+	color:#7ac311;
+	font-size:14px;
+	margin:10px;
+}
+#yoodooWidget button.go{
+	background:url(../../image/go.gif) no-repeat;
+	width:22px;
+	height:22px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:none;
+	-o-box-shadow: 0px 0px 5px #000;
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	margin:0 0 0 5px;
+	cursor:pointer;
+}
+#yoodooWidget button.go:hover{
+	background-position:0px -22px;
+}
+#yoodooWidget #progress{
+	margin:10px;
+}
+#yoodooWidget .episodeText b{
+	color:#fff;
+	font-size:16px;
+}
+#yoodooWidget .alert{
+	color:#FFFF00;
+	font-size:14px;
+}
+/* for the comment form */
+#yoodooWidget .tabset_content_container a{
+	display:inline-block;
+	border:1px solid #c1ceff;
+	margin:3px;
+	padding:2px 4px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	text-decoration:none;
+}
+#yoodooWidget ul.tabset_tabs li{
+	background:none;
+	height:28px;
+	line-height:28px;
+	-moz-border-radius:3px 3px 0 0;
+	-o-border-radius:3px 3px 0 0;
+	-webkit-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+	list-style:none;
+	float:left;
+}
+#yoodooWidget ul.tabset_tabs li a{
+	padding:0px 10px;
+	text-decoration:none;
+	font-size:18px;
+}
+#yoodooWidget ul.tabset_tabs li.active a{
+	color:#fff !important;
+}
+#yoodooWidget ul.tabset_tabs li.active{
+	background:url(../../image/footer.gif) repeat-x;
+	border:1px solid #26426a;
+	border-bottom:none;
+}
+#yoodooWidget .tabset_content_container{
+	clear:both;
+	border:2px solid #26426a;
+}
+#yoodooWidget .yoodoohelp,#yoodooWidget .dooitclosewarning,#yoodooWidget .finishCheck, #yoodooWidget .exportTypes{
+	display:none;
+	position:absolute;
+	bottom:-1px;
+	border:1px solid #233d63;
+	border-bottom:none;
+	-moz-border-radius:3px 3px 0 0;
+	-o-border-radius:3px 3px 0 0;
+	-webkit-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+	padding:15px 20px;
+	max-width:200px;
+	font-size:14px;
+	text-align:center;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #8090a7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#8090a7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8090a7',GradientType=0 );*/ /* IE6-9 */
+
+}
+#yoodooWidget .dooitclosewarning{
+	background:#53a830;
+}
+#yoodooWidget .exportTypes button{
+	background:url(../../image/excel.png) no-repeat !important;
+	width:38px;
+	height:37px;
+	margin:0px 5px;
+	padding:0px;
+
+}
+#yoodooWidget .exportTypes button.xls{
+	background-position:0px 0px;
+}
+#yoodooWidget .exportTypes button.csv{
+	background-position:-38px 0px;
+}
+#yoodooWidget .exportTypes button.xls:hover{
+	background-position:0px -37px;
+}
+#yoodooWidget .exportTypes button.csv:hover{
+	background-position:-38px -37px;
+}
+#yoodooWidget .top_comment{
+	padding:5px;
+	clear:both;
+}
+#yoodooWidget .top_comment button,#yoodooWidget .sub_comment button{
+	float:right;
+}
+#yoodooWidget .sub_comment{
+    padding-left:30px;
+	clear:both;
+}
+#yoodooWidget .comment_author{
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+} 
+#yoodooWidget .comment_body{
+    color: #999999;
+	overflow:auto;
+} 
+#yoodooWidget .comment_form{
+    clear:both;
+} 
+#yoodooWidget .comment_text {
+    width: 500px;
+    height: 100px;
+    border: 2px solid #75BC00;
+}
+#yoodooWidget .yoodoohelp{
+	line-height:16px;
+}
+#yoodooWidget .dooitclosewarning{
+	background:#6c7f9a;
+}
+#yoodooWidget .dooitclosewarning a{
+	color:#fff !important;
+	white-space:nowrap;
+	text-decoration:none;
+	display:block;
+}
+#yoodooWidget .dooitclosewarning a:hover{
+	text-decoration:underline;
+}
+
+/* scrapbook */
+
+#yoodooWidget #scrapbook .boxnt_left_title{
+	color:#233d63;
+	font-size:20px;
+	margin:2px 0px;
+	padding:0px 10px;
+}
+#yoodooWidget #scrapbook .boxnt_right_subtitle{
+	color:#53a830;
+	font-size:16px;
+	float:right;
+}
+#yoodooWidget #scrapbook .scrapbookDescription{
+	clear:both;
+	font-size:14px;
+	color:#666666
+}
+#yoodooWidget .float_left{
+	float:left;
+}
+#yoodooWidget .float_right{
+	float:right;
+}
+#yoodooWidget #scrapbook .filter .float_right{
+	float:right;
+}
+#yoodooWidget #scrapbook .filter .ddContainerSmall{
+	white-space:nowrap;
+	width:300px;
+	text-align:left;
+	height:24px;
+}
+#yoodooWidget #scrapbook .filter .ddContainerSmall div,#yoodooWidget #scrapbook .filter .ddContainerSmall div{
+	float:left;
+}
+#yoodooWidget #scrapbook .scrapbookEntry{
+	clear:both;
+	border-top:1px solid #eeeeee;
+	padding:10px 0;
+}
+#yoodooWidget #scrapbook .scrapbookEntry .scrapbookImage{
+	float:left;
+	margin:0 5px 5px 0;
+}
+#yoodooWidget #scrapbook .scrapbookEntry a{
+	text-decoration:none;
+}
+#yoodooWidget input,#yoodooWidget button{
+
+	vertical-align:baseline;
+}
+#yoodooWidget .overlayFooter #voiceoverbutton .progressContainer{
+	position:relative;
+	height:100%;
+	line-height:28px;
+}
+#yoodooWidget .overlayFooter #voiceoverbutton .progress{
+	position:absolute;
+	top:3px;
+	height:2px;
+	width:100%;
+	background:#1a2d48;
+	box-shadow:0px 0px 3px #1a2d48;
+}
+#yoodooWidget .overlayFooter #voiceoverbutton .progress .bar{
+	height:2px;
+	background:#cfd9e9;
+}

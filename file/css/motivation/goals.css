@@ -1,0 +1,68 @@
+.cssDetector_goals{display:none;}
+.goals{
+	background:url(../../../image/dooits/motivation/goals.gif) no-repeat top right;
+	color:#333;
+	position:relative;
+	font-size:14px;
+}
+.goals .buttons{
+}
+.goals .job,.goals .position,.goals .earn,.goals .business,.goals .other{
+	width:116px;
+	height:116px;
+	float:left;
+	border:0px;
+	cursor:pointer;
+	background:url(../../../image/dooits/motivation/goals-buttons.png) no-repeat;
+	color:#000;
+	margin:10px;
+}
+.goals .position{
+	background-position:-116px 0;
+}
+.goals .earn{
+	background-position:-232px 0;
+}
+.goals .business{
+	background-position:-348px 0;
+}
+.goals .other{
+	background-position:-464px 0;
+}
+.goals .job:hover{
+	background-position:0px -116px;
+}
+.goals .position:hover{
+	background-position:-116px -116px;
+}
+.goals .earn:hover{
+	background-position:-232px -116px;
+}
+.goals .business:hover{
+	background-position:-348px -116px;
+}
+.goals .other:hover{
+	background-position:-464px -116px;
+}
+.goals .creator{
+	width:400px;
+	margin:0px auto;
+	padding:20px 0px;
+	clear:both;
+	text-shadow:0px 1px 3px rgba(0,0,0,0.5);
+}
+.goals .creator input{
+	width:320px;
+	border:none;
+	outline:none;
+	padding:0 10px;
+	margin:10px 0 0 50px;
+}
+.goals .list{
+	clear:both;
+	font-size:18px;
+	text-shadow:0px 1px 3px rgba(0,0,0,0.2);
+	padding:50px 10px 10px 10px;
+	text-align:center;
+	color:#1c3456;
+}

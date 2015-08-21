@@ -1,0 +1,77 @@
+.cssDetector_certificate{display:none;}
+#yoodooWidget .certificate h2{
+	margin:1px 0px 10px 0px;
+}
+.certificate{
+	/*background:url(../../image/CertificateBackground.jpg) no-repeat top center;*/
+	color:#000;
+	font-size:14px;
+	width:764px;
+	height:416px;
+}
+.certificate .downloadButton{
+	background:url(../../image/CertificateButton.png) no-repeat top center;
+	width:184px;
+	height:39px;
+	border:0;
+	padding:0px;
+	margin:10px;
+	cursor:pointer;
+}
+.certificate .downloadButton:hover{
+	background-position:0px -39px;
+}
+.certificate p{
+	font-size:30px;
+	color:#fff;
+	text-shadow:2px 2px 2px #000;
+	text-align:center;
+	margin:0px !important;
+	display:block;
+	padding:20px 0px 10px 0px;
+}
+.certificate .previewContainer{
+	overflow:hidden;
+	-o-box-shadow:0px 0px 10px #000;
+	-moz-box-shadow:0px 0px 10px #000;
+	-khtml-box-shadow:0px 0px 10px #000;
+	-webkit-box-shadow:0px 0px 10px #000;
+	box-shadow:0px 0px 10px #000;
+	margin:10px 0px 0px 0px;
+}
+.certificate .previewArea{
+	margin:20px;
+	-o-box-shadow:0px 0px 15px #000;
+	-moz-box-shadow:0px 0px 15px #000;
+	-khtml-box-shadow:0px 0px 15px #000;
+	-webkit-box-shadow:0px 0px 15px #000;
+	box-shadow:0px 0px 15px #000;
+	position:relative;
+	font-family:Arial;
+	cursor:pointer;
+}
+.certificate .previewArea div{
+	position:absolute;
+	z-index:5;
+}
+.font-Arial{
+	font-family:Arial;
+}
+.font-Courier{
+	font-family:Courier;
+}
+.font-Helvetica{
+	font-family:Helvetica;
+}
+.font-Times{
+	font-family:"Times New Roman";
+}
+.font-B{
+	font-weight:bold;
+}
+.font-I{
+	font-style:italic;
+}
+.font-U{
+	text-decoration:underline;
+}

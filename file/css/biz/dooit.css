@@ -1,0 +1,150 @@
+.cssDetector_dooit{display:none;}
+.dooitinput {border:2px solid #70ba00;font-size:18px;resize:none;outline:none}
+.dooitinput:focus {border:2px solid #990000}
+.slidescale{height:43px;width:305px;position:relative;margin:0 auto}
+.scale{background:url(../../../image/biz/scale.jpg);width:305px;height:43px;font-size:1px;position:absolute;top:0px;left:0px}
+.slider{background:url(../../../image/biz/slider.png);width:83px;height:30px;font-size:12px;text-align:center;position:absolute;color:#fff}
+.slideResponder{width:225px;height:43px;cursor:pointer;position:absolute;left:40px}
+.dooitalert{text-align:center;font-size:18px;color:#CC0000}
+.dooitsummary{text-align:center;font-size:18px;color:#70ba00;margin:10px}
+.dooitdotit{border:2px dashed #CCCCCC;padding:10px;margin:10px}
+.dooitdotit nobr{color:#FF0000}
+.dooitdotit b{color:#000099}
+#exercise_content{font-size:14px}
+#exercise_content select{font-size:14px;height:auto}
+#exercise_content td{font-size:14px}
+#verbose_summary{font-size:18px;text-align:center;padding:10px;color:#70ba00}
+#exercise_content table{}
+.textareaContainer{padding:0px 10px 0px 355px;margin:0 0 20px 0;}
+.textareaContainer textarea{
+	float:none;
+	margin:0px;
+	border:3px solid #5cb30b;
+	width:100%;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+	resize:none;
+	outline:none;
+	height:80px;
+}
+.textareaContainer textarea:focus{
+	-o-box-shadow:0px 0px 5px #999;
+	-moz-box-shadow:0px 0px 5px #999;
+	-webkit-box-shadow:0px 0px 5px #999;
+	-khtml-box-shadow:0px 0px 5px #999;
+	box-shadow:0px 0px 5px #999;
+}
+.radioselector,.checkselector{margin:0px;padding:0px}
+.radioselector td,.checkselector td{background:url(../../../image/biz/unseled.gif) bottom repeat-x;margin:2px;padding:4px;text-align:center;cursor:pointer;width:100px;font-size:12px;border:1px solid #CCCCCC}
+.radioselector td{height:130px;vertical-align:top}
+.checkselector td{min-height:50px;vertical-align:middle;padding:auto 4px}
+.radioselector td:hover,.checkselector td:hover{border:1px solid #990000}
+.radioselector td img{display:block;margin:0 auto}
+.radioselector td.selected,.checkselector td.selected{background:url(../../../image/biz/seled.gif) bottom repeat-x;border:1px solid #000066}
+.unseleddiv,.seleddiv{cursor:pointer;font-size:14px;width:290px;height:23px;line-height:23px;padding-left:10px}
+.seleddiv{color:#fff;background:url(../../../image/biz/bargreen.gif)}
+.unseleddiv{color:#003366;background:url(../../../image/biz/bargrey.gif)}
+.seleddiv:hover{color:#f00}
+.unseleddiv:hover{color:#f00}
+.inputSection{margin:10px;padding:10px;clear:both;border:1px solid #EEE;float:none;overflow:auto;}
+div.inputSection p{float:none}
+.inputSection label{clear:both;cursor:pointer}
+.inputSection label:hover{color:#990000}
+.inputPos{float:left;margin-left:355px}
+.editableSpan{background:#eee;cursor:pointer}
+.editableSpan:hover{background:#FF5500}
+.rowleft{width:300px;text-align:right;float:left;line-height:20px}
+.rowright{width:300px;text-align:left;float:left;line-height:20px;margin-left:5px}
+.fullrow{clear:both;min-height:30px}
+.mainQuestion{font-size:larger}
+.inputCheck{padding:10px}
+.inputCheck em{display:block}
+.textareainput{margin:10px;padding:20px;font-size:larger;border:2px dashed #70ba00}
+.textareainput:focus{border:2px dashed #70ba00}
+.dooithelp{width:16px;height:16px;float:right;position:relative;cursor:help;background:url(../../../image/biz/rollover.png)}
+.dooithelp .dooitbubble{display:none;position:absolute;left:-67px;bottom:30px;width:157px;font-size:10px;color:#fff;text-align:center;padding:0px}
+.dooithelp:hover .dooitbubble{display:block}
+.bubbletop{background:url(../../../image/biz/bubble.png) 1px 0px;height:11px}
+.bubblebottom{background:url(../../../image/biz/bubble.png) 1px 12px;height:13px}
+.bubblemid{background:url(../../../image/biz/bubblemid.png) repeat-y;padding:0px 8px 2px 8px;text-align:center}
+.howopen{cursor:pointer;background:url(../../../image/biz/how.gif) no-repeat;height:18px;font-size:14px;color:#000;padding-left:30px}
+.howopen:hover{color:#3e7a00}
+.how{font-size:14px;color:#556e8c;padding:0px 20px;cursor:default}
+.how .equation{font-family:"Courier New", Courier, monospace;margin-left:20px}
+.how .equation span{background:#f0f0f0}
+.textLink{text-decoration:underline;cursor:pointer;color:#22395e}
+.textLink:hover{color:#00CC33}
+.input100,.input250,.input50{height:26px;line-height:26px;font-size:14px;padding:0px 2px;border:none;resize:none;outline:none}
+.input50{background:url(../../../image/biz/input54.gif) no-repeat;width:50px}
+.input100{background:url(../../../image/biz/input104.gif) no-repeat;width:100px}
+.input250{background:url(../../../image/biz/input254.gif) no-repeat;width:250px}
+.wideInput{background:url(../../../image/biz/inputwide.gif) no-repeat;width:730px;height:150px;font-size:18px;padding:5px;border:none;resize:none;outline:none;display:block;margin:0px auto}
+#easily{background:url(../../../image/biz/easilylogo.gif) right top no-repeat;padding:0px;float:right;min-width:168px;min-height:48px}
+.easily2 div{width:135px;height:24px;text-align:center;background:url(../../../image/biz/easily.gif);cursor:pointer;padding:38px 110px 8px 5px;margin:0px auto;color:#fff}
+.easily2 div:hover{font-weight:bold}
+.abutton{background:url(../../../image/biz/buttonback.gif) repeat-x;cursor:pointer;color:#fff;height:21px;float:right;margin:70px 10px 0px 0px}
+.abutton .left,.abutton .right{width:5px;height:21px;background:url(../../../image/biz/buttonends.gif);float:left;margin:0px !important;}
+.abutton .right{background-position:5px 0px;float:right;margin:0px !important;}
+.suggestion{font-size:12px;line-height:15px;color:#000066;cursor:pointer}
+.suggestion:hover{color:#33CC33}
+.step{background:url(../../../image/biz/steps.gif);width:20px;height:20px;float:left;margin:5px}
+.on{background-position:0px -20px}
+.checkbox{cursor:pointer;color:#36459e;line-height:36px}
+.checkbox:hover{color:#4db000}
+.checkbox div{float:left;width:26px;height:26px;background:url(../../../image/biz/checks.gif);margin:5px}
+.checkbox.on div{background-position:0px -26px}
+.draggable{cursor:move;z-index:30;clear:both;height:25px;}
+.draggable .left,.draggable .right{background:url(../../../image/biz/draggable-ends.png);width:5px;height:25px;float:left;margin:0px !important;}
+.draggable .right{background-position:-5px 0px;float:left !important;}
+.draggable:hover .left{background-position:-10px 0px}
+.draggable:hover .right{background-position:-15px 0px}
+.draggable .center{background:url(../../../image/biz/draggable-back.png);float:left;height:25px;line-height:20px;padding:0px 5px;color:#fff}
+.draggable:hover .center{background-position:0px -25px}
+#dropper{background:url(../../../image/biz/dropper.png);width:33px;height:42px;position:absolute;display:none;left:-30px}
+.result{float:right;width:100px;height:100px;border:1px solid #CCCCCC;text-align:center;color:#CCCCCC;margin:5px;padding:5px}
+.result.active{border:1px solid #333333;color:#333333}
+#tabbed{position:relative;top:3px;width:740px;padding:0px 0px 0px 10px}
+#tabbed li{float:left;list-style:none;height:22px;line-height:20px;padding:3px 0px 0px 0px}
+.tab{background:url(../../../image/biz/tabs.gif);color:#828b92;cursor:pointer}
+.tab:hover{color:#464d52}
+.tab.on{background-position:0px -25px;color:#464d52;cursor:default}
+.tabend{background:url(../../../image/biz/tabends.gif) -64px 0px;width:16px}
+.tabend.on{background-position:0px 0px}
+.tabend.on.first{background-position:-32px 0px}
+.tabend.wason{background-position:-48px 0px}
+.tabend.first{background-position:-96px 0px}
+.tabend.last{background-position:-80px 0px}
+.tabend.last.on{background-position:-16px 0px}
+#tabpage{margin:22px 0px 0px 0px}
+#tabpage table{width:740px}
+#tabpage td{padding:0px !important}
+#tabpage .tl,#tabpage .tr,#tabpage .bl,#tabpage .br{background:url(../../../image/biz/tabcorners.gif);width:6px;height:6px}
+#tabpage .tr{background-position:-6px 0px}
+#tabpage .bl{background-position:0px -6px}
+#tabpage .br{background-position:-6px -6px}
+#tabpage .t,#tabpage .b{background:url(../../../image/biz/tabtb.gif);height:6px}
+#tabpage .b{background-position:0px -6px}
+#tabpage .l,#tabpage .r{background:url(../../../image/biz/tablr.gif);width:6px}
+#tabpage .r{background-position:-6px 0px}
+#tabpage .c{background:#f5f6f8}
+.easilyCheck{background:url(../../../image/biz/check.gif);width:49px;height:21px;border:none;cursor:pointer;}
+.worldMap{
+	background:url(../../../image/biz/world.jpg) repeat scroll 100px 100px #fff;
+	width:200px;
+	height:200px;
+	display:none;
+}
+button.leftButton,button.rightButton{
+	background:url(../../../image/biz/down.gif);
+	cursor:pointer;
+	width:11px;
+	height:12px;
+	padding:2px;
+	border:none;
+}
+button.rightButton{
+	background:url(../../../image/biz/up.gif);
+}

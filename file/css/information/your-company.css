@@ -1,0 +1,20 @@
+.cssDetector_your_company{display:none;}
+.samepeople,.justme,.withmanagement,.money,.charity{
+	height:70px;
+	background:no-repeat center center;
+}
+.samepeople{
+	background-image:url(../../../image/dooits/information/samepeople.png);
+}
+.justme{
+	background-image:url(../../../image/dooits/information/justme.png);
+}
+.withmanagement{
+	background-image:url(../../../image/dooits/information/withmanagement.png);
+}
+.money{
+	background-image:url(../../../image/dooits/information/money.png);
+}
+.charity{
+	background-image:url(../../../image/dooits/information/charity.png);
+}

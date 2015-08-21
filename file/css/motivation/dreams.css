@@ -1,0 +1,107 @@
+.cssDetector_dreams{display:none;}
+.dreams{
+	background:url(../../../image/dooits/motivation/dreams.gif) no-repeat top right;
+	/*width:760px;*/
+	height:380px;
+	color:#333;
+	font-size:14px;
+	position:relative;
+}
+.dreams .buttons{
+	padding:5px 0 0 0;
+}
+.dreams .visit,.dreams .buy,.dreams .live,.dreams .do,.dreams .other{
+	background:url(../../../image/dooits/motivation/dreams-buttons.png) no-repeat;
+	width:116px;
+	height:116px;
+	float:left;
+	border:0px;
+	cursor:pointer;
+	margin:10px;
+}
+.dreams .buy{
+	background-position:-116px 0;
+}
+.dreams .live{
+	background-position:-232px 0;
+}
+.dreams .do{
+	background-position:-348px 0;
+}
+.dreams .other{
+	background-position:-464px 0;
+}
+.dreams .visit:hover{
+	background-position:0px -116px;
+}
+.dreams .buy:hover{
+	background-position:-116px -116px;
+}
+.dreams .live:hover{
+	background-position:-232px -116px;
+}
+.dreams .do:hover{
+	background-position:-348px -116px;
+}
+.dreams .other:hover{
+	background-position:-464px -116px;
+}
+.dreams .creator{
+	clear:both;
+}
+.dreams .creator input{
+	width:320px;
+	padding:0 10px;
+}
+.dreams .creator button.add{
+	background:url(../../../image/dooits/motivation/add-dream.png) no-repeat;
+	width:143px;
+	height:34px;
+	padding:2px 0 8px 0;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	float:right;
+	margin:2px 0 0 0;
+}
+.dreams .creator button.add:hover{
+	background-position:0px -34px;
+}
+.dreams .list{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-shadow:0px 1px 2px rgba(0,0,0,0.4);
+	border:1px solid #bbbbbb;
+	background:url(../../../image/dooits/motivation/dreams-aspirations.png) #f5f5f5;
+	min-height:100px;
+	padding:10px 0px;
+}
+.dreams .adream{
+	float:left;
+	margin:1px 30px;
+}
+.dreams .adream,.dreams .adream button{
+	background:url(../../../image/dooits/motivation/adream.png) no-repeat;
+	width:306px;
+	height:46px;
+	cursor:default;
+}
+.dreams .adream .text{
+	padding:2px 0 0 20px;
+	overflow:hidden;
+	width:250px;
+	height:38px;
+	margin:3px 0px;
+}
+.dreams .adream button{
+	float:right;
+	width:26px;
+	background-position:top right;
+	cursor:pointer;
+	border:none;
+}
+.dreams .adream button:hover{
+	background-position:bottom right;
+}

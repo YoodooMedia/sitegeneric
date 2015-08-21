@@ -1,0 +1,1541 @@
+
+@-webkit-keyframes pulsing {
+  0% 100%  { -webkit-transform:scale(1);border-radius:0px;box-shadow:0px 0px 0px #000; }
+  50% { -webkit-transform:scale(1.3);border-radius:10px;box-shadow:0px 0px 10px #000; }
+}
+@-moz-keyframes pulsing {
+  0% 100%  { -moz-transform:scale(1);border-radius:0px;box-shadow:0px 0px 0px #000; }
+  50% { -moz-transform:scale(1.3);border-radius:10px;box-shadow:0px 0px 10px #000; }
+}
+@-o-keyframes pulsing {
+  0% 100%  { -o-transform:scale(1);border-radius:0px;box-shadow:0px 0px 0px #000; }
+  50% { -o-transform:scale(1.3);border-radius:10px;box-shadow:0px 0px 10px #000; }
+}
+@keyframes pulsing {
+  0% 100%  { transform:scale(1);border-radius:0px;box-shadow:0px 0px 0px #000; }
+  50% { transform:scale(1.3);border-radius:10px;box-shadow:0px 0px 10px #000; }
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/Roboto-Bold-webfont.eot');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('../fonts/Roboto-Italic-webfont.eot');
+    src: url('../fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Italic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('../fonts/RobotoCondensed-Regular-webfont.eot');
+    src: url('../fonts/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Regular-webfont.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.cssDetector_yoodooMetaphorTwo{display:none;}
+
+
+/*
+	DarkBlue:#0052BA;
+	MidBlue:#3E87BB;
+	LightBlue:#97C1E0;
+	DarkGreen:#006600;
+	MidGreen:#339933;
+	LightGreen:#99CC33;
+	Ruby:#CF1040;
+	MidRed:#9C1737;
+	LightRed:#E09801;
+	Yellow:#FFD149;
+	DarkGrey:#575757;
+	MidGrey:#878787;
+	LightGrey:#B2B2B2;
+	PaleGrey:#DADADA;
+	Black:#000000;
+	White:#FFFFFF;
+*/
+#yoodooWidget{
+	font-family:robotoregular;
+	line-height:16px;
+	font-size:14px;
+	position:relative;
+	overflow:hidden;
+}
+#yoodooWidget h1,#yoodooWidget h2,#yoodooWidget h3,#yoodooWidget h4/*,#yoodooWidget b*/{
+	font-family:robotobold;
+	margin:0px;
+	font-weight:normal;
+}
+#yoodooWidget em{
+	font-family:robotoitalic;
+}
+input::-webkit-input-placeholder { color:#fff; }
+input::-moz-placeholder { color:#fff; } /* firefox 19+ */
+input:-ms-input-placeholder { color:#fff; } /* ie */
+input:-moz-placeholder { color:#fff; }
+
+.dooitDisplay input::-webkit-input-placeholder { color:#bbb; }
+.dooitDisplay input::-moz-placeholder { color:#bbb; } /* firefox 19+ */
+.dooitDisplay input:-ms-input-placeholder { color:#bbb; } /* ie */
+.dooitDisplay input:-moz-placeholder { color:#bbb; }
+
+.yoodooUI_dialog input::-webkit-input-placeholder { color:#bbb; }
+.yoodooUI_dialog input::-moz-placeholder { color:#bbb; } /* firefox 19+ */
+.yoodooUI_dialog input:-ms-input-placeholder { color:#bbb; } /* ie */
+.yoodooUI_dialog input:-moz-placeholder { color:#bbb; }
+
+.yoodooBackground{
+	background-color: #1873cc;
+}
+#yoodooWidget .login{
+	max-width:360px;
+	margin:0px auto;
+}
+#yoodooWidget button{
+	cursor:pointer;
+	outline:none;
+	border-radius:3px;
+	background:#fff;
+	margin:3px;
+	padding:10px 20px;
+	min-width:112px;
+	border:none;
+	transition:background 0.3s, color 0.3s, opacity 0.3s;
+}
+#yoodooWidget button:hover{
+	background:#eaf5ff;
+}
+#yoodooWidget .dooitDisplay button{
+	background:#B2B2B2;
+}
+#yoodooWidget .dooitDisplay button:hover{
+	background:#575757;
+	color:#fff;
+}
+#yoodooWidget button.positiveAction{
+	background:#99CC33;
+	color:#000;
+}
+#yoodooWidget button.positiveAction:hover{
+	background:#006600;
+	color:#fff;
+}
+#yoodooWidget button.negativeAction{
+	background:#E09801;
+	color:#000;
+}
+#yoodooWidget button.negativeAction:hover{
+	background:#9C1737;
+	color:#fff;
+}
+.isNotApp ::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+}
+.isNotApp ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.isNotApp ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:#1976d2;
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}
+#yoodooWidget .yd_error{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+}
+#yoodooWidget .yd_error>div{
+	background:#FF9;
+	color:#000;
+	padding:5px;
+	margin:5px;
+	text-align:center;
+}
+#yoodooWidget .yd_working{
+	position:absolute;
+	width:inherit;
+	height:inherit;
+	left:0px;
+	top:0px;
+	background:url(images/blank.gif);
+	text-align:center;
+}
+#yoodooWidget .yd_working>div{
+	background:rgb(255,255,255);
+	color:#000;
+	padding:5px 0px;
+	display:table;
+	position:absolute;
+	margin:auto;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	width:100%;
+	border-top:1px solid rgb(0,0,0);
+	border-bottom:1px solid rgb(0,0,0);
+}
+#yoodooWidget .yd_working>div .spinner{
+	width:28px;
+	height:28px;
+	border-radius:14px;
+	background:url(../../image/loading.gif) center center no-repeat #fff;
+	margin:10px auto;
+}
+
+
+
+
+.yoodoo_debugger{
+	position:fixed;
+	border-left:1px solid #555;
+	padding:0px;
+	top:0px;
+	right:0px;
+	background:rgba(255,255,255,0.5);
+	color:#555;
+	min-width:100px;
+	max-width:300px;
+	height:100%;
+	font-family:"Courier New", Courier, monospace;
+	overflow:auto;
+	z-index:999;
+}
+.yoodoo_debugger>button{
+	margin:0px;
+	border:none;
+	border-left:1px solid #555;
+	padding:2px 5px;
+	cursor:pointer;
+	background:#555;
+	color:#fff;
+	width:100%;
+}
+.yoodoo_debugger>button:hover{
+	background:#999;
+	color:#fff;
+}
+.yoodoo_debugger>div{
+	clear:both;
+	white-space:nowrap;
+	background:#555;
+	color:#fff;
+	padding:1px 3px;
+}
+.yoodoo_debugger .tag_debug>div{
+	padding:0px 5px 0px 5px;
+	line-height:16px;
+	background:#fff;
+	color:#555;
+	font-size:11px;
+	white-space:nowrap;
+}
+.yoodoo_debugger .tag_debug>div.addTag{
+	color:#090;
+}
+.yoodoo_debugger .tag_debug>div.removeTag{
+	color:#900;
+}
+.yoodoo_debugger .meta_debug>div{
+	padding:0px 5px 0px 5px;
+	line-height:16px;
+	background:#fff;
+	color:#555;
+	font-size:11px;
+	white-space:nowrap;
+}
+.yoodoo_debugger .meta_debug>div.cachedMeta{
+	color:#090;
+}
+.yoodoo_debugger .post_debug>div{
+	padding:0px 5px 0px 5px;
+	line-height:16px;
+	background:#fff;
+	color:#555;
+	font-size:11px;
+	white-space:nowrap;
+}
+.yoodoo_debugger .post_debug>div+div{
+	color:#666;
+}
+.yoodoo_debugger .post_debug>div+div+div{
+	color:#777;
+}
+.yoodoo_debugger .post_debug>div+div+div+div{
+	color:#888;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div{
+	color:#999;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div{
+	color:#aaa;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div{
+	color:#bbb;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div+div{
+	color:#ccc;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div+div+div{
+	color:#ddd;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div+div+div+div{
+	color:#eee;
+}
+
+.yoodooHub{
+	background:url(../../image/hub/pebbles.jpg) no-repeat top center;
+	height:inherit;
+	position:relative;
+	box-sizing:border-box;
+	background-size:cover;
+}
+.yoodooHub .notificationMessage{
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	left:0px;
+	box-sizing: border-box;
+}
+.yoodooHub .notificationMessage.hasWarning{
+	height:100%;
+	background:rgba(0,0,0,0.2);
+	left:0px;
+	box-sizing: border-box;
+}
+#yoodooWidget .yoodooHub .notificationMessage button{
+	background:rgba(0,0,0,0.8);
+	color:#fff;
+	border-radius:0px;
+	width:100%;
+	margin:0px;
+}
+#yoodooWidget .yoodooHub .notificationMessage.hasWarning button{
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	left:15%;
+	top:50%;
+	width:70%;
+	border-radius:50px;
+}
+#yoodooWidget .notificationView .screen button{
+	width:90%;
+	background:#fff !important;
+	padding:10px;
+	margin-top:20px;
+	border-left:3px solid #97C1E0;
+	color:#97C1E0 !important;
+	text-align:left;
+	font-size:18px;
+	border-radius:0px;
+}
+#yoodooWidget .notificationView .screen button.warning,#yoodooWidget .notificationView .screen .warning button{
+	border-left:3px solid #CF1040;
+	color:#CF1040 !important;
+}
+#yoodooWidget .notificationView .screen button>div{
+	font-size:12px;
+}
+#yoodooWidget .notificationView .screen button>svg{
+	float:right;
+}
+.notificationView{
+	height:100%;
+}
+.notificationDetails{
+	padding:10%;
+	font-size:18px;
+	background:#E3F2FD;
+}
+.notificationDetails.warning{
+	
+}
+.notificationDetails button{
+	padding:20px !important;
+}
+.notificationDetails .messagetitle{
+	font-size:24px;
+}
+.notificationDetails .fullmessage{
+	margin:40px 0px 20px 0px;
+}
+.pieChart{
+	position:relative;
+}
+.pieChart>div{
+	position:absolute;
+	top:35px;
+	left:0px;
+	width:100%;
+	
+}
+.yoodooHub .blurred{
+	/*background:url(../../image/hub/pebbles_blurred.jpg) no-repeat top center;*/
+}
+.yoodooHub .pageDotPanel+.pagePanel .blurred{
+	background-position:center -40px;
+}
+#yoodooWidget .yoodooHub button.sessionCTA{
+	display:block;
+	width:100%;
+	background:rgba(97,142,40,0.7);
+	padding:20px 0px 0px 0px;
+	margin:0px 0px 30px 0px;
+	color:#fff;
+	text-align:center;
+	font-size:24px;
+	font-family:robotolight;
+}
+#yoodooWidget .yoodooHub button.sessionCTA>center{
+	font-size:14px;
+}
+.yoodooHub_header{
+	font-family:robotolight;
+	position:absolute;
+	top:0px;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	background:#1976d2;
+	color:#fff;
+	padding:0px 10px 0px 0px;
+	box-sizing:border-box;
+	font-size:24px;
+}
+.yoodooHub_header>button,.yoodooHub_header>svg,.yoodooHub_header>span{
+	vertical-align:middle;
+	display:inline-block;
+}
+#yoodooWidget .yoodooHub_header button{
+}
+.yoodooHub_pages{
+	height:inherit;
+}
+.yoodooHub_header+.yoodooHub_pages{
+	
+}
+#yoodooWidget .yoodooHub_header button{
+	padding:0px;
+	margin:0px;
+	min-width:0px;
+	vertical-align:bottom;
+	background:none !important;
+}
+.rightButtons{
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:inherit;
+	line-height:inherit;
+	background:#1976d2;
+	padding:0px 10px 0px 0px;
+}
+#yoodooWidget .yoodooHub>*{
+
+}
+#yoodooWidget .yoodooHub button.sessionCTA .next{
+	display:inline-block;
+	position:relative;
+	bottom:-25px;
+	left:0px;
+	min-width:20px;
+	line-height:20px;
+	border-radius:30px;
+	background:rgb(219,248,160);
+	border:none;
+	cursor:pointer;
+	transition:left 0.3s;
+	margin-top:-10px;
+}
+#yoodooWidget .yoodooHub button.sessionCTA .next>div{
+	width:20px;
+	min-width:20px;
+	height:20px;
+	line-height:20px;
+	background:rgb(153,204,51);
+	box-shadow:1px 1px 1px rgba(0,0,0,0.5);
+	margin:1px;
+	padding:15px;
+	border-radius:30px;
+}
+#yoodooWidget .yoodooHub button.sessionCTA:hover .next{
+	left:10px;
+}
+.hub_tool_title{
+	font-family:robotolight;
+	font-size:28px;
+}
+#yoodooWidget button.green{
+	background:#99CC33;
+	color:#4d4d4d;
+	border:2px solid rgba(255,255,255,0.5);
+}
+#yoodooWidget button.green:hover{
+	background:#339933;
+	color:#ffffff;
+}
+#yoodooWidget button.red{
+	background:#E09801;
+	color:#4d4d4d;
+	border:2px solid rgba(255,255,255,0.5);
+
+}
+#yoodooWidget button.red:hover{
+	background:#9C1737;
+	color:#ffffff;
+}
+
+
+#yoodooWidget button.hub_widget_button svg{
+	/*position:absolute;
+	right:5px;
+	top:5px;*/
+}
+#yoodooWidget button.hub_tool_button,#yoodooWidget button.hub_widget_button,#yoodooWidget button.hub_fav_button{
+	text-align:left;
+	padding:0px;
+	margin:0px;
+	border-radius:0px;
+	overflow:hidden;
+	vertical-align:top;
+	position:relative;
+}
+#yoodooWidget button.hub_tool_button>div,#yoodooWidget button.hub_widget_button>div,#yoodooWidget button.hub_fav_button>div{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:24px;
+}
+#yoodooWidget button.hub_tool_button:last-child,#yoodooWidget button.hub_fav_button:last-child{
+	margin-bottom:40px;
+}
+.hub_widgets{
+	font-family:robotolight;
+	font-size:28px;
+}
+.sessionDisplay{
+	
+}
+#yoodooWidget .sessionDisplay .yoodooUI_page>h2{
+	padding:10px 0px;
+	color:#575757;
+	font-size:32px;
+	line-height:32px;
+	font-family:robotolight;
+}
+.sessionDisplay .yoodooUI_page>h2+p{
+	margin-top:0px;
+}
+.sessionDisplay .yoodooUI_page>svg{
+	margin:0px 0px 10px 0px;
+}
+.pageDotPanel.blue{
+	background:#64b5f6;
+}
+#yoodooWidget .yoodooUI_pages .pageDotPanel.blue>*{
+	background:#aed581;
+	border-color:#fff;
+}
+#yoodooWidget .yoodooUI_pages .pageDotPanel.blue>*.on,#yoodooWidget .yoodooUI_pages .pageDotPanel.blue>*:hover{
+	background:#fff;
+	border-color:#fff;
+}
+#yoodooWidget .yoodooUI_pages .pageDotPanel.blue>*:disabled,#yoodooWidget .yoodooUI_pages .pageDotPanel.blue>*:disabled:hover{
+	opacity:1;
+	background:#bbdefb;
+	border-color:#bbdefb;
+	cursor:default;
+}
+.sessionDisplay .yoodooUI_page{
+	background:#fafafa;
+	text-align:center;
+}
+.experienceSlider{
+	white-space:nowrap;
+	overflow:hidden;
+}
+#yoodooWidget .yoodooUI button.experienceButton{
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+	background:#64b5f6;
+	padding:0px;
+	margin:20px 0px;
+	border-radius:0px;
+	min-width:10px;
+}
+.experienceButtonContainer{
+	overflow:visible !important;
+}
+
+#yoodooWidget .yoodooUI button.nextExperience:not(.timedReveal){
+	background:#3ebc2e;
+	-webkit-animation: pulsing 1s infinite;
+	-moz-animation: pulsing 1s infinite;
+	-o-animation: pulsing 1s infinite;
+	animation: pulsing 1s infinite;
+	z-index:21;
+}
+.experienceButton .experienceTitle{
+	font-family:robotolight;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#fff;
+	font-size:10px;
+	line-height:13px;
+	text-transform: uppercase;
+	padding:3px;
+	box-sizing: border-box;
+	text-align:center;
+}
+#yoodooWidget .yoodooUI button.experienceButton.experienceComplete{
+	background:#1976d2;
+}
+#yoodooWidget .yoodooUI button.experienceButton.notAvailable,#yoodooWidget .yoodooUI button.experienceButton:disabled{
+	opacity:1;
+	background:#cfcfcf;
+}
+#yoodooWidget .yoodooUI button.timedReveal{
+	transform:scale(1.3);
+	border-radius:10px;
+	background:#bdbdbd !important;
+	z-index:21;
+	cursor:default;
+}
+#yoodooWidget .yoodooUI button.timedReveal svg,#yoodooWidget .yoodooUI button.timedReveal .experienceTitle{
+	opacity:0.2;
+}
+#yoodooWidget .yoodooUI button.timedReveal>span{
+	position:absolute;
+	bottom:5px;
+	left:0px;
+	width:100%;
+	font-size:10px;
+}
+
+@-webkit-keyframes spin {
+    0% {bottom: 0px;}
+    15% {bottom: 5px;}
+    45% {bottom: -5px;}
+    60% {bottom: 0px;}
+    100% {bottom: 0px;}
+}
+@keyframes spin {
+    0% {bottom: 0px;}
+    25% {bottom: 5px;}
+    50% {bottom: 0px;}
+    100% {bottom: 0px;}
+}
+#yoodooWidget .yoodooUI button.timedReveal>span>span{
+	font-size:14px;
+	color:#1976d2;
+	display:block;
+	position:relative;
+	-webkit-animation: spin 1s infinite;
+	animation: spin 1s infinite;
+}
+.experienceDisplay{
+	height:inherit;
+	background:#fafafa;
+}
+.experienceList{
+	height:inherit;
+	box-sizing:border-box;
+	overflow:auto;
+}
+#yoodooWidget .experienceList button.contentButton{
+	background:#fafafa;
+	color:#575757;
+	text-align:left;
+	border-radius:0px;
+	padding:5px;
+	margin:0px;
+	box-sizing:border-box;
+	position:relative;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	position:relative;
+}
+#yoodooWidget .experienceList button.contentButton:disabled{
+	opacity:1;
+}
+#yoodooWidget .experienceList button.contentButton.timedReveal>span{
+	position:absolute;
+	bottom:5px;
+	right:10px;
+	padding:0px 10px;
+	background:#fff;
+	border-radius:10px;
+	font-size:10px;
+	text-align:right;
+	display:block;
+}
+#yoodooWidget .experienceList button.contentButton.timedReveal>span>span{
+	font-size:14px;
+	color:#1976d2;
+	position:relative;
+	display:inline-block;
+	padding:0px 5px;
+	-webkit-animation: spin 1s infinite;
+	animation: spin 1s infinite;
+	line-height:normal;
+}
+@-webkit-keyframes rightbounce {
+    0%   {right: 0px;}
+    50%  {right: 10px;}
+    100% {right: 0px;}
+}
+@keyframes rightbounce {
+    0%   {right: 0px;}
+    50%  {right: 10px;}
+    100% {right: 0px;}
+}
+.experienceList button.contentButton>svg{
+	display:inline-block;
+	vertical-align:middle;
+	margin:0px 10px 0px 5px;
+}
+.experienceList button.contentButton>svg+svg{
+	position:absolute;
+}
+#yoodooWidget .experienceList button.contentButton.itemCTA>svg:last-child{
+    -webkit-animation: rightbounce 0.5s infinite; /* Chrome, Safari, Opera */
+    animation: rightbounce 0.5s infinite;
+}
+
+/* dooits */
+
+.dooitDisplay{
+	background:#fafafa;
+	box-sizing:border-box;
+	min-height:100%;
+	height:inherit;
+}
+.dooitArena{
+	height:inherit;
+	overflow:hidden;
+}
+.doneButtonContainer{
+	position:absolute;
+	min-width:80px;
+	min-height:80px;
+	right:0px;
+	bottom:0px;
+	border-radius:50px 0px 0px 0px;
+	text-align:right;
+	overflow:hidden;
+}
+#yoodooWidget .dooitArena button.doneButton{
+	min-width:50px;
+	padding:0px;
+	margin:0px;
+	width:50px;
+	height:50px;
+	border-radius:100px;
+	background:#878787;
+	color:#fff;
+	opacity:0.1;
+	position:absolute;
+	bottom:-10px;
+	right:-5px;
+	transition:background 0.3s, opacity 0.3s, width 0.3s, height 0.3s,bottom 0.3s,right 0.3s;
+	cursor:default;
+}
+#yoodooWidget .dooitArena button.doneButton.finishable{
+	width:100px;
+	height:100px;
+	bottom:-20px;
+	right:-20px;
+	opacity:0.7;
+	background:#99CC33;
+	cursor:pointer;
+}
+#yoodooWidget .dooitArena button.doneButton.finishable:hover{
+	opacity:1;
+	background:#339933;
+}
+#yoodooWidget .dooitArena button.doneButton.savable{
+	width:100px;
+	height:100px;
+	bottom:-20px;
+	right:-20px;
+	opacity:0.7;
+	background:#97C1E0;
+	cursor:pointer;
+}
+#yoodooWidget .dooitArena button.doneButton.savable:hover{
+	opacity:1;
+	background:#3E87BB;
+}
+@-webkit-keyframes marginbounce {
+    0%   {margin-top: 0px;}
+    20%  {margin-top: 20px;}
+    40% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+@keyframes marginbounce {
+    0%   {margin-top: 0px;}
+    20%  {margin-top: 20px;}
+    40% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+#yoodooWidget .dooitArena button.doneButton.hilite{
+    -webkit-animation: marginbounce 3s infinite; /* Chrome, Safari, Opera */
+    animation: marginbounce 3s infinite;
+}
+.doneButtonContainer .savePromptBlockout{
+	display:none;
+	z-index:998;
+}
+.doneButtonContainer .savePrompt{
+	width:0px;
+	height:0px;
+	background:#3E87BB;
+	margin:0px 10px 10px 0px;
+	border-radius:200px;
+	transition:width 0.5s, height 0.5s;
+	z-index:999;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	color:#fff;
+	box-sizing:border-box;
+}
+.doneButtonContainer .savePrompt>p{
+	padding-top:40px;
+}
+#yoodooWidget .dooitArena button.doneButton.savable.prompted{
+	opacity:1;
+	background:#3E87BB;
+}
+.doneButtonContainer button.doneButton.savable.prompted+.savePromptBlockout{
+	display:block;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background:url(images/blank.gif);
+}
+.doneButtonContainer button.doneButton.savable.prompted+.savePromptBlockout+.savePrompt{
+	display:block;
+	width:250px;
+	height:250px;
+}
+#yoodooWidget .blockout{
+	background:rgba(0,0,0,0.5);
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	overflow:hidden;
+}
+#yoodooWidget .menu{
+	display:inline-block;
+	background:#fff;
+	position:relative;
+}
+#yoodooWidget .menu>div{
+	background:#1976d2;
+	color:#fff;
+	padding:0px 10px;
+}
+#yoodooWidget .menu button{
+	display:block;
+	white-space:nowrap;
+	width:100%;
+	text-align:left;
+	margin:0px;
+	border-radius:0px;
+	padding:10px;
+}
+#yoodooWidget .menu button>svg{
+	vertical-align:middle;
+	margin:0px 10px 0px 0px;
+}
+
+
+/* episode */
+.ui_episode{
+	height:100%;
+	background:#000;
+	position:relative;
+	overflow:hidden;
+}
+.ui_keypoint{
+	height:100%;
+}
+.ui_episode_keypoints{
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:100px;
+	width:0px;
+	height:100%;
+	padding-top:50px;
+}
+.yoodooHub_header+.ui_episode_keypoint_pages{
+	box-sizing:border-box;
+	height:100%;
+	background:#fff;
+}
+.ui_episode_keypoint_page{
+	width:50% !important;
+}
+@media (orientation:portrait) {
+	.ui_episode_keypoint_page{
+		width:100% !important;
+	}
+}
+#yoodooWidget .ui_episode_keypoints .ui_episode_keypoint{
+	position:relative;
+	left:-50px;
+	transition:left 0.3s;
+	margin:12px 0px;
+}
+#yoodooWidget .ui_episode_keypoints .ui_episode_keypoint>button.ui_episode_keypoint_play{
+	position:absolute;
+	left:400px;
+	width:30px;
+	height:30px;
+	min-width:0px;
+	top:9px;
+	border-radius:30px;
+	padding:0px;
+	transition:left 0.5s;
+	text-align:center;
+}
+#yoodooWidget .ui_episode_keypoints .ui_episode_keypoint.ui_episode_keypoint_reveal>button.ui_episode_keypoint_play{
+	left:-30px;
+}
+#yoodooWidget .ui_episode_keypoints .ui_episode_keypoint.ui_episode_keypoint_active>button.ui_episode_keypoint_play{
+	left:400px;
+}
+#yoodooWidget .ui_episode_keypoints .ui_episode_keypoint>button{
+	background:#4caf50;
+	border-radius:30px 0px 0px 30px;
+	padding:0px 5px 0px 20px;
+	transition:background 0.3s,color 0.3s;
+	white-space:nowrap;
+	min-width:100px;
+	max-width:400px;
+	text-align:left;
+	font-size:14px;
+	line-height:48px;
+	color:#fff;
+	box-shadow:0px 1px 5px #000;
+	margin:0px;
+}
+#yoodooWidget .ui_episode_keypoints .ui_episode_keypoint.ui_episode_keypoint_active>button{
+	background:#3df545;
+	color:#000;
+}
+.ui_episode_header{
+	position:absolute;
+	width:100%;
+	left:0px;
+	top:-100px;
+	background:rgba(0,0,0,0.6);
+	transition:top 0.3s;
+	color:#fff;
+	text-align:center;
+}
+.videoPaused .ui_episode_header{
+	top:0px;
+}
+#yoodooWidget .ui_episode_header .ui_episode_chapters{
+	display:inline-block;
+}
+#yoodooWidget .ui_episode_header button{
+	background:none;
+	min-width:0px;
+	vertical-align:middle;
+	margin:0px;
+}
+#yoodooWidget .ui_episode_header .ui_episode_chapters button{
+	min-width:0px;
+	color:#97C1E0;
+	padding:1px;
+	border-radius:20px;
+	background:none;
+	border:2px solid rgba(255,255,255,0);
+	transition:border 0.3s;
+}
+#yoodooWidget .ui_episode_header .ui_episode_chapters button:hover{
+	border:2px solid rgba(255,255,255,1);
+}
+.ui_episode_chapters button>div{
+	border-radius:20px;
+	width:18px;
+	height:18px;
+	text-align:center;
+	line-height:19px;
+	border:2px solid #97C1E0;
+}
+#yoodooWidget .ui_episode_header .ui_episode_chapters button.playing{
+	border:1px solid #fff;
+	color:#fff;
+}
+.ui_episode_chapters button.playing>div{
+	border:2px solid #fff;
+}
+.ui_episode_controls{
+	position:absolute;
+	width:100%;
+	box-sizing:border-box;
+	bottom:-100px;
+	left:0px;
+	padding:10px;
+	background:rgba(0,0,0,0.6);
+	transition:bottom 0.3s;
+}
+.videoPaused .ui_episode_controls{
+	bottom:0px;
+}
+#yoodooWidget .ui_episode_controls>button{
+	min-width:0px;
+	padding:0px;
+	background:none;
+}
+.ui_episode_buffering{
+	position:absolute;
+	width:100%;
+	height:0px;
+	top:50%;
+	left:0px;
+	display:none;
+}
+.ui_episode_buffering>div{
+	position:absolute;
+	width:100%;
+	height:0px;
+	top:50%;
+	left:0px;
+	text-align:center;
+}
+.ui_episode_buffering>div>div{
+	background:rgb(255,255,255) url(../../image/loading.gif) center center no-repeat;
+	height:30px;
+	line-height:30px;
+	position:relative;
+	top:-15px;
+	display:inline-block;
+	width:30px;
+	border-radius:30px;
+	box-shadow:0px 0px 20px #FFF;
+}
+.videoBuffering .ui_episode_buffering{
+	display:block;
+}
+.ui_episode_call_toPlay{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	display:none;
+	background:rgba(0,0,0,0.2);
+	cursor:pointer;
+}
+.ui_episode_call_toPlay>div{
+	position:absolute;
+	width:100%;
+	height:0px;
+	top:50%;
+	left:0px;
+}
+.ui_episode_call_toPlay>div>div{
+	height:60px;
+	padding:20px 0px;
+	line-height:100px;
+	position:relative;
+	top:-50px;
+	text-align:center;
+}
+.notStarted .ui_episode_call_toPlay{
+	display:block;
+}
+.ui_episode_progress{
+	width:50%;
+	height:20px;
+	padding:9px 0px;
+	display:inline-block;
+	margin-left:20px;
+	cursor:pointer;
+	position:relative;
+}
+.ui_episode_progress>span{
+	position:absolute;
+	top:-2px;
+	color:#fff;
+}
+.ui_episode_progress>span+div+span{
+	right:0px;
+}
+.ui_episode_progress>div{
+	height:2px;
+	background:#fff;
+	margin:9px 5px;
+}
+.ui_episode_progress>div>.ui_episode_progress_bar{
+	position:relative;
+	height:2px;
+	background:#3E87BB;
+}
+.ui_episode_progress>div>.ui_episode_progress_bar>div{
+	width:18px;
+	height:18px;
+	border-radius:10px;
+	background:#3E87BB;
+	position:absolute;
+	top:-8px;
+	right:-8px;
+}
+
+.notPlaying{
+	display:block;
+}
+.videoPlaying .notPlaying{
+	display:none;
+}
+.whenPlaying{
+	display:none;
+}
+.videoPlaying .whenPlaying{
+	display:block;
+}
+
+/* Community */
+
+.community,.newComment{
+	background:#fdfdfd;
+	height:100%;
+}
+#yoodooWidget .newComment h2{
+	color:#1976d2;
+	margin:20px auto;
+	width:80%;
+}
+.postCommentButton{
+	opacity:1;
+	cursor:pointer;
+}
+.stillRequired+.postCommentButton{
+	opacity:0;
+	cursor:default;
+}
+.community .communityUsers{
+	position:absolute;
+	top:40px;
+	overflow:hidden;
+	width:100%;
+}
+.webkit .community .communityUsers{
+	overflow-x:auto;
+}
+.isTouch .community .communityUsers{
+	overflow:hidden !important;
+}
+.community .communityUsers>div{
+	white-space:nowrap;
+	/*position:relative;
+	left:0px;*/
+}
+.community .your_community{
+	padding:0px 10px;
+	height:40px;
+	line-height:40px;
+	font-size:12px;
+	font-weight:bold;
+	position:absolute;
+	top:0px;
+	width:100%;
+	box-sizing:border-box;
+}
+.community .latest_comments{
+	padding:0px 10px;
+	height:40px;
+	line-height:40px;
+	font-size:12px;
+	font-weight:bold;
+	position:absolute;
+	top:132px;
+
+	width:100%;
+	box-sizing:border-box;
+}
+.webkit .community .latest_comments{
+	top:138px;
+}
+.community .communityComments{
+	padding:172px 0px 0px 0px;
+	box-sizing:border-box;
+	height:100%;
+}
+.webkit .community .communityComments{
+	padding:178px 0px 0px 0px;
+}
+.community .communityComments>div{
+	height:100%;
+	overflow-y:auto;
+}
+#yoodooWidget .community .communityUsers button.user{
+	width:90px;
+	height:90px;
+	color:#fff;
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:10px 2px;
+	background:#424242;
+	display:inline-block;
+	vertical-align:top;
+	box-sizing:border-box;
+	margin:1px;
+	border-radius:0px;
+	min-width:0px;
+}
+#yoodooWidget .community .communityComments button.comment{
+	position:relative;
+	display:block;
+	padding:0px;
+	margin:0px;
+	width:100%;
+	text-align:left;
+	background:none;
+}
+#yoodooWidget .community .communityComments button.comment:hover{
+	background:none;
+}
+#yoodooWidget .commentView .commentDetails{
+	overflow-y:auto;
+}
+#yoodooWidget .commentView .commentDetails+button{
+	transition:background 0.3s, top 0.3s;
+}
+#yoodooWidget .commentView .commentDetails+button.off{
+	top:-45px !important;
+}
+.community .communityComments .user,#yoodooWidget .commentView .commentDetails>div{
+	position:relative;	
+}
+#yoodooWidget .commentView .commentDetails>div:first-child>.content{
+	font-size:18px;
+	color:#1976d2;
+}
+.screen{
+	height:100%;
+	box-sizing:border-box;
+	padding:0px;
+	background:#fdfdfd;
+}
+#yoodooWidget .screen button{
+	display:block;
+	margin:5px auto;
+	background:#97C1E0;
+	color:#fff;
+}
+.community .communityComments .user,#yoodooWidget .commentView .commentDetails>div .user{
+	width:60px;
+	min-height:60px;
+	height:100%;
+	position:absolute;
+	vertical-align:top;
+	padding:5px;
+	box-sizing:border-box;
+	left:0px;
+	transition:left 0.3s;
+}
+#yoodooWidget .community .communityComments button.comment:hover .user{
+	left:10px;
+}
+.community .communityComments .content{
+	padding:0px 10px 0px 70px;
+	height:60px;
+	color:#9a9a9a;
+	font-size:16px;
+	line-height:30px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position:relative;
+}
+.commentView .commentDetails>div>.content{
+	padding:5px 10px 0px 70px;
+	color:#9a9a9a;
+	font-size:14px;
+	line-height:20px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position:relative;
+}
+.commentView .commentDetails>div>.content{
+	min-height:60px;
+}
+.community .communityComments .content .responses{
+	position:absolute;
+	right:20px;
+	bottom:5px;
+	border-radius:20px;
+	min-width:20px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	background:#1976d2;
+	box-shadow:0px 0px 2px #1976d2;
+	color:#fff;
+	text-align:center;
+}
+.community .communityComments .content .responses>div{
+	position:relative;
+}
+.community .communityComments .content .responses>div>svg{
+	position:absolute;
+	right:-15px;
+	bottom:0px;
+}
+.content_ago{
+	margin:0px 10px 0px 70px;
+	border-top:1px solid #e6e6e6;
+	text-align:right;
+	font-size:12px;
+	color:#9a9a9a;
+	padding:3px;
+}
+.nickname{
+	color:#555 !important;
+}
+.avatar{
+	width:50px;
+	height:50px;
+	border-radius:80px;
+	margin:0px auto;	
+}
+.community .communityUsers .user .userTitle{
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.userBio{
+	height:100%;
+}
+.userBio>div+div>div{
+	height:100%;
+	background:#fdfdfd;
+	position:relative;
+}
+.userBio .bioAvatar{
+	border-radius:80px;
+	width:80px;
+	height:80px;
+	border:3px solid #fdfdfd;
+	position:absolute;
+	top:10%;
+	left:20px;
+}
+.bioDetails{
+	height:80%;
+	padding:40px 110px 10px 110px;
+	overflow-y:auto;
+	box-sizing: border-box;
+}
+.portrait .bioDetails{
+	padding:40px 10px 10px 10px;
+}
+.bioDetails>div{
+	line-height:24px;
+}
+.bioDetails>div>div{
+	line-height:20px;
+}
+.activityGraph{
+	overflow-x:auto;
+	border:1px solid #B2B2B2;
+	position:relative;
+}
+.activityGraphContainer{
+	position:relative;
+}
+.activityGraph>span{
+	position:absolute;
+	top:0px;
+}
+.graphMonth{
+	display:inline-block;
+	box-sizing:border-box;
+	height:100%;
+	vertical-align:top;
+}
+.graphMonth+.graphMonth{
+	border-left:1px solid #000;
+}
+.activityGraphContainer{
+	position:relative;
+}
+.activityGraphY{
+	position:absolute;
+	width:100px;
+	text-align:right;
+	left:-100px;
+}
+.activityGraphY>div{
+	position:relative;
+	height:100%;
+}
+.activityGraphY span{
+	position:absolute;
+	font-size:11px;
+	right:1px;
+	height:14px;
+	line-height:14px;
+}
+
+
+.commentView{
+	height:100%;
+}
+.commentView>div+div>div{
+	background:#fdfdfd;
+	height:100%;
+}
+.snapshotArena{
+	height:100%;
+	position:relative;
+}
+.snapshotLocator{
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.snapshots{
+	position:relative;
+	background:#fdfdfd;
+	height:100%;
+	padding:10px;
+	box-sizing:border-box;
+	left:-100%;
+	transition:left 0.3s;
+	display:inline-block;
+	vertical-align:top;
+}
+.snapshotPrompt{
+	position:relative;
+	left:-100%;
+	box-sizing:border-box;
+	padding:50px;
+	background:#3E87BB;
+	border-radius:0px 200px 200px 0px;
+	color:#fff;
+	display:inline-block;
+	vertical-align:top;
+}
+#yoodooWidget .snapshotPrompt>div>div>button{
+	display:block;
+	margin:10px auto;
+}
+
+.snapshotPrompt>div{
+	padding:0px 0px 0px 20px;
+}
+#yoodooWidget .snapshots button{
+	line-height:20px;
+	white-space:nowrap;
+	text-align:left;
+	width:100%;
+	margin:10px auto;
+	display:block;
+}
+.snapshots button svg{
+	vertical-align:middle;
+	margin-right:10px;
+}
+.snapshots button span{
+	color:#878787;
+	float:right;
+	margin-left:20px;
+}
+#yoodooWidget .snapshots button.addButton{
+	float:none;
+	position:absolute;
+	right:-20px;
+	width:auto;
+}
+#yoodooWidget .snapshots button.addButton>svg{
+	margin:0px;
+}
+.snapshotTitle{
+	line-height:50px;
+	font-size:18px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	position:absolute;
+}
+.snapshotTitle svg{
+	vertical-align:middle;
+	margin-right:10px;
+}
+.snapshotTitle+div{
+	height:100%;
+	min-width:200px;
+	box-sizing:border-box;
+	padding:50px 0px 0px 0px;
+}
+.snapshotTitle+div>div{
+	height:100%;
+	overflow-y:auto;
+}
+#yoodooWidget button.closeButton{
+	padding:5px;
+	min-width:0px;
+	background:none;
+	float:right;
+}

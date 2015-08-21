@@ -1,0 +1,967 @@
+
+.cssDetector_yoodooUi{display:none;}
+
+.yoodooUI{
+	position:relative;
+}
+
+.yoodooUI_dialog,
+.yoodooUI_text,
+.yoodooUI_date,
+.yoodooUI_month,
+.yoodooUI_password,
+.yoodooUI_selectbox,
+.yoodooUI_slider{
+	overflow:hidden;
+}
+
+
+.yoodooUIerrorMessage{
+	background:#900;
+	color:#fff;
+	padding:2px 5px;
+	white-space:nowrap;
+	right:0%;
+	position:absolute;
+	top:0px;
+	transition:right 0.5s;
+	opacity:0;
+}
+.yoodooUIerrorMessage.yoodooUIerror{
+	right:10%;
+	opacity:1;
+}
+.yoodooUI.stillRequired{
+	color:#F00;
+}
+#yoodooWidget .yoodooUI button{
+	cursor:pointer;
+	outline:none;
+	border-radius:3px;
+	background:#fff;
+	margin:3px;
+	padding:10px 20px;
+	min-width:112px;
+	border:none;
+	transition:background 0.3s, color 0.3s, opacity 0.3s;
+}
+#yoodooWidget .yoodooUI button:hover{
+	background:#eaf5ff;
+}
+
+
+/* text input */
+
+.yoodooUI_text{
+	
+}
+.yoodooUI_ring{
+	position:relative;
+}
+.yoodooUI_ring>div{
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	text-align:center;
+}
+.yoodooUI label{
+	display:block;
+	color:#64b5f6;
+	width:80%;
+	margin:2px auto;
+}
+.yoodooUI_text label,
+.yoodooUI_password label,
+.yoodooUI_textarea label{
+	font-size:14px;
+}
+.yoodooUI_text>input,
+.yoodooUI_date>input,
+.yoodooUI_month>input,
+.yoodooUI_password>input,
+.yoodooUI_selectbox>select,
+.yoodooUI_textarea>.textareaSurround>textarea{
+	display:block;
+	border:none;
+	background:none;
+	outline:none;
+}
+.yoodooUI_textarea textarea{
+	width:100%;
+	outline:none;
+	border:none;
+}
+.yoodooUI_textarea>.textareaSurround>textarea{
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+}
+.yoodooUI_text>input,
+.yoodooUI_date>input,
+.yoodooUI_month>input,
+.yoodooUI_password>input,
+.yoodooUI_selectbox>select,
+.yoodooUI_textarea .textareaSurround,
+.yoodooUI_textarea .fixedTextareaSurround,
+.yoodooUI_slider>.ui_slider_block{
+	width:80%;
+	margin:2px auto;
+}
+.yoodooUI_text>input,
+.yoodooUI_date>input,
+.yoodooUI_month>input,
+.yoodooUI_password>input,
+.yoodooUI_selectbox>select{
+	border-bottom:2px solid #1669bb;
+}
+.yoodooUItextarea_tester,
+.yoodooUI_text>input,
+.yoodooUI_date>input,
+.yoodooUI_month>input,
+.yoodooUI_password>input,
+.yoodooUI_textarea>div>textarea{
+	font-size:14px;
+	line-height:20px;
+	padding:0px;
+	resize:none;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:#fff;
+}
+#sf_admin_content .yoodooUItextarea_tester,
+#sf_admin_content  .yoodooUI_text>input,
+#sf_admin_content  .yoodooUI_date>input,
+#sf_admin_content  .yoodooUI_month>input,
+#sf_admin_content  .yoodooUI_password>input,
+#sf_admin_content  .yoodooUI_selectbox>select,
+#sf_admin_content  .yoodooUI_textarea>.textareaSurround>textarea,
+#sf_admin_content  .yoodooUI_textarea>.fixedTextareaSurround>textarea{
+	color:#555;
+}
+.dooitDisplay .yoodooUItextarea_tester,
+.dooitDisplay .yoodooUI_text>input,
+.dooitDisplay .yoodooUI_date>input,
+.dooitDisplay .yoodooUI_month>input,
+.dooitDisplay .yoodooUI_password>input,
+.dooitDisplay .yoodooUI_selectbox>select,
+.dooitDisplay .yoodooUI_textarea>.textareaSurround>textarea,
+.dooitDisplay .yoodooUI_textarea>.fixedTextareaSurround>textarea{
+	color:#555;
+}
+.yoodooUI_dialog .yoodooUItextarea_tester,
+.yoodooUI_dialog .yoodooUI_text>input,
+.yoodooUI_dialog .yoodooUI_date>input,
+.yoodooUI_dialog .yoodooUI_month>input,
+.yoodooUI_dialog .yoodooUI_password>input,
+.yoodooUI_dialog .yoodooUI_selectbox>select,
+.yoodooUI_dialog .yoodooUI_textarea>div>textarea,
+.yoodooUI_dialog .yoodooUI_textarea>.fixedTextareaSurround>textarea{
+	color:#555;
+}
+.screen .yoodooUItextarea_tester,
+.screen .yoodooUI_text>input,
+.screen .yoodooUI_date>input,
+.screen .yoodooUI_month>input,
+.screen .yoodooUI_password>input,
+.screen .yoodooUI_selectbox>select,
+.screen .yoodooUI_textarea>div>textarea,
+.screen .yoodooUI_textarea>.fixedTextareaSurround>textarea{
+	color:#555;
+}
+.yoodooUI_textarea .textareaSurround{
+	padding:0px;
+	overflow:visible;	
+	position:relative;
+	min-height:20px;
+	margin-bottom:-18px;
+}
+
+.yoodooUI_textarea .fixedTextareaSurround{
+	padding:0px;	
+	position:static;
+}
+.yoodooUI_textarea .textareaSurround .textareaBorder{
+	position:absolute;
+	height:2px;
+	bottom:18px;
+	background:#1669bb;
+	width:100%;
+}
+.yoodooUI_textarea>.fixedTextareaSurround{
+	position:relative;
+	padding:2px 0px 6px 0px;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea{
+	position:absolute;
+	top:0px;
+	left:0px;
+	cursor:text;
+	transition:border 0.5s,background 0.3s;
+	background:#fff;
+	padding:2px 0px 0px 0px;
+	overflow:hidden;
+	width:100%;
+	box-sizing:border-box;
+}
+.yoodooUI_textarea>.fixedTextareaSurround textarea:hover{
+	background:#eaf5ff;
+}
+.yoodooUI_textarea>.fixedTextareaSurround textarea:focus{
+	overflow:auto;
+	cursor:text;
+	background:#eaf5ff;
+	border-bottom:4px solid #1669bb;
+}
+.yoodooUI_textarea textarea:disabled{
+	cursor:default;
+	color:#999 !important;
+	background:#fff !important;
+}
+.yoodooUI_text>input:focus,.yoodooUI_text>input:hover,
+.yoodooUI_password>input:focus,.yoodooUI_password>input:hover,
+.yoodooUI_selectbox>select:focus,.yoodooUI_selectbox>select:hover{
+	border-bottom:2px solid #64b5f6;
+}
+.yoodooUI_month .yoodooUI_selectbox{
+	width:40%;
+	display:inline-block;
+	margin-left:10%;
+	margin-right:0%;
+}
+.yoodooUI_month .yoodooUI_selectbox+.yoodooUI_selectbox{
+	margin-left:0%;
+	margin-right:10%;
+}
+.yoodooUI_text>input:focus,.yoodooUI_text>input:hover,
+.yoodooUI_password>input:focus,.yoodooUI_password>input:hover,
+.yoodooUI_textarea>.textareaSurround>textarea:focus,.yoodooUI_textarea>.textareaSurround>textarea:hover{
+	/*background:rgba(255,255,255,0.5);*/
+}
+.yoodooUI_textarea textarea:focus+.textareaBorder,.yoodooUI_textarea textarea:hover+.textareaBorder{
+	background:#09C;
+}
+.yoodooUI_text.stillRequired input,
+.yoodooUI_password.stillRequired input,
+.yoodooUI_textarea.stillRequired textarea{
+	border-color:#f00 !important;
+}
+.yoodooUI_textarea.stillRequired .textareaBorder{
+	background:#f00 !important;
+}
+
+.ui_slider_block{
+	
+}
+.ui_slider_range{
+}
+.ui_slider_hotspot{
+	margin:0px 10px;
+	padding:20px 0px 10px 0px;
+	cursor:pointer;
+	position:relative;
+}
+.ui_slider_labels{
+	position:absolute;
+	width:100%;
+}
+.ui_slider_labels>div{
+	width:0px;
+	position:absolute;
+	bottom:5px;
+}
+.ui_slider_labels>div>div{
+	width:20px;
+	text-align:center;
+	left:-10px;
+	position:relative;
+}
+.ui_slider_bar{
+	height:2px;
+	background:#C7C7C7;
+	position:relative;
+}
+.ui_slider_range .ui_slider_button{
+	background:#555;
+	height:2px;
+	text-align:right;
+	width:50%;
+}
+.ui_slider_hotspot:hover .ui_slider_button,.ui_slider_hotspot:hover .ui_slider_button>div{
+	background:#3db1d8;
+}
+.ui_slider_range .ui_slider_button>div{
+	display:inline-block;
+	background:#555;
+	border-radius:10px;
+	height:10px;
+	width:10px;
+	margin:-4px -5px 0px -5px;
+}
+.ui_slider_labels>div.ui_slider_mintxt{
+	width:50%;
+}
+.ui_slider_labels>div.ui_slider_maxtxt{
+	width:50%;
+}
+.ui_slider_labels>div.ui_slider_mintxt>div{
+	width:auto;
+	white-space:nowrap;
+	text-align:left;
+}
+.ui_slider_labels>div.ui_slider_maxtxt>div{
+	left:auto;
+	right:-10px;
+	width:auto;
+	white-space:nowrap;
+	text-align:right;
+}
+
+.UIavailable{
+    color:#555;
+    background:#fbfbfb;
+    cursor:pointer;
+}
+.UIavailable:hover{
+    background:#f5f5f5;
+}
+.UIdisabled{
+    color:#fff;
+    background:#6f6f6f;
+    cursor:default;
+}
+.UIselected{
+    color:#red;
+    background-color:red;
+    /*background:#1e88e5;*/
+    cursor:pointer;
+}
+.UIselected:hover{
+    background:#90caf9;
+}
+.UIcorrect{
+    color:#fff;
+    background:green;
+    cursor:pointer;
+    transition:right 0.5s;
+}
+.UIcorrect:hover{
+    background:green;
+    transition:right 0.5s;
+}
+.UIincorrect{
+    color:#fff;
+    background:red;
+    cursor:pointer;
+    transition:right 0.5s;
+}
+.UIincorrect:hover{
+    background:red;
+    transition:right 0.5s;
+}
+
+
+/* pages */
+
+.yoodooUI_pages{
+	height:100%;
+	width:100%;
+}
+.yoodooUI_pages .pagePanel{
+	height:100%;
+	left:0px;
+	box-sizing:border-box;
+	white-space:nowrap;
+	position:relative;
+}
+.yoodooUI_pages .pageDotPanel{
+	height:40px;
+	width:inherit;
+	position:absolute;
+	line-height:40px;
+	text-align:center;
+}
+.yoodooUI_pages .pageDotPanel>div,#yoodooWidget .yoodooUI_pages .pageDotPanel>button{
+	vertical-align:middle;
+	width:10px;
+	min-width:10px;
+	height:10px;
+	border-radius:20px;
+	background:#424241;
+	display:inline-block;
+	margin:13px 5px;
+	padding:0px;
+	box-sizing:content-box;
+	transition:background 0.3s, border 0.3s;
+	border:2px solid rgba(255,255,255,0.5);
+}
+.yoodooUI_pages .pageDotPanel>div.on,#yoodooWidget .yoodooUI_pages .pageDotPanel>button.on,#yoodooWidget .yoodooUI_pages .pageDotPanel>button:hover{
+	background:#b7b7b7;
+	border:2px solid rgba(0,0,0,0.5);
+}
+.yoodooUI_pages .pageDotPanel+.pagePanel{
+	padding-top:40px;
+}
+.yoodooUI_pages .pagePanel+.pageDotPanel{
+	bottom:0px;
+}
+.yoodooUI_pages .pagePanel .yoodooUI_page{
+	height:inherit;
+	width:100%;
+	display:inline-block;
+	vertical-align:top;
+	white-space:normal;
+	box-sizing:border-box !important;
+}
+.yoodooUI_pages .pagePanel .yoodooUI_page .ui_episode_keypoint_kppage{
+	padding:10px;
+}
+.yoodooUI_pages .pagePanel .yoodooUI_page .ui_episode_keypoint_kppage img{
+	margin:5px auto;
+	display:block;
+}
+.dooitDisplay .yoodooUI_pages{
+	box-sizing:border-box;
+	border:1px solid #64b5f6;
+}
+#yoodooContainerContent .dooitDisplay .yoodooUI_pages{
+	border:none;
+}
+.dooitDisplay .yoodooUI_pages  .yoodooUI_pages{
+	border:none;
+}
+.dooitDisplay .yoodooUI_pages .pagePanel .yoodooUI_page{
+	padding:5px 5px 80px 5px;
+	overflow:auto;
+}
+
+.isTouch .dooitDisplay .yoodooUI_pages .pagePanel .yoodooUI_page{
+	overflow:hidden;
+}
+.dooitDisplay .yoodooUI_pages .pagePanel .yoodooUI_page .yoodooUI_page{
+	padding:0px;
+}
+.yoodooUI_pages .pageNavPanel{
+	height:40px;
+	width:inherit;
+	position:absolute;
+	line-height:40px;
+	text-align:center;
+	bottom:0px;
+}
+.yoodooUI_pages .pagePanel.dotsAbove{
+	padding-top:40px;
+}
+.yoodooUI_pages .pagePanel.dotsAbove+.pageDotPanel{
+	bottom:auto;
+	top:0px;
+}
+.yoodooUI_pages .pageDotPanel+.pageNavPanel{
+	bottom:40px;
+}
+.yoodooUI_pages .pagePanel.dotsAbove+.pageDotPanel+.pageNavPanel{
+	bottom:10px;
+}
+.yoodooUI_pages .pageNavPanel .backButton{
+	position:absolute;
+	left:10px;
+}
+
+@media (max-height:400px) {
+	.yoodooUI_pages .pageNavPanel,button.doneButton{
+		display:none !important;
+	}
+}
+/*@media (orientation:landscape) and (max-height:200px) {
+	.yoodooUI_pages .pageNavPanel,button.doneButton{
+		display:none !important;
+	}
+}*/
+
+/* buttons */
+
+#yoodooWidget button.backButton{
+	background:#b2b2b2;
+	color:#fff;
+	line-height:20px;
+}
+#yoodooWidget button.backButton svg,#yoodooWidget button.backButton img{
+	vertical-align:middle;
+	float:left;
+	position:relative;
+	left:0px;
+	transition:left 0.3s;
+}
+#yoodooWidget button.backButton:hover{
+	background:#DADADA;
+	color:#000;
+}
+#yoodooWidget button.backButton:disabled:hover svg,#yoodooWidget button.backButton:disabled:hover img{
+	left:0px;
+}
+#yoodooWidget button.backButton:hover svg,#yoodooWidget button.backButton:hover img{
+	left:-10px;
+}
+
+
+#yoodooWidget button.ctaButton,#yoodooWidget .dooitDisplay button.ctaButton{
+	background:#99cc33;
+	color:#fff;
+	line-height:20px;
+}
+#yoodooWidget button.ctaButton svg,#yoodooWidget button.ctaButton img{
+	vertical-align:middle;
+	float:right;
+	position:relative;
+	right:0px;
+	transition:right 0.3s;
+}
+#yoodooWidget button.ctaButton:hover,#yoodooWidget .dooitDisplay button.ctaButton:hover{
+	background:#339933;
+	color:#fff;
+}
+#yoodooWidget button.ctaButton:hover svg,#yoodooWidget button.ctaButton:hover img{
+	right:-10px;
+}
+#yoodooWidget button.ctaButton:disabled:hover svg,#yoodooWidget button.ctaButton:disabled:hover img{
+	right:0px;
+}
+
+
+#yoodooWidget button:disabled,#yoodooWidget button:disabled:hover{
+	opacity:0;
+	background:#575757;
+	color:#fff;
+	cursor:default;
+}
+
+.yoodooUI_radio label,.yoodooUI_checkbox label{
+	cursor:pointer;
+}
+.yoodooUI input[type=radio]{
+	display:none;
+}
+.yoodooUI label>input[type=radio]{
+	display:inline-block;
+}
+.yoodooUI input[type=radio]+label{
+}
+.yoodooUI input[type=radio]:checked+label{
+}
+.yoodooUI input[type=radio]:disabled+label{
+	color:#dadada;
+	cursor:default;
+}
+.yoodooUI input[type=radio]+label>span{
+	display:inline-block;
+	height:8px;
+	width:8px;
+	background:#dadada;
+	border:1px solid #878787;
+	vertical-align:middle;
+	border-radius:10px;
+	margin-right:10px;
+	transition:background 0.3s;
+}
+.yoodooUI input[type=radio]:checked+label>span{
+	background:#00528A;
+	border:1px solid #0052ba;
+}
+.yoodooUI input[type=radio]:disabled+label>span{
+	border:1px solid #dadada;
+}
+
+
+.yoodooUI input[type=checkbox]{
+	display:none;
+}
+.yoodooUI label>input[type=checkbox]{
+	display:inline-block;
+}
+.yoodooUI input[type=checkbox]+label{
+}
+.yoodooUI input[type=checkbox]:checked+label{
+}
+.yoodooUI input[type=checkbox]:disabled+label{
+	color:#dadada;
+	cursor:default;
+}
+.yoodooUI input[type=checkbox]+label>span.checkImage{
+	display:inline-block;
+	height:12px;
+	width:12px;
+	background:#dadada;
+	border:1px solid #878787;
+	vertical-align:middle;
+	border-radius:3px;
+	margin-right:10px;
+	transition:background 0.3s;
+}
+.yoodooUI input[type=checkbox]+label>span.checkImage>span{
+	display:block;
+	width:13px;
+	height:11px;
+	background:url(../../icons/png/checkbox.png) 13px 0px no-repeat;
+	transition:background-position 0.3s;
+}
+.yoodooUI input[type=checkbox]:checked+label>span.checkImage{
+	border:1px solid #0052ba;
+}
+.yoodooUI input[type=checkbox]:checked+label>span.checkImage>span{
+	background-position:0px 0px;
+}
+.yoodooUI input[type=checkbox]:disabled+label>span.checkImage{
+	border:1px solid #dadada;
+}
+/* selectbox */
+.yoodooUI_selectbox{
+    position:relative;
+    width:80%;
+}
+.yoodooUI_selectbox>div{
+    position:relative;
+    margin:2px auto;
+}
+.yoodooUI_selectbox>select{
+    position:relative;
+    margin:2px auto;
+    padding: 5px;
+    line-height: 1;
+    font-size:14px;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+/* multiplechoice */
+.yoodooUI_multiplechoice input[type="checkbox"]:checked+label{}
+.yoodooUI_multiplechoiceButton input[type="checkbox"]:checked+label{}
+
+.yoodooUI_multiplechoice label input[type="checkbox"]:checked{}
+.yoodooUI_multiplechoiceButton label input[type="checkbox"]:checked{}
+
+.yoodooUI_multiplechoice.centreOdd{
+	text-align:center;
+}
+
+.yoodooUI_multiplechoiceButton{
+	width: 80%;
+	margin:1% auto;
+}
+
+.yoodooUI_multiplechoice img{
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	border:1px solid rgb(216, 216, 216);
+	border-radius:10px;
+	margin-bottom: 15px;
+}
+
+.yoodooUI_multiplechoiceButton>button{
+	margin:0!important;
+	border:1px solid rgb(216, 216, 216)!important;
+	padding:0!important;
+}
+
+.yoodooUI_multiplechoice>button,.yoodooUI_multiplechoiceButton>button{
+    position:relative;
+    height:40px;
+    width:100%;
+    text-align:center;
+}
+
+.yoodooUI_multiplechoiceButton .timeLabel{
+	font-size: 30px;
+  	color: rgb(50, 189, 200)!important;
+  	border: 1px solid rgb(182, 182, 182)!important;
+}	
+.yoodooUI_multiplechoice>button:disabled,.yoodooUI_multiplechoiceButton>button:disabled{
+    color:#fff;
+    background:#6f6f6f;
+    cursor:default;
+}
+.yoodooUI_multiplechoice,.yoodooUI_multiplechoiceButton,.yoodooUI_selectbox{
+    position:relative;
+}
+
+/* proportions */
+
+.yoodooUI_proportion{
+    padding-bottom: 70px;
+}
+.yoodooUI_proportion .proportioner{
+    padding:0px;
+    margin:0px auto;
+    clear:both;
+
+}
+.yoodooUI_proportion .proportions{
+    margin:55px auto;
+    width:610px;
+
+}
+.yoodooUI_proportion .proportions .proportion{
+    float:left;
+    position:relative;
+    cursor:e-resize;
+
+}
+
+.yoodooUI_proportion  .proportions .proportion .handle{
+    background:url(../../image/dooits/dragger.gif) no-repeat;
+    width:11px;
+    height:10px;
+    /*    background:#3db1d8;
+        border-radius:10px;
+        height:10px;
+        width:10px;*/
+    position:absolute;
+}
+.yoodooUI_proportion .proportions .proportion .label{
+    width:1px;
+    margin:0px auto;
+    position:relative;
+    height:20px;
+}
+.yoodooUI_proportion .proportions .proportion .label>div{
+    width:1px;
+}
+.yoodooUI_proportion .proportions .proportion.odd .label>div{
+    padding-bottom:30px;
+    bottom:0px;
+    position:absolute;
+}
+.yoodooUI_proportion .proportions .proportion.even .label>div{
+    padding-top:30px;
+    top:0px;
+    position:absolute;
+}
+.yoodooUI_proportion .proportions .proportion .label>div>div{
+    width:100px;
+    margin-left:-50px;
+    text-align:center;
+    font-size:10px;
+}
+.yoodooUI_proportion .odd{
+    background: #555;
+}
+
+.yoodooUI_proportion .even{
+    background: #1e88e5;
+}
+.yoodooUI_proportion .proportions .proportion.odd .handle{
+    bottom:-10px;
+    right:-6px;
+}
+.yoodooUI_proportion .proportions .proportion.odd:hover .handle{
+    background-position:-11px 0px;
+}
+.yoodooUI_proportion .proportions .proportion.even .handle{
+    top:-10px;
+    background-position:0px -10px;
+    right:-6px;
+}
+.yoodooUI_proportion .proportions .proportion.even:hover .handle{
+    background-position:-11px -10px;
+}
+.yoodooUI_proportion .proportions{
+    clear:both;
+}
+
+.yoodooUI-blockout{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	background:url(images/blank.gif);
+	z-index:999;
+}
+.yoodooUI-dialogue{
+}
+.yoodooUI-center{
+	position:relative;
+	height:1px;
+	width:1px;
+	top:50%;
+	left:50%;
+}
+.yoodooUI-calendar{
+	font-family:robotoregular,"Trebuchet MS", Helvetica, sans-serif;
+	width:234px;
+	margin:-100px 0px 0px -112px;
+	border:1px solid #000;
+	background:#fff;
+	box-shadow:0px 0px 50px #000;
+	padding:5px;
+	border-radius:5px;
+}
+.yoodooUI-calendar td{
+	text-align:center;
+	color:#575757;
+	width:30px;
+	height:20px;
+}
+.yoodooUI-days{
+	font-size:14px;
+}
+.yoodooUI-calendar button{
+	width:30px;
+	height:20px;
+	padding:0px;
+	background:none;
+	color:#DADADA;
+	border:none;
+	outline:none;
+	transition:background 0.3s,color 0.3s;
+}
+.yoodooUI-calendar-title{
+	font-size:14px;
+}
+.yoodooUI-calendar button.selectable,.yoodooUI-calendar-title button{
+	cursor:pointer;
+	background:#97C1E0;
+	color:#0052BA;
+}
+.yoodooUI-calendar button.weekend.selectable{
+	background:#0052BA;
+	color:#fff;
+}
+.yoodooUI-calendar button.selectable:hover,.yoodooUI-calendar-title button:hover{
+	background:#3E87BB;
+	color:#fff;
+}
+.yoodooUI-calendar button.selectable.selected,.yoodooUI-calendar button.selectable.selected:hover{
+	background:#339933;
+	color:#fff;
+}
+
+#yoodooWidget .yoodooUI button.removeButton{
+	position:absolute;
+	background:#E09801;
+	min-width:0px;
+	padding:5px;
+	border-radius:20px;
+	right:0px;
+	bottom:5px;
+	margin:0px 0px 0px 5px;
+}
+#yoodooWidget .yoodooUI button.removeButton:hover{
+	background:#CF1040;
+}
+#yoodooWidget button.addButton{
+	background:#99CC33;
+	min-width:0px;
+	padding:5px;
+	border-radius:50px;
+	float:right;
+	margin:0px 0px 0px 5px;
+	-moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -ms-transform: scale(1);
+	-moz-transition:all 0.3s;
+	-webkit-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	transition:all 0.3s;
+    opacity:1;
+}
+#yoodooWidget .yoodooUI button.addButton:hover{
+	background:#339933;
+}
+.yoodooUI_list{
+	overflow:auto;
+	margin:0px auto;
+	width:90%;
+}
+#yoodooWidget .yoodooUI .yoodooUI_list.nomore button.addButton{
+	-moz-transform: scale(0.1);
+   -webkit-transform: scale(0.1);
+   -o-transform: scale(0.1);
+   transform: scale(0.1);
+   -ms-transform: scale(0.1);
+   opacity:0;
+}
+.yoodooUI_list_row{
+	padding-top:5px;
+	padding-bottom:5px;
+	box-sizing:border-box;
+	position:relative;
+}
+.yoodooUI_list_row+.yoodooUI_list_row{
+}
+
+.yoodooUI_dialog{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.2);
+}
+.yoodooUI_dialog .ui-helper-hidden-accessible{
+	display:none;
+}
+ul.ui-autocomplete{
+	position:absolute;
+	background:#fff;
+	padding:2px 5px 5px 5px;
+	margin:0px;
+	text-align:left;
+	box-shadow:0px 2px 2px #000;
+	font-family: sans-serif;
+	padding:0px;
+}
+ul.ui-autocomplete li{
+	list-style:none;
+	white-space:nowrap;
+	cursor:pointer;
+	font-size:12px;
+	line-height:18px;
+	padding:2px 5px;
+}
+ul.ui-autocomplete li:hover{
+	background:#eaf5ff;
+}
+.yoodooUI_dialog>div{
+	padding:0px;
+	position:relative;
+	top:50%;
+	box-sizing:border-box;
+	text-align:center;
+	height:0px;
+}
+.yoodooUI_dialog>div>div{
+	position:relative;
+	display:inline-block;
+	margin:0px 20px;
+}
+.yoodooUI_dialog>div>div>div{
+	display:inline-block;
+	background:#fff;
+	box-shadow:0px 0px 50px #fff;
+	border-radius:10px;
+	padding:20px;
+	box-sizing:border-box;
+}
+#yoodooWidget .yoodooUI_dialog>div>div>div button.close_dialog{
+	min-width:0px;
+	padding:5px;
+	border-radius:30px;
+	position:absolute;
+	top:-10px;
+	right:-10px;
+}
+.yoodooUI_linegraph{
+	text-shadow:-1px -1px 0px #fff,
+				1px -1px 0px #fff,
+				-1px 1px 0px #fff,
+				1px 1px 0px #fff;
+}
+#yoodooWidget .yoodooUI_dialog>div>div>div a{
+	color:#1669bb;
+	padding:5px 10px;
+}
+#yoodooWidget .yoodooUI_dialog>div>div>div a:hover{
+	color:#64b5f6;
+}

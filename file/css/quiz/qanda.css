@@ -1,0 +1,27 @@
+.cssDetector_qanda{display:none;}
+.qanda{
+	margin-top:20px;
+}
+.qanda .qanda_button{
+	background:url(../../../image/dooits/quiz/expand-radio.gif) no-repeat;
+	cursor:pointer;
+	border:none;
+	min-width:63px;
+	text-align:left;
+	height:25px;
+	line-height:25px;
+	padding-left:40px;
+}
+.qanda .qanda_button.on{
+	background-position:0px -25px;
+}
+/*.qanda textarea{
+	border:3px solid #9e9;
+	width:400px;
+	float:right;
+	resize:none;
+	outline:none;
+}
+.qanda textarea:focus{
+	box-shadow:0px 0px 10px #000;
+}*/

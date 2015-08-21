@@ -1,0 +1,13 @@
+.cssDetector_ui_questions{display:none;}
+
+.dooitBox{
+	height:inherit;
+	box-sizing: border-box;
+	padding:0px;
+}
+.dooitDisplay{
+	height:inherit;
+}
+.dooitDisplay>div{
+	height:inherit;
+}

@@ -1,0 +1,73 @@
+.cssDetector_slider{display:none;}
+#slidercss{
+	width:1px;
+	height:1px;
+}
+.slider{
+	background:url(../../../image/dooits/quiz/slider.png) no-repeat;
+	width:318px;
+	height:39px;
+	margin:0 5px 0 0;
+	position:relative;
+	float:right;
+	cursor:pointer;
+}
+.slider .value{
+	background:url(../../../image/dooits/quiz/slider-green.gif) no-repeat;
+	position:absolute;
+	top:18px;
+	left:9px;
+	height:10px;
+	width:0px;
+}
+.slider .slide{
+	/*background:url(../../image/dooits/slider-frame.png) no-repeat;*/
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:30px;
+	padding:0px 9px 0px 9px;
+	width:300px;
+	/*display:none;*/
+}
+.slider .boxes{
+	width:30px;
+	height:10px;
+	border:none;
+	padding:18px 0px 11px 0px;
+	float:left;
+}
+.slider .boxes .box{
+	width:30px;
+	height:10px;
+	border:none;
+	float:left;
+}
+.slider .boxes:hover .box{
+	width:26px;
+	height:6px;
+	border:2px solid #fff;
+}
+/*.slider .responder{
+	width:inherit;
+	height:inherit;
+	position:absolute;
+	top:0px;
+	left:0px;
+	cursor:pointer;
+}*/
+.question{
+	padding:10px 0px;
+	clear:both;
+	font-size:14px;
+	position:relative;
+	min-height:50px;
+	margin:10px 0x;
+}
+.question>div{
+	text-align:right;
+	position:relative;
+	top:-15px;
+}
+.slider .minText,.slider .maxText{padding:0 10px;font-size:12px;}
+.slider .minText{float:left;}

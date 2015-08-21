@@ -1,0 +1,763 @@
+.cssDetector_yoodooComments{display:none;}
+#yoodooWidget.isMouse .overlayFooter button.done.unavailable,#yoodooWidget.isMouse .overlayFooter button.done.unavailable:hover{
+	background:rgba(0,0,0,0.2);
+	color:rgba(255,255,255,0.2);
+	cursor:default;
+
+}
+#yoodooWidget.isMouse.Explorer8 .overlayFooter button.done.unavailable,#yoodooWidget.isMouse.Explorer8 .overlayFooter button.done.unavailable:hover{
+	background:#cccccc;
+	color:#dddddd;
+}
+#yoodooWidget #fullComments{
+	padding:4px;
+	z-index:500;
+}
+#yoodooWidget #fullComments .commentsListUI{
+	
+}
+#yoodooWidget .commentsListUI .moreButton{
+	border-radius:0px 0px 5px 5px;
+	border:1px solid #A8C2D1;
+	color:#3E84AC;
+	border-top:none;
+	cursor:pointer;
+	position:relative;
+	margin-top:10px;
+	top:0px;
+	left:10px;
+	background:#d4e7f2;
+	z-index:501;
+	-webkit-transition:background 0.3s, color 0.3s;
+	transition:background 0.3s, color 0.3s;
+	font-size:12px;
+}
+#yoodooWidget.Explorer8 .commentsListUI .moreButton{
+	margin-top:0px;
+}
+#yoodooWidget .commentsListUI .moreButton:hover{
+	background:#3BB7FD;
+	color:#fff;
+}
+#yoodooWidget #framed .filterByUser a.authorFilterButton{
+	text-decoration:none;
+	cursor:default;
+	color:#999;
+}
+#yoodooWidget #framed .filterByUser a.authorFilterButton:hover{
+	color:#999;
+}
+*>.whenNoHover{
+	visibility:visible;
+}
+*>.whenHover{
+	visibility:hidden;
+}
+*:hover>.whenNoHover{
+	visibility:hidden;
+}
+*:hover>.whenHover{
+	visibility:visible;
+}
+.commentsListUI{
+	overflow:hidden;
+	position:relative;
+	cursor:hand;
+	padding-top:12px;
+}
+.commentsListUI>button{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}
+.commentsInputUI{
+	position:relative;
+	margin-left:5px;
+}
+.commentsInputUI button.sendComment,.commentsInputUI button.cancelReply{
+	position:absolute;
+	right:20px;
+	top:5px;
+	height:34px;
+	line-height:34px;
+	padding:0px 15px;
+	margin:0px;
+	background:rgba(0,0,0,0.2);
+	border-radius:3px 3px 0px 0px;
+	border:none;
+	cursor:pointer;
+	color:#555;
+	-webkit-transition:background 0.2s;
+	transition:background 0.2s;
+}
+.Explorer8 .commentsInputUI button.sendComment,.Explorer8 .commentsInputUI button.cancelReply{
+	background:#cccccc;
+}
+.Explorer8 .commentsInputUI button.sendComment,.commentsInputUI button.sendComment{
+	background:rgb(117,202,82);
+}
+.commentsInputUI button.cancelReply{
+	right:85px;
+}
+.Explorer8 .commentsInputUI button.sendComment:hover,.commentsInputUI button.sendComment:hover{
+	background:rgb(84,169,49);
+	color:#FFF;
+}
+.commentsInputUI button.cancelReply:hover{
+	background:rgba(0,0,0,0.6);
+	color:#FFF;
+}
+.Explorer8 .commentsInputUI button.cancelReply:hover{
+	background:#cccccc;
+}
+.commentsInputUI button.sendComment.unavailable,.commentsInputUI button.sendComment.unavailable:hover{
+	background:rgba(0,0,0,0.1);
+	color:#999;
+	cursor:default;
+}
+.Explorer8 .commentsInputUI button.sendComment.unavailable,.Explorer8 .commentsInputUI button.sendComment.unavailable:hover{
+		background:#e5e5e5;
+}
+.commentsInputUI>div.textareaTitle{
+	line-height:30px;
+	height:30px;
+	white-space:nowrap;
+	overflow:hidden;
+	padding-right:75px;
+	text-overflow:ellipsis;
+}
+.commentsInputUI{
+	background:rgba(255,255,255,0.8);
+	border-radius:5px;
+}
+.Explorer8 .commentsInputUI{
+	background:#fff;
+}
+.commentsInputUI>div{
+	/*background:rgba(255,255,255,0.8);*/
+	margin:0px;
+	padding:2px;
+	border-radius:5px;
+}
+.commentsListUI>div>div>.commentItem{
+	background:rgb(255,255,255);
+	box-shadow:0px 0px 5px #000;
+	margin:3px;
+	padding:2px;
+	margin-bottom:-12px;
+	top:0px;
+	border-radius:5px;
+	-webkit-transition:top 0.2s;
+	transition:top 0.2s,background 0.2s;
+	position:relative;
+	z-index:502;
+	border:3px solid rgba(0,0,0,0);
+}
+.commentsListUI>div>div>.commentItem.on{
+	border:3px solid rgba(18,164,248,0.5);
+}
+/*.commentsListUI>div>div>.commentItem:first-child{
+	margin-bottom:3px;
+}
+.commentsListUI>div>div>span+.commentItem{
+	margin-bottom:3px;
+}
+.commentsListUI>div>div>.commentItem:nth-child(even){
+	margin-bottom:3px;
+}
+.commentsListUI>div>div>.commentItem:nth-child(odd){
+	margin-bottom:3px;
+}*/
+/*.commentsListUI .commentItem+.commentItem{
+	margin-top:-12px;
+}
+.commentsListUI .commentItem:hover+.commentItem{
+	margin-top:3px;
+}*/
+.isMouse .commentsListUI .commentItem:first-child:hover+.commentItem{
+	top:10px;
+}
+.isMouse .commentsListUI .commentItem:hover{
+	top:-10px;
+}
+.isMouse .commentsListUI .commentItem:first-child:hover{
+	top:0px;
+}
+.isMouse .commentsListUI .commentItem:last-child:hover{
+	top:0px;
+}
+.isTouch .commentsListUI .commentItem.hover:first-child+.commentItem{
+	top:10px;
+}
+.isTouch .commentsListUI .commentItem.hover{
+	top:-10px;
+}
+.isTouch .commentsListUI .commentItem.hover:first-child{
+	top:0px;
+}
+.isTouch .commentsListUI .commentItem.hover:last-child{
+	top:0px;
+}
+.Explorer8 .commentsListUI>div>div>.commentItem{
+	top:0px !important;
+	margin-bottom:0px !important;
+	background:#fff;
+	border:1px solid #999;
+}
+
+.commentsListUI .commentItem .createdBlock{
+	float:right;
+	display:block;
+	white-space:nowrap;
+	color:#999;
+	font-size:11px;
+}
+.commentsListUI .commentItem .authorBlock{
+	color:#333;
+	min-height:16px;
+	display:block;
+}
+.commentsListUI .commentItem .authorBlock a{
+	font-size:12px;
+}
+.commentsListUI .commentItem .commentBlock{
+	color:#333;
+	font-size:12px;
+	background:#d4e7f2;
+	border-radius:5px;
+	padding:5px;
+	margin:2px 0px;
+}
+.commentsListUI .commentItem .responseBlock{
+	clear:both;
+}
+.commentsListUI .commentItem .authorBlock .shareContent{
+	display:inline-block;
+	margin-right:4px;
+}
+.commentsListUI .commentItem .responseBlock .respondButton{
+	background:url(../../image/reply_arrow.png) no-repeat right center;
+	display:block;
+	height:21px;
+	line-height:21px;
+	padding:0px 22px 0px 0px;
+	right:0px;
+	-webkit-transition:right 0.3s;
+	transition:right 0.3s;
+	position:absolute;
+}
+.isMouse .commentsListUI .commentItem .responseBlock .respondButton:hover{
+	right:10px;
+}
+.commentsListUI .commentItem .authorBlock .respondButton:hover{
+	background-image:url(../../../../images/icons/comment_respond_on.png);
+}
+span.shareNone,span.shareAll,span.shareOne,span.shareSome{
+	background:url(../../../../images/icons/comment_privacy.png);
+	display:inline-block;
+	height:10px;
+	margin:3px 3px 7px 0px;
+	vertical-align:middle;
+}
+span.shareNone{
+	width:10px;
+}
+span.shareAll{
+	background-position:-20px 0px;
+	width:18px;
+}
+span.shareOne{
+	width:10px;
+	background-position:-10px 0px;
+}
+span.shareSome{
+	width:10px;
+	background-position:-10px 0px;
+}
+.commentsListUI .commentItem .authorBlock .shareContent span{
+	background:url(../../../../images/icons/comment_privacy.png);
+	display:inline-block;
+	height:10px;
+}
+.commentsListUI .commentItem .authorBlock .shareContent.isprivate span{
+	width:10px;
+}
+.commentsListUI .commentItem .authorBlock .shareContent.isShared span{
+	width:10px;
+	background-position:-10px 0px;
+}
+.commentsListUI .commentItem .authorBlock .shareContent.isShared span+span{
+	margin-left:-5px;
+}
+.commentsListUI .commentItem .authorBlock .shareContent.isSharedAll span{
+	background-position:-20px 0px;
+	width:18px;
+}
+.commentsListUI .commentItem .responseBlock{
+	color:#333;
+	font-size:11px;
+	color:#7fbccd;
+	min-height:21px;
+	position:relative;
+}
+.commentsListUI .commentItem .responseBlock>a,.commentsListUI .commentItem .responseBlock>span{
+	display:inline-block;
+	height:21px;
+	line-height:21px;
+}
+.commentsListUI .commentItem .responseBlock .responseItem{
+	border-top:1px solid #7fbccd;
+	padding-left:20px;
+}
+.commentsInputUI .textareaContainer{
+	font-size:12px;
+	background:rgba(0,0,0,0.2);
+	margin:0px 3px;
+	border-radius:5px;
+	width:100%;
+	-webkit-transition:background 0.2s;
+	transition:background 0.2s;
+}
+.Explorer8 .commentsInputUI .textareaContainer{
+	background:#cccccc;
+}
+.commentsInputUI textarea{
+	color:#000;
+	font-size:12px;
+	background:none;
+	padding:5px;
+	resize:none;
+	height:100px;
+	width:100%;
+	display:block;
+	outline:none;
+	border:none;
+	-webkit-transition:background 0.2s;
+	transition:background 0.2s;
+}
+.listScroller{
+	float:right;
+	width:20px;
+	height:100%;
+	background:#eee;
+	border-radius:3px;
+	border:1px solid #999;
+	box-shadow:0px 0px 5px #000;
+}
+.listScroller>div{
+	cursor:n-resize;
+	position:relative;
+	width:20px;
+	border-radius:2px;
+	background:#9BBED3;
+	box-shadow:0px 0px 0px #000;
+	-webkit-transition:background 0.3s,box-shadow 0.3s;
+	transition:background 0.3s,box-shadow 0.3s;
+}
+.listScroller>div.ui-draggable-dragging,.listScroller>div.ui-draggable:hover{
+	box-shadow:0px 0px 5px #000;
+	background:#5D93B3;
+}
+.commentsInputUI .textareaContainer.focus{
+	background:rgba(0,0,0,0.6);
+	color:#FFF;
+}
+.Explorer8 .commentsInputUI .textareaContainer.focus{
+	background:#666666;
+}
+.commentsInputUI .textareaContainer.focus textarea{
+	color:#FFF;
+}
+.commentsInputUI .textareaContainer .sendSnapshot{
+	line-height:23px;
+	padding:0px 5px;
+	text-align:right;
+}
+.commentsInputUI .textareaContainer .sendSnapshot label{
+	cursor:pointer;
+}
+.commentsInputUI .textareaContainer .sendSnapshot input[type=checkbox]{
+	display:none;
+}
+.commentsInputUI .textareaContainer .sendSnapshot span.camera{
+	display:inline-block;
+	background:url(../../image/snapshot_camera.png);
+	width:29px;
+	height:23px;
+	vertical-align:middle;
+}
+.commentsInputUI .textareaContainer .sendSnapshot span.infoBubble{
+	background:url(../../image/micro_info.png) 5px 5px no-repeat;
+	width:23px;
+	height:23px;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	position:relative;
+	-webkit-transition:background-position 0.3s;
+	transition:background-position 0.3s;
+}
+.commentsInputUI .textareaContainer .sendSnapshot span.infoBubble:hover{
+	background-position:5px 2px;
+}
+.commentsInputUI .textareaContainer .sendSnapshot span.infoBubble>div{
+	display:none;
+	position:absolute;
+	width:200px;
+	left:-88px;
+	bottom:23px;
+	border-radius:3px;
+	background:#333;
+}
+.commentsInputUI .textareaContainer .sendSnapshot span.infoBubble>div>div{
+	color:#fff;
+	font-size:12px;
+	line-height:18px;
+	text-align:center;
+	padding:5px;
+}
+.commentsInputUI .textareaContainer .sendSnapshot span.infoBubble:hover>div{
+	/*display:block;*/
+}
+.commentsInputUI .textareaContainer .sendSnapshot input+label>span.camera>span{
+	display:block;
+	background:url(../../image/snapshot_tick.png) -21px 0px no-repeat;
+	width:27px;
+	height:23px;
+	margin:0px 0px 0px 2px;
+	-webkit-transition:background-position 0.3s;
+	transition:background-position 0.3s;
+}
+.commentsInputUI .textareaContainer .sendSnapshot input:checked+label>span.camera>span{
+	background-position:5px 0px;
+}
+.commentsInputUI .textareaContainer .sendSnapshot input+label:hover>span.camera>span{
+	background-position:-8px 0px;
+}
+.commentsInputUI .textareaContainer .sendSnapshot input:checked+label:hover>span.camera>span{
+	background-position:0px 0px;
+}
+.commentsInputUI textarea:focus{
+	/*background:rgba(0,0,0,0.6);
+	color:#FFF;*/
+}
+.commentsInputUI .emptyTextarea textarea{
+	color:#777;
+}
+.commentsInputUI .groupSelector{
+	padding:0px 10px;
+	margin-top:0px;
+}
+.commentsInputUI .groupSelector>button{
+	border-radius:0px 0px 3px 3px;
+	margin:0px 3px 3px 0px;
+	background:rgba(0,0,0,0.1);
+	border:none;
+	border-top:none;
+	font-size:12px !important;
+	font-weight:normal;
+	cursor:pointer;
+	color:#AAA;
+	-webkit-transition:background 0.2s,margin 0.2s;
+	transition:background 0.2s,margin 0.2s;
+	vertical-align:top;
+	display:inline-block;
+}
+.commentsInputUI .groupSelector>button.groupSelectButton.on{
+	border-radius:0px;
+	padding-bottom:4px;
+	margin-bottom:0px;
+}
+.commentsInputUI .groupSelector>button:hover{
+	background:rgba(0,0,0,0.2);
+	color:#000;
+}
+.Explorer8 .commentsInputUI .groupSelector>button:hover{
+	background:#cccccc;
+}
+.commentsInputUI .groupSelector>button.on,.commentsInputUI .groupSelector>button.on:hover,.commentsInputUI .groupSelector>div{
+	background:rgba(0,0,0,0.2);
+	color:#000;
+}
+.Explorer8 .commentsInputUI .groupSelector>button.on,.Explorer8 .commentsInputUI .groupSelector>button.on:hover,.Explorer8 .commentsInputUI .groupSelector>div{
+	background:#cccccc;
+}
+.commentsInputUI textarea:focus+.groupSelector>button.on{
+	background:rgba(0,0,0,0.6);
+	color:#FFF;
+	cursor:default;
+}
+.Explorer8 .commentsInputUI textarea:focus+.groupSelector>button.on{
+	background:#666666;
+}
+.commentsInputUI textarea.emptyTextarea.groupSelector>button.on{
+	color:#777;
+}
+.commentsInputUI textarea+.groupSelector>button.groupSelectButton+div{
+	background:rgba(0,0,0,0.2);
+	border-radius:3px;
+	webkit-transition:background 0.2s;
+	transition:background 0.2s;
+}
+.Explorer8 .commentsInputUI textarea+.groupSelector>button.groupSelectButton+div{
+	background:#cccccc;
+}
+.commentsInputUI textarea:focus+.groupSelector>button.groupSelectButton+div{
+	background:rgba(0,0,0,0.6);
+	border-radius:3px;
+}
+.Explorer8 .commentsInputUI textarea:focus+.groupSelector>button.groupSelectButton+div{
+	background:#666666;
+}
+.commentsInputUI .groupSelector>div{
+	padding:5px;
+}
+.commentsInputUI .groupSelector>div>button{
+	background:rgba(255,255,255,0.5);
+	color:rgba(0,0,0,0.5);
+	cursor:pointer;
+	border-radius:3px;
+	font-size:12px !important;
+	border:none;
+	transition:background 0.2s, top 0.2s !important;
+	position:relative;
+	top:0px;
+	margin:1px;
+	max-width:50%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.commentsInputUI .groupSelector>div>button.on{
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+}
+.Explorer8 .commentsInputUI .groupSelector>div>button,.Explorer8 .commentsInputUI .groupSelector>div>button.on{
+	background:#7f7f7f;
+}
+.commentsInputUI .groupSelector>div>button:hover{
+	top:-2px;
+}
+.commentsInputUI .groupSelector>div>button.on:hover{
+	top:2px;
+}
+a.gotoDooit,a.gotoFile,a.gotoEpisode,a.gotoChapter,a.gotoKeypoint{
+	padding:0px 1px 0px 28px;
+	display:block;
+	height:24px;
+	line-height:24px;
+	white-space:nowrap;
+	background:url(../../../../images/icons/content-fragment-types.png) no-repeat 0px 0px;
+	border-bottom:1px solid #0086d3;
+}
+a.gotoDooit{
+	background-position:0px -72px;	
+}
+a.gotoDooit:hover{
+	background-position:0px -48px;	
+}
+a.gotoFile{
+	background-position:0px -120px;	
+}
+a.gotoFile:hover{
+	background-position:0px -92px;	
+}
+a.gotoEpisode{
+	background-position:0px -24px;	
+}
+a.gotoEpisode:hover{
+	background-position:0px -0px;	
+}
+a.gotoChapter{
+	background-position:0px -168px;	
+}
+a.gotoChapter:hover{
+	background-position:0px -144px;	
+}
+a.gotoKeypoint{
+	background-position:0px -216px;	
+}
+a.gotoKeypoint:hover{
+	background-position:0px -192px;	
+}
+.filterWindow{
+	height:30px;
+	line-height:30px;
+	width:100%;
+	vertical-align:top;
+	display:block;
+}
+.filterWindow>div{
+	line-height:30px;
+}
+.filterWindow>div>.commentIcon{
+	height:24px;
+	line-height:24px;
+	-moz-border-radius:0px 10px 10px 0px;
+	-o-border-radius:0px 10px 10px 0px;
+	-webkit-border-radius:0px 10px 10px 0px;
+	-khtml-border-radius:0px 10px 10px 0px;
+	border-radius:0px 10px 10px 0px;
+	border:1px solid #555;
+	display:inline-block;
+	padding:0px 20px 0px 25px;
+	margin:2px 2px 2px 20px;
+	vertical-align:bottom;
+	box-shadow:0px 0px 3px rgba(0,0,0,0.5);
+	position:relative;
+	background:#fff;
+}
+.Explorer .filterWindow>div>.commentIcon{
+	background:#7f7f7f;
+}
+.filterWindow>div>.commentIcon>span{
+	background:url(../../image/playa_comments.png) no-repeat left center;
+	width:38px;
+	height:35px;
+	display:block;
+	position:absolute;
+	top:-5px;
+	left:-20px;
+	z-index:999;
+}
+.commentFilter{
+	-moz-border-radius:0px 10px 10px 0px;
+	-o-border-radius:0px 10px 10px 0px;
+	-webkit-border-radius:0px 10px 10px 0px;
+	-khtml-border-radius:0px 10px 10px 0px;
+	border-radius:0px 10px 10px 0px;
+	border:1px solid #555;
+	max-width:20%;
+	background:rgb(255,255,255);
+	display:inline-block;
+	padding:0px 5px 0px 5px;
+	margin:2px 0px;
+	height:24px;
+	line-height:24px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	color:#555 !important;
+	text-decoration:none;
+	z-index:505;
+	box-shadow:0px 0px 3px rgba(0,0,0,0.5);
+	position:relative;
+	-webkit-transition:padding 0.2s,background 0.2s;
+	transition:padding 0.2s,background 0.2s;
+	vertical-align:middle;
+	margin-left:-11px;
+	padding-left:5px;
+	vertical-align:bottom;
+}
+.commentFilter+.commentFilter{
+	margin-left:-11px;
+	padding-left:15px;
+	z-index:504;
+}
+.commentFilter+.commentFilter+.commentFilter{
+	z-index:503;
+}
+.commentFilter+.commentFilter+.commentFilter+.commentFilter{
+	z-index:502;
+}
+.commentFilter:hover{
+	padding-left:15px;
+	background:rgb(220,220,220);
+}
+.commentFilter+.commentFilter:hover{
+	padding-left:20px;
+}
+.commentFilter+.commentFilter.on:hover{
+	padding-left:15px !important;
+}
+.commentFilter.on{
+	background:#555;
+	color:#FFF !important;
+	cursor:default;
+}
+.commentFilter.on:hover{
+	padding-left:5px;
+	background:#555;
+}
+.commentFilter>span{
+	padding:0px 1px 0px 28px;
+	display:block;
+	height:24px;
+	line-height:24px;
+	white-space:nowrap;
+	background:url(../../../../images/icons/content-fragment-types.png) no-repeat 0px 0px;
+}
+.commentFilter>span.filterepisode{
+	background-position:0px -24px;	
+}
+.commentFilter>span.filtervideo{
+	background-position:0px -168px;	
+}
+.commentFilter>span.filterdooit{
+	background-position:0px -72px;	
+}
+.commentFilter>span.filterfile{
+	background-position:0px -120px;	
+}
+.commentFilter>span.filterkey_point{
+	background-position:0px -216px;	
+}
+
+.unreadButtonCount{
+	position:absolute !important;
+	top:0px;
+	right:0px;
+	border:2px solid #FFF;
+	box-shadow:0px 0px 5px #000;
+	background:#f00;
+	border-radius:20px;
+	width:20px !important;
+	height:20px !important;
+	line-height:20px !important;
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+}
+.commentIconOnly{
+	background:url(../../image/large_comments.png) no-repeat;
+	width:76px;
+	height:79px;
+	position:relative;
+	margin:0px auto;
+	cursor:pointer;
+}
+.commentIconOnly .unreadButtonCount{
+	-webkit-transition:top 0.2s;
+	transition:top 0.2s;
+}
+.commentIconOnly:hover .unreadButtonCount{
+	top:-5px;
+}
+
+
+
+#yoodooWidget .commentsListUI .commentsWindow{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	text-align:center;
+	background:#242634;
+}
+
+#yoodooWidget .commentsListUI button.snapshot{
+	width:36px;
+	height:30px;
+	background:url(../../image/snapshot_attached.png) left top no-repeat;
+	padding:0px;
+	border:none;
+	cursor:pointer;
+	position:relative;
+	top:-9px;
+	right:-1px;
+	-webkit-transition:width 0.3s;
+	transition:width 0.3s;
+}
+#yoodooWidget .commentsListUI button.snapshot:hover{
+	width:45px;
+}
+

@@ -1,0 +1,780 @@
+.cssDetector_kloe{display:none;}
+#yoodooWidget.Chrome .kloe div{
+	-webkit-backface-visibility:visible;
+}
+.kloe{
+	position:relative;
+	overflow:hidden;
+}
+#yoodooContainerContent .dooitDisplay.kloe textarea{
+	border:none !important;
+	box-shadow:none;
+}
+#yoodooContainerContent .dooitDisplay.kloe input[type=text]{
+	border:none;
+	border-bottom:2px solid #1669bb;
+	box-shadow:none;
+	border-radius:0px;
+}
+#yoodooContainerContent .dooitDisplay.kloe input[type=text]:focus,
+#yoodooContainerContent .dooitDisplay.kloe input[type=text]:hover{
+
+}
+#yoodooWidget>div>h2+div p{
+	color:#555;
+}
+@-webkit-keyframes pulsing {
+  0% 100%  { -webkit-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -webkit-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-moz-keyframes pulsing {
+  0% 100%  { -moz-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -moz-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-o-keyframes pulsing {
+  0% 100%  { -o-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -o-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@keyframes pulsing {
+  0% 100%  { transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-webkit-keyframes cta {
+  0% 100%  { -webkit-transform:scale(1);}
+  50% { -webkit-transform:scale(0.9);}
+}
+@-moz-keyframes cta {
+  0% 100%  { -moz-transform:scale(1);}
+  50% { -moz-transform:scale(0.9);}
+}
+@-o-keyframes cta {
+  0% 100%  { -o-transform:scale(1);}
+  50% { -o-transform:scale(0.9);}
+}
+@keyframes cta {
+  0% 100%  { transform:scale(1);}
+  50% { transform:scale(0.9);}
+}
+@-webkit-keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@-moz-keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@-o-keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@-webkit-keyframes nextRecord {
+  0% 100%  { border-color:#1669bb;}
+  50% { border-color:#1EDFF5;}
+}
+@-moz-keyframes nextRecord {
+  0% 100%  { border-color:#1669bb !important;}
+  50% { border-color:#75B7F7 !important;}
+}
+@-o-keyframes nextRecord {
+  0% 100%  { border-color:#1669bb !important;}
+  50% { border-color:#75B7F7 !important;}
+}
+@keyframes nextRecord {
+  0% 100%  { border-color:#1669bb !important;}
+  50% { border-color:#75B7F7 !important;}
+}
+#yoodooWidget .dooitBox,#yoodooWidget .dooitBox>div,#yoodooWidget .kloe{
+	height:100%;
+	box-sizing:border-box;
+}
+#yoodooWidget .kloe h2{
+	position:absolute;
+	margin:0px;
+	top:10px;
+}
+.kloe section>div{
+	position:absolute;
+	right:0px;
+	top:-90px;
+	transition:top 0.3s;
+}
+.kloe section>div>div{
+	margin-right:100px;
+	line-height:20px;
+}
+.kloe.showSections .statDiv{
+	top:0px;
+}
+.kloe.showItems .sectionstatDiv{
+	top:0px;
+}
+.kloe .statPlans{
+	border-top:1px solid #999;
+}
+.kloe section>div>.statDial{
+	margin-right:0px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.kloe section>div>.statDial .kloe_numeric_dial{
+	font-size:40px;
+	height:40px;
+	line-height:40px;
+}
+.kloe section>div>.statDial .kloe_numeric_dial.belowTen{
+	font-size:60px;
+	height:60px;
+	line-height:60px;
+}
+#yoodooWidget .kloe h2>button{
+	display:none;
+}
+#yoodooWidget .kloe.showSections h2>button{
+	display:inline;
+}
+#yoodooWidget .kloe>div{
+	position:absolute;
+	box-sizing:border-box;
+	padding:60px 0px 0px 0px;
+	height:100%;
+	width:100%;
+	top:0px;
+	left:0%;
+	-webkit-transition:left 0.3s;
+	-moz-transition:left 0.3s;
+	-o-transition:left 0.3s;
+	transition:left 0.3s;
+}
+#yoodooWidget .kloe button{
+	cursor:pointer;
+}
+.kloe>div>div{
+	height:100%;
+	overflow:hidden;
+	overflow-y:auto;
+}
+.kloe .yoodooUI_dial>div{
+	display:none;
+}
+#yoodooWidget .kloe.showSections>div{
+	/*display:block;*/
+	left:0%;
+}
+#yoodooWidget .kloe.showSections>div+div{
+	/*display:block;*/
+	left:101%;
+}
+#yoodooWidget .kloe.showItems>div{
+	/*display:block;*/
+	left:101%;
+}
+#yoodooWidget .kloe.showItems>div+div{
+	/*display:block;*/
+	left:0%;
+}
+#yoodooWidget .kloe.showItems>div+div+div{
+	/*display:none;*/
+	left:101%;
+}
+#yoodooWidget .kloe.showRecords>div{
+	/*display:none;*/
+	left:101%;
+}
+#yoodooWidget .kloe.showRecords>div+div+div{
+	/*display:block;*/
+	left:0%;
+}
+#yoodooWidget .kloe.showRecords>div+div+div+div{
+	/*display:none;*/
+	left:101%;
+}
+#yoodooWidget .kloe.showRecord>div{
+	/*display:none !important;*/
+	left:101% !important;
+}
+#yoodooWidget .kloe.showRecord>div+div+div+div{
+	/*display:block !important;*/
+	left:0% !important;
+}
+.emptyMessage{
+	color:#999;
+}
+.recordButton{
+
+}
+.recordButton+.emptyMessage{
+	display:none;
+}
+#yoodooWidget .kloe button.addButton{
+	border:none;
+	border-radius:50px;
+	width:50px;
+	height:50px;
+	transition:zoom 0.3s,opacity 0.3s;
+	color:#fff;
+	font-size:40px;
+	line-height:40px;
+}
+#yoodooWidget .kloe .suggestMessage{
+	display:none;
+	position:absolute;
+	right:80px;
+	height:50px;
+	line-height:50px;
+	color:#99CC33;
+}
+#yoodooWidget .kloe .suggestMessage.suggestalert{
+	display:block;
+}
+#yoodooWidget .kloe .suggestMessage.suggestalert+button.addButton{
+	-webkit-animation: cta 1s infinite;
+	-moz-animation: cta 1s infinite;
+	-o-animation: cta 1s infinite;
+	animation: cta 1s infinite;
+}
+.kloe .deleteConfirm{
+	width:300px;
+	background:#fff;
+	position:absolute;
+	right:-310px;
+	top:0px;
+	transition:right 0.3s;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.kloe .deleteConfirm.on{
+	right:5px;
+}
+.kloe .deleteConfirm button{
+	color:#fff;
+	border:none;
+	border-radius:3px;
+	height:24px;
+	margin:3px;
+}
+#yoodooWidget .kloe button.delButton{
+	border:none;
+	border-radius:50px;
+	height:30px;
+	color:#fff;
+	background:#ab2a2a;
+	font-size:12px;
+	line-height:30px;
+	padding:0px 10px;
+	-webkit-transition:opacity 0.3s;
+	-moz-transition:opacity 0.3s;
+	-o-transition:opacity 0.3s;
+	transition:opacity 0.3s;
+	opacity:0.4;
+	position:absolute;
+	right:5px;
+	top:0px;
+}
+#yoodooWidget .kloe button.delButton:hover{
+	opacity:1;
+}
+#yoodooWidget .kloe button.backButton{
+	border:none;
+	border-radius:50px 0px 0px 50px;
+	height:30px;
+	-webkit-transition:background 0.3s,opacity 0.3s;
+	-moz-transition:background 0.3s,opacity 0.3s;
+	-o-transition:background 0.3s,opacity 0.3s;
+	transition:background 0.3s,opacity 0.3s;
+	color:#fff;
+	font-size:12px;
+	line-height:30px;
+	padding:0px 10px;
+	margin-bottom: 10px;
+}
+#yoodooWidget .kloe button.backButton svg,#yoodooWidget .kloe button.backButton img{
+	vertical-align:middle;
+	margin:5px 0px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe h3{
+	display:inline-block;
+	vertical-align:middle;
+	line-height:30px;
+	height:30px;
+	margin:0px 0px 10px 0px;
+	padding:0px 30px 0px 30px;
+	background:#084d84;
+	color:#fff;
+	border-radius:0px 50px 50px 0px;
+}
+#yoodooWidget .kloe .recordButton.emptyRecord+.emptyMessage+button.addButton{
+	zoom:0;
+	opacity:0;
+}
+#yoodooWidget .kloe button.info{
+	border:none;
+	border-radius:50px;
+	width:20px;
+	height:20px;
+	background:rgb(156,182,239);
+	color:#fff;
+	font-size:14px;
+	line-height:18px;
+	margin:0px 0px 0px 10px;
+	vertical-align:top;
+}
+#yoodooWidget .kloe h3>button.info{
+	margin:5px -24px 5px 10px;
+}
+#yoodooWidget button.recordButton{
+	border:1px solid #999;
+	border-left:10px solid #999;
+	background:#FFF;
+	color:#555;
+	border-radius:5px;
+	margin:10px 0px;
+	display:block;
+	height:60px;
+	/*white-space:nowrap;*/
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position:relative;
+	left:0px;
+	text-align:left;
+	width:100%;
+	-webkit-transition:border 0.3s;
+	-moz-transition:border 0.3s;
+	-o-transition:border 0.3s;
+	transition:border 0.3s;
+}
+#yoodooWidget button.recordButton:hover{
+	border-left-width:20px;
+}
+#yoodooWidget button.recordButton span.imminentDate{
+	color:#f00;
+	-webkit-animation: imminent 1s infinite;
+	-moz-animation: imminent 1s infinite;
+	-o-animation: imminent 1s infinite;
+	animation: imminent 1s infinite;
+}
+#yoodooWidget button.recordButton>div{
+	overflow:hidden;
+	line-height:20px;
+	max-height:40px;
+	text-overflow:ellipsis;
+	margin:0px 150px 0px 0px;
+}
+#yoodooWidget button.recordButton>div+div{
+	position:absolute;
+	bottom:5px;
+	font-style:italic;
+	height:auto;
+	line-height:normal;
+	margin:0px;
+}
+#yoodooWidget button.recordButton>svg,#yoodooWidget button.recordButton>img{
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+#yoodooWidget button.recordButton>svg+svg,#yoodooWidget button.recordButton>img+img{
+	right:90px;
+}
+#yoodooWidget .sectionBox button.recordButton:nth-child(2n){
+	margin-left:5%;
+}
+.emptyRecord{
+	-webkit-animation: pulsing 1s infinite;
+	-moz-animation: pulsing 1s infinite;
+	-o-animation: pulsing 1s infinite;
+	animation: pulsing 1s infinite;
+}
+#yoodooWidget .kloe select{
+	color:#fff;
+	background:#999;
+}
+#yoodooWidget .kloe select option{
+	background:#fff;
+}
+.kloe .yoodooUI{
+	padding:5px 0px;
+}
+.kloe .expiredRecords{
+	border-bottom:3px solid #f00;
+	padding:10px;
+}
+.kloe .pendingRecords{
+	padding:10px;
+}
+#yoodooWidget .kloe button.item{
+	background:#fff;
+	border:1px solid #999;
+	color:#555;
+	width:100%;
+	height:50px;
+	vertical-align:top;
+	margin:5px 0px;
+	border-radius:5px;
+	-webkit-transition:background-color 0.3s, left 0.3s;
+	-moz-transition:background-color 0.3s, left 0.3s;
+	-o-transition:background-color 0.3s, left 0.3s;
+	transition:background-color 0.3s, left 0.3s;
+	position:relative;
+	left:0px;
+}
+.subsectionList{
+	padding:10px;
+}
+#yoodooWidget .kloe button.item.section{
+	transform-style: preserve-3d;
+	transform:perspective(250px) rotateX(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform:perspective(250px) rotateX(0deg);
+	-webkit-transition:-webkit-transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	-moz-transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	-o-transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+}
+#yoodooWidget .kloe button.item.section:hover{
+	-webkit-transform:perspective(250px) translateZ(-10px) rotateX(5deg);
+	transform:perspective(250px) translateZ(-10px) rotateX(5deg);
+	z-index:999;
+	background:#f8f8f8;
+	left:0px;
+	box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+}
+#yoodooWidget .kloe button.item:hover{
+	background:#f5f5f5 !important;
+	left:5px;
+}
+#yoodooWidget .kloe button.item.section{
+	width:48%;
+	height:auto;
+}
+#yoodooWidget .kloe button.item.section:nth-child(2n){
+	margin-left:4%;
+}
+.kloe button.item .immediateItems,.kloe button.item .imminentItems,.kloe button.item .actionplans{
+	width:33.3%;
+	max-width:80px;
+	display:inline-block;
+	font-size:18px;
+}
+.kloe button.item .immediateItems>*,.kloe button.item .imminentItems>*,.kloe button.item .actionplans>*{
+	vertical-align:middle;
+	margin:0px 2px;
+}
+#yoodooWidget .kloe button.item.subsection{
+	height:auto;
+	position:relative;
+}
+#yoodooWidget .kloe button.item.subsection b{
+	display:inline-block;
+	width:10%;
+	font-size:18px;
+	line-height:40px;
+	white-space:nowrap;
+	overflow:hidden;
+	vertical-align:middle;
+	color:#084d84;
+}
+#yoodooWidget .kloe button.item.subsection b+div{
+	display:inline-block;
+	width:90%;
+	line-height:20px;
+	overflow:hidden;
+	vertical-align:middle;
+	text-align:left;
+	padding-right:60px;
+	box-sizing:border-box;
+}
+#yoodooWidget .kloe button.item.subsection b+div+div{
+	position:absolute;
+	top:0px;
+	right:30px;
+	line-height:40px;
+	height:40px;
+}
+#yoodooWidget .kloe button.item.subsection b+div+div+div{
+	position:absolute;
+	top:0px;
+	right:0px;
+	line-height:40px;
+	height:40px;
+}
+#yoodooWidget .kloe button.item.subsection svg,#yoodooWidget .kloe button.item.subsection img{
+	vertical-align:middle;
+	margin:5px;
+}
+/*#yoodooWidget .kloe button.item>div{
+	margin-right:70px;
+	margin-left: 70px;
+}*/
+.kloe button.section .buttonLabel{
+	margin-bottom:5px;
+	overflow:hidden;
+	border-bottom:1px solid #dddddd;
+	height:60px;
+	position:relative;
+}
+.kloe button.section .buttonLabel b{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:20%;
+	font-size:18px;
+	line-height:60px;
+	white-space:nowrap;
+	overflow:hidden;
+	vertical-align:middle;
+	text-align:center;
+	color:#084d84;
+}
+.kloe button.section .buttonLabel div{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:80%;
+	line-height:20px;
+	max-height:60px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	vertical-align:middle;
+	text-align:left;
+}
+.kloe .scoreBar{
+	padding:5px 0px;
+}
+.kloe .scoreBar,.kloe .scoreBar div{
+	height:20px;
+}
+.kloe .scoreBar>div{
+	overflow:hidden;
+	white-space:nowrap;
+	text-align:left;
+	border-radius:3px;
+	background:rgba(0,0,0,0.1);
+	box-shadow:1px 3px 10px rgba(0,0,0,0.5) inset;
+}
+.kloe .scoreBar>div>div{
+	display:inline-block;
+}
+.kloe .scoreBar>div>div>div{
+	border-radius:0px;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5) inset;
+}
+.kloe .scoreBar>div.bar0>div{
+	display:none;
+}
+.kloe .scoreBar>div.bar10>div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar20>div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar30>div+div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar40>div+div+div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar50>div+div+div+div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar60>div+div+div+div+div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar70>div+div+div+div+div+div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar80>div+div+div+div+div+div+div+div+div{
+	display:none;
+}
+.kloe .scoreBar>div.bar90>div+div+div+div+div+div+div+div+div+div{
+	display:none;
+}
+
+.kloe .scoreBar>div>div{
+	width:10%;
+	padding:0px 0px;
+	box-sizing:border-box;
+}
+.kloe .scoreBar>div.bar0>div>div{
+	background:#fa361b;
+}
+.kloe .scoreBar>div.bar10>div>div{
+	background:#fa361b;
+}
+.kloe .scoreBar>div.bar20>div>div{
+	background:#fa361b;
+}
+.kloe .scoreBar>div.bar30>div>div{
+	background:#faa41b;
+}
+.kloe .scoreBar>div.bar40>div>div{
+	background:#faa41b;
+}
+.kloe .scoreBar>div.bar50>div>div{
+	background:#efe21a;
+}
+.kloe .scoreBar>div.bar60>div>div{
+	background:#efe21a;
+}
+.kloe .scoreBar>div.bar70>div>div{
+	background:#8bab2a;
+}
+.kloe .scoreBar>div.bar80>div>div{
+	background:#8bab2a;
+}
+.kloe .scoreBar>div.bar90>div>div{
+	background:#8bab2a;
+}
+.kloe .scoreBar>div.bar100>div>div{
+	background:#1fef1a;
+}
+.kloe .scoreBar>div>div>div>div{
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 26%, rgba(255,255,255,0.5) 39%, rgba(255,255,255,0) 53%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(26%,rgba(255,255,255,0.5)), color-stop(39%,rgba(255,255,255,0.5)), color-stop(53%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.promptDescription{
+	padding:0px 0px 10px 0px;
+}
+.recordSection{
+	/*width:80%;*/
+	border:1px solid #1669bb;
+	border-radius:5px;
+	padding:10px;
+	margin:0px 50px;
+	background:#fff;
+	transition:border 0.3s;
+}
+.sectionLink{
+	width:5px;
+	margin:-1px 0px -1px 20%;
+	border-left:1px solid #1669bb;
+	border-right:1px solid #1669bb;
+	background:#fff;
+	height:20px;
+	position:relative;
+}
+.recordSection.isEmpty{
+	border-color:#ddd;
+}
+.recordSection.isEmpty+div{
+	border-color:#ddd;
+}
+.promptDescription+.recordSection.isEmpty,.recordSection+.sectionLink+.recordSection.isEmpty{
+	/*border-color:#1ADF23;*/
+	border-color:#1669bb;
+	border-width:5px;
+	margin:-5px 50px;
+	-webkit-animation: nextRecord 1s infinite;
+	-moz-animation: nextRecord 1s infinite;
+	-o-animation: nextRecord 1s infinite;
+	animation: nextRecord 1s infinite;
+}
+.recordSection.isEmpty~.recordSection.isEmpty{
+	border-color:#ddd;
+	border-width:1px;
+	margin:0px 50px;
+	-webkit-animation:none;
+	-moz-animation:none;
+	-o-animation:none;
+	animation:none;
+}
+.recordSection.disabled{
+	-webkit-animation:none !important;
+	-moz-animation:none !important;
+	-o-animation:none !important;
+	animation:none !important;
+	margin:0px 50px !important;
+}
+.recordSection.disabled,.recordSection.disabled+.sectionLink{
+	border-color:#eee !important;
+	border-width:1px !important;
+}
+.recordSection.disabled *{
+	border-color:#fff !important;
+	background:#fff !important;
+	cursor:default;
+}
+#yoodooWidget button.emptyRecordButton{
+	position:absolute;
+	bottom:3px;
+	left:-90px;
+	width:80px;
+	transition:left 0.3s, bottom 0.3s;
+	-webkit-animation: nextRecord 1s infinite;
+	-moz-animation: nextRecord 1s infinite;
+	-o-animation: nextRecord 1s infinite;
+	animation: nextRecord 1s infinite;
+	border:2px solid #1669bb;
+	color:#1669bb;
+	background:#fff;
+	border-radius:10px;
+	padding:5px;
+}
+#yoodooWidget button.emptyRecordButton:hover{
+	bottom:1px;
+}
+#yoodooWidget button.emptyRecordButton.on{
+	left:5px;
+}
+#yoodooWidget .kloe button.voiceoverPlayer{
+	position:relative;
+	top:-40px;
+	left:10px;
+	border:none;
+	border-radius:50px;
+	width:20px;
+	height:20px;
+	background:#CCC;
+	color:#fff;
+	font-size:14px;
+	line-height:18px;
+	-webkit-transition:top 1s,background-color 1s;
+	transition:top 1s,background-color 1s;
+	padding:0px;
+	display:inline-block !important;
+}
+#yoodooWidget .kloe button.voiceoverPlayer>svg,#yoodooWidget .kloe button.voiceoverPlayer>img{
+	margin:3px;
+}
+#yoodooWidget .kloe button.voiceoverPlayer.available{
+	top:-2px;
+}
+#yoodooWidget .kloe button.voiceoverPlayer.playing{
+	background:rgb(198,150,20);
+
+	-webkit-animation: pulsing 1s infinite;
+	-moz-animation: pulsing 1s infinite;
+	-o-animation: pulsing 1s infinite;
+	animation: pulsing 1s infinite;
+}
+
+#yoodooWidget a:disabled:hover{
+	color:#7a96bc !important;
+}
+
+#yoodooWidget a:hover{
+	color:#B3D1FA !important;
+}
+
+#yoodooWidget a{
+	text-decoration:none !important;
+	color:#7a96bc !important;
+}
+#yoodooWidget ul{
+    text-align: left;
+}
+#yoodooWidget button.kloe_exporter{
+	float:right;
+}

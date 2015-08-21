@@ -1,0 +1,680 @@
+.cssDetector_yoodooPlaya{display:none;}
+.yd_bookcase_viewport{
+	-o-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background:rgba(255,255,255,0.1);
+	float:left;
+	overflow:hidden;
+}
+.yd_bookcaseButtons{
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	background:rgba(255,255,255,0.2);
+	float:left;
+}
+.yd_bookcase_slider{
+	-o-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background:rgba(255,255,255,0.2);
+	float:left;
+}
+.isTouch #yoodooContainerContent,.isTouch #yoodooWhiteout,.isTouch #yoodooWait,.isTouch .yd_bookcase_viewport,.isTouch .yd_bookcaseButtons,.isTouch .yd_bookcase_slider{
+	-o-border-radius:0 !important;
+	-moz-border-radius:0 !important;
+	-khtml-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	border-radius:0 !important;
+}
+.yd_bookcaseItem{
+	float:left;
+	border:1px solid #000;
+	overflow:hidden;
+	/*box-shadow:0px 0px 3px #000;*/
+	white-space:nowrap;
+	cursor:pointer;
+	/*background:#eee !important;*/
+}
+.yd_bookcaseItem:hover{
+	/*box-shadow:0px 0px 3px #fff;*/
+}
+.yd_bookcaseItem .yd_spine{
+	vertical-align:top;
+	display:inline-block;
+	position:relative;
+	overflow:hidden;
+	transform:scale(1,1);
+}
+.yd_bookcaseItem .yd_bookFace{
+	vertical-align:top;
+	display:inline-block;
+	position:relative;
+	overflow:hidden;
+	transform:scale(1,1);
+}
+.yd_spine_shader{
+	position:absolute;
+	display:none;
+	z-index:50;
+	top:0px;
+	left:0px;
+}
+.yd_book_title{
+	writing-mode: tb-rl;
+	-webkit-transform: rotate(90deg);	
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	white-space:nowrap;
+	position:absolute;
+	text-align:left;
+	z-index:11;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.yd_book_earmark{
+	background:url(../../image/earmark-off.png) no-repeat center center;
+	cursor:pointer;
+}
+.yd_book_earmark:hover{
+	background:url(../../image/earmark-over.png) no-repeat center center;
+}
+.yd_book_earmark.on{
+	background:url(../../image/earmark-on.png) no-repeat center center;
+}
+.yd_book_completed{
+	height:30px;
+	left:0px;
+	position:absolute;
+	width:100%;
+}
+.yd_book_completed.on{
+	background:url(../../image/book_tick.png) no-repeat center center;
+}
+.yd_book_colour{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+}
+.yd_bookcaseItemLogo,.yd_callToAction{
+	width:inherit;
+	height:inherit;
+}
+.yd_callToAction{
+	text-align:center;
+	background:none;
+	border:none;
+	color:#fff;
+	/*text-shadow:0px 0px 3px #000;*/
+}
+.yd_light .dooit .yd_bookcaseItemLogo{
+	background:url(../../image/playa_dooit.png) no-repeat center center;
+}
+.yd_light .book .yd_bookcaseItemLogo{
+	background:url(../../image/playa_playit.png) no-repeat center center;
+}
+.yd_light .book .yd_bookcaseItemLogo.ct{
+	background:url(../../image/playa_playit_ct.png) no-repeat center center;
+}
+.yd_light .book .yd_bookcaseItemLogo.lb{
+	background:url(../../image/playa_playit_lb.png) no-repeat center center;
+}
+.yd_light .book .yd_bookcaseItemLogo.ei{
+	background:url(../../image/playa_playit_ei.png) no-repeat center center;
+}
+.yd_light .document .yd_bookcaseItemLogo{
+	background:url(../../image/playa_documents.png) no-repeat center center;
+}
+.yd_dark .dooit .yd_bookcaseItemLogo{
+	background:url(../../image/playa_dooit_dark.png) no-repeat center center;
+}
+.yd_dark .book .yd_bookcaseItemLogo{
+	background:url(../../image/playa_playit_dark.png) no-repeat center center;
+}
+.yd_dark .book .yd_bookcaseItemLogo.ct{
+	background:url(../../image/playa_playit_ct_dark.png) no-repeat center center;
+}
+.yd_dark .book .yd_bookcaseItemLogo.lb{
+	background:url(../../image/playa_playit_lb_dark.png) no-repeat center center;
+}
+.yd_dark .book .yd_bookcaseItemLogo.ei{
+	background:url(../../image/playa_playit_ei_dark.png) no-repeat center center;
+}
+.yd_dark .document .yd_bookcaseItemLogo{
+	background:url(../../image/playa_documents_dark.png) no-repeat center center;
+}
+.yd_bookFace{
+	text-align:center;
+}
+.yd_bookFace img{
+	box-shadow:0px 1px 4px #000;
+}
+.yd_bookFace .yd_catTitle{
+	font-size:1.2em;
+	text-shadow:0px 0px 5px #000;
+}
+.yd_bookFace .yd_bookTitle{
+	font-size:1.4em;
+	padding:5px;
+}
+.yd_bookFace .yd_shortDescription,.yd_bookFace .yd_bookTitle{
+	white-space:normal;
+}
+.yd_shortDescription{
+	padding:5px;
+}
+.yd_buttons button{
+	border:none;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
+	cursor:pointer;
+	padding:0px;
+	position:relative;
+}
+.yd_buttons button .buttonLight{
+	background:url(../../image/buttonOn.png) no-repeat top left;
+}
+.yd_buttons button.off .buttonLight{
+	background:url(../../image/buttonOff.png) no-repeat top left;
+}
+.yd_buttons button div{
+	width:inherit;
+	height:inherit;
+	position:relative;
+}
+.yd_light .yd_bookcaseButtons button.yd_earmarks>div{
+	background:url(../../image/playa_earmarks.png) no-repeat center center;
+}
+.yd_light .yd_bookcaseButtons button.yd_episodes>div{
+	background:url(../../image/playa_playit.png) no-repeat center center;
+}
+.yd_light .yd_bookcaseButtons button.yd_dooits>div{
+	background:url(../../image/playa_dooit.png) no-repeat center center;
+}
+.yd_light .yd_bookcaseButtons button.yd_documents>div{
+	background:url(../../image/playa_documents.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_home>div{
+	background:url(../../image/playa_home.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_bookcase_view>div{
+	background:url(../../image/playa_list.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_goto_bookcase>div{
+	background:url(../../image/playa_bookcase.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_scrapbook>div{
+	background:url(../../image/playa_scrapbook.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_comments>div{
+	background:url(../../image/playa_comments.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_fullscreen>div{
+	background:url(../../image/playa_fullscreen.png) no-repeat center center;
+}
+.yd_light .yd_buttons button.yd_settings>div{
+	background:url(../../image/playa_settings.png) no-repeat center center;
+}
+.yd_dark .yd_bookcaseButtons button.yd_earmarks>div{
+	background:url(../../image/playa_earmarks_dark.png) no-repeat center center;
+}
+.yd_dark .yd_bookcaseButtons button.yd_episodes>div{
+	background:url(../../image/playa_playit_dark.png) no-repeat center center;
+}
+.yd_dark .yd_bookcaseButtons button.yd_dooits>div{
+	background:url(../../image/playa_dooit_dark.png) no-repeat center center;
+}
+.yd_dark .yd_bookcaseButtons button.yd_documents>div{
+	background:url(../../image/playa_documents_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_home>div{
+	background:url(../../image/playa_home_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_bookcase_view>div{
+	background:url(../../image/playa_list_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_goto_bookcase>div{
+	background:url(../../image/playa_bookcase_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_scrapbook>div{
+	background:url(../../image/playa_scrapbook_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_comments>div{
+	background:url(../../image/playa_comments_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_fullscreen>div{
+	background:url(../../image/playa_fullscreen_dark.png) no-repeat center center;
+}
+.yd_dark .yd_buttons button.yd_settings>div{
+	background:url(../../image/playa_settings_dark.png) no-repeat center center;
+}
+.yd_bookcase_slider{
+	overflow:hidden;
+	position:relative;
+}
+.yd_bookcase_slider div.yd_thumb,.yd_bookcase_slider div.yd_level{
+	display:inline-block;
+}
+.yd_bookcase_slider div.yd_level{
+	overflow:hidden;
+}
+.yd_bookcase_slider div.yd_level span{
+	text-shadow:0px 0px 5px #000;
+	color:#fff;
+	padding:0px 3px;
+}
+.yd_bookcase_slider div.yd_thumb div{
+	height:inherit;
+}
+.yd_bookcase_slider div.yd_thumb.yd_completed{
+	/*background:url(../../image/minitick.png) no-repeat center bottom !important;*/
+}
+.yd_bookcase_slider div.yd_thumb.yd_uncompleted{
+	background: rgb(181,189,200); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(181,189,200,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(181,189,200,1)), color-stop(36%,rgba(130,140,149,1)), color-stop(100%,rgba(40,52,59,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-9 */
+}
+.yd_minibookcase{
+	display:inline-block;
+	white-space:nowrap;
+	padding:0px 5px;
+}
+.yd_bookcase_slider .yd_eyepiece{
+	position:absolute;
+	border:1px solid rgba(0,0,0,0.5);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.5) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(51%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.5))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.51) 0%,rgba(255,255,255,0) 51%,rgba(255,255,255,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 51%,rgba(255,255,255,0.5) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 51%,rgba(255,255,255,0.5) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 51%,rgba(255,255,255,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.yd_callToAction{
+	cursor:pointer;
+}
+.yd_episode_container{
+	width:inherit;
+	height:inherit;
+	z-index:20;
+}
+#yoodooWidget .yd_episode_container h2{
+	margin:5px;
+}
+#yoodooWidget .yd_episode_container h3{
+	margin:5px;
+}
+.yd_episode_heading{
+	padding:0px 0px;
+}
+.yd_keypoints,.yd_chapters{
+	white-space:nowrap;
+}
+.yd_chapters{
+	overflow:hidden;
+}
+.yd_movie,.yd_keypoints{
+	float:left;
+}
+.yd_chapters{
+	clear:both;
+}
+.yd_chapters .chapterItem{
+	padding:1px;
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+}
+.yd_chapters .chapterItem .quizThumb,.yd_chapters .chapterItem img{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+}
+.yd_chapters .chapterItem .quizThumb{
+	overflow:hidden;
+}
+.yd_chapters .chapterItem.playing{
+	cursor:default;
+}
+.yd_chapters .chapterItem.played .overlay{
+	background:rgba(0,0,0,0.4);
+}
+.yd_chapters .chapterItem.toplay .overlay{
+	background:rgba(255,255,255,0.4);
+}
+.yd_chapters .chapterItem.played .overlay div,.yd_chapters .chapterItem.toplay .overlay div{
+	/*background:url(../../image/keypoint_play_small.png) no-repeat center center;*/
+}
+.yd_chapters .chapterItem .overlay{
+	position:absolute;
+}
+.yd_chapters .chapterItem .overlay>div{
+	display:none;
+}
+.yd_chapters .chapterItem.playing .overlay>div{
+	display:block;
+	background:url(../../image/chapter_play.png) no-repeat center center;
+}
+.yd_movieObject .yd_moviePlaybutton{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:55;
+	cursor:pointer;
+}
+.yd_movieObject .yd_moviePlaybutton.playing{
+	/*display:block;*/
+}
+.yd_movieObject .yd_moviePlaybutton div{
+	display:block;
+}
+.yd_movieObject .yd_moviePlaybutton.playing div{
+	display:none;
+}
+.yd_movieObject .yd_moviePlaybutton.playing:hover div{
+	display:block;
+}
+.yd_movieObject:hover .yd_moviePlaybutton.playing{
+	/*display:block;*/
+}
+.yd_light .yd_movieObject .yd_moviePlaybutton div{
+	background:url(../../image/playa_play.png) no-repeat center center;
+}
+.yd_light .yd_movieObject .yd_moviePlaybutton.playing div{
+	background:url(../../image/playa_pause.png) no-repeat center center;
+}
+.yd_dark .yd_movieObject .yd_moviePlaybutton div{
+	background:url(../../image/playa_play_dark.png) no-repeat center center;
+}
+.yd_dark .yd_movieObject .yd_moviePlaybutton.playing div{
+	background:url(../../image/playa_pause_dark.png) no-repeat center center;
+}
+.isTouch .yd_movieObject .yd_moviePlaybutton.playing div{
+	background:none;
+}
+.yd_light .yd_movieObject .yd_moviePlaybutton.complete,.yd_dark .yd_movieObject .yd_moviePlaybutton.complete{
+	background:none !important;
+}
+.yd_movieObject .yd_moviePlaybutton.yd_buffering div{
+	display:block !important;
+	background:url(../../image/working.gif) rgba(255,255,255,0.4) center center no-repeat !important;
+	cursor:default;
+}
+.yd_complete{
+	display:none;
+	text-align:center;
+	cursor:pointer;
+	z-index:56;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.yd_keypoint{
+	white-space:nowrap;
+	margin:1px 0px 0px 40px;
+	-o-transition:0.5s;
+	-moz-transition:0.5s;
+	-khtml-transition:0.5s;
+	-webkit-transition:0.5s;
+	transition:0.5s;
+	position:relative;
+	-o-border-radius:3px 0px 0px 3px;
+	-moz-border-radius:3px 0px 0px 3px;
+	-khtml-border-radius:3px 0px 0px 3px;
+	-webkit-border-radius:3px 0px 0px 3px;
+	border-radius:3px 0px 0px 3px;
+}
+.yd_keypoint div{
+	padding:0px;
+	display:inline-block;
+}
+.yd_keypoint.yd_current_keypoint{
+	margin:1px 0px 0px 1px;
+}
+.yd_keypoint.yd_past_keypoint{
+	margin:3px 0px 0px 2px;
+}
+.yd_keypoint div .keypoint_opener{
+	border-left:1px solid rgba(255,255,255,0.3);
+	padding-left:5px;
+	cursor:pointer;
+}
+.yd_keypoint div .keypoint_goto{
+	background:url(../../image/keypoint_play.png) no-repeat center center;
+	border-right:1px solid rgba(0,0,0,0.2);
+	width:30px;
+	cursor:pointer;
+}
+.yd_keypoint.small div .keypoint_goto{
+	width:20px;
+	background:url(../../image/keypoint_play_small.png) no-repeat center center;
+}
+#yoodooWidget .yd_keypointDisplay h1{
+	font-size:20px !important;
+	line-height:26px !important;	
+}
+/*.yd_keypoint .options{
+	padding:0px;
+	width:0px;
+	-o-opacity:0;
+	-moz-opacity:0;
+	-webkit-opacity:0;
+	-khtml-opacity:0;
+	opacity:0;
+	position:absolute;
+	left:0px;
+	-o-transition:0.5s;
+	-moz-transition:0.5s;
+	-khtml-transition:0.5s;
+	-webkit-transition:0.5s;
+	transition:0.5s;
+	-o-border-radius:3px 0px 0px 3px;
+	-moz-border-radius:3px 0px 0px 3px;
+	-khtml-border-radius:3px 0px 0px 3px;
+	-webkit-border-radius:3px 0px 0px 3px;
+	border-radius:3px 0px 0px 3px;
+	z-index:60;
+}
+.yd_keypoint .options button{
+	margin:1px 0px 1px 3px;
+	border:none;
+	background:url(../../image/keypoint_actions.png) no-repeat;
+	cursor:pointer;
+	height:20px;
+	padding:0px;
+	vertical-align:middle;
+}
+.yd_keypoint .options button.open{
+	width:20px;
+}
+.yd_keypoint .options button.goto{
+	width:14px;
+}
+.yd_light .yd_keypoint .options button.open{
+	background-position:-14px 0px;
+}
+.yd_dark .yd_keypoint .options button.open{
+	background-position:-14px -20px;
+}
+.yd_light .yd_keypoint .options button.goto{
+	background-position:0px 0px;
+}
+.yd_dark .yd_keypoint .options button.goto{
+	background-position:0px -20px;
+}*/
+.yd_keypoint:hover .options{
+	width:50px;
+	left:-47px;
+	-o-opacity:100;
+	-moz-opacity:100;
+	-webkit-opacity:100;
+	-khtml-opacity:100;
+	opacity:100;
+}
+.yd_timeline{
+	position:relative;
+	cursor:pointer;
+}
+.yd_progress,.yd_buffer{
+	position:absolute;
+}
+.yd_progressSlide{
+	width:63px;
+	height:20px;
+	line-height:20px;
+	padding:1px 5px 12px 5px;
+	text-align:center;
+	display:none;
+	top:-30px;
+	left:0px;
+	position:absolute;
+	font-size:10px;
+	z-index:100;
+}
+.yd_light .yd_progressSlide{
+	background:url(../../image/playheadBubble.png) no-repeat center bottom;
+	color:#555;
+}
+.yd_dark .yd_progressSlide{
+	background:url(../../image/playheadBubbleDark.png) no-repeat center bottom;
+	color:#ddd;
+}
+.yd_scrollVertical{
+	cursor:row-resize;
+}
+.yd_upScroll{
+	cursor:pointer;
+	height:20px;
+	border:none;
+	margin:0px;
+	background:url(../../image/keypoint_scroll_arrows.png) no-repeat center -60px;
+}
+.yd_upScroll:hover{
+	background-position:center -40px;
+}
+.yd_downScroll{
+	cursor:pointer;
+	height:20px;
+	border:none;
+	margin:0px;
+	background:url(../../image/keypoint_scroll_arrows.png) no-repeat center 0px;
+}
+.yd_downScroll:hover{
+	background-position:center -20px;
+}
+.yd_keypointHeader button{
+	height:30px;
+	border:none;
+	cursor:pointer;
+	line-height:30px;
+	margin:0px;
+	padding:0px 10px;
+	-o-border-radius:0px 0px 5px 0px;
+	-moz-border-radius:0px 0px 5px 0px;
+	-khtml-border-radius:0px 0px 5px 0px;
+	-webkit-border-radius:0px 0px 5px 0px;
+	border-radius:0px 0px 5px 0px;
+	margin-right:20px;
+}
+.yd_keypointFooter button{
+	height:30px;
+	border:none;
+	cursor:pointer;
+	line-height:30px;
+	margin:0px;
+	padding:0px 10px;
+}
+.yd_keypointFooter .yd_keypointNext{
+	-o-border-radius:5px 0px 0px 0px;
+	-moz-border-radius:5px 0px 0px 0px;
+	-khtml-border-radius:5px 0px 0px 0px;
+	-webkit-border-radius:5px 0px 0px 0px;
+	border-radius:5px 0px 0px 0px;
+}
+.yd_keypointFooter .yd_keypointPrev{
+	-o-border-radius:0px 5px 0px 0px;
+	-moz-border-radius:0px 5px 0px 0px;
+	-khtml-border-radius:0px 5px 0px 0px;
+	-webkit-border-radius:0px 5px 0px 0px;
+	border-radius:0px 5px 0px 0px;
+}
+.yd_keypointHeader .yd_scrapbook_add,.yd_keypointHeader .yd_scrapbook_show{
+	-o-border-radius:0px 0px 0px 5px;
+	-moz-border-radius:0px 0px 0px 5px;
+	-khtml-border-radius:0px 0px 0px 5px;
+	-webkit-border-radius:0px 0px 0px 5px;
+	border-radius:0px 0px 0px 5px;
+	float:right;
+	margin-right:0px;
+}
+.yd_keypointHeader .yd_comment{
+	-o-border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	-khtml-border-radius:0px 0px 5px 5px;
+	-webkit-border-radius:0px 0px 5px 5px;
+	border-radius:0px 0px 5px 5px;
+	float:right;
+	margin-right:5px;
+}
+#yoodooWidget .yd_episode_container .yd_episode_heading>div{
+	width:50%;
+	display:inline-block;
+	white-space:nowrap;
+	margin:2px 0px;
+}
+.marquee{
+
+}
+.yd_episode_heading h2,.yd_episode_heading h3{
+	cursor:pointer;
+}
+.yd_episode_heading .yd_scrapbook_add span,.yd_episode_heading .yd_scrapbook_show span{
+	display:block;
+	font-size:11px;
+	border:none;
+	background:none;
+	color:inherit;
+}
+.yd_episode_heading .yd_scrapbook_add:hover span,.yd_episode_heading .yd_scrapbook_show:hover span{
+	text-decoration:underline;
+}
+.yd_playa_bubble{
+	position:fixed;
+	display:none;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	border:1px solid #000;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-o-box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+	-moz-box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+	-khtml-box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+	-webkit-box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+	box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+	padding:5px;
+	background:#fff;
+	color:#000;
+	font-size:12px;
+	white-space:nowrap;
+}

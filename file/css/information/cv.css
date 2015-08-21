@@ -1,0 +1,304 @@
+.cssDetector_cv{display:none;}
+.cv{
+	background:url(../../../image/dooits/information/career.gif) no-repeat top right;
+	color:#000;
+	position:relative;
+	font-size:14px;
+}
+.cv .buttons{
+	margin:0 120px 0 0;
+}
+.cv .builder{
+	min-height:50px;
+	width:20%;
+	float:left;
+}
+.cv .toolbox{
+	min-height:50px;
+	width:76%;
+	float:left;
+}
+.cv .toolbox .preview{
+	zoom:0.5;
+}
+.cv .builder .section{
+	margin:2px 0px;
+	padding:0px;
+	cursor:pointer;
+}
+.cv .builder .section .area{
+	background:url(../../../image/dooits/information/button.gif) repeat-x;
+	height:33px;
+	line-height:33px;
+	color:#fff;
+	font-weight:bold;
+	padding:0 10px;
+	cursor:pointer;
+	border:none;
+	font-size:16px;
+	/*text-shadow:1px 1px 1px #fff;*/
+	-o-box-shadow: 0px 0px 5px #ccc;
+	-moz-box-shadow: 0px 0px 5px #ccc;
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+	box-shadow: 0px 0px 5px #ccc;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	text-align:center;
+	cursor:pointer;
+	
+}
+.cv .builder .section .area:hover{
+	background-position:0 -33px;
+}
+.cv .builder .section.editing .area{
+	border-color:#d6620d;
+	background-position:0 0px;
+}
+.cv .builder .section .move{
+	cursor:n-resize;
+	width:8px;
+	height:14px;
+	background:#999;
+	margin:9px 10px;
+	float:right;
+	background:url(../../../image/dooits/information/reorder.png) no-repeat;
+}
+.cv .builder .section .move:hover{
+	background-position:0px -17px;
+}
+.cv .builder .section.editing .area{
+	color:#00FF00;
+}
+.cv input{
+	background:url(../../../image/dooits/information/buttons5.gif) repeat-x 0px -72px;
+	padding:0px 10px;
+	width:200px;
+	height:24px;
+	line-height:24px;
+	border:none;
+	margin:3px 0px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #c1ceff;
+	outline:none;
+}
+/*.cv a.select{
+	background:url(../../image/dooits/miniselect.gif) no-repeat top right;
+	height:25px;
+	line-height:25px;
+	width:66px;
+	padding:0px 19px 0px 5px;
+	margin:2px 5px 2px 0px;
+	float:left;
+	text-decoration:none;
+	color:#333333 !important;
+}
+.cv a.select:hover{
+	background-position:0px -25px;
+	color:#000 !important;
+}*/
+.cv button.green,.cv button.red{
+	background:url(../../../image/dooits/information/button.gif) no-repeat;
+	width:141px;
+	height:31px;
+	padding:2px 5px 6px 5px;
+	margin:10px 0 0 20px;
+	cursor:pointer;
+	border:none;
+	text-shadow:1px 1px 1px #fff;
+}
+.cv button.green:hover{
+	background-position:0px -31px;
+}
+.cv button.red{
+	background-position:-141px 0px;
+}
+.cv button.red:hover{
+	background-position:-141px -31px;
+}
+.cv button.del{
+	background:url(../../../image/dooits/information/mini-del.png) no-repeat;
+	width:14px;
+	height:14px;
+	cursor:pointer;
+	border:none;
+	margin:0 0 5px 5px;
+}
+.cv button.del:hover{
+	background-position:0px -14px;
+}
+.cv h2{
+	padding:0px;
+	margin:0px;
+}
+.cv textarea{
+	width:90%;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #81adc3;
+	height:24px;
+	line-height:24px;
+}
+.cv button{
+	background:url(../../../image/dooits/information/mini-button.gif) repeat-x 0px 0px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:none;
+	height:18px;
+	line-height:18px;
+	font-size:11px;
+	cursor:pointer;
+	padding:0px 5px;
+	color:#fff;
+	margin:0px 1px;
+}
+.cv button:hover{
+	background-position:0px -18px;
+}
+.cv button.on{
+	background-position:0px -18px;
+}
+.arrow{
+	background:url(../../../image/dooits/information/arrow.png) no-repeat;
+	width:30px;
+	height:30px;
+	position:absolute;
+	z-index:502;
+}
+.spacer{
+	height:5px;
+}
+.cv .forCV,.cv .forSection,.cv .builder{
+	border:1px solid #16273f;
+	-moz-border-radius:8px;
+	-o-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	padding:1%;
+	background:#fff;
+}
+.cv h4{
+	position:absolute;
+	background:#fff;
+	top:-15px;
+	padding:0px 4px;
+	/*float:left;*/
+	/*white-space:nowrap;*/
+}
+.cv .forCV,.cv .forSection,.cv .builder{
+	position:relative;
+	margin:10px 0 4px 0;
+}
+.cv .previewContainer{
+	max-height:200px;
+	overflow:auto;
+}
+.cv .preview{
+	margin:3px 0 0 0;
+}
+.cv .builder{
+	margin-right:1%;
+}
+.cv .forSection{
+}
+.cv .floating{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:rgba(255,255,255,0.9);
+}
+.cv .floating>div{
+	background:#fff;
+}
+.rounded3{
+	border:1px solid #16273f;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	padding:3px;
+}
+.cv .forSection .rounded3{
+	margin:3px 0 0 0;
+}
+.cv .warning{
+	color:#FF6600;
+	font-size:12px;
+}
+.dropdown{
+	position:absolute;
+	border:1px solid #000;
+	border-top:none;
+	border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	background:#fff;
+	display:none;
+	z-index:503;
+}
+.blockout{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:502;
+}
+a.select table.threecol{
+	display:inline-block;
+	width:auto !important;
+	border:none;
+	vertical-align:middle;
+}
+a.select .threecol td{
+	background:url(../../../image/dooits/information/dropdown3.png);
+	height:20px;
+	line-height:20px;
+	padding:0px !important;
+	margin:0px !important;
+}
+a.select .threecol td.l{
+	width:3px;
+}
+a.select .threecol td.r{
+	background-position:-3px 0px;
+	width:13px;
+}
+a.select .threecol td.c{
+	background-position:0px -40px;
+	width:auto;
+}
+a.select:hover .threecol td.l{
+	background-position:0px -20px;
+}
+a.select:hover .threecol td.r{
+	background-position:-3px -20px;
+}
+a.select:hover .threecol td.c{
+	background-position:0px -60px;
+}
+.dropdown ul{
+	margin:0px;
+	padding:0px;
+}
+.dropdown li{
+	list-style:none;
+	cursor:pointer;
+	padding:2px;
+	margin:0px;
+}
+.dropdown li:hover{
+	list-style:none;
+	cursor:pointer;
+	padding:2px;
+	margin:0px;
+	background:#333333;
+	color:#fff;
+}

@@ -1,0 +1,8 @@
+.cssDetector_yoodoo_widget_ie7{display:none;}
+#yoodooWidget .login center button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red{
+	min-width:auto !important;
+	width:auto !important;
+}
+#yoodooWidget h2{
+	margin:0px 0px 20px 0px !important;
+}

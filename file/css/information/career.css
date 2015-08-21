@@ -1,0 +1,156 @@
+.cssDetector_career{display:none;}
+.career{
+	background:url(../../../image/dooits/information/career.gif) no-repeat top right;
+	color:#000;
+	position:relative;
+	font-size:14px;
+}
+.career .job{
+	width:253px;
+	height:53px;
+	background:url(../../../image/dooits/information/item.png) no-repeat top right;
+	cursor:pointer;
+	color:#333;
+	position:relative;
+}
+.career #toedit{
+	display:none;
+	font-size:12px;
+	padding:2px 0px 2px 20px;
+}
+.career .job>div{
+	width:246px;
+	height:45px;
+	padding:2px 5px 6px 4px;
+}
+.career .job .dates{
+	line-height:22px;
+	float:left;
+	width:70px;
+	padding:0px 0px 0px 5px;
+}
+.career .detail{
+	line-height:22px;
+	float:left;
+	width:170px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.career .job.on,.career .job:hover{
+	background-position:0px -53px;
+	color:#fff;
+}
+.career .job .fader{
+	background:url(../../../image/dooits/information/item-fader.png) no-repeat;
+	width:19px;
+	height:45px;
+	position:absolute;
+	right:6px;
+	top:2px;
+}
+.career .job.on .fader,.career .job:hover .fader{
+	background-position:0px -53px;
+}
+.career .list{
+	width:30%;
+	float:left;
+	min-height:100px;
+	min-width:275px;
+	padding:5px;
+}
+.career .jobList{
+	overflow: auto;
+	max-height:265px;
+}
+.career .details{
+	float:left;
+	min-height:100px;
+	min-width:320px;
+	border:1px solid #CCCCCC;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	padding:5px;
+}
+.career .details>div{
+	padding:3px 0px;
+}
+.career input{
+	padding:0px 10px;
+	width:320px;
+	margin:3px 0px !important;
+}
+.career input[type=checkbox]{
+	width:30px;
+}
+
+.career a.select{
+	background:url(../../../image/dooits/information/miniselect.gif) no-repeat top right;
+	height:25px;
+	line-height:25px;
+	width:66px;
+	padding:0px 19px 0px 5px;
+	margin:2px 5px 2px 0px;
+	float:left;
+	text-decoration:none;
+	color:#333333 !important;
+}
+.career a.select:hover{
+	background-position:0px -25px;
+	color:#000 !important;
+}
+.career button.green,.career button.red{
+	margin:10px 0 0 20px !important;
+}
+.career h2{
+	padding:0px;
+	margin:0px;
+}
+.eezshortlist{
+	position:absolute;
+	-moz-border-radius:0px 0px 5px 5px;
+	border-radius:0px 0px 5px 5px;
+	/*border:1px solid #4f4f51;*/
+	background:#c2c6b5;
+	color:#474c3a;
+	z-index:999;
+}
+.dropdown{
+	position:absolute;
+	border:1px solid #000;
+	border-top:none;
+	border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	background:#fff;
+	display:none;
+	z-index:503;
+	max-height:160px;
+	overflow-y:auto;
+	width:80px;
+}
+.blockout{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:502;
+}
+.dropdown ul{
+	margin:0px;
+	padding:0px;
+}
+.dropdown li{
+	list-style:none;
+	cursor:pointer;
+	padding:2px;
+	margin:0px;
+}
+.dropdown li:hover{
+	list-style:none;
+	cursor:pointer;
+	padding:2px;
+	margin:0px;
+	background:#333333;
+	color:#fff;
+}

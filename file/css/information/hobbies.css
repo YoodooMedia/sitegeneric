@@ -1,0 +1,52 @@
+.cssDetector_hobbies{display:none;}
+.hobbiesDetails{
+	background:url(../../../image/dooits/information/hobbies.gif) no-repeat top right;
+	color:#000;
+	position:relative;
+	font-size:14px;
+}
+.hobbiesDetails .hobbyitem{
+	width:253px;
+	height:30px;
+	background:url(../../../image/dooits/information/mini-item.png) no-repeat top right;
+	cursor:pointer;
+	color:#333;
+	position:relative;
+	border:none;
+	padding:0 0 3px 0;
+}
+.hobbiesDetails input{
+	width:235px;
+	border:none;
+	outline:none;
+	padding:0 5px;
+	margin:3px;
+}
+.hobbiesDetails .hobbyitem.notempty{
+	background-position:0px -60px;
+}
+.hobbiesDetails .hobbyitem.on,.hobbiesDetails .hobbyitem:hover{
+	background-position:0px -30px;
+	color:#fff;
+}
+.hobbiesDetails .leftCol,.hobbiesDetails .rightCol{
+	width:45%;
+	min-height:100px;
+	float:left;
+	margin:20px 0 0 0;
+}
+.hobbiesDetails textarea,.hobbiesDetails .textarea{
+	width:100%;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #81adc3;
+	height:150px;
+	line-height:20px;
+	font-size:16px;
+	margin:10px 0 0 0;
+}
+.hobbiesDetails button.green,.hobbiesDetails button.red{
+	margin:10px 0 0 20px !important;
+}

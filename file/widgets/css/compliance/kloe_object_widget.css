@@ -1,0 +1,140 @@
+.cssDetector_kloe_object_widget{display:none;}
+.kloe_object_widget_parent{
+	white-space:nowrap;
+	overflow:hidden !important;
+}
+.kloe_object_widget_parent>div>div{
+	height:100%;
+}
+#yoodooWidget button.kloe_object_widget .kloe_numeric_dial{
+	font-size:40px;
+}
+#yoodooWidget button.kloe_object_widget .kloe_numeric_dial.belowTen{
+	font-size:60px;
+}
+.kloe_object_widget{
+	font-size:12px;
+	text-align:center;
+	padding:0px;
+	position:relative;
+	height:100%;
+}
+.kloe_object_widget .widget_label{
+	position:absolute;
+	bottom:5px;
+	width:100% !important;
+	left:0px;
+	max-height:32px;
+	line-height:16px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.kloe_object_widget .yoodooUI_dial{
+	display:block !important;
+	position:absolute !important;
+	top:0px !important;
+	margin:0px auto;
+	width:100% !important;
+}
+.kloe_object_widget .yoodooUI_dial>div{
+	display:none;
+}
+button.kloe_object_widget{
+	border:none;
+	cursor:pointer;
+	color:#4E74A6;
+	background:rgba(255,255,255,0.0);
+	transition:background 0.3s,color 0.3s;
+}
+button.kloe_object_widget:hover{
+	background:#4E74A6;
+	color:#fff;
+}
+.kloe_admin_widget .businessSelector{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.kloe_admin_widget .businessSelector span{
+	
+}
+.kloe_admin_widget .businessSelector button,.kloe_admin_widget .businessSelector select{
+	cursor:pointer;
+	border:none;
+	border-bottom:2px solid #4E74A6;
+	background:none;
+	color:#4E74A6;
+	transition:border 0.3s,color 0.3s;
+	outline:none;
+}
+.kloe_admin_widget .businessSelector button:hover{
+	color:#e99;
+	border-bottom:2px solid #e99;
+}
+#yoodooWidget .kloe_admin_widget{
+	text-align:center;
+}
+#yoodooWidget .kloe_admin_widget .keyQuestion{
+	display:inline-block;
+	width:19.5%;
+	box-sizing:border-box;
+	padding:5px;
+	vertical-align:top;
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.kloe_admin_widget .keyQuestion>span{
+	position:relative;
+	padding:0px 10px 0px 0px;
+	display:inline-block;
+	height:20px;
+}
+.kloe_admin_widget .keyQuestion>span>span{
+	position:absolute;
+	border-radius:20px;
+	color:#fff;
+	font-size:11px;
+	height:14px;
+	line-height:14px;
+	min-width:14px;
+	text-align:center;
+	left:13px;
+	border:1px solid #fff;
+}
+.kloe_admin_widget button.overview_button{
+	border:1px solid #ddd;
+	cursor:pointer;
+	padding:0px;
+	margin:0px;
+	width:100%;
+	background:rgba(255,255,255,0.5);
+}
+.kloe_admin_widget button.overview_button:hover{
+	background:#4E74A6;
+	color:#fff;
+}
+.templateButtons{
+	text-align:center;
+	white-space:norap;
+	overflow:hidden;
+}
+.templateButtons button{
+	display:inline-block;
+	width:19.5%;
+	box-sizing:border-box;
+	font-size:10px;
+	border:1px solid #ddd;
+	border-top:none;
+	border-radius:0px 0px 3px 3px;
+	margin:-1px 1px 0px 1px;
+	background:rgba(255,255,255,0.5);
+	padding:2px;
+	overflow:hidden;
+	outline:none;
+	cursor:pointer;
+}
+.templateButtons button:hover{
+	background:#4E74A6;
+	color:#fff;
+}

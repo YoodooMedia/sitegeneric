@@ -1,0 +1,205 @@
+.cssDetector_application_forms{display:none;}
+.applications{
+	
+}
+.applications .formrow{
+	clear:both;
+	padding-top:10px;
+}
+.applications .section,.dateselector{
+	border:1px solid #999;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+	-khtml-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	margin:10px;
+	padding:10px;
+	-o-box-shadow:0px 0px 8px #999;
+	-moz-box-shadow:0px 0px 8px #999;
+	-khtml-box-shadow:0px 0px 8px #999;
+	-webkit-box-shadow:0px 0px 8px #999;
+	box-shadow:0px 0px 8px #999;
+}
+.applications .section{
+	background:#fff;
+}
+.dooitBox .applications label{
+	margin-top:8px;
+}
+.dooitBox .applications label .warning{
+	color:#f00;
+}
+.dooitBox .applications input[type=text],
+.dooitBox .applications textarea{
+	width:50%;
+	padding:5px;
+	border:1px solid #999;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	margin:3px;
+}
+.dateselector,
+.dooitBox .applications input[type=text],
+.dooitBox .applications textarea{
+	background: rgb(242,245,246); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+
+}
+.dooitBox .applications input[type=text].required,
+.dooitBox .applications textarea.required{
+	background: rgb(246,230,180); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,230,180,1)), color-stop(100%,rgba(237,144,23,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+}
+.dooitBox .applications input[type=text]:focus,
+.dooitBox .applications textarea:focus{
+	-o-box-shadow:0px 0px 8px #999;
+	-moz-box-shadow:0px 0px 8px #999;
+	-khtml-box-shadow:0px 0px 8px #999;
+	-webkit-box-shadow:0px 0px 8px #999;
+	box-shadow:0px 0px 8px #999;
+}
+.applications textarea.bigTextarea{
+	width:90%;
+	float:none;
+	margin:5px auto;
+	display:block;
+}
+.applications textarea.extraBigTextarea{
+	width:90%;
+	float:none;
+	margin:5px auto;
+	display:block;
+	height:150px;
+}
+.applications input[type=checkbox],
+.applications input[type=text],
+.applications textarea,
+.applications select,
+.applications a.select{
+	float:right;
+}
+.applications input[type=checkbox]{
+	margin-left:20;
+}
+.applications button.checkbox{
+	background:none;
+	border:none;
+	width:100%;
+	line-height:16px;
+	cursor:pointer;
+	text-align:left;
+	padding-left:0px;
+}
+.applications button.checkbox div,.applications button.radio div{
+	float:right;
+	width:16px;
+	height:16px;
+	margin:2px 2px 2px 5px;
+	background:url(../../../image/dooits/quiz/checkbox.png);
+	background-position:0px -16px;
+}
+.applications button.checkbox:hover div,.applications button.radio:hover div{
+	background-position:-16px -16px;
+}
+.applications button.checkbox.on div,.applications button.radio.on div{
+	background-position:0px 0px;
+}
+.applications button.checkbox.on:hover div,.applications button.radio.on:hover div{
+	background-position:-16px 0px;
+}
+.applications button.hide{
+	border:none;
+	background:none;
+	color:#000;
+	cursor:pointer;
+}
+.applications button.hide.on{
+	color:#999;
+}
+.applications button.hide:hover{
+	text-decoration:underline;
+}
+.applications .formrow .suggestion{
+	border-top:1px dashed #aaa;
+	border-bottom:1px dashed #aaa;
+	padding:3px;
+	margin:2px 40px 2px 40px;
+}
+.dateselector{
+	position:absolute;
+	z-index:503;
+	color:#555;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+.dateselector .date{
+	background:#fff;
+	text-align:center;
+	color:#999;
+}
+.dateselector .date.selectable{
+	color:#000;
+	cursor:pointer;
+}
+.dateselector .date.selectable:hover{
+	color:#00f;
+	background:#eef;
+}
+.dateselector .date.today{
+	color:#00f;
+}
+.dateselector .head .monthTitle{
+	text-align:center;
+}
+.dateselector .head button{
+	cursor:pointer;
+	color:#555;
+	background:#fff;
+	border:1px solid #fff;
+}
+.dateselector .head button:hover{
+	color:#009;
+	border:1px solid #009;
+}
+.dateselector .head .right{
+	float:right;
+}
+.dateselector .head .left{
+	float:left;
+}
+#yoodooWidget #framed{
+	background: rgb(254,255,255) !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(210,235,249,1))) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ) !important; /* IE6-9 */
+}
+.pdfButton{
+	background:url(../../../image/dooits/pdf-icon.png);
+	width:56px;
+	height:76px;
+	border:none;
+	cursor:pointer;
+	float:right;
+}
+.pdfButton:hover{
+	background-position:0px -76px;
+}

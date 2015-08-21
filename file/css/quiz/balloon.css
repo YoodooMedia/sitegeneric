@@ -1,0 +1,10 @@
+.cssDetector_balloon{display:none;}
+@charset "utf-8";
+#balloonist{height:300px;border:1px solid #CCCCCC;position:absolute;width:764px;overflow:hidden;}
+.red-balloon,.green-balloon,.purple-balloon{background:url(../../../image/biz/red-balloon.png);width:133px;height:201px;position:absolute;padding:63px 38px 0px 38px;text-align:center;z-index:1}
+.green-balloon{background:url(../../../image/biz/green-balloon.png);bottom:10px;left:10px}
+.purple-balloon{background:url(../../../image/biz/purple-balloon.png);bottom:10px;left:10px}
+.cloud{background:url(../../../image/biz/cloud.png);position:absolute;z-index:2;bottom:-1px;left:0px;height:82px;width:100%}
+#whiteout{background:#fff;position:absolute;min-height:300px;width:100%;z-index:3;text-align:center}
+/*.button{float:left;cursor:pointer;width:100px;height:50px;line-height:50px;text-align:center}*/
+#boxes{height:160px;position:absolute;z-index:600;width:744px;padding:10px;}

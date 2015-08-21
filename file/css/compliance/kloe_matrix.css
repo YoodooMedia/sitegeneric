@@ -1,0 +1,458 @@
+.cssDetector_kloe_matrix{display:none;}
+
+@-webkit-keyframes pulsing {
+  0% 100%  { -webkit-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -webkit-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-moz-keyframes pulsing {
+  0% 100%  { -moz-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -moz-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-o-keyframes pulsing {
+  0% 100%  { -o-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -o-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@keyframes pulsing {
+  0% 100%  { transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+#yoodooWidget .kloe_matrix div{
+	-webkit-backface-visibility:visible;
+}
+#yoodooWidget .dooitBox{
+	height:100%;
+	box-sizing:border-box;
+}
+#yoodooWidget button.getpdf,#yoodooWidget button.getpdfall{
+	background:url(images/pdf-download.png) left center no-repeat !important;
+	min-width:30px;
+	padding:0px !important;
+	height:30px;
+	border:none !important;
+	color:#555 !important;
+	border-radius:0px !important;
+	/*float:right;*/
+	cursor:pointer;
+	position:relative;
+	right:0px;
+	transition:right 0.3s;
+	float:right;
+	margin:0px;
+	text-shadow:0px 0px 1px #fff;
+}
+#yoodooWidget button.getpdfall{
+	background:url(images/pdf-download-all.png) right center no-repeat #ac1205 !important;
+	border-radius:30px 0px 0px 30px !important;
+	overflow:hidden;
+	right:30px;
+	color:#fff !important;
+	padding:0px 40px 0px 10px !important;
+	letter-spacing:1px;
+}
+#yoodooWidget button.getpdf:hover{
+	right:5px;
+}
+#yoodooWidget button.getpdfall:hover{
+	right:35px;
+}
+#yoodooWidget .nav button.getpdf{
+	height:45px;
+	background-position:top center !important;
+	padding:30px 0px 0px 0px !important;
+	line-height:15px !important;
+}
+.dooitBox>div{
+	height:100%;
+}
+.kloe_matrix{
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2,.dooitDisplay.kloe_matrix .nav{
+	margin:0px;
+	line-height:40px;
+	padding:10px 0px;
+	position:absolute;
+	top:0px;
+	width:100%;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 span,#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 input{
+	color:#084d84;
+	font-size:24px;
+	height:40px;
+	line-height:40px;
+	border:none;
+	box-shadow:none;
+	padding:0px;
+	vertical-align:top;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 input{
+	border-radius:0px;
+	margin-left:20px;
+	padding-left:20px;
+	width:300px;
+	border:1px solid #fff;
+	border-left:1px solid #084d84;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 input:hover{
+	border-color:#084d84;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 input+span{
+	position:relative;
+	left:-320px;
+	top:-15px;
+	background:rgba(255,255,255,0.3);
+	padding:3px 10px;
+	font-size:9px;
+	border-radius:5px;
+	color:#555;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 input:focus+span,
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h2 input:hover+span{
+	display:none;
+}
+.dooitDisplay.kloe_matrix .nav>div{
+	display:inline-block;
+	border-radius:0px 50px 50px 0px;
+	background:#084d84;
+	line-height:30px;
+	height:30px;
+	vertical-align:middle;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	padding:0px 10px;
+}
+.dooitDisplay.kloe_matrix .nav>button{
+	background:#b2b2b2;
+	border-radius:50px 0px 0px 50px;
+	border:none;
+	line-height:30px;
+	height:30px;
+	padding:0px 10px;
+	cursor:pointer;
+	color:#fff;
+	transition:background 0.3s;
+}
+.dooitDisplay.kloe_matrix .nav>button:hover{
+	background:#DADADA;
+}
+.dooitDisplay.kloe_matrix .nav>button svg,.dooitDisplay.kloe_matrix .nav>button img{
+	position:relative;
+	left:0px;
+	transition:left 0.3s;
+	vertical-align:middle;
+}
+.dooitDisplay.kloe_matrix .nav>button:hover svg,.dooitDisplay.kloe_matrix .nav>button:hover img{
+	left:-5px;
+}
+#yoodooWidget .kloe_matrix .controlPanel{
+	height:100%;
+	padding:60px 0px 0px 0px;
+	box-sizing:border-box;
+	position:relative;
+}
+#yoodooWidget .kloe_matrix .controlPanel>div{
+	height:100%;
+	position:relative;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3{
+	line-height:30px;
+	margin:0px;
+	cursor:pointer;
+	color:#084d84;
+	font-weight:normal;
+	font-size:24px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>span{
+	position:relative;
+	left:0px;
+	transition:left 0.3s;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3:hover>span{
+	left:5px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>svg,#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>img{
+	margin:2px 5px 5px 5px;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    	transform: rotate(-90deg);
+	vertical-align:middle;
+	opacity:0.5;
+	transition:-ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, opacity 0.3s;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>.downArrow{
+	width:20px;
+	height:20px;
+	background:url(../../image/downArrow.png) no-repeat center center;
+	display:inline-block;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3.on>.downArrow{
+	background-image:url(../../image/rightArrow.png);
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>div{
+	padding:0px 30px 0px 0px;
+	font-size:14px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>div>svg,#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3>div>img{
+	vertical-align:middle;
+	margin-right:6px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3.on>svg,#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3.on>img{
+	opacity:1;
+	-ms-transform: rotate(0deg); /* IE 9 */
+    	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    	transform: rotate(0deg);
+}
+#yoodooContainerContent .dooitBox .dooitDisplay.kloe_matrix p{
+	font-size:12px;
+}
+.kloe_matrix .prompt{
+	border:1px solid #EEE;
+	padding:10px;
+	margin:10px;
+}
+.kloe_matrix .prompt .emptyPrompt{
+	text-align:center;
+}
+.kloe_matrix .prompt .response+.emptyPrompt{
+	display:none;
+}
+.kloe_matrix .response{
+	border:1px solid #EEE;
+	padding:10px;
+}
+.kloe_matrix .response+.response{
+	margin-top:3px;
+}
+#yoodooWidget .kloe_matrix .report{
+	padding-top:50px;
+	height:100%;
+	box-sizing:border-box;
+}
+.kloe_matrix .report>div{
+	height:100%;
+	box-sizing:border-box;
+	overflow-y:scroll;
+}
+.kloe_matrix .report>div>div{
+	border:3px solid #EEE;
+	border-radius:3px;
+	padding:5px;
+	background:rgba(255,255,255,0.7);
+	margin:5px 5px 5px 0px;
+}
+.prompt>div:first-child{
+	color:#084d84;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .response>div>p{
+	padding-left:20px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .prompt>p,
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .response>div>p:first-child{
+	padding-left:0px;
+	color:#999;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3+div>div>div:first-child+p{
+	color:#555;
+}
+h3+div>div>div:first-child{
+	background:#999;
+	color:#fff;
+	padding:5px;
+	font-weight:bold;
+}
+h3+div>div+div{
+	padding-top:20px;
+}
+#yoodooWidget .kloe_matrix .matrices,#yoodooWidget .kloe_matrix .kloe_summaries{
+	width:50%;
+	box-sizing:border-box;
+	padding:5px;
+	display:inline-block;
+	vertical-align:top;
+	height:100%;
+}
+#yoodooWidget .kloe_matrix .matrices>div{
+	box-sizing:border-box;
+	padding:0px 0px 5px 0px;
+}
+#yoodooWidget .kloe_matrix .matrices button{
+	background:#e9fafb;
+	border:1px solid #555;
+	border-radius:10px;
+	width:46%;
+	height:100%;
+	margin:0px 2%;
+	cursor:pointer;
+	transform-style: preserve-3d;
+	transform:perspective(250px) rotateY(0deg) translateX(0px);
+	transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	z-index:10;
+	position:relative;
+	box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+	font-size:32px;
+	line-height:40px;
+	color:#084d84;
+	padding:10px 0px 50px 0px;
+}
+#yoodooWidget .kloe_matrix .matrices>div+div button{
+	width:96%;
+	background:#FBE9F8;
+	padding:10px 0px 10px 0px;
+}
+#yoodooWidget .kloe_matrix .matrices button:hover{
+	transform:perspective(250px) rotateY(10deg) translateX(10px);
+	z-index:999;
+	background:#abf7fc;
+	box-shadow:-5px 0px 10px rgba(0,0,0,0.2);
+}
+#yoodooWidget .kloe_matrix .matrices>div+div button:hover{
+	transform:perspective(250px) rotateY(10deg) rotateX(10deg) translateX(20px) translateY(-10px);
+	z-index:999;
+	background:#F1BCE9;
+	box-shadow:-5px 0px 10px rgba(0,0,0,0.2);
+}
+#yoodooWidget .kloe_matrix .matrices button>div{
+	padding-top:20px;
+	font-size:14px;
+	position:absolute;
+	bottom:25px;
+	width:100%;
+	text-align:center;
+	left:0px;
+}
+#yoodooWidget .kloe_matrix .matrices button svg,#yoodooWidget .kloe_matrix .matrices button img{
+	vertical-align:middle;
+	margin-right:6px;
+}
+#yoodooWidget .kloe_matrix .kloe_summaries button{
+	background:#fdf9e4;
+	border:1px solid #555;
+	border-radius:10px;
+	margin:2%;
+	width:46%;
+	height:100px;
+	position:relative;
+	padding:10px 0px 40px 0px;
+	cursor:pointer;
+	color:#084d84;
+	font-size:18px;
+	transform-style: preserve-3d;
+	transform:perspective(250px) rotateX(0deg);
+	transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+}
+#yoodooWidget .kloe_matrix .kloe_summaries button:hover{
+	transform:perspective(250px) rotateX(15deg);
+	z-index:999;
+	background:#fff6c4;
+	box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+}
+.kloe_matrix .kloe_summaries button .summaryIcons{
+	border-top:1px solid #555;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	height:30px;
+	padding-top:5px;
+}
+.kloe_matrix .kloe_summaries button .kloe_numeric_dial{
+	position:absolute;
+	top:3px;
+	right:3px;
+}
+.kloe_matrix .kloe_summaries button .summaryIcons svg,.kloe_matrix .kloe_summaries button .summaryIcons img{
+	vertical-align:middle;
+}
+.kloe_matrix .kloe_summaries button .summaryIcons>div{
+	display:inline-block;
+	vertical-align:top;
+	width:33%;
+}
+.kloe_matrix .kloe_summaries button>.yoodooUI_dial{
+	position:absolute !important;
+	top:0px;
+	right:0px;
+}
+.kloe_matrix .kloe_summaries button>.yoodooUI_dial>div{
+	display:none;
+}
+.kloe_matrix .overall{
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:60px;
+	width:240px;
+}
+.kloe_matrix .overall svg,.kloe_matrix .overall img{
+	vertical-align:middle;
+	margin-right:4px;
+}
+.kloe_matrix .overall>div+div{
+	height:18px;
+	line-height:18px;
+	padding:1px;
+	margin-right:75px;
+}
+.kloe_matrix .overall>div:last-child{
+	border-top:1px solid #b7b7b7;
+}
+.kloe_matrix .overall .yoodooUI_dial,.kloe_matrix .overall .kloe_numeric_dial{
+	float:right;
+}
+.kloe_matrix .overall .kloe_numeric_dial{
+	font-size:40px;
+	height:40px;
+	line-height:40px;
+}
+.kloe_matrix .overall .kloe_numeric_dial.belowTen{
+	font-size:60px;
+	height:60px;
+	line-height:60px;
+}
+.kloe_matrix .overall .yoodooUI_dial>div{
+	display:none;
+}
+#yoodooWidget .kloe_matrix button.voiceoverPlayer{
+	position:relative;
+	top:-40px;
+	left:0px;
+	border:none;
+	border-radius:50px;
+	width:20px;
+	height:20px;
+	background:rgb(156,182,239);
+	color:#fff;
+	font-size:14px;
+	line-height:18px;
+	transition:top 0.3s,background-color 0.3s;
+	cursor:pointer;
+	padding:0px;
+	display:inline-block !important;
+	margin:0px 0px 0px 10px;
+}
+#yoodooWidget .kloe_matrix button.voiceoverPlayer>svg,#yoodooWidget .kloe_matrix button.voiceoverPlayer>img{
+	margin:3px;
+}
+#yoodooWidget .kloe_matrix button.voiceoverPlayer.available{
+	top:10px;
+}
+#yoodooWidget .kloe_matrix button.voiceoverPlayer.playing{
+	background:rgb(198,150,20);
+
+	-webkit-animation: pulsing 1s infinite;
+	-moz-animation: pulsing 1s infinite;
+	-o-animation: pulsing 1s infinite;
+	animation: pulsing 1s infinite;
+}
+.evidenceAndPlansRecord{
+	padding:5px;
+	margin:3px;
+	background:rgb(244, 247, 249);
+	border-radius:5px;
+}
+.evidenceAndPlansRecord label+p{
+	padding-left:20px;
+}

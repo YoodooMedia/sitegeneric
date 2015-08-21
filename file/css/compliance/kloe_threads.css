@@ -1,0 +1,842 @@
+.cssDetector_kloe_threads{display:none;}
+#yoodooWidget .dooitBox{
+	padding:0px 0px 4px 0px;
+}
+#yoodooWidget .dooitBox,#yoodooWidget .dooitBox>div,#yoodooWidget .dooitBox .dooitDisplay{
+	height:100%;
+	box-sizing:border-box;
+}
+#yoodooWidget .dooitBox .dooitDisplay{
+	position:relative;
+	overflow:hidden;
+}
+#yoodooWidget .dooitBox button{
+	cursor:pointer;
+}
+.linkage_editor{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	/*background:rgba(0,0,0,0.1);*/
+}
+.linkage_selection{
+	position:absolute;
+	left:-480px;
+	top:0px;
+	width:500px;
+	height:100%;
+	background:#f1f1f1;
+	transition:left 1s;
+	z-index:1000;
+}
+.linkage_selection .selection_editor{
+	position:absolute;
+	top:0px;
+	left:499px;
+	color:#2f2f2f;
+	padding:1px 3px 1px 0px;
+	border-radius:0px 3px 3px 0px;
+}
+.linkage_selection .selection_editor:before{
+	content:'Threads';
+}
+.linkage_selection>button{
+	float:right;
+	height:100%;
+	width:20px;
+	padding:0px;
+	cursor:pointer;
+	box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+	transition:box-shadow 1s !important;
+}
+.linkage_selection.on>button{
+	box-shadow:20px 0px 5px rgba(0,0,0,0.2);
+}
+.linkage_selection>button:before{
+	content:'>';
+}
+.linkage_selection.on>button:before{
+	content:'<';
+}
+.linkage_selection>button,.linkage_selection .selection_editor{
+	background:#fff;
+	border:1px solid #2f2f2f;
+	color:#2f2f2f;
+}
+.linkage_selection .selection_editor{
+	border-left:none;
+}
+.linkage_selection.on{
+	left:0px;
+}
+.prompt_selection{
+	position:absolute;
+	right:-180px;
+	top:0px;
+	width:200px;
+	height:100%;
+	background:#2F2F2F;
+	transition:right 1s;
+	z-index:1000;
+}
+.prompt_selection .selection_editor{
+	position:absolute;
+	top:0px;
+	right:199px;
+	color:#2f2f2f;
+	padding:1px 0px 1px 3px;
+	border-radius:3px 0px 0px 3px;
+}
+.prompt_selection .selection_editor:before{
+	content:'Prompts';
+}
+.prompt_selection>button{
+	position:absolute;
+	height:100%;
+	width:20px;
+	padding:0px;
+	cursor:pointer;
+}
+.prompt_selection>button:before{
+	content:'<';
+}
+.prompt_selection.on>button:before{
+	content:'>';
+}
+.prompt_selection>button,.prompt_selection .selection_editor{
+	background:#fff;
+	border:1px solid #2f2f2f;
+	color:#2f2f2f;
+}
+.prompt_selection .selection_editor{
+	border-right:none;
+}
+.prompt_selection.on{
+	right:0px;
+}
+.linkage_selection.loading:before{
+	content:'Loading...';
+	background:url(../../../image/loading.gif) center 30px no-repeat #fff;
+	width:60px;
+	height:70px;
+	border-radius:5px 5px 100px 100px;
+	padding:5px;
+	box-sizing:border-box;
+	margin:0px auto;
+	text-align:center;
+	display:block;
+	font-size:11px;
+	position:absolute;
+	left:20px;
+}
+.linkage_selector_div{
+	height:100%;
+	margin:0px 20px 0px 0px;
+}
+.linkage_selector_div button{
+	border:none;	
+}
+.linkage_selector_div>.linkage_item{
+	line-height:24px;
+	position:relative;
+	border:1px solid #BBB;
+	border-right:none;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button{
+	display:block;
+	width:100%;
+	margin:0px;
+	text-align:left;
+	padding:5px 0px 5px 10px;
+	background:#f8f8f8;
+	color:#555;
+	cursor:pointer;
+	transition:background 0.5s,color 0.5s;
+	overflow:hidden;
+}
+
+.linkage_selector_div>.linkage_item>button.linkage_button>.linkage_description{
+	position:absolute;
+	left:-100%;
+	width:100%;
+	height:100%;
+	top:0px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	transition:left 0.5s,background 0.5s,color 0.5s;
+	background:#f8f8f8;
+	color:#555;
+	line-height:19px;
+	padding:0px 60px 0px 10px;
+	box-sizing:border-box !important;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button:hover>.linkage_description{
+	left:0%;
+	background:#9dc0e0;
+	color:#2f2f2f;
+}
+.linkage_selector_div>.linkage_item+.linkage_item{
+	border-top:none;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button:hover{
+	background:#9dc0e0;
+	color:#2f2f2f;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button>.completion{
+	position:absolute;
+	right:0px;
+	height:100%;
+	border-left:1px solid #999;
+	top:0px;
+	background:url(images/tick.png) no-repeat center center #fff;
+	width:50px;
+}
+.linkage_selector_div>.linkage_item>button.linkage_button>.completion.outOfDateCompletion{
+	background:url(images/tick-redo.png) no-repeat center center #fff;
+}
+button.linkage_button>div{
+	font-size:11px;
+}
+button.linkage_button>div{
+	content:'updated ';
+}
+.completion>span{
+	border:1px solid #999;
+	background:#fff;
+	position:absolute;
+	top:5px;
+	right:25px;
+	white-space:nowrap;
+	border-radius:5px;
+	padding:2px 5px;
+	opacity:0;
+	transition:opacity 0.5s,right 0.5s;
+}
+.completion>span>em{
+	display:block;
+}
+.completion:hover>span{
+	right:45px;
+	opacity:1;
+}
+.linkage_selector_div .addButton{
+	width:30px;
+	height:30px;
+	cursor:pointer;
+}
+.linkage_selector_div .addButton:before{
+	content:'+';
+}
+.linkage_edit_button,.linkage_delete_button{
+	position:absolute;
+	top:2px;
+	border-radius:30px;
+	width:20px;
+	height:20px;
+	background:#9dc0e0;
+	padding:4px;
+	border:none;
+	transition:left 1s,right 1s !important;
+}
+.linkage_edit_button{
+	left:-20px;
+}
+.linkage_delete_button{
+	background:#C30;
+	right:-20px;
+}
+.linkage_item{
+	overflow:hidden;
+}
+.linkage_item:hover .linkage_edit_button{
+	left:1px;
+}
+.linkage_item:hover .linkage_delete_button{
+	right:1px;
+}
+#yoodooWidget .linkage_editor{
+	padding:0px 20px;
+	box-sizing:border-box;
+}
+.linkage_editor .map,.linkage_editor .sequence,.linkage_input{
+	height:100%;
+	overflow-y:auto;
+}
+#yoodooWidget .linkage_editor h2{
+	padding:0px 100px;
+	margin:0px;
+	position:absolute;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay .linkage_editor h2{
+	color:rgba(0,0,0,0.3);
+}
+.linkage_input{
+	width:100%;
+	/*position:absolute;*/
+	z-index:1;
+	overflow:hidden;
+}
+.linkage_input label{
+	display:none;
+}
+.linkage_input .link{
+	text-align:center;
+}
+.sequence_position{
+	width:50px;
+	height:50px;
+	position:relative;
+	margin:-5px auto;
+}
+.linkage_input.ui-sortable .link .sequence_handle{
+	cursor:move;
+}
+.linkage_input .link:first-child>.yoodooUI_textarea{
+	display:none;
+}
+.linkage_input .link .sequence_handle{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	background:#FFF;
+	line-height:50px;
+}
+.linkage_input{
+	background:rgba(255,255,255,0);
+	transition:background 0.3s;
+}
+.linkage_input.dropping{
+	background:rgba(255,255,255,0.5);
+}
+#yoodooWidget .linkage_editor .map .editor,#yoodooWidget .linkage_editor .sequence .editor{
+	text-align:center;
+	height:100%;
+	padding-top:10%;
+	box-sizing:border-box;
+}
+.linkage_editor label{
+	text-align:left;
+}
+.prompt_list{
+	padding:0px 0px 0px 20px;
+	box-sizing:border-box;
+	color:#eee;
+	height:100%;
+}
+.promptSelector{
+	overflow-y:auto;
+	height:100%;
+}
+.promptDragger{
+	padding:2px 5px;
+	cursor:move;
+	background:#2f2f2f;
+	transition:background 0.5s,color 0.5s;
+}
+.promptDragger:hover{
+	background:#fff;
+	color:#2f2f2f;
+}
+.promptDragger.ui-draggable-dragging{
+	background:#fff;
+	border:1px solid #555;
+	border-radius:3px;
+	padding:3px;
+}
+.ui-sortable-helper .yoodooUI_textarea{
+	visibility:hidden;
+}
+.sequence_info{
+	border:1px solid #ddd;
+	background:#fff;
+	width:200px;
+	position:absolute;
+	left:45px;
+	top:5px;
+	display:none;
+	z-index:1001;
+	padding:3px;
+	border-radius:3px;
+}
+.ui-sortable-helper .sequence_info{
+	display:none !important;
+}
+.sequence_handle:hover+.sequence_info{
+	display:block;
+}
+.sequence_info:hover{
+	display:block;
+}
+#yoodooWidget .sequence_info button.delButton,#yoodooWidget .contextmenu button.delButton{
+	float:right;
+	margin:2px;
+	padding:0px 5px;
+	background:#700;
+	color:#fff;
+	border:none;
+	border-radius:20px;
+	font-size:10px;
+	height:20px;
+	line-height:20px;
+}
+#yoodooWidget .sequence_info button.delButton:hover,#yoodooWidget .contextmenu button.delButton:hover{
+	background:#d00;
+}
+.mapItem{
+	position:relative;
+	width:0px;
+	height:0px;
+	text-align:center;
+}
+.linkage_input .mapItem .mapItemDetail{
+	position:absolute;
+	left:-25px;
+	top:-25px;
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	background:#FFF;
+	line-height:50px;
+	z-index:10;
+	cursor:move;
+	box-shadow:0px 0px 3px rgba(0,0,0,0.0);
+	border:1px solid rgba(0,0,0,0.2);
+	transition:box-shadow 0.3s;
+}
+.linkage_input .mapItem.ui-draggable-dragging .mapItemDetail{
+	z-index:20;
+	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+}
+.mapItem .mapItemRing{
+	position:absolute;
+	left:-100px;
+	top:-100px;
+	width:200px;
+	height:200px;
+	border-radius:200px;
+	border:1px solid rgba(255,255,255,0.3);
+	transition:border 0.3s;
+	box-sizing:border-box;
+}
+.mapItem .mapItemDetail:hover+.mapItemRing{
+	border:1px solid #9DC0E0;
+}
+.contextmenu{
+	width:200px;
+	height:200px;
+	border-radius:5px;
+	padding:5px;
+	background:#fff;
+	border:1px solid #bbb;
+	position:absolute;
+	left:-75px;
+	top:-75px;
+	z-index:1001;
+}
+#yoodooWidget .yoodooUI button.recordButton{
+	    width: 100%;
+	    margin: 2px 0px;
+	    text-align: left;
+	    border: 1px solid #eee;
+}
+#yoodooWidget .yoodooUI button.recordButton svg,#yoodooWidget .yoodooUI button.recordButton img{
+    float: right;
+    margin-left: 10px;
+}
+
+
+
+
+
+.responseCount{
+	position:absolute;
+	border-radius:20px;
+	font-size:12px;
+	left:-10px;
+	top:-5px;
+	min-width:20px;
+	height:20px;
+	line-height:20px;
+	background:#fff;
+	border:1px solid #06F;
+	color:#06f;
+}
+.responseCount.noResponses{
+	border:1px solid #F00;
+	color:#f00;
+}
+#yoodooWidget .responseCount button{
+	cursor:pointer;
+	border-radius:20px;
+	background:#090;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	line-height:12px;
+	height:100%;
+	width:100%;
+	position:absolute;
+	border:none;
+	left:0px;
+	top:0px;
+	padding:0px;
+	opacity:0;
+	transform:scale(0.01);
+	transition:transform 0.3s,opacity 0.3s;
+	padding:4px;
+}
+#yoodooWidget .responseCount:hover button{
+	opacity:1;
+	transform:scale(1);
+}
+.columns2,.columnLike{
+	margin:10px 0px;
+}
+.columns2>div{
+	display:inline-block;
+	vertical-align:top;
+	width:50%;
+}
+#yoodooWidget .TagSelector button{
+	border:1px solid #eee;
+}
+#yoodooWidget .TagSelector button.on{
+	background:#eaf5ff;
+}
+#yoodooWidget .evidenceSummary button,#yoodooWidget .actionPlanSummary button{
+	width:100%;
+	position:relative;
+}
+.evidenceSummary button>div,.actionPlanSummary button>div{
+	font-size:24px;
+}
+.evidenceSummary button>div>svg{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.actionPlanSummary button>div>svg{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.kloe_response_dialog label{
+	text-align:left;
+}
+.losenge{
+	text-align:left;
+}
+#yoodooWidget .yoodooUI .kloe_response_dialog button{
+	min-width:0px;
+}
+#yoodooWidget .kloe_response_dialog button.backButton{
+	border:none;
+	border-radius:50px 0px 0px 50px;
+	height:30px;
+	-webkit-transition:background 0.3s,opacity 0.3s;
+	-moz-transition:background 0.3s,opacity 0.3s;
+	-o-transition:background 0.3s,opacity 0.3s;
+	transition:background 0.3s,opacity 0.3s;
+	color:#fff;
+	font-size:12px;
+	line-height:30px;
+	padding:0px 10px;
+	margin: 0px 0px 10px 0px;
+}
+#yoodooWidget .kloe_response_dialog button.backButton svg,#yoodooWidget .kloe button.backButton img{
+	vertical-align:middle;
+	margin:5px 0px;
+}
+#yoodooWidget .kloe_response_dialog h3{
+	display:inline-block;
+	vertical-align:middle;
+	line-height:30px;
+	height:30px;
+	margin:0px 0px 10px 0px;
+	padding:0px 30px 0px 30px;
+	background:#084d84;
+	color:#fff;
+	border-radius:0px 50px 50px 0px;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button{
+	width:100%;
+	text-align:left;
+	border-bottom:1px solid #eee;
+	position:relative;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button>button{
+	position:absolute;
+	background:#8D3737;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button>button{
+	position:absolute;
+	right:5px;
+	top:0px;
+	background:#8D3737;
+	color:#fff;
+	border-radius:30px;
+	padding:5px;
+}
+#yoodooWidget .kloe_response_dialog .recordWindow>button>button:hover{
+	background:#E71515;
+	color:#fff;
+}
+#yoodooWidget .kloe_response_dialog button.addButton{
+	padding:10px;
+}
+
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea{	
+	border:none;
+	border-radius:0px;
+	border-bottom:0px solid #fff;
+	box-shadow:0px 0px 0px #fff;
+	background:#eaf5ff;
+	padding:0px 2px;
+	transition:background 0.3s,border 0.3s, box-shadow 0.3s;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea:hover{
+	box-shadow:0px 0px 5px #999;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea:focus{
+	box-shadow:0px 3px 20px #999;
+	background:#fff;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton{
+	width:100%;
+	margin:2px 0px;
+	text-align:left;
+	border:1px solid #eee;
+	background:#fff;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton:hover{
+	background:#eaf5ff !important;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton>div{
+	margin-right:120px;
+	height:40px;
+	line-height:20px;
+	font-size:14px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#yoodooWidget .kloe_response_dialog button.recordButton svg,#yoodooWidget .kloe_response_dialog button.recordButton img{
+	float:right;
+	margin-left:10px;
+}
+#yoodooWidget .losenge+div>button.delButton{
+	background:#8D3737;
+	color:#fff;
+	border-radius:30px;
+	padding:5px;
+	position:relative;
+	top:-20px;
+}
+#yoodooWidget .losenge+div>button.delButton:hover{
+	background:#E71515;
+	color:#fff;
+}
+.deleteConfirm{
+	position: absolute;
+	right: 0px;
+	z-index: 1000;
+	background: #fff;
+	padding: 5px;
+	display:none;
+	top:20px;
+	/*top:-30px;
+	transition:top 0.4s;*/
+}
+.deleteConfirm.on{
+	/*top:20px;*/
+	display:block;
+}
+.kloe_response_dialog{
+	overflow:hidden;
+}
+#yoodooWidget button.recordButton{
+	border:1px solid #999;
+	border-left:10px solid #999;
+	background:#FFF;
+	color:#555;
+	border-radius:5px;
+	margin:10px 0px;
+	display:block;
+	height:60px;
+	/*white-space:nowrap;
+	overflow:hidden;*/
+	text-overflow:ellipsis;
+	position:relative;
+	left:0px;
+	text-align:left;
+	width:100%;
+	-webkit-transition:border 0.3s;
+	-moz-transition:border 0.3s;
+	-o-transition:border 0.3s;
+	transition:border 0.3s;
+}
+#yoodooWidget button.recordButton:hover{
+	border-left-width:20px;
+}
+#yoodooWidget button.recordButton span.imminentDate{
+	color:#f00;
+	-webkit-animation: imminent 1s infinite;
+	-moz-animation: imminent 1s infinite;
+	-o-animation: imminent 1s infinite;
+	animation: imminent 1s infinite;
+}
+#yoodooWidget button.recordButton>div{
+	overflow:hidden;
+	line-height:20px;
+	max-height:40px;
+	text-overflow:ellipsis;
+	margin:0px 150px 0px 0px;
+}
+#yoodooWidget button.recordButton>div+div{
+	position:absolute;
+	bottom:5px;
+	font-style:italic;
+	height:auto;
+	line-height:normal;
+	margin:0px;
+}
+#yoodooWidget button.recordButton>svg,#yoodooWidget button.recordButton>img{
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+#yoodooWidget button.recordButton>svg+svg,#yoodooWidget button.recordButton>img+img{
+	right:90px;
+}
+#yoodooWidget .dooitDisplay h3,#yoodooWidget .dooitDisplay h4{
+	margin:5px !important;
+}
+.linkageList{
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+#yoodooContainerContent .dooitDisplay .yoodooUI_pages{
+	border-top:1px solid #00aefe;
+}
+#yoodooWidget .yoodooUI button{
+	min-width:0px;
+}
+#yoodooWidget .yoodooUI button.clipboardPaste{
+	border:none;
+	background:url(/images/cms/icons/paste.png) no-repeat center center;
+	width:21px;
+	height:23px;
+	float:right;
+	position:relative;
+	transform:rotate(0deg);
+	top:0px;
+	left:0px;
+	transition:transform 0.5s,top 0.5s,left 0.5s;
+}
+#yoodooWidget .yoodooUI button.clipboardPaste:hover{
+	transform:rotate(20deg);
+	top:3px;
+	left:-3px;
+}
+#yoodooWidget .yoodooUI .recordButton button.clipboardCopy{
+	display:none;
+	border:none;
+	background:url(/images/cms/icons/copy.png) no-repeat center center;
+	width:21px;
+	height:23px;
+	position:absolute;
+	top:-3px;
+	left:5px;
+	min-width:0px;
+	padding:0px;
+	margin:0px;
+}
+#yoodooWidget .yoodooUI .recordButton:hover button.clipboardCopy{
+	display:block;
+}
+
+.recordButton .indicator{
+	position:absolute;
+	left:-5px;
+	height:100%;
+	bottom:1px;
+	background:#F60;
+	color:#fff;
+	border-radius:20px;
+	border:1px solid #F60;
+	overflow:visible !important;
+	width:20px !important;
+	height:20px !important;
+	text-align:center;
+}
+.recordButton .indicator:before{
+	content:'!';
+}
+.recordButton .indicator>div{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#F60;
+	color:#fff;
+	border-radius:20px;
+	border:1px solid #F60;
+	white-space:nowrap;
+	display:none;
+	text-align:left;
+	padding:3px 20px;
+	line-height:16px !important;
+	font-size:12px !important;
+}
+.recordButton .indicator:hover>div{
+	display:block;
+}
+#yoodooWidget .yoodooUI .optionalResponses button{
+	border:1px solid #99CC33;
+	background:#D1E0B2;
+	border-radius:3px;
+	font-size:12px !important;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position:relative;
+	display:block;
+	width:100%;
+	color:#537510;
+	padding:5px;
+	text-align:left;
+	min-height:32px;
+	margin:3px 0px;
+}
+#yoodooWidget .yoodooUI .optionalResponses button em{
+	display:block;
+	text-align:left;
+}
+#yoodooWidget .yoodooUI .optionalResponses button span{
+	background:#D1E0B2;
+	float:right;
+}
+#yoodooWidget .yoodooUI .optionalResponses button div{
+	border-radius:50px;
+	height:39px;
+	width:39px;
+	background:#99CC33;
+	position:absolute;
+	top:-4px;
+	right:-50px;
+	transition:right 0.3s;
+	box-shadow:-5px 0px 10px #000;
+}
+#yoodooWidget .yoodooUI .optionalResponses button div>img,#yoodooWidget .yoodooUI .optionalResponses button div>svg{
+	margin:12px;
+}
+#yoodooWidget .yoodooUI .optionalResponses button:hover div{
+	right:-6px;
+}
+.linkageArena .waiting{
+	height:inherit;
+	min-height:40px;
+	background:url(../../../image/loading.gif) center center no-repeat #fff;
+}
+.linkageList{
+}

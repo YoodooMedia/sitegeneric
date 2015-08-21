@@ -1,0 +1,67 @@
+.cssDetector_references{display:none;}
+.references{
+	background:url(../../../image/dooits/information/references.gif) no-repeat top right;
+	color:#000;
+	position:relative;
+	font-size:14px;
+}
+.references>div{
+	margin:0 30px;
+}
+#ref0,#ref1{
+	border:1px solid #e8e8e8;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:10px;
+	background:#fff;
+}
+.references input{
+	padding:0px 5px;
+	width:340px;
+	border:none;
+	margin:2px 1px;
+	outline:none;
+	display:inline-block;
+}
+.references .label{
+	width:150px;
+	height:24px;
+	line-height:24px;
+	display:inline-block;
+	text-align:right;
+	padding:0 10px 0 0;
+}
+.references input.medium{
+	background-position:-150px 0px;
+	width:50px;
+}
+.references input.short{
+	background-position:-210px 0px;
+	width:30px;
+}
+.references h2{
+	padding:0px;
+	margin:0px;
+}
+
+.references button.green,.references button.red{
+	background:url(../../../image/dooits/information/button.gif) no-repeat;
+	width:141px;
+	height:31px;
+	padding:2px 5px 6px 5px;
+	margin:0 0 0 20px !important;
+	cursor:pointer;
+	border:none;
+	text-shadow:1px 1px 1px #fff;
+}
+.references button.green:hover{
+	background-position:0px -31px;
+}
+.references button.red{
+	background-position:-141px 0px;
+}
+.references button.red:hover{
+	background-position:-141px -31px;
+}

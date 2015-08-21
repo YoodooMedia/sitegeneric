@@ -1,0 +1,176 @@
+.cssDetector_constructor_3_3{display:none;}
+.construction div.info label{
+	width:200px;
+	text-align:right;
+	line-height:24px;
+	padding:0px 10px;
+	display:inline-block;
+}
+.construction input[type=text]{
+	width:250px;
+}
+.construction .field{
+	border:1px solid #999;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin:2px;
+	padding:2px;
+	background:url(../../image/dooits/grey-grad.gif) repeat-x top left #ececec;
+}
+.construction .field .summary{
+	cursor:pointer;
+}
+.construction .field .paragraphTitle{
+	font-size:10px;
+	color:#fff;
+	background:#1a2d48;
+	float:left;
+	padding:0px 3px;
+	margin-top:8px;
+}
+.construction .field .field_help{
+	font-size:12px;
+	color:#999;
+}
+.construction .field .paragraph{
+	min-height:20px;
+	border:1px solid #1a2d48;
+	cursor:pointer;
+	clear:both;
+	padding:0px 3px;
+}
+.construction .field .paragraph:hover{
+	border:1px dashed #1a2d48;
+}
+.construction .field .summary,.construction .field .fieldvalue{
+	line-height:23px;
+}
+.construction button.default,.construction button.required,.construction button.grouped,.construction button.multiple,.construction button.addable,.construction button.onlyTitle{
+	background:url(../../image/dooits/constructorIcons.png) no-repeat 0px -20px;
+	border:none;
+	cursor:pointer;
+	padding:0px 6px 0px 17px;
+	width:67px;
+	height:20px;
+	line-height:20px;
+	font-size:10px;
+}
+.construction button.required,.construction button.grouped,.construction button.multiple{
+	float:right;
+}
+.construction button.default.on,.construction button.required.on,.construction button.grouped.on,.construction button.multiple.on,.construction button.addable.on,.construction button.onlyTitle.on{
+	background-position:0px 0px;
+}
+.construction button.default,.construction button.default.on:hover,.construction button.required,.construction button.required.on:hover,.construction button.grouped,.construction button.grouped.on:hover,.construction button.multiple,.construction button.multiple.on:hover,.construction button.addable,.construction button.onlyTitle,.construction button.addable.on:hover,.construction button.onlyTitle.on:hover{
+	color:#999;
+}
+.construction button.default:hover,.construction button.default.on,.construction button.required:hover,.construction button.required.on,.construction button.grouped:hover,.construction button.grouped.on,.construction button.multiple:hover,.construction button.multiple.on,.construction button.addable.on,.construction button.onlyTitle.on,.construction button.addable:hover,.construction button.onlyTitle:hover{
+	color:#000;
+}
+.construction button.removeButton,.construction button.copyButton{
+	background:url(../../image/dooits/constructorIcons.png) no-repeat -67px -0px;
+	border:none;
+	cursor:pointer;
+	padding:0px;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	margin-left:10px;
+}
+.construction button.copyButton{
+	background-position:-88px 0px;
+}
+.construction button.removeButton:hover{
+	background-position:-67px -20px;
+}
+.construction button.copyButton:hover{
+	background-position:-88px -20px;
+}
+.construction .field .fieldvalue label{
+	font-size:10px;
+	cursor:pointer;
+}
+.construction .field .movefield,.construction .field .fieldvalue .move{
+	cursor:url(../../image/dooits/transparentish.png), move;
+	float:left;
+	width:23px;
+	height:23px;
+	background:url(../../image/dooits/move.png) no-repeat;
+	margin:0 5px 0 0;
+}
+.construction .field .movefield:hover,.construction .field .fieldvalue .move:hover{
+	background-position:0px -23px;
+}
+.construction a{
+	font-size:10px;
+	color:#666666;
+	text-decoration:none;
+	margin:0 5px;
+}
+.construction a:hover{
+	color:#999999;
+	text-decoration:underline;
+}
+.construction input[type=text]{
+	height:20px;
+	line-height:20px;
+}
+.construction .questions{
+	-o-border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:3px solid #bbb;
+	padding:10px;
+	clear:both;
+}
+.construction .field .editor .field_info{
+	padding:2px 10px;
+}
+.construction .field .editor .field_info label{
+	float:right;
+}
+.construction .field .editor .field_container{
+	padding:5px 40px;
+}
+.construction .additionalOptions{
+	float:right;
+}
+.construction .helper{
+	position:relative;
+}
+.construction .helper .helperText{
+	font-size:12px;
+	display:none;
+	position:absolute;
+	border:1px solid #999;
+	background:#fff;
+	padding:4px;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-o-box-shadow:0px 2px 5px #999;
+	-moz-box-shadow:0px 2px 5px #999;
+	-khtml-box-shadow:0px 2px 5px #999;
+	-webkit-box-shadow:0px 2px 5px #999;
+	box-shadow:0px 2px 5px #999;
+	background: rgb(205,235,142); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(205,235,142,1)), color-stop(100%,rgba(165,201,86,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+	z-index:600;
+}
+.construction .helper:hover .helperText{
+	display:block;
+}
+.construction input[type=text]{
+	border-radius:3px;
+}

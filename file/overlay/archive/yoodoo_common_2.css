@@ -1,0 +1,2006 @@
+.cssDetector_yoodoo_common_2{display:none;}
+#yoodooWidget button, #yoodooWidget input, #yoodooWidget select, #yoodooWidget textarea{
+	font-size:14px;
+}
+#yoodooWidget{
+	font:100 14px/16px "Trebuchet MS", Helvetica, sans-serif;
+	line-height:16px;
+	font-size:14px;
+}
+#yoodooWidget i,#yoodooWidget cite,#yoodooWidget em,#yoodooWidget var,#yoodooWidget address,#yoodooWidget dfn{
+	font-style:italic;
+}
+#yoodooWidget p{
+	color:#fff;
+}
+#yoodooWidget *,#yoodooWidget h2{
+	box-sizing:content-box;
+	letter-spacing:0px;
+}
+#yoodooWidget button{
+	box-sizing:border-box;
+}
+#yoodooWidget h2{
+	font:200 24px/26px "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#yoodooWidget #advisorPanel{
+	background:#fff;
+	margin:10px;
+	padding:5px;
+	overflow:auto;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#yoodooWidget #advisorPanel .adviseeDooit{
+	border-top:1px solid #aaaaaa;
+	color:#aaa;
+	cursor:pointer;
+	padding:2px;
+	height:35px;
+	line-height:35px;
+}
+#yoodooWidget #advisorPanel .adviseeDooit div span{
+	width:26px;
+	height:35px;
+	display:inline-block;
+	margin-right:3px;
+}
+#yoodooWidget #advisorPanel .adviseeDooit.userCompleted div span{
+	background:url(../../image/userCompleted.png) center center no-repeat;
+}
+#yoodooWidget #advisorPanel .adviseeDooit.completed div span{
+	background:url(../../image/advisorCompleted.png) center center no-repeat;
+}
+#yoodooWidget #advisorPanel .adviseeDooit div{
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	height:35px;
+	line-height:35px;
+	padding-left:40px;
+	background:url(../../image/promptRight.png) 5px center no-repeat;
+}
+#yoodooWidget #advisorPanel .adviseeDooit.open div{
+	background:url(../../image/promptDown.png) left 5px no-repeat;
+}
+#yoodooWidget #advisorPanel .adviseeDooit:hover{
+	color:#f00;
+}
+#yoodooWidget #advisorPanel .adviseeDooit nobr{
+	float:right;
+}
+#yoodooWidget #advisorPanel .adviseeDooit.userCompleted{
+	color:#000;
+}
+#yoodooWidget #advisorPanel .adviseeDooit.completed{
+	color:#000;
+}
+#yoodooWidget #advisorPanel .adviseeDooit.unread nobr{
+	color:#f55 !important;
+}
+#yoodooWidget #advisorPanel .advisorMessage.unread{
+	color:#f55;
+}
+#yoodooWidget #advisorPanel .advisorMessage{
+	border:1px solid #aaa;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	margin:2px;
+	font-size:11px;
+	padding:2px;
+	background:#fff;
+}
+#yoodooWidget #advisorPanel .advisorMessage nobr{
+	float:right;
+	color:#555;
+	margin-left:10px;
+}
+#yoodooWidget #advisorPanel .advisorMessage.fromUser{
+	
+}
+#yoodooWidget #advisorPanel .advisorCommenter textarea{
+	border:1px solid #aaa;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	margin:2px;
+	font-size:12px;
+	padding:2px;
+	resize:none;
+	display:block;
+	width:50%;
+}
+#yoodooWidget #advisorPanel .advisorMessage.fromMe{
+	
+}
+#yoodooWidget #advisorPanel .dooitMessages{
+	border:1px solid #aaa;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	margin:2px;
+	font-size:12px;
+	padding:2px;
+background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(220,235,242,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(100%,rgba(220,235,242,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(220,235,242,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(220,235,242,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(220,235,242,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(220,235,242,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#dcebf2',GradientType=0 ); /* IE6-9 */
+
+}
+#yoodooWidget #advisorPanel .dooitMessages .advisorMessageHeader{
+	height:30px;
+	line-height:30px;
+}
+#yoodooWidget #advisorPanel .dooitMessages .advisorMessageHeader button{
+	float:right;
+}
+#yoodooWidget #advisorPanel button{
+	background: rgb(226,226,226); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+	border:1px solid #666;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	cursor:pointer;
+	margin:2px;
+}
+#yoodooWidget #advisorPanel h2{
+	margin-top:0px;
+}
+#yoodooWidget #advisorPanel h3{
+	color:#555;
+}
+#yoodooWidget #advisorPanel button:hover{
+	background: rgb(242,246,248); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,246,248,1)), color-stop(50%,rgba(216,225,231,1)), color-stop(51%,rgba(181,198,208,1)), color-stop(100%,rgba(224,239,249,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+
+}
+#yoodooWidget .advisorBubble{
+	position:absolute;
+	z-index:100;
+	right:0px;
+	top:32px;
+	padding:5px;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background: rgb(50,182,243); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(50,182,243,1) 0%, rgba(1,132,194,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,182,243,1)), color-stop(100%,rgba(1,132,194,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(50,182,243,1) 0%,rgba(1,132,194,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(50,182,243,1) 0%,rgba(1,132,194,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(50,182,243,1) 0%,rgba(1,132,194,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(50,182,243,1) 0%,rgba(1,132,194,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32b6f3', endColorstr='#0184c2',GradientType=0 ); /* IE6-9 */
+}
+#yoodooWidget .advisorBubble>div{
+	white-space:nowrap;
+	color:#fff;
+	position:relative;
+}
+#yoodooWidget .advisorBubble>div>.spike{
+	width:10px;
+	height:7px;
+	position:absolute;
+	right:0px;
+	top:-12px;
+	-o-border-radius:5px 5px 0px 0px;
+	-moz-border-radius:5px 5px 0px 0px;
+	-khtml-border-radius:5px 5px 0px 0px;
+	-webkit-border-radius:5px 5px 0px 0px;
+	border-radius:5px 5px 0px 0px;
+	background:#32B6F3;
+}
+
+#yoodooWidget .login,#yoodooContainerContent .welcome{
+	padding:20px;
+	text-align:left;
+}
+#yoodooWidget .login nobr{
+	float:right;
+}
+#yoodooWidget .login>div>div{
+	clear:both;
+	padding:10px;
+	margin:0px auto;
+	width:400px;
+}
+#yoodooWidget .login>div>div>div{
+	float:left;
+	text-align:right;
+	width:120px;
+	font-size:18px;
+	padding:3px 20px 0px 0px;
+}
+#yoodooWidget .login .forgotten div{
+	float:none;
+	width:auto;
+	text-align:center;
+}
+#yoodooWidget .login center,#yoodooContainerContent .welcome center{
+	text-align:center;
+	padding:5px;
+	clear:both;
+}
+#yoodooWidget .login button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red,#yoodooWidget button.medium,#yoodooContainerContent a.medium{
+	/*background:url(../../image/button.gif) repeat-x;*/
+	background: #3e5a91; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3e5a91 0%, #182e4f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e5a91), color-stop(100%,#182e4f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* IE10+ */
+	background: linear-gradient(top,  #3e5a91 0%,#182e4f 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e5a91', endColorstr='#182e4f',GradientType=0 );*/ /* IE6-9 */
+}
+#yoodooWidget .login button,#yoodooWidget .welcome center button,#yoodooWidget .welcome button.logout,#yoodooWidget button.green,#yoodooWidget button.red,#yoodooWidget a.green,#yoodooWidget a.red{
+	min-width:120px;
+	height:33px;
+	line-height:33px;
+	color:#fff !important;
+	font-weight:bold;
+	padding:0 10px;
+	margin:10px;
+	cursor:pointer;
+	border:none;
+	font-size:16px;
+	/*text-shadow:1px 1px 1px #fff;*/
+	-o-box-shadow: 0px 0px 5px #000;
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#yoodooWidget .progressBlock{
+	margin:5px auto;
+	display:block;
+	width:90%;
+	padding:0px;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;background: rgb(254,254,254); /* Old browsers */
+	border:1px inset #000 ;
+	background: -moz-linear-gradient(top,  rgba(254,254,254,1) 0%, rgba(215,215,215,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,254,254,1)), color-stop(100%,rgba(215,215,215,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(215,215,215,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(215,215,215,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(215,215,215,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%,rgba(215,215,215,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#d7d7d7',GradientType=0 ); /* IE6-9 */
+	-o-box-shadow:0px 0px 5px #000;
+	-moz-box-shadow:0px 0px 5px #000;
+	-khtml-box-shadow:0px 0px 5px #000;
+	-webkit-box-shadow:0px 0px 5px #000;
+	box-shadow:0px 0px 5px #000;
+	height:20px;
+	line-height:20px;
+	position:relative;
+	overflow:hidden;
+	cursor:pointer;
+}
+#yoodooWidget .progressBlock>span{
+	height:20px;
+	line-height:20px;
+	display:block;
+	position:absolute;
+	top:20px;
+	text-align:center;
+	width:100%;
+	white-space:nowrap;
+	font-size:12px;
+	transition:top 0.3s;
+	color:#fff;
+	text-shadow:0px 0px 5px #000;
+}
+#yoodooWidget .progressBlock:hover>span{
+	top:0px;
+}
+#yoodooWidget .progressBlock>div{
+	float:left;
+	width:2px;
+	height:20px;
+	margin:0px 0px 0px 1px;
+	background:#555;
+}
+#yoodooWidget .progressBlock>div.complete{
+	background:rgba(100,200,100,0.8);
+}
+#yoodooWidget .progressBlock>div.hidden{
+	background:rgba(200,200,200,0.8);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden{
+	background:rgba(200,200,200,0.7);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden+.hidden{
+	background:rgba(200,200,200,0.6);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden+.hidden+.hidden{
+	background:rgba(200,200,200,0.5);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden+.hidden+.hidden+.hidden{
+	background:rgba(200,200,200,0.4);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden+.hidden+.hidden+.hidden+.hidden{
+	background:rgba(200,200,200,0.3);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden+.hidden+.hidden+.hidden+.hidden+.hidden{
+	background:rgba(200,200,200,0.2);
+}
+#yoodooWidget .progressBlock>div.hidden+.hidden+.hidden+.hidden+.hidden+.hidden+.hidden+.hidden{
+	background:rgba(200,200,200,0.1);
+}
+#yoodooWidget .countdown{
+	font-family:"Courier New", Courier, monospace;
+	font-size:16px;
+	text-align:center;
+	white-space:nowrap;
+}
+#yoodooWidget .tipContainer{
+	margin:0px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+#yoodooWidget .tipContainer .tipContent{
+	white-space:normal;
+}
+#yoodooWidget .tipContainer .noticesContainer{
+	white-space:nowrap;
+	overflow:visible;
+}
+#yoodooWidget .noticesContainer>div{
+	display:inline-block;
+	vertical-align:top;
+	white-space:normal;
+}
+#yoodooWidget .noticesContainer>div>div{
+	overflow-x:hidden;
+	overflow-y:auto;
+	box-shadow:0px 0px 5px #000;
+}
+#yoodooWidget .tipContainer .warningNotice>div{
+	margin:5px;
+	margin-right:0px;
+	border:1px solid #f00;
+	background:#4c1a1a;
+	color:#fff;
+	font-size:12px;
+}
+#yoodooWidget .tipContainer .Notice>div{
+	margin:5px;
+	margin-right:0px;
+	border:1px solid #11bade;
+	background:#1a434c;
+	color:#fff;
+	font-size:12px;
+}
+#yoodooWidget.notwebkit .scrollStyle{
+	scrollbar-track-color:#ffffff;
+	scrollbar-face-color:#999999;
+}
+#yoodooWidget .scrollStyle::-webkit-scrollbar {
+	width:5px;
+	display:block;
+}
+#yoodooWidget .scrollStyle:hover::-webkit-scrollbar {
+	display:block;
+}
+#yoodooWidget .scrollStyle::-webkit-scrollbar-button {
+	width:5px;
+	height:10px;
+	background:#6e6e6e;
+}
+#yoodooWidget .scrollStyle::-webkit-scrollbar-track-piece {
+	width:5px;
+	background: rgb(198,198,198); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(198,198,198,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(198,198,198,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(198,198,198,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(198,198,198,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(198,198,198,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(198,198,198,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+#yoodooWidget .scrollStyle::-webkit-scrollbar-thumb {
+	width:5px;
+	
+	background: rgb(188,188,188); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(188,188,188,1) 0%, rgba(121,121,121,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(188,188,188,1)), color-stop(100%,rgba(121,121,121,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(188,188,188,1) 0%,rgba(121,121,121,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(188,188,188,1) 0%,rgba(121,121,121,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(188,188,188,1) 0%,rgba(121,121,121,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(188,188,188,1) 0%,rgba(121,121,121,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#797979',GradientType=1 ); /* IE6-9 */
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+#yoodooWidget .scrollStyle::-webkit-scrollbar-corner {
+	width:5px;
+	background:#555;
+}
+#yoodooWidget .scrollStyle::-webkit-resizer {
+	width:5px;
+	background:#000;
+}
+#yoodooWidget .widgetContainer{
+	padding:5px;
+	margin-right:5px;
+	display:inline-block;
+	vertical-align:top;
+}
+#yoodooWidget .widgetContainer>div{
+	box-shadow:0px 0px 5px #000;
+	padding:5px;
+	margin-right:0px;
+	background:#fff;
+}
+#yoodooWidget .widgetLeft{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:70px;
+	height:100%;
+	z-index:999;
+	transition:width 0.3s;
+	color:#000;
+	overflow:hidden;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 79%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.9)), color-stop(79%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 79%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 79%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 79%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 79%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+#yoodooWidget .widgetLeft.off{
+	width:0px;
+}
+#yoodooWidget .widgetLeft>div{
+	width:100%;
+	height:100%;
+	background:url(../../image/dragRight.png) no-repeat center center;
+	white-space:nowrap;
+}
+#yoodooWidget.isTouch .widgetLeft>div{
+	background:url(../../image/swipeRight.png) no-repeat center center;
+}
+#yoodooWidget .widgetLeft>div>div{
+	padding:5px;
+	text-align:left;
+	font-size:10px;
+	line-height:14px;
+}
+#yoodooWidget .widgetRight{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:70px;
+	height:100%;
+	z-index:999;
+	transition:width 0.3s;
+	color:#000;
+	overflow:hidden;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 21%, rgba(255,255,255,0.9) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(21%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,0.9))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.9) 21%,rgba(255,255,255,0.9) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.9) 21%,rgba(255,255,255,0.9) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.9) 21%,rgba(255,255,255,0.9) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.9) 21%,rgba(255,255,255,0.9) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#e6ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+#yoodooWidget .widgetRight.off{
+	width:0px;
+}
+#yoodooWidget .widgetRight>div{
+	width:100%;
+	height:100%;
+	background:url(../../image/dragLeft.png) no-repeat center center;
+	white-space:nowrap;
+}
+#yoodooWidget.isTouch .widgetRight>div{
+	background:url(../../image/swipeLeft.png) no-repeat center center;
+}
+#yoodooWidget .widgetRight>div>div{
+	padding:5px;
+	text-align:right;
+	font-size:10px;
+	line-height:14px;
+}
+#yoodooWidget .login>div input,#yoodooWidget .welcome input{
+	float:left;
+	width:250px;
+	background:#fff;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-o-border-radius:5px;
+	-khtml-border-radius:5px;
+	padding:3px;
+	color:#000033;
+	font-size:18px;
+	outline:none;
+	-o-box-shadow:0px 0px 5px #777;
+	-moz-box-shadow:0px 0px 5px #777;
+	-khtml-box-shadow:0px 0px 5px #777;
+	-webkit-box-shadow:0px 0px 5px #777;
+	box-shadow:0px 0px 5px #777;
+	border:none;
+}
+#yoodooWidget .login>div input:focus,#yoodooWidget .welcome input:focus{
+	-o-box-shadow:0px 0px 5px #000;
+	-moz-box-shadow:0px 0px 5px #000;
+	-khtml-box-shadow:0px 0px 5px #000;
+	-webkit-box-shadow:0px 0px 5px #000;
+	box-shadow:0px 0px 5px #000;
+}
+#yoodooWidget .welcome input{
+	float:left;
+}
+#yoodooWidget .welcome label{
+	width:200px;
+	float:left;
+}
+#yoodooWidget a{
+	color:#CCCCCC;
+}
+#yoodooWidget a:hover{
+	color:#FFFFFF;
+}
+#yoodooWidget a img{
+	border:none;
+}
+#yoodooWidget #framed a{
+	color:#666666;
+}
+#yoodooWidget #framed a:hover{
+	color:#000000;
+}
+#yoodooWidget .welcome .error,#yoodooWidget .login .error{
+	font-size:14px;
+	height:20px;
+	width:100%;
+	line-height:20px;
+	color:#FFFF00;
+	padding:0 !important;
+}
+#yoodooWidget .welcome .widgetMoving{
+	z-index:999;
+}
+#yoodooWidget .welcome .tabs{
+	height:24px !important;
+	position:absolute;
+	top:-24px;
+	right:10px;
+	white-space:nowrap;
+}
+#yoodooWidget .welcome .tabs button{
+	border:none;
+	background:none;
+	padding:0px 4px;
+	margin:0px 3px;
+	line-height:24px;
+	height:24px;
+	cursor:pointer;
+}
+#yoodooWidget .welcome .tabs button.on{
+	border-radius:3px 3px 0px 0px;
+}
+#yoodooContainerContent .inputline{
+	padding:5px 50px;
+	height:32px;
+}
+#yoodooContainerContent .inputline label{
+	line-height:32px;
+}
+.yd_overlay,#yoodooWidget .welcome .tabs button.on{
+	background:rgba(255,255,255,0.5);
+}
+
+@media screen and (orientation : landscape) {
+	.devicePortrait{
+		display:none !important;
+	}
+}
+@media screen and (orientation : portrait) {
+	.deviceLandscape{
+		display:none !important;
+	}
+}
+
+#yoodooWidget button, #yoodooWidget input, #yoodooWidget select, #yoodooWidget textarea{
+	font-size:14px;
+}
+
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 1px dotted transparent;
+}
+
+button:focus::-moz-focus-inner,
+input[type="reset"]:focus::-moz-focus-inner,
+input[type="button"]:focus::-moz-focus-inner,
+input[type="submit"]:focus::-moz-focus-inner,
+input[type="file"] > input[type="button"]:focus::-moz-focus-inner {
+}
+body.portrait{
+	background-image:url(../../image/rotate.png);
+	background-position: center center;
+}
+#yoodooWidget.isApp{
+	display:none;
+}
+.landscape #yoodooWidget.isApp{
+	display:block;
+}
+.portrait #yoodooWidget.isApp{
+	display:none;
+}
+#yoodooWidgetPortrait{
+	display:none;
+	text-align:center;
+	vertical-align:middle;
+	/*background:url(../../image/rotate.png) center center no-repeat #fee;*/
+}
+.portrait #yoodooWidgetPortrait{
+	display:block;
+}
+.hide #yoodooWidget.isApp .hide #yoodooWidgetPortrait{
+	display:none;
+}
+#yoodooWidget{
+	position:relative;
+	clear:both;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+#yoodooWidget button{
+	outline:none;
+	transition:background-color 0.2s;
+}
+#yoodooWidget button:active, #yoodooWidget button:focus{
+	outline:none;
+}
+#yoodooWidget,.eezshortlist,#yoodooWidget textarea,.dropdown,#yoodooWidget button{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+#yoodooWidget .clear{
+	clear:both;
+	width:auto;
+	height:auto;
+	overflow:visible;
+	visibility:visible;
+}
+iframe#yoodooPoster{
+	display:none;
+}
+#yoodooWidget,#yoodooWhiteout,#yoodooWait{
+
+	border-radius:7px;
+	-o-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	-webkit-border-radius:7px;
+}
+#yoodooContainerContent,#yoodooWhiteout,#yoodooWait{
+	position:absolute;
+	/*width:788px;*/
+	top:0px;
+	left:0px;
+	z-index:501;
+}
+#yoodooContainerContent .yoodoo-title{
+	font-size:24px;
+	color:#fff;
+	line-height:28px;
+}
+#yoodooContainerContent .yoodoo-medium{
+	background:url(../../image/yoodoo-medium.gif) no-repeat;
+	width:82px;
+	height:28px;
+	margin:2px 0 0 10px;
+}
+#yoodooContainerContent p{
+	margin:2px 0 2px 0;
+}
+#yoodooContainerContent .login,#yoodooContainerContent .welcome{
+	color:#fff;
+}
+#yoodooContainerContent .login>div{
+	overflow:auto;
+}
+#yoodooWait{
+	z-index:999;
+	/*height:466px;*/
+	height:80px;
+	text-align:center;
+	color:#fff;
+	background:url(../../image/working.gif) center center no-repeat rgba(43,73,120,0.8);
+}
+#yoodooWait .oops{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:20px;
+	border:1px solid #fff;
+	background:rgb(43,73,120);
+	width:400px;
+	margin:0 auto;
+}
+#yoodooContainerContent img{
+	/*border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;*/
+}
+#yoodooContainerContent .footerLinks{
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+#yoodooContainerContent .footerLinks a{
+	font-size:10px;
+	text-decoration:none;
+}
+#yoodooContainerContent .footerLinks a:hover{
+	text-decoration:underline;
+}
+#yoodooWhiteout{
+	background:rgba(255,255,255,0.5);
+}
+.hideFrame{
+	display:none;
+}
+.dooitBox{
+	padding:4px;
+}
+.dooitLogo{
+	/*background:url(../../image/dooit.png) no-repeat;
+	width:56px;
+	height:24px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:999;*/
+}
+/*
+#saveDooit,#scrapbookadd{
+	position:absolute;
+	bottom:0px;
+	left:20px;
+	background:url(../../image/widget_buttons.png) no-repeat;
+	cursor:pointer;
+	border:none;
+	width:97px;
+	height:31px;
+}
+#scrapbookadd{
+	left:200px;
+	float:right;
+	background-position:-97px 0px;
+	width:169px;
+}
+#scrapbookadd:hover{
+	background-position:-97px -31px;
+}
+#saveDooit:hover{
+	background-position:0px -31px;
+}
+*/
+.dooitBox .dooitBoxBack{
+	background:#fff;
+	border-radius:3px;
+	-khtml-border-radius:3px;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:10px;
+	color:#000033;
+	overflow:auto;
+}
+.hideFrame{
+	width:400px;
+	height:400px;
+	border:none;
+}
+#yoodooContainerContent{
+	/*display:none;*/
+}
+#yoodooWidget button.red,#yoodooContainerContent a.red{
+	background:url(../../image/buttonred.gif) repeat-x;
+}
+#yoodooWidget button.medium,#yoodooContainerContent a.medium{
+	/*background:url(../../image/med-button.gif) repeat-x !important;*/
+	height:24px !important;
+	line-height:24px !important;
+	/*min-width:80px !important;*/
+	margin-bottom:2px;
+	font-size:14px !important;
+	font-weight:normal !important;
+	display:inline-block;
+	text-align:center;
+}
+#yoodooWidget button.reversed{
+	background-position:0px -33px !important;
+}
+#yoodooWidget .login button:hover,#yoodooWidget .welcome center button:hover,#yoodooWidget .welcome button.logout:hover,#yoodooWidget button.green:hover,#yoodooWidget button.red:hover,#yoodooWidget a.green:hover,#yoodooWidget a.red:hover,#yoodooWidget button.medium:hover,#yoodooContainerContent a.medium:hover{
+}
+/*#yoodooWidget button.reversed:hover{
+	background-position:0px 0px !important;
+}
+#yoodooWidget  button.medium:hover,#yoodooWidget  a.medium:hover{
+	background-position:0px -24px !important;
+}
+#yoodooWidget  button.medium.reversed,#yoodooWidget a.medium.reversed{
+	background-position:0px -24px !important;
+}
+#yoodooWidget  button.medium.reversed:hover,#yoodooWidget a.medium.reversed:hover{
+	background-position:0px 0px !important;
+}*/
+#yoodooWidget button.del{
+	background:url(../../image/del.gif) no-repeat;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	border:none;
+	margin:2px 2px 5px 5px;
+	vertical-align:bottom;
+}
+#yoodooWidget button.del:hover{
+	background-position:0px -18px;
+}
+#yoodooWidget .right{
+	float:right;
+	margin:5px;
+}
+#yoodooWidget .left{
+	float:left;
+}
+#yoodooWidget .error{
+	text-align:center;
+}
+/*#yoodooContainerContent .login center button:hover,#yoodooContainerContent .welcome center button:hover,#yoodooContainerContent .welcome button.logout:hover{
+	background:#6bb800;
+	color:#fff;
+	border:1px solid #fff;
+}*/
+span.doo{
+	color:#6ac100;
+}
+#exercise_content{
+	width:auto !important;
+	float:none !important;
+}
+#yoodooWidget #framed{
+	background:#fff !important;
+	border-radius:5px ;
+	-moz-border-radius:5px ;
+	-o-border-radius:5px ;
+	-khtml-border-radius:5px ;
+	-webkit-border-radius:5px ;
+	/*width:auto !important;*/
+	margin:4px !important;
+	padding:4px;
+	position:relative;
+}
+#yoodooWidget .welcome .messenger{
+	font-size:14px;
+}
+#yoodooWidget .overlayFooter,#yoodooWidget .overlayFooter>button,#yoodooWidget .overlayFooter>*>button{
+	background: #6c7f9a; /* Old browsers */
+	background: -moz-linear-gradient(top, #6c7f9a 0%, #445772 49%, #1a2d48 51%, #2e415c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6c7f9a), color-stop(49%,#445772), color-stop(51%,#1a2d48), color-stop(100%,#2e415c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* IE10+ */
+	background: linear-gradient(top, #6c7f9a 0%,#445772 49%,#1a2d48 51%,#2e415c 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c7f9a', endColorstr='#2e415c',GradientType=0 );*/ /* IE6-9 */
+}
+#yoodooWidget .overlayFooter{
+
+	/*background:url(../../image/footer.gif) repeat-x;*/
+	height:28px;
+	line-height:28px;
+	position:absolute;
+	width:100%;
+	left:-4px;
+	bottom:-4px;
+	margin:0px 4px 4px 4px;
+	border-radius:0px 0px 3px 3px;
+	-o-border-radius:0px 0px 3px 3px;
+	-moz-border-radius:0px 0px 3px 3px;
+	-webkit-border-radius:0px 0px 3px 3px;
+	z-index:10;
+}
+#yoodooWidget.isApp .overlayFooter{
+	/*position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	width:100%;*/
+}
+#yoodooWidget.isApp #exercise_content{
+	padding-bottom:30px;
+}
+#yoodooWidget .overlayFooter button.footerbutton{
+	height:28px;
+	border:none;
+	margin:0px;
+	padding:0px 15px;
+	cursor:pointer;
+	color:#ddd;
+	float:left;
+}
+#yoodooWidget .overlayFooter button.done{
+	/*background:url(../../image/done.gif) repeat-x;*/
+	background: #8ee468; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8ee468 0%, #71c64e 49%, #53a830 51%, #5eb83c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8ee468), color-stop(49%,#71c64e), color-stop(51%,#53a830), color-stop(100%,#5eb83c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* IE10+ */
+	background: linear-gradient(top,  #8ee468 0%,#71c64e 49%,#53a830 51%,#5eb83c 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ee468', endColorstr='#5eb83c',GradientType=0 ); *//* IE6-9 */
+
+	float:right;
+	font-size:16px;
+	color:#fff;
+	border-radius:0px 0px 3px 0px;
+	-o-border-radius:0px 0px 3px 0px;
+	-moz-border-radius:0px 0px 3px 0px;
+	-webkit-border-radius:0px 0px 3px 0px;
+	height:28px;
+	border:none;
+	margin:0px;
+	padding:0px 20px;
+	cursor:pointer;
+}
+#yoodooWidget .overlayFooter .finishCheck{
+	/*background:url(../../image/undone-bg.gif) repeat-x left bottom #53a830;*/
+	position:absolute;
+	background: #436830; /* Old browsers */
+	background: -moz-linear-gradient(top,  #436830 0%, #8ee468 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#436830), color-stop(100%,#8ee468)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #436830 0%,#8ee468 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #436830 0%,#8ee468 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #436830 0%,#8ee468 100%); /* IE10+ */
+	background: linear-gradient(top,  #436830 0%,#8ee468 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#436830', endColorstr='#8ee468',GradientType=0 );*/ /* IE6-9 */
+
+	bottom:-1px;
+	right:0px;
+	border-right:none;
+	border-bottom:none;
+	color:#fff;
+	border-radius:3px 0px 0px 0px !important;
+	-o-border-radius:3px 0px 0px 0px !important;
+	-moz-border-radius:3px 0px 0px 0px !important;
+	-webkit-border-radius:3px 0px 0px 0px !important;
+}
+#yoodooWidget .overlayFooter .finishCheck a{
+	color:#fff !important;
+}
+#yoodooWidget .overlayFooter .finishCheck a:hover{
+	color:#000 !important;
+}
+#yoodooWidget .overlayFooter button{
+	transition:background 0.3s,color 0.3s;
+	
+}
+#yoodooWidget.isMouse .overlayFooter button.footerbutton:hover{
+	background: #8494aa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8494aa 0%, #627289 49%, #3f4f65 51%, #506076 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8494aa), color-stop(49%,#627289), color-stop(51%,#3f4f65), color-stop(100%,#506076)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* IE10+ */
+	background: linear-gradient(top,  #8494aa 0%,#627289 49%,#3f4f65 51%,#506076 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8494aa', endColorstr='#506076',GradientType=0 );*/ /* IE6-9 */
+	color:#fff;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button{
+	display:block;
+	padding-left:50px;
+	background:url(../../image/snapshot.png) no-repeat;
+	color:#1d304b;
+	float:none;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button#scrapbookaddsnapshot{
+	background-position:0px 0px
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button#scrapbookadd{
+	background-position:0px -56px
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button#scrapbookcomments{
+	background-position:0px -112px
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button#scrapbookaddsnapshot:hover{
+	background-position:0px -28px
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button#scrapbookadd:hover{
+	background-position:0px -84px
+}
+#yoodooWidget .overlayFooter .scrapbookOptions button#scrapbookcomments:hover{
+	background-position:0px -140px
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .commenter textarea{
+	float:none;
+	width:100%;
+	height:32px;
+	border:1px solid #999;
+	display:block;
+	margin:2px 0px;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .comment{
+	font-size:10px;
+	text-align:left;
+	line-height:14px;
+	padding:2px;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .comment .when{
+	text-align:right;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .comment.inbox{
+	background:#d1ebf6;
+	color:#8db4c5;
+	border-top:1px solid #8db4c5;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .comment.outbox{
+	background:#f4fafd;
+	color:#8db4c5;
+	border-top:1px solid #8db4c5;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .comment.hasSnapshot{
+	background-image:url(addons/snapshot-comment.png);
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+#yoodooWidget .overlayFooter .scrapbookOptions .comment.hasSnapshot:hover{
+	background-color:#ddfdd2;
+	color:#8baa80;
+}
+#yoodooWidget .progressBack{
+	background:url(../../image/progress.png) left -42px;
+	width:200px;
+	height:41px;
+	margin:10px 10px 10px 0;
+	/*background:rgba(255,255,255,0.1);*/
+	float:left;
+}
+#yoodooWidget .progress{
+	height:41px;
+	background:url(../../image/progress.png) left 0px;
+	/*background:#008001;*/
+	float:left;
+}
+#yoodooWidget .progressText{
+	font-size:18px;
+	float:left;
+	line-height:41px;
+	margin:10px 10px 10px 0;
+}
+#yoodooWidget .half{
+	width:50%;
+	float:left;
+	clear:none;
+}
+#yoodooWidget .half>div{
+	padding:0px 5px;
+}
+#yoodooWidget .half.halfLeft>div{
+	padding:5px ;
+}
+#yoodooWidget .half.halfLeft{
+background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1affffff',GradientType=1 ); /* IE6-9 */
+
+}
+#yoodooWidget .tip>div{
+}
+#yoodooWidget .tip>div p{
+	color:#fff;
+	font-size:16px;
+}
+#yoodooWidget .tip .Notice,#yoodooWidget .tip .warningNotice{
+	padding:3px;
+}
+#yoodooWidget .tip .Notice>div,#yoodooWidget .tip .warningNotice>div{
+	font-size:12px;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-o-text-shadow:0px 2px 5px #000;
+	-moz-text-shadow:0px 2px 5px #000;
+	-khtml-text-shadow:0px 2px 5px #000;
+	-webkit-text-shadow:0px 2px 5px #000;
+	text-shadow:0px 2px 5px #000;
+}
+#yoodooWidget .tip .Notice>div{
+	padding:5px;
+}
+#yoodooWidget .tip .warningNotice>div{
+	padding:5px;
+	font-size:14px;
+}
+#yoodooWidget .tip .noticeScroller{
+	float:right;
+	width:20px;
+	position:relative;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1affffff',GradientType=1 ); /* IE6-9 */
+}
+#yoodooWidget .tip .noticeContainer{
+	overflow:hidden;
+}
+#yoodooWidget .tip .scrollButton{
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	width:20px;
+	cursor:row-resize;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+#yoodooWidget .tip .tipContent{
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background:#152d4d;
+	background:rgba(0,0,0,0.1);
+	padding:20px;
+	margin:0px 10px;
+}
+#yoodooWidget h2{
+	color:#00aefe;
+	font-size:24px;
+	font-weight:normal;
+	margin:20px 0;
+}
+#yoodooWidget h3{
+	color:#fff;
+	font-size:18px;
+	margin:0 0 5px 0;
+}
+#yoodooWidget #exercise_content h2{
+	color:#00aefe;
+}
+#yoodooWidget #exercise_content h3{
+	color:#26426a !important;
+}
+#yoodooWidget .episodeText{
+	padding:2px 10px;
+	color:#555;
+	font-size:14px;
+	margin:3px;
+}
+#yoodooWidget button.go{
+	background:url(../../image/go.gif) no-repeat;
+	width:22px;
+	height:22px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:none;
+	-o-box-shadow: 0px 0px 5px #000;
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	margin:0 0 0 5px;
+	cursor:pointer;
+}
+#yoodooWidget button.go:hover{
+	background-position:0px -22px;
+}
+#yoodooWidget #progress{
+	margin:10px;
+}
+#yoodooWidget .episodeText b{
+	color:#000;
+}
+#yoodooWidget .alert{
+	color:#FFFF00;
+	font-size:14px;
+}
+/* for the comment form */
+#yoodooWidget .tabset_content_container a{
+	display:inline-block;
+	border:1px solid #c1ceff;
+	margin:3px;
+	padding:2px 4px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	text-decoration:none;
+}
+#yoodooWidget ul.tabset_tabs li{
+	background:none;
+	height:28px;
+	line-height:28px;
+	-moz-border-radius:3px 3px 0 0;
+	-o-border-radius:3px 3px 0 0;
+	-webkit-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+	list-style:none;
+	float:left;
+}
+#yoodooWidget ul.tabset_tabs li a{
+	padding:0px 10px;
+	text-decoration:none;
+	font-size:18px;
+}
+#yoodooWidget ul.tabset_tabs li.active a{
+	color:#fff !important;
+}
+#yoodooWidget ul.tabset_tabs li.active{
+	background:url(../../image/footer.gif) repeat-x;
+	border:1px solid #26426a;
+	border-bottom:none;
+}
+#yoodooWidget .tabset_content_container{
+	clear:both;
+	border:2px solid #26426a;
+}
+#yoodooWidget .yoodoohelp,#yoodooWidget .scrapbookOptions,#yoodooWidget .exportTypes{
+	display:none;
+	position:absolute;
+	bottom:-1px;
+	border:1px solid #233d63;
+	border-bottom:none;
+	-moz-border-radius:3px 3px 0 0;
+	-o-border-radius:3px 3px 0 0;
+	-webkit-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+	padding:15px 20px;
+	max-width:200px;
+	font-size:14px;
+	text-align:center;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #8090a7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#8090a7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#8090a7 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8090a7',GradientType=0 );*/ /* IE6-9 */
+
+}
+#yoodooWidget .dooitclosewarning{
+	background:#53a830;
+}
+#yoodooWidget .exportTypes button{
+	background:url(../../image/excel.png) no-repeat !important;
+	width:38px;
+	height:37px;
+	margin:0px 5px;
+	padding:0px;
+
+}
+#yoodooWidget .exportTypes button.xls{
+	background-position:0px 0px;
+}
+#yoodooWidget .exportTypes button.csv{
+	background-position:-38px 0px;
+}
+#yoodooWidget .exportTypes button.xls:hover{
+	background-position:0px -37px;
+}
+#yoodooWidget .exportTypes button.csv:hover{
+	background-position:-38px -37px;
+}
+#yoodooWidget .top_comment{
+	padding:5px;
+	clear:both;
+}
+#yoodooWidget .top_comment button,#yoodooWidget .sub_comment button{
+	float:right;
+}
+#yoodooWidget .sub_comment{
+    padding-left:30px;
+	clear:both;
+}
+#yoodooWidget .comment_author{
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+} 
+#yoodooWidget .comment_body{
+    color: #999999;
+	overflow:auto;
+} 
+#yoodooWidget .comment_form{
+    clear:both;
+} 
+#yoodooWidget .comment_text {
+    width: 500px;
+    height: 100px;
+    border: 2px solid #75BC00;
+}
+#yoodooWidget .yoodoohelp{
+	line-height:16px;
+}
+#yoodooWidget .dooitclosewarning{
+	background:#6c7f9a;
+}
+#yoodooWidget .dooitclosewarning a{
+	color:#fff !important;
+	white-space:nowrap;
+	text-decoration:none;
+	display:block;
+}
+#yoodooWidget .dooitclosewarning a:hover{
+	text-decoration:underline;
+}
+
+/* scrapbook */
+
+#yoodooWidget #scrapbook .boxnt_left_title{
+	color:#233d63;
+	font-size:20px;
+	margin:2px 0px;
+	padding:0px 10px;
+}
+#yoodooWidget #scrapbook .boxnt_right_subtitle{
+	color:#53a830;
+	font-size:16px;
+	float:right;
+}
+#yoodooWidget #scrapbook .scrapbookDescription{
+	clear:both;
+	font-size:14px;
+	color:#666666
+}
+#yoodooWidget .float_left{
+	float:left;
+}
+#yoodooWidget .float_right{
+	float:right;
+}
+#yoodooWidget #scrapbook .filter .float_right{
+	float:right;
+}
+#yoodooWidget #scrapbook .filter .ddContainerSmall{
+	white-space:nowrap;
+	width:300px;
+	text-align:left;
+	height:24px;
+}
+#yoodooWidget #scrapbook .filter .ddContainerSmall div,#yoodooWidget #scrapbook .filter .ddContainerSmall div{
+	float:left;
+}
+#yoodooWidget #scrapbook .scrapbookEntry{
+	clear:both;
+	border-top:1px solid #eeeeee;
+	padding:10px 0;
+}
+#yoodooWidget #scrapbook .scrapbookEntry .scrapbookImage{
+	float:left;
+	margin:0 5px 5px 0;
+}
+#yoodooWidget #scrapbook .scrapbookEntry a{
+	text-decoration:none;
+}
+#yoodooWidget input,#yoodooWidget button{
+
+	vertical-align:middle;
+}
+#yoodooWidget .overlayFooter #voiceoverbutton .progressContainer{
+	position:relative;
+	height:100%;
+	line-height:28px;
+}
+#yoodooWidget .overlayFooter #voiceoverbutton .progress{
+	position:absolute;
+	top:3px;
+	height:2px;
+	width:70px;
+	background:#000;
+	-o-box-shadow:0px 0px 5px #fff;
+	-moz-box-shadow:0px 0px 5px #fff;
+	-khtml-box-shadow:0px 0px 5px #fff;
+	-webkit-box-shadow:0px 0px 5px #fff;
+	box-shadow:0px 0px 5px #fff;
+}
+#yoodooWidget .overlayFooter #voiceoverbutton .progress .bar{
+	height:2px;
+	background:#cfd9e9;
+}
+#yoodooWidget #yoodooAlert{
+	text-align:center;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	background: rgb(255,175,75); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,175,75,1)), color-stop(100%,rgba(255,146,10,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 ); /* IE6-9 */
+	font-size:20px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:999;
+}
+#yoodooWidget #yoodooAlert .alertButtons button{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border:1px solid #adadad;
+	-o-box-shadow:0px 0px 5px #000;
+	-moz-box-shadow:0px 0px 5px #000;
+	-khtml-box-shadow:0px 0px 5px #000;
+	-webkit-box-shadow:0px 0px 5px #000;
+	box-shadow:0px 0px 5px #000;
+	font-size:18px;
+	margin:5px;
+	padding:5px 10px;
+	cursor:pointer;
+}
+#yoodooWidget #yoodooAlert .alertButtons button:hover{
+	background: rgb(210,255,82); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(210,255,82,1)), color-stop(100%,rgba(145,232,66,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
+
+}
+#yoodooWidget .overlayFooter .footerWarning{
+	position:absolute;
+	bottom:0px;
+	background: rgb(69,72,77); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	color:#fff;
+	width:100%;
+	line-height:28px;
+	text-align:center;
+	z-index:999;
+}
+#yoodooWidget .overlayFooter .footerWarning.saveWarning{
+	background: rgb(205,235,142); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(205,235,142,1)), color-stop(100%,rgba(165,201,86,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+	color:#333;
+	border-top:1px solid #333;
+}
+#yoodooWidget .overlayFooter .footerWarning button{
+	border-radius:3px;
+	height:20px;
+	line-height:20px;
+	margin:4px 5px;
+	-o-box-shadow:0px 0px 3px #fff;
+	-moz-box-shadow:0px 0px 3px #fff;
+	-khtml-box-shadow:0px 0px 3px #fff;
+	-webkit-box-shadow:0px 0px 3px #fff;
+	box-shadow:0px 0px 3px #fff;
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+	float:none;
+	color:#fff;
+}
+#yoodooWidget .overlayFooter .footerWarning.saveWarning button{
+	-o-box-shadow:0px 0px 3px #000;
+	-moz-box-shadow:0px 0px 3px #000;
+	-khtml-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 3px #000;
+	box-shadow:0px 0px 3px #000;
+}
+#yoodooWidget .overlayFooter .footerWarning button:hover{
+	-o-box-shadow:0px 0px 6px #fff;
+	-moz-box-shadow:0px 0px 6px #fff;
+	-khtml-box-shadow:0px 0px 6px #fff;
+	-webkit-box-shadow:0px 0px 6px #fff;
+	box-shadow:0px 0px 6px #fff;
+	background: rgb(174,188,191); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(174,188,191,1) 0%, rgba(110,119,116,1) 50%, rgba(10,14,10,1) 51%, rgba(10,8,9,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,188,191,1)), color-stop(50%,rgba(110,119,116,1)), color-stop(51%,rgba(10,14,10,1)), color-stop(100%,rgba(10,8,9,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */
+}
+#yoodooWidget .overlayFooter .footerWarning.saveWarning button:hover{
+	-o-box-shadow:0px 0px 6px #000;
+	-moz-box-shadow:0px 0px 6px #000;
+	-khtml-box-shadow:0px 0px 6px #000;
+	-webkit-box-shadow:0px 0px 6px #000;
+	box-shadow:0px 0px 6px #000;
+}
+#yoodooWidget .overlayFooter button.scrapbookDooit{
+	overflow:hidden;
+	position:relative;
+	width:50px;
+	padding:0px;
+}
+#yoodooWidget .overlayFooter button.scrapbookDooit>div{
+	top:-10px;
+	height:10px;
+	line-height:10px;
+	transition:top 0.2s;
+	font-size:9px;
+	position:absolute;
+	width:50px;
+	text-align:center;
+}
+#yoodooWidget .overlayFooter button.scrapbookDooit:hover>div{
+	top:0px;
+}
+#yoodooWidget .overlayFooter button.scrapbookDooit>div+div{
+	position:relative;
+	top:0px;
+	width:17px;
+	height:15px;
+	background:url(../../image/dooit_scrapbook.png) center center no-repeat;
+	display:inline-block;
+	vertical-align:middle;
+	transition:top 0.2s;
+}
+#yoodooWidget .overlayFooter button.scrapbookDooit.scrapbookDooitAdd>div+div{
+	background-image:url(../../image/dooit_scrapbook_add.png);
+}
+#yoodooWidget .overlayFooter button.scrapbookDooit:hover>div+div{
+	top:3px;
+}
+#yoodooWidget .overlayFooter button.dooitComments{
+	overflow:hidden;
+	position:relative;
+	width:50px;
+	padding:0px;
+}
+#yoodooWidget .overlayFooter button.dooitComments>div{
+	top:-10px;
+	height:10px;
+	line-height:10px;
+	transition:top 0.2s;
+	font-size:9px;
+	position:absolute;
+	width:50px;
+	text-align:center;
+}
+#yoodooWidget .overlayFooter button.dooitComments:hover>div{
+	top:0px;
+}
+#yoodooWidget .overlayFooter button.dooitComments>div+div{
+	position:relative;
+	top:0px;
+	width:21px;
+	height:17px;
+	background:url(../../image/dooit_comments.png) center center no-repeat;
+	display:inline-block;
+	vertical-align:middle;
+	transition:top 0.2s;
+}
+#yoodooWidget .overlayFooter button.dooitComments:hover>div+div{
+	top:3px;
+}
+#yoodooWidget .overlayFooter button.dooitComments>div+div>div{
+	position:absolute;
+	background:rgba(0,0,0,0.5);
+	border-radius:3px;
+	padding:0px 1px;
+	text-shadow:0px 0px 2px #000;
+	color:#fff;
+	text-align:right;
+	left:12px;
+	bottom:-2px;
+}
+
+#yoodooWidget .overlayFooter button.dooitSnapshots{
+	overflow:hidden;
+	position:relative;
+	width:50px;
+	padding:0px;
+}
+#yoodooWidget .overlayFooter button.dooitSnapshots>div{
+	top:-12px;
+	height:10px;
+	line-height:10px;
+	transition:top 0.2s;
+	font-size:9px;
+	position:absolute;
+	width:50px;
+	text-align:center;
+}
+#yoodooWidget .overlayFooter button.dooitSnapshots:hover>div{
+	top:0px;
+}
+#yoodooWidget .overlayFooter button.dooitSnapshots>div+div{
+	position:relative;
+	top:0px;
+	width:21px;
+	height:17px;
+	background:url(../../image/dooit_snapshot.png) center center no-repeat;
+	display:inline-block;
+	vertical-align:middle;
+	transition:top 0.2s;
+}
+#yoodooWidget .overlayFooter button.dooitSnapshots:hover>div+div{
+	top:3px;
+}
+#yoodooWidget .overlayFooter button.dooitSnapshots>div+div>div{
+	position:absolute;
+	background:rgba(0,0,0,0.5);
+	border-radius:3px;
+	padding:0px 1px;
+	text-shadow:0px 0px 2px #000;
+	color:#fff;
+	text-align:right;
+	left:12px;
+	bottom:-2px;
+}
+#yoodooWidget .snapshotList{
+	min-height:120px;
+}
+#yoodooWidget .snapshotList .snapshotBin{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:74px;
+	height:100%;
+	background:url(../../image/snapshot_bin.png) center center no-repeat rgba(0,0,0,0.8);
+	color:rgba(255,255,255,0.5);
+	text-align:center;
+	min-height:120px;
+}
+#yoodooWidget .snapshotList .snapshotBin.hover{
+	background-image:url(../../image/snapshot_bin_over.png);
+}
+#yoodooWidget .snapshotList>.buttonDiv{
+	display:inline-block;
+	font-size:8px;
+	line-height:12px;
+	text-align:center;
+	width:60px;
+	height:40px;
+	white-space:nowrap;
+	cursor:pointer;
+	overflow:hidden;
+	border:none;
+	background:none;
+	margin:2px;
+	padding:0px;
+}
+#yoodooWidget .snapshotList>.buttonDiv>span{
+	display:block;
+	margin:0px auto;
+	width:20px;
+	height:24px;
+	background:url(../../image/file_icon.png) no-repeat 0px 0px;
+}
+#yoodooWidget .snapshotList>.buttonDiv.ui-draggable-dragging{
+	z-index:999;
+}
+#yoodooWidget .snapshotList>.buttonDiv.inComment>span{
+	background-position:-20px 0px;
+}
+#yoodooWidget .snapshotList>.buttonDiv.viewing>span,#yoodooWidget .snapshotList>.buttonDiv.viewing:hover>span{
+	background-position:0px -48px;
+}
+#yoodooWidget .snapshotList>.buttonDiv.inComment.viewing>span,#yoodooWidget .snapshotList>.buttonDiv.inComment.viewing:hover>span{
+	background-position:-20px -48px;
+}
+
+#yoodooWidget .snapshotList>.buttonDiv:hover>span{
+	background-position:0px -24px;
+}
+#yoodooWidget .snapshotList>.buttonDiv.inComment:hover>span{
+	background-position:-20px -24px;
+}
+#yoodooWidget .snapshotList>.buttonDiv.addSnapshot.saving,#yoodooWidget .snapshotList>.buttonDiv.addSnapshot.saving:hover,#yoodooWidget .snapshotList>.buttonDiv.addSnapshot.saving>span{
+	color:rgba(0,0,0,0);
+}
+#yoodooWidget .snapshotList>.buttonDiv.addSnapshot.saving>span{
+	background:url(../../image/loading.gif) no-repeat center center #fff;
+	border-radius:3px;
+}
+#yoodooWidget .snapshotList>.buttonDiv.addSnapshot>span{
+	background:url(../../image/dooit_snapshot.png) center center no-repeat;
+	color:#00FF0A;
+	text-align:right;
+	font-size:18px;
+	text-shadow:0px 0px 1px #000;
+}
+
+#yoodooWidget .overlayFooter button.dooitHelp{
+	overflow:hidden;
+	position:relative;
+	width:50px;
+	padding:0px;
+}
+#yoodooWidget .overlayFooter button.dooitHelp>div{
+	top:-10px;
+	height:10px;
+	line-height:10px;
+	transition:top 0.2s;
+	font-size:9px;
+	position:absolute;
+	width:50px;
+	text-align:center;
+}
+#yoodooWidget .overlayFooter button.dooitHelp:hover>div{
+	top:0px;
+}
+#yoodooWidget .overlayFooter button.dooitHelp>div+div{
+	position:relative;
+	top:0px;
+	width:21px;
+	height:17px;
+	background:url(../../image/dooit_help.png) center center no-repeat;
+	display:inline-block;
+	vertical-align:middle;
+	transition:top 0.2s;
+}
+#yoodooWidget .overlayFooter button.dooitHelp:hover>div+div{
+	top:3px;
+}
+#yoodooWidget .overlayFooter button#voiceoverbutton{
+	background-image:url(../../image/dooit_play.png);
+	background-position: center 5px;
+	background-repeat: no-repeat;
+	width:50px;
+	overflow:hidden;
+	transition:background 0.2s,width 0.2s;
+}
+#yoodooWidget .overlayFooter button#voiceoverbutton>div{
+	display:none;
+}
+#yoodooWidget .overlayFooter button#voiceoverbutton.isPlaying{
+	background-image:url(../../image/dooit_pause.png);
+	width:100px;
+}
+#yoodooWidget .overlayFooter button#voiceoverbutton.isPlaying>div{
+	display:block;
+}
+#yoodooWidget .overlayFooter .coverall{
+	display:none;
+	position:absolute;
+	bottom:-28px;
+	width:100%;
+	z-index:998;
+	background:#fff;
+	opacity:0;
+}
+#yoodooWidget .overlayFooter .dialog{
+	position:absolute;
+	bottom:0px;
+	width:inherit;
+	background:#000077;
+	width:100%;
+	z-index:999;
+	display:none;
+}
+#yoodooWidget .overlayFooter .dialog>div{
+	padding:10px 74px 10px 10px;
+}
+#yoodooWidget .overlayFooter .dialog>div>button{
+	border:none;
+	border-radius:3px;
+	background:#747474;
+	color:#fff;
+	cursor:pointer;
+}
+#yoodooWidget .overlayFooter .dialog>div>button:hover{
+	background:#434343;
+}
+#yoodooWidget .yd_mobileOptions{
+	margin:5px 20px;
+	padding:5px;
+	text-align:center;
+	background:rgba(0,0,0,0.1);
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#yoodooWidget .yd_moviePlaybutton{
+	background:rgba(0,0,0,0);
+}
+
+.yoodoo_debugger{
+	position:fixed;
+	border-left:1px solid #555;
+	padding:0px;
+	top:0px;
+	right:0px;
+	background:rgba(255,255,255,0.5);
+	color:#555;
+	min-width:100px;
+	max-width:300px;
+	height:100%;
+	font-family:"Courier New", Courier, monospace;
+	overflow:auto;
+	z-index:999;
+}
+.yoodoo_debugger>button{
+	margin:0px;
+	border:none;
+	border-left:1px solid #555;
+	padding:2px 5px;
+	cursor:pointer;
+	background:#555;
+	color:#fff;
+	width:100%;
+}
+.yoodoo_debugger>button:hover{
+	background:#999;
+	color:#fff;
+}
+.yoodoo_debugger>div{
+	clear:both;
+	white-space:nowrap;
+	background:#555;
+	color:#fff;
+	padding:1px 3px;
+}
+.yoodoo_debugger .tag_debug>div{
+	padding:0px 5px 0px 5px;
+	line-height:16px;
+	background:#fff;
+	color:#555;
+	font-size:11px;
+	white-space:nowrap;
+}
+.yoodoo_debugger .tag_debug>div.addTag{
+	color:#090;
+}
+.yoodoo_debugger .tag_debug>div.removeTag{
+	color:#900;
+}
+.yoodoo_debugger .meta_debug>div{
+	padding:0px 5px 0px 5px;
+	line-height:16px;
+	background:#fff;
+	color:#555;
+	font-size:11px;
+	white-space:nowrap;
+}
+.yoodoo_debugger .meta_debug>div.cachedMeta{
+	color:#090;
+}
+.yoodoo_debugger .post_debug>div{
+	padding:0px 5px 0px 5px;
+	line-height:16px;
+	background:#fff;
+	color:#555;
+	font-size:11px;
+	white-space:nowrap;
+}
+.yoodoo_debugger .post_debug>div+div{
+	color:#666;
+}
+.yoodoo_debugger .post_debug>div+div+div{
+	color:#777;
+}
+.yoodoo_debugger .post_debug>div+div+div+div{
+	color:#888;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div{
+	color:#999;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div{
+	color:#aaa;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div{
+	color:#bbb;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div+div{
+	color:#ccc;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div+div+div{
+	color:#ddd;
+}
+.yoodoo_debugger .post_debug>div+div+div+div+div+div+div+div+div+div{
+	color:#eee;
+}
+
+.yoodooBubble{
+	z-index:999;
+	position:absolute;
+	max-width:200px;
+	border-radius:5px;
+	padding:5px;
+	text-align:center;
+	background:#555;
+	box-shadow:0px 0px 10px #000;
+	color:#fff;
+	border:1px solid #000;
+	font:100 12px/14px "Trebuchet MS", Helvetica, sans-serif;
+}

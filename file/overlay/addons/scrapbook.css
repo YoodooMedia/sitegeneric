@@ -1,0 +1,1051 @@
+.cssDetector_scrapbook{display:none;}
+@charset "utf-8";
+
+@font-face {
+    font-family: 'ArchitectsDaughterRegular';
+    src: url('font/ArchitectsDaughter-webfont.eot');
+    src: url('font/ArchitectsDaughter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/ArchitectsDaughter-webfont.woff') format('woff'),
+         url('font/ArchitectsDaughter-webfont.ttf') format('truetype'),
+         url('font/ArchitectsDaughter-webfont.svg#ArchitectsDaughterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.scrapbookContext,.scrapbookContext button,.inbin{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+.htmlEditor{
+	border:1px solid #000;
+	position:absolute;
+	z-index:900;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+	-o-box-shadow:0px 0px 10px #000;
+	-moz-box-shadow:0px 0px 10px #000;
+	-khtml-box-shadow:0px 0px 10px #000;
+	-webkit-box-shadow:0px 0px 10px #000;
+	box-shadow:0px 0px 10px #000;
+}
+.htmlConsole>div{
+	padding:10px;
+}
+.htmlConsole>div input{
+	width:100%;
+	padding:5px;
+	border:1px solid #351f1d;
+	outline:none;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.htmlConsole>div textarea{
+	width:100%;
+	height:100%;
+	padding:5px;
+	border:1px solid #351f1d;
+	resize: none;
+	outline:none;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.htmlConsole>div textarea:focus,.htmlConsole>div input:focus{
+	padding:4px;
+	border:2px solid #351f1d;
+}
+#yoodooWidget #scrapbook h2{
+	position:absolute;
+	z-index:702;
+	margin:10px;
+}
+#yoodooWidget #scrapbook .scrapbookPages{
+	height:30px;
+	overflow:hidden;
+}
+#yoodooWidget #scrapbook .scrapbookPages .truncatedScroller{
+	border-right:1px solid #cce8f3;
+	border-left:1px solid #cce8f3;s
+}
+#yoodooWidget #scrapbook .scrapbookPages a{
+	display:inline-block;
+	margin:8px -12px 0px 0px;
+	cursor:pointer;
+	font-size:12px;
+	text-decoration:none;
+	color:#a0c6d5;
+	position:relative;
+	z-index:500;
+	vertical-align:bottom;
+}
+#yoodooWidget #scrapbook .scrapbookPages .pageTabBlock>span{
+	vertical-align:bottom;
+	margin:8px 0px 0px 0px;
+	font-size:12px;
+	height:22px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.groupUserToggle,#yoodooWidget #scrapbook .scrapbookPages a.newnote,#yoodooWidget #scrapbook .scrapbookPages a.bin,#yoodooWidget #scrapbook .scrapbookPages a.abuse_reports{
+	float:right;
+	margin-right:0px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.abuse_reports{
+	color:#f00;
+	margin-left:-12px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.groupUserToggle span.c span{
+	background:url(scrapbook-group-toggle.png) no-repeat 0px 0px;
+	height:18px;
+	line-height:18px;
+	margin:0px;
+	padding:0 0 0 28px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.groupUserToggle.showUsers span.c span{
+	background-position:0px -18px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.bin{
+	margin-right:-12px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.bin .c .recyclebin{
+	height:18px;
+	line-height:18px;
+	/*background:url(recycle.png) no-repeat left center;
+	padding:0 0 0 20px;*/
+	display:block;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.bin .c .recyclebin span,#yoodooWidget .scrapbookToolbar a.bin .c .recyclebin span{
+	display:inline-block;
+	vertical-align:middle;
+	height:18px;
+	width:20px;
+	background:url(recycle.png) no-repeat left center;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow{
+	border:1px solid #000;
+	background:#fff;
+	box-shadow:-3px 0px 5px #000;
+	z-index:999;
+	overfow:auto;
+	min-height:50px;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow>a{
+	float:right;
+	font-size:11px;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow>em{
+	font-size:14px;
+	line-height:50px;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem{
+	border-top:1px solid #bbb;
+	font-size:11px;
+	width:250px;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .abusetools{
+	padding:1px 2px;
+	background: rgb(248,80,50); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,80,50,1)), color-stop(50%,rgba(241,111,92,1)), color-stop(51%,rgba(246,41,12,1)), color-stop(71%,rgba(240,47,23,1)), color-stop(100%,rgba(231,56,39,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .abusetools a{
+	margin:2px;
+	color:#fff;
+	text-decoration:none;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .abusetools a:hover{
+	text-decoration:underline;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .reportAbuseItemContent{
+	cursor:pointer;
+	padding:1px 2px;
+	background: rgb(252,255,244); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(239,239,239,1) 40%, rgba(221,221,221,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(40%,rgba(239,239,239,1)), color-stop(100%,rgba(221,221,221,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(239,239,239,1) 40%,rgba(221,221,221,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(239,239,239,1) 40%,rgba(221,221,221,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(239,239,239,1) 40%,rgba(221,221,221,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(252,255,244,1) 0%,rgba(239,239,239,1) 40%,rgba(221,221,221,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .reportAbuseItemContent:hover{
+	background: rgb(246,230,180); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,230,180,1)), color-stop(100%,rgba(237,144,23,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .reportAbuseItemContent div{
+	font-style:italic;
+	color:#006;
+	text-align:right;
+}
+#yoodooWidget #scrapbook .reportAbuseWindow .reportAbuseItem .reportAbuseItemContent b{
+	color:#600;
+}
+.inbin{
+	position:absolute;
+	width:300px;
+	max-height:300px;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:5px;
+	background:#fff;
+	border:1px solid #a0c6d5;
+	--o-box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	-moz-box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	-khtml-box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	z-index:999;
+}
+.inbin div{
+	height:18px;
+	background:url(recycle.png) no-repeat left center;
+	line-height:18px;
+	padding:0 0 0 20px;
+}
+.inbin,.inbin a{
+	display:block;
+	color:#666;
+	font-size:12px;
+	text-decoration:none;
+}
+.inbin a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+.inbin .purgebin{
+	float:right;
+	font-size:11px;
+}
+#yoodooWidget #scrapbook .scrapbookPages a.on{
+	cursor:default;
+	color:#00aefe;
+	z-index:501;
+}
+#yoodooWidget #scrapbook .scrapbookPages a:hover{
+	z-index:502;
+}
+#yoodooWidget #scrapbook .scrapbookPages .moreLeft,#yoodooWidget #scrapbook .scrapbookPages .moreRight{
+	position:absolute;
+	width:12px;
+	height:14px;
+	top:12px;
+	background:url(scrapbookPage_more.png) no-repeat;
+	z-index:503;
+	cursor:pointer;
+}
+#yoodooWidget #scrapbook .scrapbookPages .moreLeft{
+	left:2px;
+}
+#yoodooWidget #scrapbook .scrapbookPages .moreRight{
+	right:2px;
+	background-position:-12px 0px;
+}
+.scrapbookPages a>span{
+	display:inline-block;
+	height:22px;
+	margin:0px;
+	background:url(scrapbookTabs.png) repeat-x;
+	height:18px;
+	line-height:18px;
+	padding:4px 0px 0px 0px;
+	vertical-align:bottom;
+}
+.scrapbookPages a>span.l,.scrapbookPages a>span.r{
+	width:17px;
+}
+.scrapbookPages a>span.l{
+	background-position:0px -22px;
+}
+.scrapbookPages a>span.r{
+	background-position:-17px -22px;
+}
+.scrapbookPages a>span.c{
+	background-position:0px -88px;
+	white-space:nowrap;
+}
+.scrapbookPages div a>span.c{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	max-width:80px;
+}
+.scrapbookPages a>span.c span.group{
+	background:url(scrapbook-group.png) no-repeat 0px -12px;
+	position:relative;
+	width:22px;
+	height:12px;
+	padding:0px;
+	margin:0px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.scrapbookPages a.on span.c span.group{
+	background-position:0px 0px;
+}
+.scrapbookPages a.on span.l{
+	background-position:0px -0px;
+}
+.scrapbookPages a.on span.r{
+	background-position:-17px -0px;
+}
+.scrapbookPages a.on span.c{
+	background-position:0px -66px;
+}
+.scrapbookPages a:hover span.l{
+	background-position:0px -44px;
+}
+.scrapbookPages a:hover span.r{
+	background-position:-17px -44px;
+}
+.scrapbookPages a:hover span.c{
+	background-position:0px -110px;
+}
+.scrapbookPages a.on:hover span.l{
+	background-position:0px -0px;
+}
+.scrapbookPages a.on:hover span.r{
+	background-position:-17px -0px;
+}
+.scrapbookPages a.on:hover span.c{
+	background-position:0px -66px;
+}
+.scrapbookWindow{
+	position:relative;
+}
+.scrapbookDesktop{
+	background:url(scrapbookPaper.gif);
+	position:relative;
+}
+.scrapbookDesktop .emptyPage{
+	width:100%;
+	height:100%;
+	background:url(../../../image/empty-page.png) center center no-repeat;
+}
+.scrapbookPlaceholder{
+	border:1px solid #cce8f3;
+	position:relative;
+}
+.scrapbookItem{
+	color:#223550;
+	font-size:12px;
+	position:absolute;
+	background:url(notepaper.png);
+	padding:3px 5px 2px 8px;
+	cursor:default;
+}
+.mobile_scrapbook{
+	position:relative;
+	padding-top:50px;
+}
+.mobile_scrapbook .scrapbookDesktop{
+
+}
+.scrapbookToolbar{
+	height:50px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:999;
+}
+.scrapbookToolbar>div{
+	display:inline-block;
+	height:50px;
+	padding:10px 2px;
+	line-height:30px;
+}
+.scrapbookToolbar>button{
+	white-space:nowrap;
+	height:50px;
+	line-height:50px;
+	border-right:1px solid rgba(0,0,0,0.2);
+	display:inline-block;
+	border:none;
+	padding:0px 5px;
+	text-decoration:none;
+}
+.scrapbookToolbar>a{
+	float:right;
+	white-space:nowrap;
+	height:50px;
+	line-height:50px;
+	border-left:1px solid rgba(0,0,0,0.2);
+	display:block;
+	padding:0px 5px;
+	text-decoration:none;
+}
+.scrapbookItem{
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-o-box-shadow:0px 2px 5px #000;
+	-moz-box-shadow:0px 2px 5px #000;
+	-khtml-box-shadow:0px 2px 5px #000;
+	-webkit-box-shadow:0px 2px 5px #000;
+	box-shadow:0px 2px 5px #000;
+}
+
+.scrapbookItem .medal{
+	width:34px;
+	height:60px;
+	background:url(medals.png);
+	display:none;
+	position:absolute;
+	right:5px;
+	top:0px;
+}
+.scrapbookItem.podium{
+	padding-top:60px;
+}
+.scrapbookItem.podium img{
+	position:absolute;
+	top:10px;
+}
+.scrapbookItem.gold .medal{
+	display:block;
+	background-position:0px 0px;
+}
+.scrapbookItem.silver .medal{
+	display:block;
+	background-position:-34px 0px;
+}
+.scrapbookItem.bronze .medal{
+	display:block;
+	background-position:-68px 0px;
+}
+.scrapbookItem.user{
+	background:url(paper.png);
+}
+.scrapbookItem.user .userViewButton{
+	font-size:10px;
+	display:block;
+	width:100%;
+	border:1px solid #999;
+	background:#fff;
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	cursor:pointer;
+}
+.scrapbookItem.user .userViewButton:hover{
+	background:#ddd;
+}
+.scrapbookItem.centeron{
+	background:#fff;
+}
+.scrapbookItem .name,.scrapbookItem .description{
+	font-family:ArchitectsDaughterRegular;
+}
+.scrapbookItem .tools{
+	position:absolute;
+	right:5px;
+	top:-24px;
+	height:20px;
+	padding:2px;
+	background:rgba(0,0,0,0.3);
+	border-radius:3px 3px 0px 0px;
+	display:none;
+}
+.mobile_scrapbook .scrapbookItem.scrapbookTopItem .tools{
+	display:block;
+}
+.scrapbookItem:hover .tools{
+	display:block;
+}
+.scrapbookItem.dragging:hover .tools{
+	display:none;
+}
+.scrapbookItem .tools button,.scrapbookItem button.public{
+	background:url(scrapbookIcons.png);
+	border:none;
+	cursor:pointer;
+}
+.mobile_scrapbook .scrapbookItem .tools button{
+	margin-left:10px;
+}
+.scrapbookItem button.public{
+	position:absolute;
+	left:15px;
+	top:-14px;
+	width:25px;
+	height:17px;
+	background-position:-66px 0px;
+	padding:0px;
+}
+.scrapbookItem .tools button.grab{
+	background:none;
+}
+.scrapbookItem .tools button.grab:hover{
+	color:#fff;
+}
+.scrapbookItem button.public.on{
+	background-position:-41px -17px;
+}
+.scrapbookItem button.public:hover{
+	background-position:-41px 0px;
+}
+.scrapbookItem button.public.on:hover{
+	background-position:-66px -17px;
+}
+.scrapbookItem .tools button.edit{
+	padding:0px;
+	width:24px;
+	height:20px;
+	background-position:0px -20px;
+}
+.scrapbookItem .tools button.edit:hover{
+	background-position:0px 0px;
+}
+.scrapbookItem .tools button.remove{
+	padding:0px;
+	width:18px;
+	height:20px;
+	background-position:-23px -20px;
+}
+.scrapbookItem .tools button.remove:hover{
+	background-position:-23px 0px;
+}
+.scrapbookItem span.score{
+	float:right;
+	font-size:1em;
+}
+.scrapbookItem.podium span.score{
+	float:none;
+	position:absolute;
+	left:60px;
+	top:10px;
+	max-width:80px;
+	display:block;
+	font-size:1em;
+}
+.scrapbookItem.podium span.score span{
+	font-size:1.4em;
+	display:block;
+}
+.scrapbookItem div div img{
+	-o-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-o-box-shadow:0px 0px 3px #000;
+	-moz-box-shadow:0px 0px 3px #000;
+	-khtml-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 3px #000;
+	box-shadow:0px 0px 3px #000;
+}
+.scrapbookPin{
+	background:url(scrapbookPins.png);
+	height:20px;
+	width:18px;
+	position:absolute;
+	left:-5px;
+	top:-7px;
+	cursor:move;
+}
+.scrapbookPin.pinstaple{
+	background-position:-108px 2px;
+	cursor:default;
+}
+.scrapbookPin.pinorange{
+	background-position:0px -20px;
+}
+.scrapbookPin.pinorange:hover,.scrapbookItem.dragging .scrapbookPin.pinorange{
+	background-position:0px 0px;
+}
+.scrapbookPin.pinred{
+	background-position:-18px -20px;
+}
+.scrapbookPin.pinred:hover,.scrapbookItem.dragging .scrapbookPin.pinred{
+	background-position:-18px 0px;
+}
+.scrapbookPin.pingreen{
+	background-position:-36px -20px;
+}
+.scrapbookPin.pingreen:hover,.scrapbookItem.dragging .scrapbookPin.pingreen{
+	background-position:-36px 0px;
+}
+.scrapbookPin.pinblue{
+	background-position:-54px -20px;
+}
+.scrapbookPin.pinblue:hover,.scrapbookItem.dragging .scrapbookPin.pinblue{
+	background-position:-54px 0px;
+}
+.scrapbookPin.pinyellow{
+	background-position:-72px -20px;
+}
+.scrapbookPin.pinyellow:hover,.scrapbookItem.dragging .scrapbookPin.pinyellow{
+	background-position:-72px 0px;
+}
+.scrapbookPin.pinpurple{
+	background-position:-90px -20px;
+}
+.scrapbookPin.pinpurple:hover,.scrapbookItem.dragging .scrapbookPin.pinpurple{
+	background-position:-90px 0px;
+}
+.scrapbookItem.dragging{
+	-o-box-shadow:0px 4px 8px rgba(0,0,0,0.5);
+	-moz-box-shadow:0px 4px 8px rgba(0,0,0,0.5);
+	-khtml-box-shadow:0px 4px 8px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0px 4px 8px rgba(0,0,0,0.5);
+	box-shadow:0px 4px 8px rgba(0,0,0,0.5);
+}
+.scrapbookItem .description{
+	clear:both;
+	overflow:hidden;
+}
+.scrapbookItem .description,.scrapbookItem .heading,.nicEdit-main{
+	font-family:ArchitectsDaughterRegular;
+	font-size:10px;
+	color:#223550;
+}
+#yoodooWidget .scrapbookItem .description a,#yoodooWidget .nicEdit-main a{
+	color:#004c99;
+}
+#yoodooWidget .scrapbookItem .description a:hover,#yoodooWidget .nicEdit-main a:hover{
+	color:#0b77e6;
+}
+.scrapbookItem .created_at{
+	font-size:10px;
+	text-align:right;
+}
+.scrapbookItem .commentOpener{
+	cursor:pointer;
+	color:#999;
+}
+.scrapbookItem .commentOpener.unread{
+	color:#f00;
+}
+.scrapbookItem .comment.unread{
+	border-left:3px solid #f00;
+}
+.scrapbookItem .commentOpener.open{
+	color:#900;
+}
+.scrapbookItem .commentOpener:hover{
+	color:#000;
+}
+.scrapbookItem .commentOpener.open:hover{
+	color:#f66;
+}
+.scrapbookItem .comment{
+	border-top:1px solid #999;
+	padding:2px 4px;
+	font-size:11px;
+	position:relative;
+}
+.scrapbookItem .comment{
+	cursor:pointer;
+}
+.scrapbookItem .comment.reported{
+	cursor:default;
+	background:#fee;
+}
+.scrapbookItem .comment .commentTools{
+	border-top:1px dashed #fdd;
+}
+.scrapbookItem .comment.private{
+	color:#400;
+}
+.scrapbookItem .comment .when{
+	font-size:10px;
+	text-align:right;
+}
+.scrapbookItem .comment .from,.scrapbookItem .owner{
+	font-weight:bold;
+	color:#558498;
+}
+.scrapbookItem .comment.inbox{
+	background:#d1ebf6;
+	color:#8db4c5;
+}
+.scrapbookItem .comment.outbox{
+	background:#f4fafd;
+	color:#8db4c5;
+}
+.scrapbookItem .comment.hasSnapshot{
+	background-image:url(snapshot-comment.png);
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+.scrapbookItem .comment.hasSnapshot:hover{
+	background-color:#ddfdd2;
+	color:#8baa80;
+}
+.scrapbookItem .comment.reported{
+	cursor:default;
+	background:#fee;
+}
+.scrapbookItem .commentsWindowContainer{
+	-o-box-shadow:0px 0px 3px #000;
+	-moz-box-shadow:0px 0px 3px #000;
+	-khtml-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 3px #000;
+	box-shadow:0px 0px 3px #000;
+	position:relative;
+}
+.scrapbookItem .commentButtons{
+	border-top: 1px solid #999999;
+	background: rgb(226,226,226); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+	padding:1px 4px;
+}
+.scrapbookItem .commentButtons a{
+	text-decoration:none;
+}
+.scrapbookItem .commentButtons a:hover{
+	text-decoration:underline;
+}
+.scrapbookItem .commentsWindow{
+	overflow:hidden;
+	max-height:200px;
+	background:#f9f9f9;
+}
+.scrapbookItem .commentsWindowContainer .slidebar{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:8px;
+	background:rgba(0,0,0,0.5);
+}
+.scrapbookItem .commentsWindowContainer .slidebar .bar{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:8px;
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(left, #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #eeeeee 0%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(left, #eeeeee 0%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+	-o-border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	cursor:row-resize;
+}
+.scrapbookItem .commentsWindowContainer .slidebar .bar:hover,.scrapbookItem .commentsWindowContainer .slidebar .bar.ui-draggable-dragging{
+	background: #c3d9ff; /* Old browsers */
+	background: -moz-linear-gradient(left, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c3d9ff), color-stop(41%,#b1c8ef), color-stop(100%,#98b0d9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #c3d9ff 0%,#b1c8ef 41%,#98b0d9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #c3d9ff 0%,#b1c8ef 41%,#98b0d9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #c3d9ff 0%,#b1c8ef 41%,#98b0d9 100%); /* IE10+ */
+	background: linear-gradient(left, #c3d9ff 0%,#b1c8ef 41%,#98b0d9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=1 ); /* IE6-9 */
+}
+.scrapbookItem textarea.commenter{
+	resize:none;
+	outline:none;
+	font-size:12px;
+	width:90%;
+	display:block;
+	margin:3px auto;
+	padding:3px;
+	background:#fff;
+	border:1px solid #999;
+}
+.scrapbookItem textarea.commenter+div{
+	text-align:center;
+}
+.scrapbookItem textarea.commenter.private{
+	background:#fee;
+	border:1px solid #f99;
+}
+.scrapbookItem button.actionButton{
+	border:none;
+	background:url(scrapbook-types.png) no-repeat;
+	height:24px;
+	padding:0 0 0 28px;
+	margin:2px;
+	cursor:pointer;
+	color:#999;
+}
+.scrapbookItem button.actionButton:hover{
+	color:#000;
+}
+.scrapbookItem button.actionButton.episode{
+	background-position:0px -24px
+}
+.scrapbookItem button.actionButton.episode:hover{
+	background-position:0px 0px
+}
+.scrapbookItem button.actionButton.dooit{
+	background-position:0px -72px
+}
+.scrapbookItem button.actionButton.dooit:hover{
+	background-position:0px -48px
+}
+.scrapbookItem button.actionButton.document{
+	background-position:0px -120px
+}
+.scrapbookItem button.actionButton.document:hover{
+	background-position:0px -96px
+}
+.scrapbookItem button.actionButton.chapter{
+	background-position:0px -168px
+}
+.scrapbookItem button.actionButton.chapter:hover{
+	background-position:0px -144px
+}
+.scrapbookItem button.actionButton.keypoint{
+	background-position:0px -216px
+}
+.scrapbookItem button.actionButton.keypoint:hover{
+	background-position:0px -192px
+}
+.scrapbookItem.event{
+	line-height:15px;
+}
+.scrapbookItem.event .heading{
+	position:absolute;
+	top:-30px;
+	line-height:30px;
+	font-size:18px;
+	color:#3d606d;
+}
+.scrapbookItem.event .when{
+	float:right;
+}
+.scrapbookItem.event.low,.scrapbookItem.event.medium,.scrapbookItem.event.high{
+	background:none;
+	box-shadow:none;
+	
+}
+.scrapbookItem.event.low{
+	color:#134591;
+}
+.scrapbookItem.event.medium{
+	color:#916613;
+}
+.scrapbookItem.event.high{
+	color:#c53817;
+}
+.scrapbookItem.event.complete{
+	background:none;
+	box-shadow:none;
+}
+.scrapbookContext{
+	border:1px solid #000;
+	background:rgba(255,255,255,0.8);;
+	z-index:999;
+	-o-box-shadow:0px 0px 50px #000;
+	-moz-box-shadow:0px 0px 50px #000;
+	-khtml-box-shadow:0px 0px 50px #000;
+	-webkit-box-shadow:0px 0px 50px #000;
+	box-shadow:0px 0px 50px #000;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:5px;
+	font-size:11px;
+	color:#555;
+}
+.scrapbookContext button{
+	display:block;
+	border:none;
+	background:none;
+	text-decoration:underline;
+	cursor:pointer;
+	color:#555;
+	margin-left:5px;
+}
+.scrapbookContext label{
+	display:block;
+	cursor:pointer;
+}
+/*.scrapbookContext .moveto{
+	
+}
+.scrapbookContext .moveto button{
+	display:none;
+	margin-left:5px;
+}
+.scrapbookContext .moveto:hover button{
+	display:block;
+}*/
+.arrow{
+	background:url(scrapbookArrows.png);
+	width:30px;
+	height:30px;
+	position:absolute;
+	cursor:pointer;
+	z-index:999;
+}
+.arrow.arrowleft{
+	background-position:0px -30px;
+	left:0px;
+}
+.arrow.arrowright{
+	background-position:-60px -30px;
+	right:0px;
+}
+.arrow.arrowtop{
+	background-position:-30px 0px;
+	top:0px;
+}
+.arrow.arrowbottom{
+	background-position:-30px -60px;
+	bottom:0px;
+}
+.arrow.arrowleft.arrowtop{
+	background-position:0px 0px;
+	left:0px;
+	top:0px;
+}
+.arrow.arrowleft.arrowbottom{
+	background-position:0px -60px;
+	left:0px;
+	bottom:0px;
+}
+.arrow.arrowright.arrowtop{
+	background-position:-60px 0px;
+	right:0px;
+	top:0px;
+}
+.arrow.arrowright.arrowbottom{
+	background-position:-60px -60px;
+	right:0px;
+	bottom:0px;
+}
+
+
+.arrow.arrowleft:hover{
+	background-position:-90px -30px;
+}
+.arrow.arrowright:hover{
+	background-position:-150px -30px;
+}
+.arrow.arrowtop:hover{
+	background-position:-120px 0px;
+}
+.arrow.arrowbottom:hover{
+	background-position:-120px -60px;
+}
+.arrow.arrowleft.arrowtop:hover{
+	background-position:-90px 0px;
+}
+.arrow.arrowleft.arrowbottom:hover{
+	background-position:-90px -60px;
+}
+.arrow.arrowright.arrowtop:hover{
+	background-position:-150px 0px;
+}
+.arrow.arrowright.arrowbottom:hover{
+	background-position:-150px -60px;
+}
+.htmlEditor button{
+	background: #f6f8f9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f8f9), color-stop(50%,#e5ebee), color-stop(51%,#d7dee3), color-stop(100%,#f5f7f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* IE10+ */
+	background: linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
+	-o-box-shadow:0px 0px 3px #000;
+	-moz-box-shadow:0px 0px 3px #000;
+	-khtml-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 3px #000;
+	box-shadow:0px 0px 3px #000;
+	cursor:pointer;
+	border:none;
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.htmlEditor button:hover{
+	background: #ebf1f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* IE10+ */
+	background: linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
+}
+.htmlEditor button.save{
+	float:right;
+}
+.htmlEditor .scrapbookHTML{
+	margin:0px auto;
+	background:#fff;
+}
+.htmlEditor .scrapbookHTML div:focus{
+	outline:none;	
+}
+#scrapbook .blockout{
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:998;
+	width:100%;
+	height:100%;
+	background:rgb(255,255,255);
+}
+.mobile_scrapbook .blockout{
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:998;
+	width:100%;
+	height:100%;
+	background:rgb(255,255,255);
+}
+#yoodooWidget .scrapbookSaving{
+	height:22px;
+	line-height:22px;
+	padding:0px 10px 0px 30px;
+	margin:3px;
+	background:url(scrapbook-update.gif) no-repeat 1px 1px #fff;
+	-o-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	float:left;
+	font-size:11px;
+}

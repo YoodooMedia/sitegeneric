@@ -1,0 +1,46 @@
+.cssDetector_investment{display:none;}
+.investment{
+	padding:0;
+}
+.investment input[type=text]{
+	width:350px;
+}
+.investment input[type=text].numeric{
+	width:50px;
+	text-align:right;
+	margin-left:10px;
+}
+.investment input[type=text].numeric.decimal{
+	width:60px;
+}
+.investment input[type=text].error{
+	border-color:#f00;
+}
+.investment .qinput{
+	clear:both;
+	padding:5px;
+}
+.investment .qinput label,.investment .qinput2 label,.investment .investTotal label{
+	width:600px;
+	float:left;
+	padding-right:20px;
+}
+.investment .investTotal{
+	font-size:18px;
+	clear:both;
+	border-top:2px solid #bbb;
+	padding:5px 0px;
+}
+.investment .investTotal span{
+	color:#090;
+}
+.investment .qinput2{
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+	padding:5px;
+	border:1px solid #bbb;
+	overflow:auto;
+}

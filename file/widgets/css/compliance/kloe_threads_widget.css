@@ -1,0 +1,117 @@
+.cssDetector_kloe_threads_widget{display:none;}
+.kloe_threads_widget>div{
+	
+}
+.kloe_threads_widget>div>div{
+	height:100%;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button{
+	height:100%;
+	width:100%;
+	padding:2px;
+	margin:0px;
+	border:none;
+	cursor:pointer;
+	font-size:11px;
+	background:rgba(255,255,255,0.5);
+	text-align:left;
+	transition:background 0.3s,color 0.3s;
+	position:relative;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>span{
+	font-size:14px;
+	display:block;
+	position:absolute;
+	top:0px;
+	width:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>span>span{
+	padding-right:5px;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>em{
+	font-size:11px;
+	display:block;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	text-align:center;
+	line-height:16px;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button:hover{
+	background:#4E74A6;
+	color:#fff;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>div{
+	box-sizing:border-box;
+	padding:20px 0px 0px 0px;
+	height:100%;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>div>div{
+	overflow-y:auto;
+	overflow-x:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	height:100%;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>div>div>div>span{
+	display:block;
+	width:100%;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+#yoodooWidget .kloe_threads_widget>div>div>button>em+div{
+	padding:18px 0px 16px 0px;
+}
+.kloe_threads_widget>div>div>button .notStarted{
+	background:url(../../../css/compliance/images/none.png) no-repeat center right;
+	min-height:16px;
+	padding-right:20px;
+	color:#ff5353;
+}
+.kloe_threads_widget>div>div>button.userThreads .notStarted{
+	font-size:12px;
+}
+.kloe_threads_widget>div>div>button .fullyComplete{
+	background:url(../../../css/compliance/images/tick-sml.png) no-repeat center right;
+	min-height:16px;
+	padding-right:20px;
+}
+.kloe_threads_widget>div>div>button.userThreads .fullyComplete{
+	color:#6A9D05;
+}
+.kloe_threads_widget>div>div>button .fullyRedo{
+	background:url(../../../css/compliance/images/tick-redo-sml.png) no-repeat center right;
+	min-height:16px;
+	padding-right:20px;
+}
+.kloe_threads_widget>div>div>button.userThreads .fullyRedo{
+	color:#D69D03;
+}
+.kloe_threads_widget>div>div>button.userThreads:hover .notStarted,
+.kloe_threads_widget>div>div>button.userThreads:hover .fullyComplete,
+.kloe_threads_widget>div>div>button.userThreads:hover .fullyRedo{
+	color:#fff;
+}
+.kloe_threads_widget>div>div>button .completeness{
+	height:4px;
+	border:2px solid #fff;
+	border-radius:3px;
+	margin:2px 4px 3px 4px;
+	box-shadow:0px 0px 5px #000;
+	background:#ededed;
+	text-align:left;
+}
+.kloe_threads_widget>div>div>button .completeness>div{
+	display:inline-block;
+	height:100%;
+}
+.kloe_threads_widget>div>div>button .completeness .threadComplete{
+	background:#16dd16;
+}
+.kloe_threads_widget>div>div>button .completeness .threadUpdated{
+	background:#fdc61e;
+}

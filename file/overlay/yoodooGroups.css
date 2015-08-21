@@ -1,0 +1,383 @@
+.cssDetector_yoodooGroups{display:none;}
+.yoodooGroups{
+	position:absolute;
+	z-index:100;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	margin:4px;
+	background:url(images/blank.gif);
+}
+.yoodooGroupsMember,.yoodooGroupsOptional,.yoodooGroupsViewer{
+	min-width:30%;
+	height:100%;
+	background:rgba(255,255,255,0.9);
+	visibility:hidden;
+	position:absolute;
+	box-shadow:0px 0px 50px #000;
+}
+.Explorer8 .yoodooGroupsMember,.Explorer8 .yoodooGroupsOptional,.Explorer8 .yoodooGroupsViewer{
+	background:#fff;
+}
+.yoodooGroupsMember,.yoodooGroupsOptional{
+	max-width:50%;
+}
+.yoodooGroupsMember{
+	left:0px;
+	top:0px;
+}
+.yoodooGroupsOptional,.yoodooGroupsViewer{
+	right:0px;
+	top:0px;
+}
+.yoodooGroupsMemberTitle{
+	padding:10px;
+	position:relative;
+}
+.yoodooGroupsMemberTitle button.closeGroups{
+	position:absolute;
+	top:5px;
+	left:5px;
+	cursor:pointer;
+}
+.yoodooGroupsOptionalTitle{
+	padding:10px;
+}
+.yoodooGroupsMemberList{
+	padding:10px;
+	overflow-y:auto;
+}
+.yoodooGroupsOptionalList{
+	padding:10px;
+	overflow-y:auto;
+}
+.yoodooGroupsViewerList{
+	padding:10px;
+	overflow-y:auto;
+}
+.yoodooGroupsViewerTitle{
+	padding:10px;
+	position:relative;
+}
+.yoodooGroupsViewerTitle>label{
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+.yoodooGroupsViewerTitle>label>select{
+	display:block;
+}
+.yoodooGroupsMemberTitle>div,.yoodooGroupsViewerTitle>div,.yoodooGroupsOptionalTitle>div{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+.yoodooGroupsMemberList>div{
+	border-radius:3px;
+	background:#5187b3;
+	color:#fff;
+	font-size:12px;
+	line-height:22px;
+	padding:0px 10px;
+	margin:2px;
+	transition:background 0.3s;
+	cursor:pointer;
+}
+.yoodooGroupsMemberList>div:hover{
+	background:#38b916;
+}
+.yoodooGroupsMemberList>div.canLeave>button{
+	background:url(../../image/user_group_leave.png) 0px 0px no-repeat;
+	cursor:pointer;
+	width:19px;
+	height:19px;
+	float:right;
+	border:none;
+	padding:0px;
+	margin:1px;
+}
+.yoodooGroupsMemberList>div.canLeave>button:hover{
+	background-position:0px -19px;
+}
+
+.yoodooGroupsOptionalList>div{
+	border-radius:3px;
+	background:#555;
+	color:#fff;
+	font-size:12px;
+	line-height:22px;
+	padding:0px 10px;
+	margin:2px;
+}
+.yoodooGroupsOptionalList>div.canJoin>button{
+	background:url(../../image/user_group_join.png) 0px 0px no-repeat;
+	cursor:pointer;
+	width:19px;
+	height:19px;
+	float:right;
+	border:none;
+	padding:0px;
+	margin:1px;
+}
+.yoodooGroupsOptionalList>div.canJoin>button:hover{
+	background-position:0px -19px;
+}
+.yoodooGroupsMemberList>div.busy,.yoodooGroupsOptionalList>div.busy{
+	opacity:0.3;
+}
+.yoodooGroupsMemberList>div.viewing,.yoodooGroupsOptionalList>div.viewing{
+	background:#555;
+}
+.yoodooGroupsViewer{
+	
+}
+.yoodooGroupsViewer .groupuser{
+	width:80px;
+	height:80px;
+	margin:13px;
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+}
+.yoodooGroupsViewer .groupuser .groupusername{
+	position:absolute;
+	bottom:-10px;
+	text-align:center;
+	width:100%;
+	border-radius:3px;
+	font-size:12px;
+	background:#fff;
+	border:1px solid rgb(122,188,255);
+	box-shadow:0px 0px 20px #999;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	left:-1px;
+}
+.yoodooGroupsViewer .groupuser .groupuserscore{
+	position:absolute;
+	top:5px;
+	text-align:left;
+	width:100%;
+	font-size:18px;
+	color:#000;
+}
+.yoodooGroupsViewer .groupuser .groupuserscore>span{
+	display:inline-block;
+	background:#fff;
+	border-radius:40px;
+	text-align:center;
+	height:20px;
+	min-width:12px;
+	line-height:20px;
+	padding:0px 4px;
+	box-shadow:0px 0px 5px #999;
+}
+.Explorer8 .yoodooGroupsViewer .groupuser .groupuserscore{
+	top:0px;
+}
+.Explorer8 .yoodooGroupsViewer .groupuser .groupuserscore>span{
+	border:1px solid #999;
+}
+.yoodooGroupsViewer .groupuser .groupusercircle{
+	width:74px;
+	height:74px;
+	border-radius:40px;
+	background: #fff; 
+	border: 3px solid rgb(122,188,255); 
+	overflow:hidden;
+	display:inline-block;
+	box-shadow:0px 0px 10px #999;
+	transition:background-color 0.3s,border-color 0.3s,box-shadow 0.3s;
+}
+.yoodooGroupsViewer .groupuser .groupuserawaiting{
+	position:absolute;
+	top:5px;
+	text-align:right;
+	width:100%;
+	font-size:14px;
+	color:#000;
+}
+.yoodooGroupsViewer .groupuser .groupuserawaiting>span{
+	display:inline-block;
+	background:#fff;
+	text-align:center;
+	border-radius:40px;
+	height:20px;
+	min-width:12px;
+	line-height:20px;
+	padding:0px 4px;
+	box-shadow:0px 0px 5px #999;
+	text-shadow:0px 0px 2px #000;
+	color:#fff;
+}
+.yoodooGroupsViewer .groupuser:hover .groupusercircle{
+	background: #fff; 
+	border-color:#FF0000; 
+	box-shadow:0px 0px 20px #000;
+}
+.yoodooGroupsViewer .groupuser .groupusercircle>div{
+	width:74px;
+	height:74px;
+	border-radius:40px;
+	background:url(../../image/blank_avatar.png) center center no-repeat;
+	background-size:cover;
+}
+.groupuserdetails{
+	cursor:default;
+	z-index:600;
+	border: 3px solid #FF0000; 
+	width:74px;
+	height:74px;
+	border-radius:40px;
+	position:absolute;
+	background:rgba(255,255,255,0);
+	top:0px;
+	left:0px;
+	transition:background-color 0.5s,border-color 0.5s,border-radius 0.5s;
+}
+#yoodooWidget .groupuserdetails h2{
+	color:rgb(122,188,255);
+	margin:0px 0px 10px 0px;
+}
+.groupuserdetails .groupuseravatar{
+	float:right;
+	width:74px;
+	height:74px;
+	border-radius:40px;
+	background: #fff; 
+	border: 3px solid rgb(122,188,255); 
+	overflow:hidden;
+	display:inline-block;
+	box-shadow:0px 0px 10px #999;
+	background:url(../../image/blank_avatar.png) center center no-repeat;
+	background-size:cover;
+}
+.groupuserdetails.showingDetails{
+	border-radius:5px;
+	border-color:rgb(122,188,255); 
+	background-color:rgba(255,255,255,0.95);
+}
+.Explorer8 .groupuserdetails.showingDetails{
+	background-color:rgb(255,255,255);
+}
+#yoodooWidget .yoodooGroups button.closeBySlide{
+	position:absolute;
+	top:3px;
+	left:3px;
+}
+.yd_blockout{
+	z-index:599;
+	cursor:default;
+	position:absolute;
+	background:rgba(0,0,0,0);
+}
+.groupGraphs{
+	width:85%;
+	margin:5px auto;
+	position:relative;
+	overflow:hidden;
+	white-space:nowrap;
+	border:1px solid #555;
+	box-shadow:0px 0px 5px #999;
+}
+.groupGraphs{
+	position:relative;
+}
+.groupActivityGraph{
+	height:100px;
+}
+.groupActivityGraph,.groupSyllabusGraph{
+	position:relative;
+	overflow:hidden;
+	white-space:nowrap;
+	margin:20px 0px 0px 0px;
+	background: rgba(203,235,255,0.5);
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+}
+.Explorer8 .groupActivityGraph,.Explorer8 .groupSyllabusGraph{
+	background:url(images/white50.png);
+}
+.groupSyllabusGraph{
+	
+	
+}
+.groupActivityGraphBars{
+	white-space:nowrap;
+	height:inherit;
+	overflow:visible;
+	position:absolute;
+}
+.groupActivityGraphBars>div{
+	display:inline-block;
+	vertical-align:bottom;
+}
+.groupActivityGraphMonths{
+	white-space:nowrap;
+	height:100%;
+	position:absolute;
+	overflow:visible;
+	top:0px;
+}
+.groupActivityGraphMonths>div{
+	height:inherit;
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0.11) 0%, rgba(0,0,0,0.05) 53%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.11)), color-stop(53%,rgba(0,0,0,0.05)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.11) 0%,rgba(0,0,0,0.05) 53%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(0,0,0,0.11) 0%,rgba(0,0,0,0.05) 53%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(0,0,0,0.11) 0%,rgba(0,0,0,0.05) 53%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(0,0,0,0.11) 0%,rgba(0,0,0,0.05) 53%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+	display:inline-block;
+	vertical-align:top;
+	overflow:hidden;
+}
+.groupActivityGraphMonths>div>div{
+	white-space:normal;
+	font-size:10px;
+	color:rgba(0,0,0,0.5);
+	margin:2px;
+	line-height:auto;
+}
+.dooit_activity,.episode_activity{
+	margin:1px 0px 0px 0px;
+	height:2px;
+}
+.dooit_activity.activity_complete,.episode_activity.activity_complete{
+	height:5px;
+}
+.dooit_activity,.episode_activity{
+	background: rgba(0,0,0,0.2);
+}
+.dooit_activity:hover,.episode_activity:hover{
+	background: rgba(0,0,0,0.4);
+}
+.Explorer8 .dooit_activity,.episode_activity{
+	background: #BBB;
+}
+.Explorer8 .dooit_activity:hover,.episode_activity:hover{
+	background: #999;
+}
+.dooit_activity.activity_complete,.episode_activity.activity_complete{
+background: rgb(124,136,147); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(124,136,147,1) 0%, rgba(17,22,25,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,136,147,1)), color-stop(100%,rgba(17,22,25,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(124,136,147,1) 0%,rgba(17,22,25,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(124,136,147,1) 0%,rgba(17,22,25,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(124,136,147,1) 0%,rgba(17,22,25,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(124,136,147,1) 0%,rgba(17,22,25,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c8893', endColorstr='#111619',GradientType=0 ); /* IE6-9 */
+}
+.dooit_activity.activity_complete:hover,.episode_activity.activity_complete:hover{
+background: rgb(189,218,237); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(189,218,237,1) 0%, rgba(3,125,191,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(189,218,237,1)), color-stop(100%,rgba(3,125,191,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(189,218,237,1) 0%,rgba(3,125,191,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(189,218,237,1) 0%,rgba(3,125,191,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(189,218,237,1) 0%,rgba(3,125,191,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(189,218,237,1) 0%,rgba(3,125,191,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bddaed', endColorstr='#037dbf',GradientType=0 ); /* IE6-9 */
+
+}
+
+

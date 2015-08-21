@@ -1,0 +1,114 @@
+.cssDetector_yoodooKeywordSearch{display:none;}
+
+.arrow{
+    width:10px;
+    height:10px;
+    transform: rotate(90deg);
+    transition:all 0.5s  cubic-bezier(.17,.67,.83,.67);
+    margin:0 auto;
+}
+.yoodooSearchItem{
+    perspective: 100px;
+    width:100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid transparent;
+    padding: 15px 0 10px 0;
+    -moz-border-image: -moz-linear-gradient(left, rgba(225,225,225,0.25) 0%, rgba(180,180,180,0.8) 66%, rgba(225,225,225,0.25)100%);
+    -webkit-border-image: -webkit-linear-gradient(left,  rgba(225,225,225,0.25) 0%, rgba(180,180,180,0.8) 66%, rgba(225,225,225,0.25) 100%);
+    border-image: linear-gradient(left,rgba(225,225,225,0.8) 0%, rgba(180,180,180,0.8) 66%, rgba(225,225,225,0.25) 100%);
+    border-image-slice: 1;
+}
+#yoodooWidget .yoodooUI .yoodooSearchItem button,#yoodooWidget .yoodooUI .yoodooSearchItem button:hover{
+    background: transparent;
+}
+#yoodooSearchResultHolder .yoodooSearchItem button.itemLabel{
+
+    display:inline-block;
+    cursor: pointer;
+    width:75%;
+    text-align: left;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    line-height: 22px;
+    font-size:15px;
+    transition:all 0.3s  ease;
+}
+#yoodooSearchResultHolder .yoodooSearchItem button.itemLabel:hover{
+    transform: rotateX(10deg);
+    background-color: rgba(255,255,255,.5);
+
+}
+
+.yoodooSearchItem .additionalInfo{
+    display:none;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton{
+    background:#99cc33;
+    color:#fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    padding:5px 10px;
+    transition: all 0.3s ease;
+    min-width: 30px;
+
+}
+#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton svg,#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton img{
+    vertical-align:middle;
+    float:right;
+    position:relative;
+    right:0px;
+    transition:right 0.3s;
+}
+#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton:hover{
+    background:#339933;
+    color:#fff;
+}
+#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton:hover svg,#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton:hover img{
+    right:-10px;
+}
+#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton:disabled:hover svg,#yoodooWidget .yoodooUI #yoodooSearchResultHolder button.goButton:disabled:hover img{
+    right:0px;
+}
+#yoodooWidget .yoodooUI .searchCloseButton{
+    margin-top:5%;
+    background:#b4b4b4;
+    transition: all 0.3s ease;
+}
+#yoodooWidget .yoodooUI .searchCloseButton:hover{
+    background:#555555;
+}
+#yoodooWidget .contentTypeImage{
+    width:25px;
+    height:25px;
+    vertical-align:middle;
+    float:left;
+    margin-right:5%;
+
+}
+#yoodooWidget .yoodooSearchCustomDialog{
+    box-shadow:0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-color:rgba(255,255,255,0.9);
+    color:#000000;
+}
+#yoodooWidget .yoodooSearchThumbnail{
+    position:relative;
+    width:88px;
+    height:50px;
+    vertical-align:middle;
+    display:inline-block;
+}
+#yoodooWidget .description{
+    position:relative;
+    display:inline-block;
+    width:75%;
+    margin-left:5%;
+    text-align: left;
+}

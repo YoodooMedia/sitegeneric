@@ -1,0 +1,129 @@
+.cssDetector_kloe_overview{display:none;}
+#yoodooWidget .dooitBox,#yoodooWidget .dooitBox>div,#yoodooWidget .dooitDisplay{
+	height:100%;
+	box-sizing:border-box;
+}
+.kloeBreadcrumb{
+	height:30px;
+	position:absolute;
+}
+#yoodooWidget .kloeBreadcrumb+div{
+	height:100%;
+	padding:30px 0px 0px 0px;
+	box-sizing:border-box;
+}
+.kloeArena{
+	height:100%;
+	overflow-y:auto;
+}
+td{
+	border-top:1px solid #efefef;
+	padding:3px;
+}
+td.result{
+	width:15%;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+td:first-child{
+	width:25%;
+	height:20px;
+	line-height:20px;
+}
+th{
+	text-align:center;
+}
+th:first-child{
+	text-align:left;
+}
+tr{
+}
+table{
+	width:100%;
+	border:1px solid #ddd;
+	border-radius:3px;
+	background:rgba(255,255,255,0.8);
+}
+.reportDiv{
+	box-sizing:border-box;
+	padding:10px;
+}
+.kloeOverview svg{
+	vertical-align;middle;
+}
+.kloeOverview td{
+	vertical-align:top;
+}
+.kloeOverview td button{
+	width:100%;
+	cursor:pointer;
+	background:#C6E2BA;
+	border:none;
+	border-radius:3px;
+	color:#063;
+	transition:background 0.3s;
+	height:30px;
+}
+.kloeOverview td button:hover{
+	background:#0F0;
+}
+.kloeOverview td>span{
+	position:relative;
+	padding:0px 10px 0px 0px;
+	display:inline-block;
+	height:20px;
+}
+.kloeOverview td>span>span{
+	position:absolute;
+	border-radius:20px;
+	color:#fff;
+	font-size:11px;
+	height:14px;
+	line-height:14px;
+	min-width:14px;
+	text-align:center;
+	left:13px;
+	border:1px solid #fff;
+}
+.kloeOverview .scoreBar{
+	height:5px;
+	background:#eee;
+	border:1px solid #ddd;
+	border-radius:3px;
+	margin:0px 0px 2px 0px;
+}
+.kloeOverview .scoreBar>div{
+	height:5px;
+	background:#9f9;
+	border-radius:3px;
+}
+#yoodooWidget .kloeBreadcrumb button{
+	background:#9dc0e0;
+	color:#ffffff;
+	border:none;
+	border-radius:0px;
+	cursor:pointer;
+	padding:5px;
+	transition:background 0.3s,color 0.3s,border-radius 0.3s;
+}
+#yoodooWidget .kloeBreadcrumb button+button{
+	border-left:1px solid #789DBF;
+}
+#yoodooWidget .kloeBreadcrumb button:first-child{
+	border-radius:20px 0px 0px 20px;
+}
+#yoodooWidget .kloeBreadcrumb button:last-child{
+	border-radius:20px;
+}
+#yoodooWidget .kloeBreadcrumb button+button:last-child{
+	border-radius:0px 20px 20px 0px;
+}
+#yoodooWidget .kloeBreadcrumb button:hover{
+	background:#429DF0;
+}
+#yoodooWidget .kloeBreadcrumb button:disabled:hover,#yoodooWidget .kloeBreadcrumb button:disabled{
+	background:#429DF0;
+	opacity:1;
+	cursor:default;
+}

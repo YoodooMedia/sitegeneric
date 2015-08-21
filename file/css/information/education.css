@@ -1,0 +1,108 @@
+.cssDetector_education{display:none;}
+.education{
+	background:url(../../../image/dooits/information/education.gif) no-repeat top right;
+	color:#000;
+	position:relative;
+	font-size:14px;
+}
+.education .school{
+	width:253px;
+	height:53px;
+	background:url(../../../image/dooits/information/item.png) no-repeat top right;
+	cursor:pointer;
+	color:#333;
+}
+.education #toedit{
+	display:none;
+	font-size:10px;
+	padding:2px 0px 2px 20px;
+	/*white-space:nowrap;*/
+}
+.education .school>div{
+	width:246px;
+	height:45px;
+	padding:2px 5px 6px 4px;
+	position:relative;
+}
+.education .school .dates{
+	line-height:22px;
+	float:left;
+	width:70px;
+	padding:0px 0px 0px 5px;
+}
+.education .detail{
+	line-height:22px;
+	float:left;
+	width:170px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.education .school.on,.education .school:hover{
+	background-position:0px -53px;
+	color:#fff;
+}
+.education .school .fader{
+	background:url(../../../image/dooits/information/item-fader.png) no-repeat;
+	width:19px;
+	height:45px;
+	position:absolute;
+	right:6px;
+	top:2px;
+}
+.education .school.on .fader,.education .school:hover .fader{
+	background-position:0px -53px;
+}
+.education .list{
+	width:30%;
+	float:left;
+	min-height:100px;
+	min-width:275px;
+	padding:5px;
+}
+.education .schoolList{
+	overflow: auto;
+	max-height:265px;
+}
+.education .details{
+	float:left;
+	min-height:100px;
+	min-width:320px;
+	border:1px solid #CCCCCC;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	padding:5px;
+}
+.education .details>div{
+	padding:3px 0px;
+}
+.education input{
+	background:url(../../../image/dooits/information/input.png) no-repeat top right;
+	padding:0px 10px;
+	width:320px;
+	border:none;
+	margin:3px 0px;
+}
+
+.education a.select{
+	background:url(../../../image/dooits/information/miniselect.gif) no-repeat top right;
+	height:25px;
+	line-height:25px;
+	width:66px;
+	padding:0px 19px 0px 5px;
+	margin:2px 5px 2px 0px;
+	float:left;
+	text-decoration:none;
+	color:#333333 !important;
+}
+.education a.select:hover{
+	background-position:0px -25px;
+	color:#000 !important;
+}
+.education button.green,.education button.red{
+	margin:10px 0 0 20px !important;
+}
+.education h2{
+	padding:0px;
+	margin:0px;
+}
