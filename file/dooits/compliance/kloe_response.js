@@ -1,6 +1,6 @@
-dooit.temporaries('kloe_response');
+
 var kloe_response = {
-	statusWarningId: null,
+	/*statusWarningId: null,
 	getWarningStatusId:function(callback) {
 		if (typeof(callback)!="function") callback=function(){};
 		if (this.status===undefined) {
@@ -23,7 +23,7 @@ var kloe_response = {
 			if (this.status.records[s].value.typst==0) this.statusWarningId=this.status.records[s].Id;
 		}
 		return this.statusWarningId;
-	},
+	},*/
 	expiryWarningDays: 7,
 	objectName: {
 		responses: 'KLOE Responses',
@@ -176,11 +176,8 @@ var kloe_response = {
 		grey: 'eeeeee'
 	},
 	record: function(obj, item, templater,deleted,prompt) {
-		if (kloe_response.statusWarningId === null) {
-			if (typeof(kloe) != "undefined" && kloe.warningStatus.Id !== undefined) kloe_response.statusWarningId = kloe.warningStatus.Id;
-		}
 		this.item = null;
-		this.prompt = yoodoo.object.objectNames[kloe_response.objectName.subSections].recordsCache[obj.value[kloe_response.parameters.Prompt]];
+		this.prompt = yoodoo.keyQuestion.promptsObject.recordsCache[obj.value[kloe_response.parameters.Prompt]];
 		if (typeof(item) != "undefined") {
 			this.item = item;
 			if (typeof(kloe) != "undefined") kloe.recordCount++;
@@ -213,8 +210,9 @@ var kloe_response = {
 			if (this.object.value[kloe_response.parameters.Expiry] === undefined) this.object.value[kloe_response.parameters.Expiry] = yoodoo.formatDate('Y-m-d H:i:s', this.expires);
 			if (this.object.value[kloe_response.parameters.Expiry]) this.expires = yoodoo.readDate(this.object.value[kloe_response.parameters.Expiry]);
 			if (this.expires.getTime() < new Date().getTime()) {
-				this.object.value[kloe_response.parameters.Status] = kloe_response.statusWarningId;
+				this.object.value[kloe_response.parameters.Status] = yoodoo.kloeStatus.warning.Id;
 				this.warning == false;
+				console.log(this.object);
 			} else {
 				var now = new Date();
 				this.warning = this.expires.getTime() < new Date(now.setDate(now.getDate() + kloe_response.expiryWarningDays)).getTime();
@@ -241,9 +239,10 @@ var kloe_response = {
 				if (this.messages.length==0) return null;
 				var indicator=$(yoodoo.e("div")).addClass("indicator");
 				if (this.object.Id>0) indicator.addClass("updated");
-				indicator.append(
+				/*indicator.append(
 					$(yoodoo.e("div")).html('<div>'+this.messages.join('</div><div>')+'</div>')
-				);
+				);*/
+				yoodoo.bubble(indicator.get(0),'<div>'+this.messages.join('</div><div>')+'</div>');
 				return indicator;
 			}
 		};
@@ -272,14 +271,10 @@ var kloe_response = {
 			}
 		};
 		this.immediateAction = function() {
-			if (this.object !== null && kloe_response.statusWarningId !== null) {
-				return (this.object.value[kloe_response.parameters.Status] == kloe_response.statusWarningId);
-			} else {
-				return (this.status == 'needsattention');
-			}
+			return (this.object.value[kloe_response.parameters.Status] == yoodoo.kloeStatus.warning.Id);
 		};
 		this.imminentAction = function() {
-			return this.warning;
+			return (this.object.value[kloe_response.parameters.Status] != yoodoo.kloeStatus.warning.Id) && this.warning;
 		};
 		this.pendingActionPlan = function() {
 			if (this.object !== null) return (this.score() == 0) ? ((this.object.value[kloe_response.parameters.ActionPlanCount] !== undefined) ? this.object.value[kloe_response.parameters.ActionPlanCount] : 0) : 0;
@@ -297,15 +292,11 @@ var kloe_response = {
 			if (this.dialog!==undefined) this.dialog.close();
 		};
 		this.score = function() {
-			var s = 0;
-			if (this.object !== null && kloe_response.statusWarningId !== null) {
-				if (yoodoo.object.objectNames[kloe_response.objectName.status].recordsCache[this.object.value[kloe_response.parameters.Status]] !== undefined) {
-					return yoodoo.object.objectNames[kloe_response.objectName.status].recordsCache[this.object.value[kloe_response.parameters.Status]].getValue('Score');
-				} else {
-					return 0;
-				}
-			} else if (this.item !== null && this.item.context.statuses[this.status] !== undefined) s = this.item.context.statuses[this.status].score;
-			return s;
+			if (yoodoo.kloeStatus.object.recordsCache[this.object.value[kloe_response.parameters.Status]] !== undefined) {
+				return yoodoo.kloeStatus.object.recordsCache[this.object.value[kloe_response.parameters.Status]].getValue('Score');
+			} else {
+				return 0;
+			}
 		};
 		this.output = function() {
 			return {};
@@ -321,10 +312,10 @@ var kloe_response = {
 		};
 		this.statusColour = function() {
 			var statusColour = null;
-			if (this.object.value[kloe_response.parameters.Status] > 0 && yoodoo.object.objectNames[kloe_response.objectName.status].recordsCache[this.object.value[kloe_response.parameters.Status]] !== undefined) {
-				statusColour = yoodoo.object.objectNames[kloe_response.objectName.status].recordsCache[this.object.value[kloe_response.parameters.Status]].getValue("Colour");
+			if (this.object.value[kloe_response.parameters.Status] > 0 && yoodoo.kloeStatus.object.recordsCache[this.object.value[kloe_response.parameters.Status]] !== undefined) {
+				statusColour = yoodoo.kloeStatus.object.recordsCache[this.object.value[kloe_response.parameters.Status]].getValue("Colour");
 			}
-			if (this.warning && this.item !== null) statusColour = this.item.context.colours.amber;
+			if (this.warning && this.immediateAction()===false) statusColour = this.item.context.colours.amber;
 			return statusColour;
 		};
 		this.update = function(withEmptyRecord) {
@@ -339,12 +330,12 @@ var kloe_response = {
 				this.warning = this.expires.getTime() < new Date(now.setDate(now.getDate() + kloe_response.expiryWarningDays)).getTime();
 				this.overdue = false;
 				if (this.expires.getTime() < new Date().getTime()) {
-					this.status = (this.object !== null) ? kloe_response.statusWarningId : 'needsattention';
+					this.status =  yoodoo.kloeStatus.warning.Id ;
 					this.warning = false;
 					this.overdue = true;
 				}
 				statusColour = this.statusColour();
-				if (this.warning) statusColour = kloe_response.colours.amber;
+				if (this.warning && this.immediateAction()===false) statusColour = kloe_response.colours.amber;
 				actionColour = (this.overdue) ? kloe_response.colours.red : kloe_response.colours.cyan;
 			}
 			var borderColour = statusColour;
@@ -434,7 +425,9 @@ var kloe_response = {
 			attach:function(record) {
 				if (!(record instanceof Array)) record=[record];
 				for(var r in record) {
-					if (this.recordIds[record[r].Id]===undefined) {
+					if (isNaN(record[r].Id) || record[r].Id===null) {
+						this.records.push(record[r]);
+					}else if (this.recordIds[record[r].Id]===undefined) {
 						this.recordIds[record[r].Id]=record[r];
 						this.records.push(record[r]);
 					}
@@ -496,7 +489,9 @@ var kloe_response = {
 			attach:function(record) {
 				if (!(record instanceof Array)) record=[record];
 				for(var r in record) {
-					if (this.recordIds[record[r].Id]===undefined) {
+					if (isNaN(record[r].Id) || record[r].Id===null) {
+						this.records.push(record[r]);
+					}else if (this.recordIds[record[r].Id]===undefined) {
 						this.recordIds[record[r].Id]=record[r];
 						this.records.push(record[r]);
 					}
@@ -545,7 +540,7 @@ var kloe_response = {
 					this.attach(kloe_response.clone.evidence(fromTemplate[tid],this.response.object));
 				}
 				if (i>0) this.response.updateStatus.add(i+' evidence report'+((i==1)?'':'s')+' added',{addedEvidence:i});
-				if (updated>0) this.response.updateStatus.add(i+' evidence report'+((i==1)?'':'s')+' updated',{updatedEvidence:updated});
+				if (updated>0) this.response.updateStatus.add(updated+' evidence report'+((updated==1)?'':'s')+' updated',{updatedEvidence:updated});
 			}
 		};
 		if (this.object.actionPlans instanceof Array && this.object.actionPlans.length>0) this.actionPlans.attach(this.object.actionPlans);
@@ -572,6 +567,13 @@ var kloe_response = {
 				}
 			};
 			return $(div).addClass("recordSection").append(ele);
+		};
+		this.responseReminder = function() {
+			return $(yoodoo.e("div")).addClass('responseReminder yoodooUI').append(
+				$(yoodoo.e("label")).html(this.prompt.value.zgsux.lowlk)
+			).append(
+				$(yoodoo.e("p")).html(this.object.value.znajr.hklsj)
+			);
 		};
 		this.edit = function() {
 			var me = this;
@@ -656,13 +658,13 @@ var kloe_response = {
 					columns: 2,
 					onchange: function(e) {
 						$(e.target).css({
-							background: yoodoo.object.objectNames[kloe_response.objectName.status].recordsCache[this.value].getValue('Colour'),
+							background: yoodoo.kloeStatus.object.recordsCache[this.value].getValue('Colour'),
 							color: '#fff'
 						}).parent().siblings('.yoodooUI_multiplechoiceButton').find('button').attr("style", "");
 						var val = this.value;
 						if (val instanceof Array) val = val.pop();
 						me.object.setValue(kloe_response.parameters.Status, val);
-						if (yoodoo.object.objectNames[kloe_response.objectName.status].recordsCache[val].getValue("Score") == 0) {
+						if (yoodoo.kloeStatus.object.recordsCache[val].getValue("Score") == 0) {
 							form.addClass("requireActionPlan");
 						} else {
 							form.removeClass("requireActionPlan");
@@ -675,8 +677,8 @@ var kloe_response = {
 				} else {
 					form.removeClass("requireActionPlan");
 				}
-				for (var b in yoodoo.object.objectNames[kloe_response.objectName.status].records) {
-					var opt = yoodoo.object.objectNames[kloe_response.objectName.status].records[b];
+				for (var b in yoodoo.kloeStatus.object.records) {
+					var opt = yoodoo.kloeStatus.object.records[b];
 					var cssBackgroundColour = '';
 					var cssFontColour = '';
 					if (this.object.value[kloe_response.parameters.Status] == opt.Id) {
@@ -767,6 +769,25 @@ var kloe_response = {
 					recordWindow: null,
 					open: function() {
 						var me = this;
+						var loc1=$('.promptMessage').offset();
+						var loc2=$('.dooitDisplay').offset();
+						var padding=3;
+						var dx=loc2.left-loc1.left-1-padding;
+						var dy=loc1.top-loc2.top-1-padding;
+						var message=$(yoodoo.e("section")).addClass('promptMessage').html($('.promptMessage').html());
+						$('.dooitDisplay').append(message);
+						message.css({
+							position:'absolute',
+							'z-index':999,
+							left:dx,
+							top:dy,
+							opacity:0,
+							width:$('.promptMessage').width()+(2*padding)
+						}).transition({
+							opacity:1,
+							top:110-$('.promptMessage').height()-3-(2*padding)
+						},500);
+						clearTimeout(this.record.autoopentext);
 						this.recordWindow = $(yoodoo.e("div")).addClass("recordWindow");
 						this.editor = $(yoodoo.e("div")).addClass("responseEditor").append(
 							$(yoodoo.e("div")).append(
@@ -779,6 +800,9 @@ var kloe_response = {
 								})
 							).append($(yoodoo.e("div")).addClass('losenge').append(
 								$(yoodoo.e("button")).attr("type", "button").html("back").addClass("backButton").click(function() {
+									message.transition({top:0,opacity:0},500,function() {
+										$(this).remove();
+									});
 									me.close();
 								}).prepend(kloe_response.icon(kloe_response.icons.left, 20, 20, 100, 100, {
 									'4D4D4D': 'FFFFFF'
@@ -789,8 +813,14 @@ var kloe_response = {
 						).css({
 							height: '0%'
 						}).click(function(e) {
-							if (e.target === this) me.close();
+							if (e.target === this) {
+									message.transition({top:0,opacity:0},500,function() {
+										$(this).remove();
+									});
+								me.close();
+							}
 						});
+						this.recordWindow.append(this.record.responseReminder());
 						for (var r in this.records) this.recordWindow.append(this.recordRow(this.records[r]));
 						if (this.record.item !== null) {
 							this.record.item.context.containers.record.append(this.editor);
@@ -818,7 +848,7 @@ var kloe_response = {
 					recordRow: function(record, straightToEdit) {
 						var rec = record;
 						var me = this;
-						var disabled = (rec.templater!==true && rec.inheritedResponse !== undefined && rec.inheritedResponse.value[kloe_response.evidenceParameters.LockedWhenInherited] === true);
+						var disabled = (rec.templater!==true && rec.inheritedEvidence !== undefined && rec.inheritedEvidence.value[kloe_response.evidenceParameters.LockedWhenInherited] === true);
 						var buildForm=function() {
 							var columns = $(yoodoo.e("div")).addClass("columns2");
 							// evidence
@@ -829,6 +859,7 @@ var kloe_response = {
 							}
 							var label = 'Untitled';
 							if (this.prompt.value[kloe_response.promptParameters.Presentation] !== null && this.prompt.value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.Document] !== undefined) label = this.prompt.value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.Document];
+							if (label.replace(/ /g,'')=="") label="Untitled";
 							if (disabled) {
 								columns.append($(yoodoo.e("div")).addClass("yoodooUI").append(
 									$(yoodoo.e("label")).html(label)
@@ -877,6 +908,17 @@ var kloe_response = {
 								update: function(file) {
 									var obj = this.complexData;
 									if (obj === undefined) obj = {};
+									if (file !== undefined) {
+										console.log(obj);
+										obj[kloe_response.evidenceData.Bytes]=file.bytes;
+										obj[kloe_response.evidenceData.Icon]=file.icon;
+										obj[kloe_response.evidenceData.Link]=file.link;
+										obj[kloe_response.evidenceData.Name]=file.name;
+										this.complexData = obj;
+									}
+									/*for(var k in obj) {
+										
+									}
 									var keys = {};
 									if (this.record.object.parameters[this.recordKey].json_schema instanceof Array) {
 										for (var i in this.record.object.parameters[this.recordKey].json_schema) {
@@ -891,10 +933,10 @@ var kloe_response = {
 											if (keys[k.toLowerCase()] !== undefined) obj[keys[k.toLowerCase()]] = file[k];
 										}
 									}
-									this.complexData = obj;
-									if (obj[keys.link] != '') {
+									this.complexData = obj;*/
+									if (obj[kloe_response.evidenceData.Link] != '') {
 										this.link.empty().append(
-											$(yoodoo.e("a")).html(obj[keys.name] + ' (' + kloe_response.byteSize(obj[keys.bytes]) + ')').attr("href", obj[keys.link]).attr("target", "_blank")
+											$(yoodoo.e("a")).html(obj[kloe_response.evidenceData.Name] + ' (' + kloe_response.byteSize(obj[kloe_response.evidenceData.Bytes]) + ')').attr("href", obj[kloe_response.evidenceData.Link]).attr("target", "_blank")
 										);
 									} else {
 										this.link.html('No file of evidence.');
@@ -906,6 +948,7 @@ var kloe_response = {
 									docLink.container.append(docLink.link).append(but);
 								}, {
 									success: function(file) {
+										console.log(file);
 										docLink.update(file[0]);
 									}
 								});
@@ -955,7 +998,7 @@ var kloe_response = {
 							});
 							apWindow.append(
 								$(yoodoo.e("div")).addClass("losenge").append(
-									$(yoodoo.e("button")).attr("type", "button").addClass('backButton').html('back').prepend(
+									$(yoodoo.e("button")).attr("type", "button").addClass('backButton withCTA').html('back').prepend(
 										kloe_response.icon(kloe_response.icons.left, 20, 20, 100, 100, {
 											'4D4D4D': 'FFFFFF'
 										})
@@ -1004,7 +1047,6 @@ var kloe_response = {
 							this.update();
 							
 						}
-console.log(reply);
 						return reply;
 					}
 				};
@@ -1043,7 +1085,26 @@ console.log(reply);
 					editor: null,
 					recordWindow: null,
 					open: function() {
+						var loc1=$('.promptMessage').offset();
+						var loc2=$('.dooitDisplay').offset();
+						var padding=3;
+						var dx=loc2.left-loc1.left-1-padding;
+						var dy=loc1.top-loc2.top-1-padding;
+						var message=$(yoodoo.e("section")).addClass('promptMessage').html($('.promptMessage').html());
+						$('.dooitDisplay').append(message);
+						message.css({
+							position:'absolute',
+							'z-index':999,
+							left:dx,
+							top:dy,
+							opacity:0,
+							width:$('.promptMessage').width()+(2*padding)
+						}).transition({
+							opacity:1,
+							top:110-$('.promptMessage').height()-3-(2*padding)
+						},500);
 						var me = this;
+						clearTimeout(this.record.autoopentext);
 						this.recordWindow = $(yoodoo.e("div")).addClass("recordWindow");
 						this.editor = $(yoodoo.e("div")).addClass("responseEditor").append(
 							$(yoodoo.e("div")).append(
@@ -1056,6 +1117,9 @@ console.log(reply);
 								})
 							).append($(yoodoo.e("div")).addClass('losenge').append(
 								$(yoodoo.e("button")).attr("type", "button").html("back").addClass("backButton").click(function() {
+									message.transition({top:0,opacity:0},500,function() {
+										$(this).remove();
+									});
 									me.close();
 								}).prepend(kloe_response.icon(kloe_response.icons.left, 20, 20, 100, 100, {
 									'4D4D4D': 'FFFFFF'
@@ -1066,8 +1130,14 @@ console.log(reply);
 						).css({
 							height: '0%'
 						}).click(function(e) {
-							if (e.target === this) me.close();
+							if (e.target === this) {
+									message.transition({top:0,opacity:0},500,function() {
+										$(this).remove();
+									});
+								me.close();
+							}
 						});
+						this.recordWindow.append(this.record.responseReminder());
 						for (var r in this.records) this.recordWindow.append(this.recordRow(this.records[r], false));
 						if (this.record.item !== null) {
 							this.record.item.context.containers.record.append(this.editor);
@@ -1095,7 +1165,7 @@ console.log(reply);
 					recordRow: function(record, straightToEdit) {
 						var rec = record;
 						var me = this;
-						var disabled = (rec.templater!==true && rec.inheritedResponse !== undefined && rec.inheritedResponse.value[kloe_response.parameters.LockedWhenInherited] === true);
+						var disabled = (rec.templater!==true && rec.inheritedActionPlan !== undefined && rec.inheritedActionPlan.value[kloe_response.actionPlanParameters.LockedWhenInherited] === true);
 						var buildForm=function() {
 							var complexData = rec.value[kloe_response.actionPlanParameters.Data];
 							if (complexData === null || typeof(complexData) != "object") {
@@ -1107,6 +1177,7 @@ console.log(reply);
 							// not met
 							var label = 'Untitled';
 							if (this.prompt.value[kloe_response.promptParameters.Presentation] !== null && this.prompt.value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.NotMet] !== undefined) label = this.prompt.value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.NotMet];
+							if (label.replace(/ /g,'')=="") label="Untitled";
 							if (disabled) {
 								columns.append($(yoodoo.e("div")).addClass("yoodooUI").append(
 									$(yoodoo.e("label")).html(label)
@@ -1299,7 +1370,7 @@ console.log(reply);
 							});
 							apWindow.append(
 								$(yoodoo.e("div")).addClass("losenge").append(
-									$(yoodoo.e("button")).attr("type", "button").addClass('backButton').html('back').prepend(
+									$(yoodoo.e("button")).attr("type", "button").addClass('backButton withCTA').html('back').prepend(
 										kloe_response.icon(kloe_response.icons.left, 20, 20, 100, 100, {
 											'4D4D4D': 'FFFFFF'
 										})
@@ -1451,7 +1522,7 @@ console.log(reply);
 			if (this.item !== null) {
 				this.item.context.showRecord(true);
 				yoodoo.ui.update();
-				setTimeout(function() {
+				this.autoopentext=setTimeout(function() {
 					$('.showRecord>div').last().find('textarea,input[type=text]').first().focus();
 				},2000);
 			} else {
@@ -1508,8 +1579,8 @@ console.log(reply);
 			display: 'none'
 		}));
 		if (this.upgraded) {
-			for (var k in yoodoo.object.objectNames[kloe_response.objectName.status].records) {
-				var rec = yoodoo.object.objectNames[kloe_response.objectName.status].records[k];
+			for (var k in yoodoo.kloeStatus.object.records) {
+				var rec = yoodoo.kloeStatus.object.records[k];
 				sel.append($(yoodoo.e("option")).attr("value", rec.Id).html(rec.displayName()).css({
 					color: rec.getValue('Colour')
 				}));
@@ -1868,7 +1939,7 @@ console.log(reply);
 			var clone=obj.object.add();
 			clone.value[kloe_response.parameters.ActionPlanCount]=0;
 			clone.value[kloe_response.parameters.EvidenceCount]=0;
-			clone.value[kloe_response.parameters.Status]=kloe_response.statusWarningId;
+			clone.value[kloe_response.parameters.Status]=yoodoo.kloeStatus.warning.Id;
 			for(var i in toClone) {
 				clone.value[kloe_response.parameters[toClone[i]]]=obj.value[kloe_response.parameters[toClone[i]]];
 			}
@@ -1944,8 +2015,8 @@ console.log(reply);
 
 
 			// clone read only responses as inherited responses
-			me.getWarningStatusId(
-				function() {
+			//me.getWarningStatusId(
+			//	function() {
 					var optional=[];
 					var toClone=['BusinessSector','DisplayName','KeyLineOfEnquiry','KeyQuestion','Prompt','Text'];
 					for(var tid in templatesById) {
@@ -1966,8 +2037,8 @@ console.log(reply);
 					}
 					complete(optional);
 	//console.log(existing,optional);
-				}
-			);
+			//	}
+			//);
 		};
 		yoodoo.object.get([this.objectName.actionPlans,this.objectName.evidence,this.objectName.responses],function(list) {
 			var actionPlans=list.shift();
@@ -2065,13 +2136,13 @@ console.log(reply);
 					);
 				var background=yoodooStyler.hexToRGB((arr.addedResponse>0)?this.colours.red:((arr.updatedResponse>0)?colours.amber:colours.cyan));
 				if (arr.optional>0) responses.append(
-					$(yoodoo.e("span")).addClass("updateOptional").html(arr.optional).attr("title","Optional Response")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateOptional").html(arr.optional).get(0),arr.optional+" optional response"+(arr.optional==1?'':'s'))
 				);
 				if (arr.updatedResponse>0) responses.append(
-					$(yoodoo.e("span")).addClass("updateUpdated").html(arr.updatedResponse).attr("title","Updated Response")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateUpdated").html(arr.updatedResponse).get(0),arr.updatedResponse+" updated response"+(arr.updatedResponse==1?'':'s'))
 				);
 				if (arr.addedResponse>0) responses.append(
-					$(yoodoo.e("span")).addClass("updateAdded").html(arr.addedResponse).attr("title","Added Response")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateAdded").html(arr.addedResponse).get(0),arr.addedResponse+" added response"+(arr.updatedResponse==1?'':'s'))
 				);
 				background=yoodooStyler.rgbToHex(yoodooStyler.tint(background,0.6,0.2));
 				op.append(responses.css({background:background}));
@@ -2082,10 +2153,10 @@ console.log(reply);
 					);
 				var background=yoodooStyler.hexToRGB((arr.addedEvidence>0)?colours.red:colours.amber);
 				if (arr.updatedEvidence>0) evidence.append(
-					$(yoodoo.e("span")).addClass("updateUpdated").html(arr.updatedEvidence).attr("title","Updated evidence")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateUpdated").html(arr.updatedEvidence).get(0),arr.updatedEvidence+" updated evidence")
 				);
 				if (arr.addedEvidence>0) evidence.append(
-					$(yoodoo.e("span")).addClass("updateAdded").html(arr.addedEvidence).attr("title","Added evidence")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateAdded").html(arr.addedEvidence).get(0),arr.addedEvidence+" added evidence")
 				);
 				background=yoodooStyler.rgbToHex(yoodooStyler.tint(background,0.6,0.2));
 				op.append(evidence.css({background:background}));
@@ -2096,10 +2167,10 @@ console.log(reply);
 					);
 				var background=yoodooStyler.hexToRGB((arr.addedActionPlans>0)?colours.red:colours.amber);
 				if (arr.updatedActionPlans>0) actionPlans.append(
-					$(yoodoo.e("span")).addClass("updateUpdated").html(arr.updatedActionPlans).attr("title","Updated action plan")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateUpdated").html(arr.updatedActionPlans).get(0),arr.updatedActionPlans+" updated action plan"+(arr.updatedActionPlans==1?'':'s'))
 				);
 				if (arr.addedActionPlans>0) actionPlans.append(
-					$(yoodoo.e("span")).addClass("updateAdded").html(arr.addedActionPlans).attr("title","Added action plan")
+					yoodoo.bubble($(yoodoo.e("span")).addClass("updateUpdated").html(arr.addedActionPlans).get(0),arr.addedActionPlans+" added action plan"+(arr.addedActionPlans==1?'':'s'))
 				);
 				background=yoodooStyler.rgbToHex(yoodooStyler.tint(background,0.6,0.2));
 				op.append(actionPlans.css({background:background}));

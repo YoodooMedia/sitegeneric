@@ -22,7 +22,7 @@ yoodoo.element = {
 			this.tags = [];
 			this.levelIds = {};
 			var kid = node.firstChild;
-			if (yoodoo.widgets.length === 0) {
+			if (yoodoo.widgets.length === 0 && yoodoo.option.showProgress!==false) {
 				yoodoo.widgets.push(new yoodoo.element.widget({
 					dependencies : [],
 					ready : function(src) {
@@ -1545,12 +1545,12 @@ yoodoo.element = {
 			}, {
 				duration : 500,
 				complete : function() {
-					if (this.parentNode !== null)
+					if (this.parentNode !== null && typeof(this.parentNode.update)=="function")
 						this.parentNode.update();
 					complete(this.widget);
 				},
 				step : function() {
-					if (this.parentNode !== null)
+					if (this.parentNode !== null && typeof(this.parentNode.update)=="function")
 						this.parentNode.update();
 				}
 			});

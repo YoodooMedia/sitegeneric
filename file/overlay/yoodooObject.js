@@ -113,7 +113,7 @@ yoodoo.object={
 			}
 		};
 	},
-	viewrequest:function(id,managerTypeId,success,failure) {
+	viewrequest:function(id,managerTypeId,success,failure,variables) {
 		this.successCallback=(typeof(success)=="function")?success:function(){};
 		this.failureCallback=(typeof(failure)=="function")?failure:function(){};
 		this.status='pending';
@@ -133,6 +133,7 @@ yoodoo.object={
 			context:this,
 			callback:'yoodoo.object.loadCache['+this.index+'].loaded'
 		};
+		if (typeof(variables)=="object" && variables!==null) this.params.variables=variables;
 		if (this.managerTypeId!==undefined) this.params.managerTypeId=this.managerTypeId;
 		this.loaded=function(reply) {
 			var obj=null;
@@ -165,12 +166,12 @@ yoodoo.object={
 			}*/
 		};
 	},
-	getView:function(id,managerTypeId,success,failure) {
+	getView:function(id,managerTypeId,success,failure,variables) {
 		if (!(managerTypeId>0)) managerTypeId=0;
 		//if (this.views[id]!==undefined && this.views[id][managerTypeId]!==undefined) {
 		//	success(this.views[id][managerTypeId]);
 		//}else{
-			var req=new this.viewrequest(id,managerTypeId,success,failure);
+			var req=new this.viewrequest(id,managerTypeId,success,failure,variables);
 			yoodoo.sendPost(null,req.params);
 			return req;
 		//}

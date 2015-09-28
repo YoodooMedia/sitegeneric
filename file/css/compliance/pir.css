@@ -1,0 +1,516 @@
+.cssDetector_pir{display:none;}
+#yoodooWidget .dooitBox,#yoodooWidget .dooitBox>div{
+	height:100%;
+	box-sizing:border-box;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir{
+	width:100%;
+	height:100%;
+	position:relative;
+	box-sizing:border-box;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .main{
+	height:100%;
+	box-sizing:border-box;
+	padding-top:60px;
+	position: relative;
+	text-align:center;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .main>*{
+	text-align:left;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons{
+	position:absolute;
+	width:100%;
+	top:0px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .main.pirloading{
+	background:url(../../../../sitegeneric/image/loading.gif) center center no-repeat;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .main.pirloading>*{
+	visibility:hidden;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons h2{
+	display:inline-block;
+	margin:0;
+	margin-right: 20px;
+	margin-left: 10px;
+	vertical-align:middle;
+}
+#yoodooWidget .pir h3{
+	margin:0px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons>button {
+	background: #fdf9e4;
+	border: 1px solid #555;
+	border-radius: 5px;
+	margin: 2px;
+	width: 15%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/* height: 100px; */
+	position: relative;
+	box-sizing: border-box;
+	padding: 12px;
+	cursor: pointer;
+	color: #555;
+	font-size: 17px;
+	vertical-align:middle;
+	transform-style: preserve-3d;
+	transform: perspective(250px) rotateX(0deg);
+	transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s,color 0.3s;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+	  align-items: flex-start;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons>.active,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons>.active:hover {
+	background:#B775B2;
+	color:#fff;
+	transform: perspective(250px) rotateX(0deg);
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons>button:hover,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons>button.selected{
+	transform:perspective(250px) rotateX(15deg);
+	z-index:999;
+	background:#fff6c4;
+	box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirAnswers{
+	padding:4px;
+	box-sizing:border-box;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirAnswers,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions{
+	width:47%;
+	display:inline-block;
+	/*background: rgb(234, 234, 234);*/
+	/*float:left;*/
+	height: 100%;
+	z-index:1;
+	vertical-align:top;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons{
+	width:6%;
+	height: 100%;
+	display:inline-block;
+	vertical-align:top;
+	/*float:left;*/
+	margin:0px -5px;
+	position: relative;
+	z-index:2;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo{
+	border-top: 1px solid rgb(190, 190,190);
+	border-bottom: 1px solid rgb(190, 190,190);
+	background: white;
+	height:30px;
+	width:100%;
+ 	position: relative;
+	top:52.5px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo{
+		left: -5px;
+    	width: 56px;
+	}
+}
+@-moz-document url-prefix() { 
+	#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo{
+		left: -5px;
+    	width: 55px;
+	}
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo{
+	top:237.5px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne button.transfer,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo button.transfer{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  cursor:pointer;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne button.transfer svg,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo button.transfer svg{
+	left:0px;
+	position:relative;
+	transition:left 0.2s;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne button.transfer:disabled:hover svg,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo button.transfer:disabled:hover svg{
+	left:0px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQOne button.transfer:hover svg,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transferButtons .addQTwo button.transfer:hover svg{
+	left:10px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButDown{
+	margin: auto;
+	width:50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: none;
+  	background: none;
+ 	cursor:pointer;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButDown svg{
+	position:relative;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	transition:bottom 0.2s;
+	-moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButDown:disabled:hover svg{
+	bottom:0px;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButDown:hover svg{
+	bottom:-5px;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButUp{
+	margin:auto;
+	height: 25px;
+	width: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	border: none;
+	background: none;
+	cursor:pointer;  
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButUp svg{
+	position:relative;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	transition:top 0.2s;
+	-moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButUp:disabled:hover svg{
+	top:0px;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir button.scrollButUp:hover svg{
+	top:-5px;
+}
+
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirAnswers .aContainer,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer{
+	  /*border: 1px solid rgb(153, 153, 153);*/
+	  height: 100%;
+	  position: relative;
+	  display: block;
+	  /*border-radius: 10px;*/
+ }
+ #yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirAnswers .aContainer{
+ 	border-radius: 10px;
+ 	border: 1px solid rgb(190, 190,190);
+ 	position: relative;
+  	display: block;
+	padding-top:38px;
+ 	box-sizing: border-box;
+	overflow:hidden;
+ }
+ 
+ #yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qOne,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qTwo{
+	  width: 100%;
+	  height: 50%;
+	  position: relative;
+ 	box-sizing: border-box;
+	 padding:4px;
+ }
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qOne .qOneContent,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qTwo .qTwoContent{
+	border: 1px solid black;
+  	width: 100%;
+  	/*height: 96%;*/
+  	height:100%;
+  	box-sizing:border-box;
+  	padding-top:32px;
+  	position:relative;
+  	border-radius: 10px;
+ 	border: 1px solid rgb(190, 190,190);
+ 	/*position:absolute;*/
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qOne .qOneContent{
+  	top:0;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qTwo .qTwoContent{
+	bottom:0;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qOne .qOneContent h3,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qTwo .qTwoContent h3, #yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirAnswers .aContainer h3{
+  position:absolute;
+  width:100%;
+  top:0px;
+  box-sizing:border-box;
+  color: #FFF;
+  text-align: center;
+  background: #4e6da2;
+  padding: 8px;
+  line-height: 1.2;
+  font-size: 13.5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid rgb(190, 190,190);
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .qTwo .qTwoContent h3{
+	background:#66b914;
+}
+ #yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirAnswers .aContainer h3{
+ 	font-size:18px;
+ 	background:#B775B2;
+ }
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .pirQuestions .qContainer .charCount{
+	position: absolute;
+	bottom: 2px;
+	font-size: 14px;
+	right: 10px;
+	font-weight: bold;
+	color: red;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .aScroll{
+	position: relative;
+	height: 100%;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .answers{
+	position: relative;
+}
+/*
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .answer{
+	border: 1px solid #BDBDBD;
+	margin: 6px 6px 12px 6px;
+	padding: 5px;
+	border-radius: 10px;
+	background: #FFFFFF;
+	width: 91%;
+	box-sizing: border-box;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .answer b,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .answer .qText{
+	display:inline;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .answer .aText{
+  border: 1px solid rgb(223, 223, 223);
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(226, 255, 240);
+  cursor:pointer;
+  margin: 5px 0px 5px 0px;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .answer .aText.selected{
+	background: rgb(189, 255, 220);
+	border: 1px solid rgb(186, 186, 186);
+}*/
+#yoodooContainerContent .dooitDisplay textarea{
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  outline: none;
+  transition: border-radius 0.3s,box-shadow 0.3s;
+  border: none;
+  padding: 0;
+}
+#yoodooContainerContent .dooitDisplay textarea:hover{
+	  border-radius: 0px !important;
+  box-shadow: none !important;
+  outline: none;
+  transition: border-radius 0.3s,box-shadow 0.3s;
+  border: none;
+  padding: 0;
+}
+/*
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .aTextContainer{
+	overflow:hidden;
+	height: 40px;
+	transition:height 0.5s ease-out;
+}
+
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .expand{
+	height: auto;
+    transition: height 1s ease-in;
+}*/
+.aDiv h4{
+	cursor:pointer;
+}
+
+.aDiv{
+	position:relative;
+	border: 2px solid rgb(165, 213, 219);
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+
+
+#yoodooWidget .answers h4{
+	font-size:18px;
+	color:#999;
+	margin:4px 0px;
+	line-height:24px;
+}
+.response{
+	padding:2px;
+	border-radius:3px;
+	border:1px solid #333;
+	margin:3px;
+	background:#fff;
+}
+.response+.response{
+	border-top:1px solid #999;
+}
+.promptTitle{
+	cursor:pointer;
+	position:relative;
+	color:#333;
+	background:#fff;
+	padding:3px;
+	transition:color 0.3s,background 0.3s;
+}
+.promptTitle>b{
+	display:block;
+	transition:color 0.3s,background 0.3s;
+}
+.promptTitle:hover>b{
+	color:#0099CC;
+}
+.promptTitle>span{
+	font-weight:normal;
+	position:absolute;
+	border-radius:20px;
+	width:18px;
+	height:18px;
+	font-size:12px;
+	line-height:18px;
+	text-align:center;
+	background:#B775B2;
+	color:#FFF;
+	top:0px;
+	right:0px;
+}
+.responses>div{
+	padding:5px;
+	cursor:pointer;
+	background:#fff;
+	color:#333;
+	transition:color 0.3s,background 0.3s;
+}
+.responses>div:hover{
+	background:#eee;
+}
+.responses>div+div{
+	border-top:1px solid #DDD;
+}
+.responses>div.selected{
+	background:#333;
+	color:#fff;
+}
+.responses>div.selected:hover{
+	background:#555;
+}
+.promptDescription{
+	font-size:11px;
+	color:#999;
+}
+.aContainer,.aText{
+	border-left:3px solid #B775B2;
+}
+.qOneContent,.qTwoContent,.addQOne,.addQTwo,.aContainer,.aText{
+	transition:background 0.3s,color 0.3s;
+}
+.transfer1 .qOneContent,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transfer1 .transferButtons .addQOne,.transfer1 .aContainer,.transfer1 .aContainer .aText.selected{
+	background:#c9d8f1;
+}
+.transfer2 .qTwoContent,#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .transfer2 .transferButtons .addQTwo,.transfer2 .aContainer,.transfer2 .aContainer .aText.selected{
+	background:#daf0cb;
+}
+.transfer1 .aContainer .aText.selected{
+	background:#4e6da2;
+}
+.transfer2 .aContainer .aText.selected{
+	background:#66b914;
+}
+.aScroll{
+	direction: rtl;
+	height: 100%;
+	overflow: auto;
+}
+.aScroll>button{
+	display:none;
+}
+.aScroll>div{
+	direction: ltr;
+	padding: 3px;
+}
+
+.aScroll::-webkit-scrollbar-thumb{
+background-color:#B775B2;
+}
+.aScroll::-webkit-scrollbar{
+width:8px;
+background-color:#fff;
+} 
+
+.textarea1::-webkit-scrollbar-thumb{
+background-color:#4e6da2;
+}
+.textarea1::-webkit-scrollbar{
+width:8px;
+background-color:#fff;
+} 
+
+.textarea2::-webkit-scrollbar-thumb{
+background-color:#66b914;
+}
+.textarea2::-webkit-scrollbar{
+width:8px;
+background-color:#fff;
+} 
+
+
+#yoodooWidget .contenteditable{
+	padding:4px;
+	box-sizing:border-box;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons button.getpdf{
+	background:url(images/pdf-download.png) left center no-repeat !important;
+	width:30px;
+	padding:0px !important;
+	height:30px;
+	border:none !important;
+	color:#555 !important;
+	border-radius:0px !important;
+	/*float:right;*/
+	cursor:pointer;
+	position:absolute;
+	right:0px;
+	top:7px;
+	transition:right 0.3s;
+	margin:0px;
+	text-shadow:0px 0px 1px #fff;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.pir .navButtons button.getpdf:hover{
+	right:10px;
+}

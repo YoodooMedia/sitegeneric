@@ -20,9 +20,10 @@ module.exports = function(grunt) {
 		  	'file/overlay/yoodooplus.js' : [
 											'file/dooits/jquery-ui-1-10-4.js',
 										   'file/overlay/yoodooBookcase.js',
+										   'file/overlay/yoodooComments2.js',
 										   'file/overlay/yoodooAdvisor.js',
 										   'file/overlay/jquery_transit.js',
-										   'file/overlay/yoodooGroups.js',
+										   'file/overlay/yoodooGroups_2.js',
 										   'file/overlay/yoodooIcons.js',
 										   'file/overlay/yoodooInterface.js',
 										   'file/overlay/yoodooLanguage.js',
@@ -35,9 +36,10 @@ module.exports = function(grunt) {
 		  	'file/overlay/yoodoohtml.js' : [
 											'file/dooits/jquery-ui-1-10-4.js',
 										   'file/overlay/yoodooBookcase.js',
+										   'file/overlay/yoodooComments2.js',
 										   'file/overlay/yoodooAdvisor.js',
 										   'file/overlay/jquery_transit.js',
-										   'file/overlay/yoodooGroups.js',
+										   'file/overlay/yoodooGroups_2.js',
 										   'file/overlay/yoodooIcons.js',
 										   'file/overlay/yoodooInterface.js',
 										   'file/overlay/yoodooLanguage.js',

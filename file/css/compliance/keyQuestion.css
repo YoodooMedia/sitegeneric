@@ -1,0 +1,1337 @@
+.cssDetector_keyQuestion{display:none;}
+#yoodooScrolledArea{
+	overflow:hidden;
+}
+#yoodooWidget.Chrome .keyQuestion div{
+	-webkit-backface-visibility:visible;
+}
+.keyQuestion{
+	position:relative;
+	overflow:visible;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea{	
+	border:none;
+	border-radius:0px;
+	border-bottom:0px solid #fff;
+	box-shadow:0px 0px 0px #fff;
+	background:#eaf5ff;
+	padding:0px 2px;
+	transition:background 0.3s,border 0.3s, box-shadow 0.3s;
+}
+#yoodooWidget .yoodooUI_textarea>.fixedTextareaSurround textarea:focus{
+	box-shadow:0px 3px 20px #999;
+	background:#fff;
+}
+#yoodooContainerContent .dooitDisplay.keyQuestion input[type=text]{
+	border:none;
+	border-bottom:2px solid #1669bb;
+	box-shadow:none;
+	border-radius:0px;
+}
+#yoodooContainerContent .dooitDisplay.keyQuestion input[type=text]:focus,
+#yoodooContainerContent .dooitDisplay.keyQuestion input[type=text]:hover{
+
+}
+#yoodooWidget>div>h2+div p,#yoodooWidget>div>h2+div li{
+	color:#555;
+}
+@-webkit-keyframes pulsing {
+  0% 100%  { -webkit-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -webkit-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-moz-keyframes pulsing {
+  0% 100%  { -moz-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -moz-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-o-keyframes pulsing {
+  0% 100%  { -o-transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { -o-transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@keyframes pulsing {
+  0% 100%  { transform:scale(1);box-shadow:0px 0px 0px #000; }
+  50% { transform:scale(0.95);box-shadow:0px 0px 10px #000; }
+}
+@-webkit-keyframes cta {
+  0% 100%  { -webkit-transform:scale(1);}
+  50% { -webkit-transform:scale(0.9);}
+}
+@-moz-keyframes cta {
+  0% 100%  { -moz-transform:scale(1);}
+  50% { -moz-transform:scale(0.9);}
+}
+@-o-keyframes cta {
+  0% 100%  { -o-transform:scale(1);}
+  50% { -o-transform:scale(0.9);}
+}
+@keyframes cta {
+  0% 100%  { transform:scale(1);}
+  50% { transform:scale(0.9);}
+}
+@-webkit-keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@-moz-keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@-o-keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@keyframes imminent {
+  0% 100%  { right:5px;}
+  50% { right:10px;}
+}
+@-webkit-keyframes nextRecord {
+  0% 100%  { border-color:#1669bb;}
+  50% { border-color:#1EDFF5;}
+}
+@-moz-keyframes nextRecord {
+  0% 100%  { border-color:#1669bb !important;}
+  50% { border-color:#75B7F7 !important;}
+}
+@-o-keyframes nextRecord {
+  0% 100%  { border-color:#1669bb !important;}
+  50% { border-color:#75B7F7 !important;}
+}
+@keyframes nextRecord {
+  0% 100%  { border-color:#1669bb !important;}
+  50% { border-color:#75B7F7 !important;}
+}
+#yoodooWidget .dooitBox,#yoodooWidget .dooitBox>div,#yoodooWidget .keyQuestion{
+	height:100%;
+	box-sizing:border-box;
+}
+#yoodooWidget .keyQuestion h2{
+	position:absolute;
+	margin:0px;
+	top:10px;
+}
+.keyQuestion section>div{
+	position:absolute;
+	right:0px;
+	top:-90px;
+	transition:top 0.3s;
+}
+.keyQuestion section>div>div{
+	margin-right:100px;
+	line-height:20px;
+}
+.keyQuestion.showSections .statDiv{
+	top:0px;
+}
+.keyQuestion.showItems .sectionstatDiv{
+	top:0px;
+}
+.keyQuestion .statPlans{
+	border-top:1px solid #999;
+}
+.keyQuestion section>div>.statDial{
+	margin-right:0px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.keyQuestion section>div>.statDial .keyQuestion_numeric_dial{
+	font-size:40px;
+	height:40px;
+	line-height:40px;
+}
+.keyQuestion section>div>.statDial .keyQuestion_numeric_dial.belowTen{
+	font-size:60px;
+	height:60px;
+	line-height:60px;
+}
+#yoodooWidget .keyQuestion h2>button{
+	display:none;
+}
+#yoodooWidget .keyQuestion.showSections h2>button{
+	display:inline;
+}
+#yoodooWidget .keyQuestion>div{
+	position:absolute;
+	box-sizing:border-box;
+	padding:60px 0px 0px 0px;
+	height:100%;
+	width:100%;
+	top:0px;
+	left:0%;
+	-webkit-transition:left 0.3s;
+	-moz-transition:left 0.3s;
+	-o-transition:left 0.3s;
+	transition:left 0.3s;
+}
+#yoodooWidget .keyQuestion button{
+	cursor:pointer;
+	font-size:14px;
+	line-height:14px;
+}
+.keyQuestion>div>div{
+	height:100%;
+	overflow:hidden;
+	overflow-y:auto;
+}
+.keyQuestion .yoodooUI_dial>div{
+	display:none;
+}
+#yoodooWidget .keyQuestion.showSections>div{
+	/*display:block;*/
+	left:0%;
+}
+#yoodooWidget .keyQuestion.showSections>div+div{
+	/*display:block;*/
+	left:101%;
+}
+#yoodooWidget .keyQuestion.showItems>div{
+	/*display:block;*/
+	left:101%;
+}
+#yoodooWidget .keyQuestion.showItems>div+div{
+	/*display:block;*/
+	left:0%;
+}
+#yoodooWidget .keyQuestion.showItems>div+div+div{
+	/*display:none;*/
+	left:101%;
+}
+#yoodooWidget .keyQuestion.showRecords>div{
+	/*display:none;*/
+	left:101%;
+}
+#yoodooWidget .keyQuestion.showRecords>div+div+div{
+	/*display:block;*/
+	left:0%;
+}
+#yoodooWidget .keyQuestion.showRecords>div+div+div+div{
+	/*display:none;*/
+	left:101%;
+}
+#yoodooWidget .keyQuestion.showRecord>div{
+	/*display:none !important;*/
+	left:101% !important;
+}
+#yoodooWidget .keyQuestion.showRecord>div+div+div+div{
+	/*display:block !important;*/
+	left:0% !important;
+}
+.emptyMessage{
+	color:#999;
+}
+.recordButton{
+
+}
+.recordButton+.emptyMessage{
+	display:none;
+}
+#yoodooWidget .keyQuestion button.addButton{
+	border:none;
+	border-radius:50px;
+	width:50px;
+	height:50px;
+	transition:zoom 0.3s,opacity 0.3s;
+	color:#fff;
+	font-size:40px;
+	line-height:40px;
+}
+
+#yoodooWidget .keyQuestion .responseEditor button.addButton{
+	width:40px;
+	height:40px;
+}
+#yoodooWidget .keyQuestion .suggestMessage{
+	display:none;
+	position:absolute;
+	right:80px;
+	height:50px;
+	line-height:50px;
+	color:#99CC33;
+}
+#yoodooWidget .keyQuestion .suggestMessage.suggestalert{
+	display:block;
+}
+#yoodooWidget .keyQuestion .suggestMessage.suggestalert+button.addButton{
+	-webkit-animation: cta 1s infinite;
+	-moz-animation: cta 1s infinite;
+	-o-animation: cta 1s infinite;
+	animation: cta 1s infinite;
+}
+.keyQuestion .deleteConfirm{
+	width:300px;
+	background:#fff;
+	position:absolute;
+	right:-310px;
+	top:0px;
+	transition:right 0.3s;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.keyQuestion .deleteConfirm.on{
+	right:5px;
+}
+.keyQuestion .deleteConfirm button{
+	color:#fff;
+	border:none;
+	border-radius:3px;
+	height:24px;
+	margin:3px;
+}
+#yoodooWidget .keyQuestion button.delButton{
+	border:none;
+	border-radius:50px;
+	height:30px;
+	color:#fff;
+	background:#ab2a2a;
+	font-size:12px;
+	line-height:30px;
+	padding:0px 10px;
+	-webkit-transition:opacity 0.3s;
+	-moz-transition:opacity 0.3s;
+	-o-transition:opacity 0.3s;
+	transition:opacity 0.3s;
+	opacity:0.4;
+	position:absolute;
+	right:5px;
+	top:0px;
+}
+#yoodooWidget .keyQuestion button.delButton:hover{
+	opacity:1;
+}
+#yoodooWidget .kloe_response_dialog button.backButton,#yoodooWidget .keyQuestion button.backButton{
+	border:none;
+	border-radius:50px 0px 0px 50px;
+	height:30px;
+	-webkit-transition:background 0.3s,opacity 0.3s;
+	-moz-transition:background 0.3s,opacity 0.3s;
+	-o-transition:background 0.3s,opacity 0.3s;
+	transition:background 0.3s,opacity 0.3s;
+	color:#fff;
+	font-size:12px;
+	line-height:30px;
+	padding:0px 10px;
+	margin: 0px 0px 10px 0px;
+	min-width:0px;
+}
+#yoodooWidget .kloe_response_dialog button.backButton.withCTA,#yoodooWidget .keyQuestion button.backButton.withCTA{
+	background:#9c3;
+}
+#yoodooWidget .kloe_response_dialog button.backButton.withCTA:hover,#yoodooWidget .keyQuestion button.backButton.withCTA:hover{
+	background:#B0EF33;
+}
+#yoodooWidget button.addButton:hover{
+	background:#B0EF33;
+}
+#yoodooWidget .keyQuestion button.backButton svg,#yoodooWidget .keyQuestion button.backButton img,#yoodooWidget .kloe_response_dialog button.backButton svg,#yoodooWidget .kloe_response_dialog button.backButton img{
+	vertical-align:middle;
+	margin:5px 0px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.keyQuestion h3,#yoodooWidget .kloe_response_dialog h3{
+	display:inline-block;
+	vertical-align:middle;
+	line-height:30px;
+	height:30px;
+	margin:0px 0px 10px 0px;
+	padding:0px 30px 0px 30px;
+	background:#084d84;
+	color:#fff;
+	border-radius:0px 50px 50px 0px;
+}
+#yoodooWidget .keyQuestion .recordButton.emptyRecord+.emptyMessage+button.addButton{
+	zoom:0;
+	opacity:0;
+}
+#yoodooWidget .keyQuestion button.info{
+	border:none;
+	border-radius:50px;
+	width:20px;
+	height:20px;
+	background:rgb(156,182,239);
+	color:#fff;
+	font-size:14px;
+	line-height:18px;
+	margin:0px 0px 0px 10px;
+	vertical-align:top;
+}
+#yoodooWidget .keyQuestion h3>button.info{
+	margin:5px -24px 5px 10px;
+}
+#yoodooWidget button.recordButton{
+	border:1px solid #999;
+	border-left:10px solid #999;
+	background:#FFF;
+	color:#555;
+	border-radius:5px;
+	margin:10px 0px;
+	display:block;
+	height:60px;
+	/*white-space:nowrap;
+	overflow:hidden;*/
+	text-overflow:ellipsis;
+	position:relative;
+	left:0px;
+	text-align:left;
+	width:100%;
+	-webkit-transition:border 0.3s;
+	-moz-transition:border 0.3s;
+	-o-transition:border 0.3s;
+	transition:border 0.3s;
+}
+#yoodooWidget button.recordButton:hover{
+	border-left-width:20px;
+}
+#yoodooWidget button.recordButton span.imminentDate{
+	color:#f00;
+	-webkit-animation: imminent 1s infinite;
+	-moz-animation: imminent 1s infinite;
+	-o-animation: imminent 1s infinite;
+	animation: imminent 1s infinite;
+}
+#yoodooWidget button.recordButton>div{
+	overflow:hidden;
+	line-height:20px;
+	max-height:40px;
+	text-overflow:ellipsis;
+	margin:0px 150px 0px 0px;
+}
+#yoodooWidget button.recordButton>div+div{
+	position:absolute;
+	bottom:5px;
+	font-style:italic;
+	height:auto;
+	line-height:normal;
+	margin:0px;
+}
+#yoodooWidget button.recordButton>svg,#yoodooWidget button.recordButton>img{
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+#yoodooWidget button.recordButton>svg+svg,#yoodooWidget button.recordButton>img+img{
+	right:90px;
+}
+#yoodooWidget .sectionBox button.recordButton:nth-child(2n){
+	margin-left:5%;
+}
+.emptyRecord{
+	-webkit-animation: pulsing 1s infinite;
+	-moz-animation: pulsing 1s infinite;
+	-o-animation: pulsing 1s infinite;
+	animation: pulsing 1s infinite;
+}
+#yoodooWidget .keyQuestion select{
+	color:#fff;
+	background:#999;
+}
+#yoodooWidget .keyQuestion select option{
+	background:#fff;
+}
+.keyQuestion .yoodooUI{
+	padding:5px 0px;
+}
+.keyQuestion .expiredRecords{
+	border-bottom:3px solid #f00;
+	padding:10px;
+}
+.keyQuestion .pendingRecords{
+	padding:10px;
+}
+#yoodooWidget .keyQuestion button.item{
+	background:#fff;
+	border:1px solid #999;
+	color:#555;
+	width:100%;
+	height:50px;
+	vertical-align:top;
+	margin:5px 0px;
+	border-radius:5px;
+	-webkit-transition:background-color 0.3s, left 0.3s;
+	-moz-transition:background-color 0.3s, left 0.3s;
+	-o-transition:background-color 0.3s, left 0.3s;
+	transition:background-color 0.3s, left 0.3s;
+	position:relative;
+	left:0px;
+}
+.subsectionList{
+	padding:10px;
+}
+#yoodooWidget .keyQuestion button.item.section{
+	transform-style: preserve-3d;
+	transform:perspective(250px) rotateX(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform:perspective(250px) rotateX(0deg);
+	-webkit-transition:-webkit-transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	-moz-transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	-o-transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	transition:transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+}
+#yoodooWidget .keyQuestion button.item.section:hover{
+	-webkit-transform:perspective(250px) translateZ(-10px) rotateX(5deg);
+	transform:perspective(250px) translateZ(-10px) rotateX(5deg);
+	z-index:999;
+	background:#f8f8f8;
+	left:0px;
+	box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+}
+#yoodooWidget .keyQuestion button.item:hover{
+	background:#f5f5f5 !important;
+	left:5px;
+}
+#yoodooWidget .keyQuestion button.item.section{
+	width:48%;
+	height:auto;
+	overflow:hidden;
+}
+#yoodooWidget .keyQuestion button.item.section:nth-child(2n){
+	margin-left:4%;
+}
+#yoodooWidget.Explorer8 .keyQuestion button.item.section{
+	margin-left:1%;
+	margin-right:1%;
+}
+.keyQuestion button.item .immediateItems,.keyQuestion button.item .imminentItems,.keyQuestion button.item .actionplans,.keyQuestion button.item .exclamations{
+	width:25%;
+	max-width:80px;
+	display:inline-block;
+	font-size:18px;
+}
+.keyQuestion button.item .immediateItems>*,.keyQuestion button.item .imminentItems>*,.keyQuestion button.item .actionplans>*,.keyQuestion button.item .exclamations>*{
+	vertical-align:middle;
+	margin:0px 2px;
+}
+#yoodooWidget .keyQuestion button.item.subsection{
+	height:auto;
+	position:relative;
+	overflow:hidden;
+}
+#yoodooWidget .keyQuestion button.item.subsection b{
+	display:inline-block;
+	width:10%;
+	font-size:18px;
+	line-height:40px;
+	white-space:nowrap;
+	overflow:hidden;
+	vertical-align:middle;
+	color:#084d84;
+}
+#yoodooWidget .keyQuestion button.item.subsection .optionalTemplates.on+b{
+	line-height:24px;
+	height:40px;
+	padding:16px 0px 0px 0px;
+	box-sizing:border-box;
+}
+#yoodooWidget .keyQuestion button.item.subsection b+div{
+	display:inline-block;
+	width:90%;
+	line-height:20px;
+	overflow:hidden;
+	vertical-align:middle;
+	text-align:left;
+	padding-right:60px;
+	box-sizing:border-box;
+}
+#yoodooWidget .keyQuestion button.item.subsection b+div+div{
+	position:absolute;
+	top:0px;
+	right:30px;
+	line-height:40px;
+	height:40px;
+}
+#yoodooWidget .keyQuestion button.item.subsection b+div+div+div{
+	position:absolute;
+	top:0px;
+	right:0px;
+	line-height:40px;
+	height:40px;
+}
+/#yoodooWidget .keyQuestion button.item.subsection svg,#yoodooWidget .keyQuestion button.item.subsection img{
+	vertical-align:middle;
+	margin:5px;
+}
+/*#yoodooWidget .keyQuestion button.item>div{
+	margin-right:70px;
+	margin-left: 70px;
+}*/
+.keyQuestion button.section .buttonLabel{
+	margin-bottom:5px;
+	overflow:hidden;
+	border-bottom:1px solid #dddddd;
+	height:60px;
+	position:relative;
+}
+.keyQuestion button.section .buttonLabel b{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:20%;
+	font-size:18px;
+	line-height:60px;
+	white-space:nowrap;
+	overflow:hidden;
+	vertical-align:middle;
+	text-align:center;
+	color:#084d84;
+}
+.keyQuestion button.section .buttonLabel em{
+	font-size:18px;
+	color:#084d84;
+}
+.keyQuestion button.section .buttonLabel div{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:80%;
+	line-height:20px;
+	max-height:60px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	vertical-align:middle;
+	text-align:left;
+}
+.keyQuestion .scoreBar{
+	padding:5px 0px;
+}
+.keyQuestion .scoreBar>div{
+	overflow:hidden;
+	white-space:nowrap;
+	text-align:left;
+	border-radius:5px;
+	padding:2px;
+	background:rgba(0,0,0,0.1);
+	box-shadow:1px 3px 10px rgba(0,0,0,0.5) inset;
+}
+.keyQuestion .scoreBar>div>div{
+	background:rgba(0,255,0,0.5);
+	height:10px;
+	border-radius:3px;
+	box-shadow:0px 0px 2px #000;
+}
+/*.keyQuestion .scoreBar,.keyQuestion .scoreBar div{
+	height:20px;
+}
+.keyQuestion .scoreBar>div{
+	overflow:hidden;
+	white-space:nowrap;
+	text-align:left;
+	border-radius:3px;
+	background:rgba(0,0,0,0.1);
+	box-shadow:1px 3px 10px rgba(0,0,0,0.5) inset;
+}
+.Explorer8 .keyQuestion .scoreBar>div{
+	background:#f7f7f7;
+	border:1px solid #999999;
+	box-sizing:border-box;
+}
+.keyQuestion .scoreBar>div>div{
+	display:inline-block;
+}
+.keyQuestion .scoreBar>div>div>div{
+	border-radius:0px;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5) inset;
+}
+.keyQuestion .scoreBar>div.bar0>div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar10>div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar20>div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar30>div+div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar40>div+div+div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar50>div+div+div+div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar60>div+div+div+div+div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar70>div+div+div+div+div+div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar80>div+div+div+div+div+div+div+div+div{
+	display:none;
+}
+.keyQuestion .scoreBar>div.bar90>div+div+div+div+div+div+div+div+div+div{
+	display:none;
+}
+
+.keyQuestion .scoreBar>div>div{
+	width:10%;
+	padding:0px 0px;
+	box-sizing:border-box;
+}
+.keyQuestion .scoreBar>div.bar0>div>div{
+	background:#fa361b;
+}
+.keyQuestion .scoreBar>div.bar10>div>div{
+	background:#fa361b;
+}
+.keyQuestion .scoreBar>div.bar20>div>div{
+	background:#fa361b;
+}
+.keyQuestion .scoreBar>div.bar30>div>div{
+	background:#faa41b;
+}
+.keyQuestion .scoreBar>div.bar40>div>div{
+	background:#faa41b;
+}
+.keyQuestion .scoreBar>div.bar50>div>div{
+	background:#efe21a;
+}
+.keyQuestion .scoreBar>div.bar60>div>div{
+	background:#efe21a;
+}
+.keyQuestion .scoreBar>div.bar70>div>div{
+	background:#8bab2a;
+}
+.keyQuestion .scoreBar>div.bar80>div>div{
+	background:#8bab2a;
+}
+.keyQuestion .scoreBar>div.bar90>div>div{
+	background:#1fef1a;
+}
+.keyQuestion .scoreBar>div.bar100>div>div{
+	background:#1fef1a;
+}
+.keyQuestion .scoreBar>div>div>div>div{
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 26%, rgba(255,255,255,0.5) 39%, rgba(255,255,255,0) 53%, rgba(255,255,255,0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(26%,rgba(255,255,255,0.5)), color-stop(39%,rgba(255,255,255,0.5)), color-stop(53%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); 
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 26%,rgba(255,255,255,0.5) 39%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+
+}*/
+.promptDescription{
+	padding:0px 0px 10px 0px;
+}
+.recordSection{
+	/*width:80%;*/
+	border:1px solid #1669bb;
+	border-radius:5px;
+	padding:10px;
+	margin:0px 50px;
+	background:#fff;
+	transition:border 0.3s;
+}
+.sectionLink{
+	width:5px;
+	margin:-1px 0px -1px 20%;
+	border-left:1px solid #1669bb;
+	border-right:1px solid #1669bb;
+	background:#fff;
+	height:20px;
+	position:relative;
+}
+.recordSection.isEmpty{
+	border-color:#ddd;
+}
+.recordSection.isEmpty+div{
+	border-color:#ddd;
+}
+.promptDescription+.recordSection.isEmpty,.recordSection+.sectionLink+.recordSection.isEmpty{
+	/*border-color:#1ADF23;*/
+	border-color:#1669bb;
+	border-width:5px;
+	margin:-5px 50px;
+	-webkit-animation: nextRecord 1s infinite;
+	-moz-animation: nextRecord 1s infinite;
+	-o-animation: nextRecord 1s infinite;
+	animation: nextRecord 1s infinite;
+}
+.recordSection.isEmpty~.recordSection.isEmpty{
+	border-color:#ddd;
+	border-width:1px;
+	margin:0px 50px;
+	-webkit-animation:none;
+	-moz-animation:none;
+	-o-animation:none;
+	animation:none;
+}
+.recordSection.disabled{
+	-webkit-animation:none !important;
+	-moz-animation:none !important;
+	-o-animation:none !important;
+	animation:none !important;
+	margin:0px 50px !important;
+}
+.recordSection.disabled,.recordSection.disabled+.sectionLink{
+	border-color:#eee !important;
+	border-width:1px !important;
+}
+.recordSection.disabled *{
+	border-color:#fff !important;
+	background:#fff !important;
+	cursor:default;
+}
+#yoodooWidget button.emptyRecordButton{
+	position:absolute;
+	bottom:3px;
+	left:-90px;
+	width:80px;
+	transition:left 0.3s, bottom 0.3s;
+	-webkit-animation: nextRecord 1s infinite;
+	-moz-animation: nextRecord 1s infinite;
+	-o-animation: nextRecord 1s infinite;
+	animation: nextRecord 1s infinite;
+	border:2px solid #1669bb;
+	color:#1669bb;
+	background:#fff;
+	border-radius:10px;
+	padding:5px;
+}
+#yoodooWidget button.emptyRecordButton:hover{
+	bottom:1px;
+}
+#yoodooWidget button.emptyRecordButton.on{
+	left:5px;
+}
+#yoodooWidget .keyQuestion button.voiceoverPlayer{
+	position:relative;
+	top:-40px;
+	left:10px;
+	border:none;
+	border-radius:50px;
+	width:20px;
+	height:20px;
+	background:#CCC;
+	color:#fff;
+	font-size:14px;
+	line-height:20px;
+	-webkit-transition:top 1s,background-color 1s;
+	transition:top 1s,background-color 1s;
+	padding:0px;
+	display:inline-block !important;
+}
+#yoodooWidget .keyQuestion button.voiceoverPlayer>svg,#yoodooWidget .keyQuestion button.voiceoverPlayer>img{
+	/*margin:3px;*/
+}
+#yoodooWidget .keyQuestion button.voiceoverPlayer.available{
+	top:-2px;
+}
+#yoodooWidget .keyQuestion button.voiceoverPlayer.playing{
+	background:rgb(198,150,20);
+
+	-webkit-animation: pulsing 1s infinite;
+	-moz-animation: pulsing 1s infinite;
+	-o-animation: pulsing 1s infinite;
+	animation: pulsing 1s infinite;
+}
+#yoodooWidget .blockout{
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	box-sizing : border-box;
+	padding : 50;
+	background : rgba(255,255,255,0.9);
+	z-index : 998;
+	top : 0px;
+}
+#yoodooWidget .blockout>h2{
+	transform:rotate(10deg);
+	display:inline-block;
+	position:absolute;
+	right:75px;
+	top:10px;
+	color:#791F1F;
+	text-transform:uppercase;
+	border:2px solid #791f1f;
+	padding:2px 6px;
+	background:#fff;
+}
+#yoodooWidget .blockout>button{
+	position:absolute;
+	font-size:11px;
+	background:#fff;
+	border:1px solid #999;
+	color:#999;
+	cursor:pointer;
+	top:5px;
+	left:5px;
+	transition:background 0.3s,color 0.3s;
+}
+#yoodooWidget .blockout>button:hover{
+	background:#999;
+	color:#fff;
+}
+#yoodooWidget .blockout>button.closebutton{
+	left:initial;
+	right:5px;
+	padding:3px;
+	border-radius:20px;
+}
+#yoodooWidget.Explorer8 .blockout{
+	background:url(../../../../../images/blank.gif);
+}
+#yoodooWidget .blockout>div{
+	padding : 75px 10px 10px 10px;
+	height:100%;
+	box-sizing:border-box;
+	border:3px solid #555;
+	text-align : center;
+	background:#fff;
+}
+#yoodooWidget .blockout>div>div{
+	height:100%;
+	overflow-y:auto;
+}
+#yoodooWidget .blockout>div>div h2{
+	color:#3E74C5;
+	float:left;
+	margin:0px 10px 5px 0px;
+}
+#yoodooWidget .blockout>div>div .description{
+	padding:5px;
+	background:#eee;
+	border-radius:5px;
+	margin:3px;
+	overflow:auto;
+	text-align:left;
+}
+#yoodooWidget.Explorer8 .blockout>h2{
+	top:10px;
+}
+.actionPlanForm{
+	display:none;
+}
+.requireActionPlan .actionPlanForm{
+	display:block;
+}
+#yoodooWidget .columns2,#yoodooWidget .columnLike{
+	width:80%;
+	margin:5px auto;
+	border:1px solid #eee;
+	border-radius:5px;
+	padding:0px 10px;
+	background:#fff;
+	box-sizing:border-box;
+}
+#yoodooWidget .yoodooUI_dialog .columns2{
+	width:100%;
+}
+.yoodooUI_dialog label{
+	text-align:left;
+}
+.columns2>div{
+	display:inline-block;
+	vertical-align:top;
+	width:50%;
+}
+.columns2>div+div+div{
+	text-align:center;
+	width:100%;
+	margin:10px 0px;
+}
+.yoodooUI_dialog h4{
+	margin-top:0px;
+}
+#yoodooWidget .keyQuestion .expiryInput button{
+	margin:0px auto;
+	width:100%;
+	display:block;
+}
+#yoodooWidget .keyQuestion .expiryInput button>div:first-child{
+	font-size:24px;
+	line-height:30px;
+}
+#yoodooWidget .keyQuestion .evidenceSummary{
+	text-align:center;
+}
+#yoodooWidget .keyQuestion .evidenceSummary svg{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+#yoodooWidget .keyQuestion .actionPlanSummary{
+	text-align:center;
+}
+#yoodooWidget .keyQuestion .actionPlanSummary svg{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+#yoodooWidget .keyQuestion .evidenceSummary button,
+#yoodooWidget .keyQuestion .actionPlanSummary button{
+	width:100%;
+	padding:5px;
+}
+#yoodooWidget .keyQuestion .evidenceSummary button div,
+#yoodooWidget .keyQuestion .actionPlanSummary button div{
+	font-size:30px;
+	line-height:30px;
+}
+#yoodooWidget .keyQuestion .actionPlanSummary button{
+	color:#bbb;
+}
+#yoodooWidget .keyQuestion .evidenceSummary button,
+#yoodooWidget .keyQuestion .requireActionPlan .actionPlanSummary button,
+#yoodooWidget .keyQuestion .requireActionPlan.actionPlanSummary button{
+	color:#084d84;
+}
+#yoodooWidget .responseEditor{
+	position:absolute;
+	height:100%;
+	width:100%;
+	box-sizing:border-box;
+	padding:50px 0px 0px 0px;
+	left:0px;
+	bottom:0px;
+	overflow:hidden;
+	/*background:rgba(255,255,255,0.8);*/
+}
+#yoodooWidget .responseEditor>div{
+	position:relative;
+	border:1px solid #bbb;
+	border-radius:5px;
+	height:100%;
+	box-sizing:border-box;
+	padding:50px 5px 5px 5px;
+	background:rgba(255,255,255,0.9);
+}
+#yoodooWidget .responseEditor>div>recordWindow{
+	overflow-y:auto;
+	height:100%;
+}
+#yoodooWidget .responseEditor>div>button.addButton{
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+#yoodooWidget .responseEditor>div>h4{
+	position:absolute;
+	top:5px;
+	margin:0px;
+	line-height:50px;
+}
+
+
+
+
+#yoodooWidget .keyQuestion .recordWindow button{
+	border:none;
+	border-bottom:1px solid #eee;
+	background:#fff;
+	color:#084D84;
+	padding:5px 10px;
+	text-align:left;
+	width:100%;
+	line-height:30px;
+	margin:3px 0px 0px 0px;
+	-webkit-transition:background 0.3s,color 0.3s,padding 0.3s;
+	-moz-transition:background 0.3s,color 0.3s,padding 0.3s;
+	transition:background 0.3s,color 0.3s,padding 0.3s;
+	overflow:hidden;
+}
+#yoodooWidget .keyQuestion .recordWindow button+button{
+	margin:0px;
+}
+#yoodooWidget .keyQuestion .recordWindow button:hover{
+	background:#6DA6D4;
+	padding-left:20px;
+	color:#fff;
+}
+#yoodooWidget .keyQuestion .recordWindow button button.delButton{
+	position:relative;
+	right:-45px;
+	float:right;
+	width:30px;
+	height:30px;
+	background:#8D3737;
+	padding:3px;
+	color:#ab2a2a;
+	line-height:30px;
+	margin:0px;
+	border-radius:50px;
+	padding:0px;
+	-webkit-transition:background 0.3s,right 0.3s;
+	-moz-transition:background 0.3s,right 0.3s;
+	transition:background 0.3s,right 0.3s;
+	text-align:center;
+}
+#yoodooWidget .keyQuestion .recordWindow button:hover button.delButton{
+	right:0px;
+}
+#yoodooWidget .keyQuestion .recordWindow button button.delButton:hover{
+	background:#E71515;
+	color:#fff;
+}
+.losenge{
+	position:absolute;
+	top:5px;
+}
+.kloe_response_dialog .losenge{
+	position:static;
+	text-align:left;
+}
+.keyQuestion .loading{
+	background:url(../../../../sitegeneric/image/loading.gif) no-repeat center center;
+	min-height:40px;
+}
+.yoodooUI .disabledTextarea{
+	padding:2px 10px;
+	text-align:left;
+	color:#555;
+	margin:0px auto;
+}
+#yoodooWidget button.keyQuestion_exporter{
+	float:right;
+}
+.TagSelector button{
+	margin:2px;
+	padding:2px 5px;
+	background:#D2D7DC;
+	color:#fff;
+	cursor:pointer;
+	border:none;
+	border-radius:3px;
+	transition:background 0.3s, color 0.3s;
+}
+.TagSelector button.on{
+	background:#084d84;
+	color:#fff;
+}
+.TagSelector button:hover{
+	background:#9BA6B2;
+}
+.TagSelector button.on:hover{
+	background:#084d84;
+	color:#9BA6B2;
+}
+.responseCount{
+	color:#084d84;
+	text-align:right;
+	padding:0px 10px 5px 10px;
+}
+.subsection em{
+	color:#084d84;
+	font-size:24px;
+}
+.subsection em.gotNone{
+	color:#eeeeee;
+}
+.recordButton .indicator{
+	position:absolute;
+	left:-5px;
+	height:100%;
+	bottom:1px;
+	background:#F60;
+	color:#fff;
+	border-radius:20px;
+	border:1px solid #F60;
+	overflow:visible !important;
+	width:20px !important;
+	height:20px !important;
+	text-align:center;
+}
+.recordButton .indicator:before{
+	content:'!';
+}
+.recordButton .indicator>div{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#F60;
+	color:#fff;
+	border-radius:20px;
+	border:1px solid #F60;
+	white-space:nowrap;
+	display:none;
+	text-align:left;
+	padding:3px 20px;
+	line-height:16px !important;
+	font-size:12px !important;
+}
+.recordButton .indicator:hover>div{
+	display:block;
+}
+#yoodooWidget button.clipboardPaste{
+	border:none;
+	background:url(/images/cms/icons/paste.png) no-repeat center center;
+	width:21px;
+	height:23px;
+	float:right;
+	position:relative;
+	transform:rotate(0deg);
+	top:0px;
+	left:0px;
+	transition:transform 0.5s,top 0.5s,left 0.5s;
+}
+#yoodooWidget button.clipboardPaste:hover{
+	transform:rotate(20deg);
+	top:3px;
+	left:-3px;
+}
+#yoodooWidget .recordButton button.clipboardCopy{
+	display:none;
+	border:none;
+	background:url(/images/cms/icons/copy.png) no-repeat center center;
+	width:21px;
+	height:23px;
+	position:absolute;
+	top:-3px;
+	left:5px;
+	transform:scale(1);
+	transition:transform 0.5s;
+}
+#yoodooWidget .recordButton:hover button.clipboardCopy{
+	display:block;
+}
+#yoodooWidget .recordButton button.clipboardCopy:hover{
+	transform:scale(1.2);
+}
+#yoodooWidget #yoodooContainerContent .dooitBox .promptMessage{
+	color:#084d84;
+}
+#yoodooWidget #yoodooContainerContent .dooitBox section.promptMessage{
+	background:rgba(255,255,255,0.9);
+	border:1px solid #ddd;
+	border-radius:3px;
+	padding:3px;
+	box-sizing:border-box;
+}
+.promptMessage b{
+	padding-right:20px;
+}
+.optionalTemplates{
+	position:absolute;
+	top:-22px;
+	left:0px;
+	box-sizing:border-box !important;
+	width:100%;
+	line-height:22px;
+	/*border-bottom:3px solid rgb(242,166,77);*/
+	border-radius:5px 5px 0px 0px;
+	background:#fff;
+	transition:top 0.3s;
+	display:none;
+}
+.optionalTemplates.on{
+	display:block;
+}
+.item.section:hover .optionalTemplates,.item.subsection:hover .optionalTemplates{
+	top:0px;
+}
+#yoodooWidget .keyQuestion button .optionalTemplates svg,#yoodooWidget .keyQuestion button .optionalTemplates img{
+	vertical-align:top;
+	margin:3px 5px 4px 0px;
+}
+.optionalTemplates>span{
+	display:inline-block;
+}
+.optionalTemplates>span>*{
+	vertical-align:middle;
+}
+.templateMessage{
+	height:22px;
+	border-bottom:3px solid rgb(242,166,77);
+	text-align:left;
+}
+.templateMessage>span{
+	padding:0px 5px;
+	margin:0px 5px;
+	display:inline-block;
+	line-height:22px;
+	vertical-align:middle;
+	border-radius:5px;
+}
+#yoodooWidget .updateOptional,#yoodooWidget .updateAdded,#yoodooWidget .updateUpdated{
+	width:28px;
+	height:22px;
+	padding:7px 6px 5px 9px;
+	box-sizing:border-box;
+	display:inline-block;
+	line-height:10px;
+	font-size:10px;
+	text-align:center;
+	background:url(images/updateIcons.png) no-repeat;
+	overflow:hidden;
+}
+#yoodooWidget .updateOptional{
+	background-position:0px -44px;
+	color:#25d6e1;
+}
+#yoodooWidget .updateAdded{
+	background-position:0px 0px;
+	color:#fb3e3e;
+}
+#yoodooWidget .updateUpdated{
+	background-position:0px -22px;
+	color:#f3b162;
+}
+.templateTitle{
+	position:absolute;
+	float:left;
+	border-right:3px solid rgb(242,166,77);
+	border-bottom:3px solid rgb(242,166,77);
+	border-radius:0px 0px 5px 0px;
+	top:22px;
+	background:#fff;
+	padding:0px 5px;
+	font-size:12px;
+	height:16px;
+	line-height:16px;
+}
+.optionalResponses{
+	clear:both;
+}
+.optionalResponses button{
+	border:1px solid #99CC33;
+	background:#D1E0B2;
+	border-radius:3px;
+	font-size:12px !important;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position:relative;
+	display:block;
+	width:100%;
+	color:#537510;
+	padding:5px;
+	text-align:left;
+	min-height:32px;
+}
+.optionalResponses button em{
+	display:block;
+	text-align:left;
+}
+.optionalResponses button span{
+	background:#D1E0B2;
+	float:right;
+}
+.optionalResponses button div{
+	border-radius:50px;
+	height:39px;
+	width:39px;
+	background:#99CC33;
+	position:absolute;
+	top:-4px;
+	right:-50px;
+	transition:right 0.3s;
+	box-shadow:-5px 0px 10px #000;
+}
+.optionalResponses button div>img,.optionalResponses button div>svg{
+	margin:12px;
+}
+.optionalResponses button:hover div{
+	right:-6px;
+}
+.responseReminder{
+	
+}
+#yoodooWidget #yoodooContainerContent .dooitBox .responseReminder p{
+	width:80%;
+	margin:0px auto;
+	font-size:11px;
+	color:#084D84;
+}
+.recordWindow{
+	height:100%;
+	overflow-y:auto;
+}

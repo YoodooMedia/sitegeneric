@@ -49,6 +49,8 @@ var kloe_overview = {
 	managerTypeNames:{},
 	promptDisplayNames:{},
 	keyQuestionPromptCount:{},
+	keyQuestions:{},
+	keyQuestionOrder:[],
 	doSVG:(document.createElementNS!==undefined),
 	icons:{
 		cross:{
@@ -92,62 +94,64 @@ var kloe_overview = {
 		this.loadManagers();
 		// fetch the home summary view
 		var step5=function() {
-
-			yoodoo.object.getView(dooit.options.home_summary.value,null,function(view) {
-//console.log(view);
-				var foundManagerIds={};
-				var promptToKeyQuestionKey=me.objects.prompt.getParameterReferingToObjectId(me.objects.keyQuestion.schema.Id);
-				for(var i in view.results) {
-					var obj={};
-					for(var c in view.columns) obj[view.columns[c]]=view.results[i].columns[c];
-//console.log(view.columns,view.results[i].columns,obj);
-					var mid=view.results[i].managerTypeId;
-//console.log(view.results[i]);
-//console.log(mid);
-					if (me.managerIds[mid]!==undefined && obj.Prompt!==null) {
-						foundManagerIds[mid]=true;
-						//if (me.managerTypes[mid]===undefined) me.managerTypes[mid]={};
-						//if (me.managerTypeNames[obj['Manager type']]===undefined) me.managerTypeNames[obj['Manager type']]=me.managerIds[mid];
-						if (me.managerIds[mid].keyQuestion===undefined) me.managerIds[mid].keyQuestion={};
-						var prompt=me.prompts[obj.Prompt];
-//console.log(prompt,obj.Prompt);
-						var keyQuestion=me.keyQuestions[prompt.value[promptToKeyQuestionKey]];
-						var kqName=keyQuestion.displayName();
-						me.managerIds[mid].gotResults=true;
-						//console.log(mid,kqName);
-						if (me.managerIds[mid].keyQuestion[kqName]===undefined) me.managerIds[mid].keyQuestion[kqName]={
-							keyQuestion:null,
-							Score:0,
-							PromptScores:0,
-							PromptCount:me.keyQuestionPromptCount[prompt.value[promptToKeyQuestionKey]],
-							Immediate:0,
-							Imminent:0,
-							'Action Plans':0,
-							'Evidence':0,
-							'Live Action Plans':0,
-							Count:0,
-							Results:[]
-						};
-						me.managerIds[mid].keyQuestion[kqName].Results.push(obj);
-						for(var k in obj) {
-							if (me.managerIds[mid].keyQuestion[kqName][k]!==undefined) me.managerIds[mid].keyQuestion[kqName][k]+=obj[k];
+					yoodoo.object.getView(dooit.options.home_summary.value,null,function(view) {
+		//console.log(view);
+						var foundManagerIds={};
+						var promptToKeyQuestionKey=me.objects.prompt.getParameterReferingToObjectId(yoodoo.keyQuestion.object.schema.Id);
+						for(var i in view.results) {
+							var obj={};
+							for(var c in view.columns) obj[view.columns[c]]=view.results[i].columns[c];
+		//console.log(view.columns,view.results[i].columns,obj);
+							var mid=view.results[i].managerTypeId;
+		//console.log(view.results[i]);
+		//console.log(mid);
+							if (me.managerIds[mid]!==undefined && obj.Prompt!==null) {
+								foundManagerIds[mid]=true;
+								//if (me.managerTypes[mid]===undefined) me.managerTypes[mid]={};
+								//if (me.managerTypeNames[obj['Manager type']]===undefined) me.managerTypeNames[obj['Manager type']]=me.managerIds[mid];
+								if (me.managerIds[mid].keyQuestion===undefined) me.managerIds[mid].keyQuestion={};
+								var prompt=me.prompts[obj.Prompt];
+		//console.log(prompt,obj.Prompt);
+								var keyQuestion=me.keyQuestions[prompt.value[promptToKeyQuestionKey]];
+								var kqName=keyQuestion.displayName();
+								me.managerIds[mid].gotResults=true;
+								//console.log(mid,kqName);
+								if (me.managerIds[mid].keyQuestion[kqName]===undefined) me.managerIds[mid].keyQuestion[kqName]={
+									keyQuestion:null,
+									Score:0,
+									PromptScores:0,
+									PromptCount:me.keyQuestionPromptCount[prompt.value[promptToKeyQuestionKey]],
+									Immediate:0,
+									Imminent:0,
+									Expired:0,
+									'Action Plans':0,
+									'Evidence':0,
+									'Live Action Plans':0,
+									Count:0,
+									Results:[]
+								};
+								me.managerIds[mid].keyQuestion[kqName].Results.push(obj);
+								for(var k in obj) {
+									if (me.managerIds[mid].keyQuestion[kqName][k]!==undefined) me.managerIds[mid].keyQuestion[kqName][k]+=obj[k];
+								}
+								if (me.managerIds[mid].keyQuestion[kqName].keyQuestion===null) me.managerIds[mid].keyQuestion[kqName].keyQuestion=keyQuestion;
+								var score=0;
+								if (obj.Responses>0 && me.suggestedCounts[obj.Prompt]!==undefined && me.suggestedCounts[obj.Prompt]>0) score=obj.Responses/me.suggestedCounts[obj.Prompt];
+								if (score>1) score=1;
+								me.managerIds[mid].keyQuestion[kqName].PromptScores+=score;
+								me.managerIds[mid].keyQuestion[kqName].Count++;
+							}
 						}
-						if (me.managerIds[mid].keyQuestion[kqName].keyQuestion===null) me.managerIds[mid].keyQuestion[kqName].keyQuestion=keyQuestion;
-						var score=0;
-						if (obj.Responses>0 && me.suggestedCounts[obj.Prompt]!==undefined && me.suggestedCounts[obj.Prompt]>0) score=obj.Responses/me.suggestedCounts[obj.Prompt];
-						if (score>1) score=1;
-						me.managerIds[mid].keyQuestion[kqName].PromptScores+=score;
-						me.managerIds[mid].keyQuestion[kqName].Count++;
-					}
-				}
-				for(var mid in me.managerIds) {
-					for(var kqName in me.managerIds[mid].keyQuestion) {
-						me.managerIds[mid].keyQuestion[kqName].Score=me.managerIds[mid].keyQuestion[kqName].PromptScores/me.managerIds[mid].keyQuestion[kqName].PromptCount;
-					}
-				}
-				//console.log(me.manager.getScores());
-				me.manager.draw();
-			},function(){});
+						for(var mid in me.managerIds) {
+							for(var kqName in me.managerIds[mid].keyQuestion) {
+								me.managerIds[mid].keyQuestion[kqName].Score=me.managerIds[mid].keyQuestion[kqName].PromptScores/me.managerIds[mid].keyQuestion[kqName].PromptCount;
+							}
+						}
+						//console.log(me.manager.getScores());
+						me.manager.draw();
+					},function(){},{
+						business_sector:yoodoo.businessSector.selectedBusinessSector
+					});
 		};
 		var processKeyQuestions=function(list) {
 			for(var l in list) me.keyQuestions[list[l].Id]=list[l];
@@ -162,7 +166,7 @@ var kloe_overview = {
 			}
 		};
 		var processPrompts=function(list) {
-			var promptToKeyQuestionKey=me.objects.prompt.getParameterReferingToObjectId(me.objects.keyQuestion.schema.Id);
+			var promptToKeyQuestionKey=me.objects.prompt.getParameterReferingToObjectId(yoodoo.keyQuestion.object.schema.Id);
 			var kqPromptCount={};
 			for(var l in list) {
 				if (me.prompts[list[l].Id]===undefined) {
@@ -175,12 +179,12 @@ var kloe_overview = {
 				}
 			}
 			me.keyQuestionPromptCount=kqPromptCount;
-			step4();
+			step5();
 		};
 		// fetch all prompts in this business sector
 		var step2=function() {
 			var filter={};
-			filter[me.objects.prompt.getParameterReferingToObjectId(me.objects.businessSector.schema.Id)]=dooit.options.business_sector.value;
+			filter[me.objects.prompt.getParameterReferingToObjectId(yoodoo.businessSector.object.schema.Id)]=yoodoo.businessSector.selectedBusinessSector;
 			me.objects.prompt.get(processPrompts,function() {},0,filter);
 		};
 
@@ -193,13 +197,32 @@ var kloe_overview = {
 		};*/
 
 		// load the 3 objects required
-		yoodoo.object.get([dooit.options.key_question.value,dooit.options.prompts.value,dooit.options.business_sector.object_id],function(list) {
-//console.log(list);
-			me.objects.businessSector=list.pop();
-			me.objects.prompt=list.pop();
-			me.objects.keyQuestion=list.pop();
-			step2();
-		},function(){},false);
+		yoodoo.businessSector.check(function(bs) {
+			yoodoo.keyQuestion.get(function(list) {
+				me.keyQuestions={};
+				me.keyQuestionOrder=[];
+				for(var l in list) {
+					if (list[l].value.qviof>0) {
+						me.keyQuestions[list[l].Id]=list[l];
+						me.keyQuestionOrder.push(list[l]);
+					}
+				}
+				me.keyQuestionOrder.sort(function(a,b) {
+					if (a.value.qviof<b.value.qviof) return -1;
+					if (a.value.qviof>b.value.qviof) return 1;
+					return 0;
+				});
+				
+				yoodoo.keyQuestion.getPromptsObject(function(obj) {
+				//yoodoo.object.get(dooit.options.prompts.value,function(list) {
+		//console.log(list);
+					//me.objects.businessSector=list.pop();
+					me.objects.prompt=obj;
+					//me.objects.keyQuestion=list.pop();
+					step2();
+				});
+			});
+		});
 	},
 	drawScore:function(percentage) {
 		var col=yoodooStyler.fromTo(yoodooStyler.hexToRGB(this.colours.red),yoodooStyler.hexToRGB(this.colours.green),percentage/100);
@@ -211,10 +234,19 @@ var kloe_overview = {
 		);
 	},
 	drawTable:function(ids) {
-		var table=$(yoodoo.e("table"));
-		var tablehead=$(yoodoo.e("thead"));
-		var tablebody=$(yoodoo.e("tbody"));
+		var managerColumnhead=$(yoodoo.e("div")).addClass('thead');
+		var managerColumnbody=$(yoodoo.e("div"));
+		var managerColumn=$(yoodoo.e("div")).addClass('managerColumn').append(managerColumnhead).append($(yoodoo.e("div")).addClass("tbody").append(managerColumnbody));
+		var keyQuestionColumnhead=$(yoodoo.e("div")).addClass('thead');
+		var keyQuestionColumnbody=$(yoodoo.e("div"));
+		var keyQuestionColumn=$(yoodoo.e("div")).addClass('keyQuestionColumn').append(keyQuestionColumnhead).append($(yoodoo.e("div")).addClass("tbody").append(keyQuestionColumnbody));
+		var table=$(yoodoo.e("div")).addClass('table').append(managerColumn).append(keyQuestionColumn);
 		var managerName=[];
+		
+		keyQuestionColumnbody.bind("scroll",function() {
+			managerColumnbody.get(0).scrollTop=this.scrollTop;
+			keyQuestionColumnhead.get(0).scrollLeft=this.scrollLeft;
+		});
 		for(var id in ids) {
 			managerName.push({name:this.managerIds[id].name,object:this.managerIds[id]});
 		}
@@ -226,13 +258,12 @@ var kloe_overview = {
 			if (a>b) return 1;
 			return 0;
 		});
-		var kqName=['Safe','Effective','Caring','Responsive','Well-led'];
-		var tr=$(yoodoo.e("tr"));
-		tr.append($(yoodoo.e("th")).html("Location"));
+		var kqName=[];
+		for(var k in this.keyQuestionOrder) kqName.push(this.keyQuestionOrder[k].displayName());
+		managerColumnhead.append($(yoodoo.e("div")).html("Location"));
 		for(var i in kqName) {
-			tr.append($(yoodoo.e("th")).html(kqName[i]));
+			keyQuestionColumnhead.append($(yoodoo.e("div")).html(kqName[i]));
 		}
-		tablehead.append(tr);
 //console.log(ids,managerName);
 		var parentmanager=null;
 		for(n in managerName) {
@@ -242,17 +273,17 @@ var kloe_overview = {
 //console.log(mid);
 //			if (ids[mid]!==undefined && this.managerIds[mid]!==undefined) {
 //console.log(this.managerIds[mid]);
-				var tr=$(yoodoo.e("tr"));
+				var tr=$(yoodoo.e("div"));
 				(function() {
 					var thisManager=manager;
 					if (manager.managers!==null) {
-						tr.append($(yoodoo.e("td")).append(
+						managerColumnbody.append($(yoodoo.e("div")).append(
 							$(yoodoo.e("button")).attr("type","button").html(manager.name).click(function() {
 								thisManager.draw();
 							})
 						));
 					}else{
-						tr.append($(yoodoo.e("td")).html(manager.name));
+						managerColumnbody.append($(yoodoo.e("div")).html(manager.name));
 					}
 				})();
 				var record=manager.keyQuestion;
@@ -260,7 +291,7 @@ var kloe_overview = {
 				//console.log(scores,record,manager);
 				for(var i in kqName) {
 					var nom=kqName[i];
-					var td=$(yoodoo.e("td")).addClass("result");
+					var td=$(yoodoo.e("div")).addClass("result");
 					if (typeof(record)!="undefined") {
 //console.log(record[nom]);
 						if (record[nom]===undefined) {
@@ -271,30 +302,38 @@ var kloe_overview = {
 							td.append(
 								kloe_overview.drawScore(Math.round(100*record[nom].Score))
 							);
-							if (record[nom].Immediate>0) {
+							if (record[nom].Immediate>0 || record[nom].Expired>0) {
 								//td.addClass("Immediate");
+								var immediate=null;
+								if (record[nom].Immediate>0) {
+									immediate=$(yoodoo.e("span")).addClass("warningCount").html(record[nom].Immediate).css({background:'#'+this.colours.red});
+									yoodoo.bubble(immediate.get(0),record[nom].Immediate+' response'+(record[nom].Immediate==1?' ':'s ')+'are in need of attention');
+								}
+								var expired=null;
+								if (record[nom].Expired>0) {
+									expired=$(yoodoo.e("span")).addClass("expired").html('+'+record[nom].Expired).css({'border-color':'#'+this.colours.red,color:'#'+this.colours.red});
+									yoodoo.bubble(expired.get(0),record[nom].Expired+' response'+(record[nom].Expired==1?' has expired and is':'s have expired and are')+' in need of attention');
+								}
 								td.append(
-									$(yoodoo.e("span")).addClass("Immediate").append(
-										$(yoodoo.e("span")).html(record[nom].Immediate).css({background:'#'+this.colours.red})
-									).prepend(
+									$(yoodoo.e("span")).addClass("Immediate").append(immediate).append(expired).prepend(
 										this.icon(this.icons.cross,20,20,100,100,{'4D4D4D':this.colours.red})
 									)
 								);
 							}
 							if (record[nom].Imminent>0) {
+								var imminent=$(yoodoo.e("span")).addClass("warningCount").html(record[nom].Imminent).css({background:'#'+this.colours.amber});
+								yoodoo.bubble(imminent.get(0),record[nom].Imminent+' response'+(record[nom].Imminent==1?' is':'s are')+' going to expire in the next week');
 								td.append(
-									$(yoodoo.e("span")).addClass("Imminent").append(
-										$(yoodoo.e("span")).html(record[nom].Imminent).css({background:'#'+this.colours.amber})
-									).prepend(
+									$(yoodoo.e("span")).addClass("Imminent").append(imminent).prepend(
 										this.icon(this.icons.warning,20,20,100,100,{'4D4D4D':this.colours.amber})
 									)
 								);
 							}
 							if (record[nom]['Live Action Plans']>0) {
+								var ap=$(yoodoo.e("span")).addClass("warningCount").html(record[nom]['Live Action Plans']).css({background:'#'+this.colours.cyan});
+								yoodoo.bubble(ap.get(0),record[nom]['Live Action Plans']+' Live Action Plan'+(record[nom]['Live Action Plans']==1?'':'s'));
 								td.append(
-									$(yoodoo.e("span")).addClass("Imminent").append(
-										$(yoodoo.e("span")).html(record[nom]['Live Action Plans']).css({background:'#'+this.colours.cyan})
-									).prepend(
+									$(yoodoo.e("span")).addClass("Imminent").append(ap).prepend(
 										this.icon(this.icons.walking,20,20,100,100,{'4D4D4D':this.colours.cyan})
 									)
 								);
@@ -310,20 +349,28 @@ var kloe_overview = {
 							td.append(
 								kloe_overview.drawScore(Math.round(100*scores[nom].Score))
 							);
-							if (scores[nom].Immediate>0) {
+							if (scores[nom].Immediate>0 || scores[nom].Expired>0) {
+								var expired=null;
+								if (scores[nom].Expired>0) {
+									expired=$(yoodoo.e("span")).addClass("expired").html('+'+scores[nom].Expired).css({'border-color':'#'+this.colours.red,color:'#'+this.colours.red});
+									yoodoo.bubble(expired.get(0),scores[nom].Expired+' location'+(scores[nom].Expired==1?' has ':'s have ')+'one or more responses that have expired and are in need of attention');
+								}
+								var immediate=null;
+								if (scores[nom].Immediate>0) {
+									immediate=$(yoodoo.e("span")).addClass("warningCount").html(scores[nom].Immediate).css({background:'#'+this.colours.red});
+									yoodoo.bubble(immediate.get(0),scores[nom].Immediate+' location'+(scores[nom].Immediate==1?' has':'s have')+' one or more responses that are in need of attention');
+								}
 								td.append(
-									$(yoodoo.e("span")).addClass("Immediate").append(
-										$(yoodoo.e("span")).html(scores[nom].Immediate).css({background:'#'+this.colours.red})
-									).prepend(
+									$(yoodoo.e("span")).addClass("Immediate").append(immediate).append(expired).prepend(
 										this.icon(this.icons.cross,20,20,100,100,{'4D4D4D':this.colours.red})
 									)
 								);
 							}
 							if (scores[nom].Imminent>0) {
+								var imminent=$(yoodoo.e("span")).addClass("warningCount").html(scores[nom].Imminent).css({background:'#'+this.colours.amber});
+								yoodoo.bubble(imminent.get(0),scores[nom].Imminent+' location'+(scores[nom].Imminent==1?' has':'s have')+' one or more responses that are going to expire in the next week');
 								td.append(
-									$(yoodoo.e("span")).addClass("Imminent").append(
-										$(yoodoo.e("span")).html(scores[nom].Imminent).css({background:'#'+this.colours.amber})
-									).prepend(
+									$(yoodoo.e("span")).addClass("Imminent").append(imminent).prepend(
 										this.icon(this.icons.warning,20,20,100,100,{'4D4D4D':this.colours.amber})
 									)
 								);
@@ -332,10 +379,10 @@ var kloe_overview = {
 					}
 					tr.append(td);
 				}
-				tablebody.append(tr);
+				keyQuestionColumnbody.append(tr);
 		//	}
 		}
-		table.append(tablehead).append(tablebody);
+		//table.append(tablehead).append(tablebody);
 		/*if (parentmanager!==null) {
 			tablehead.find('th').first().prepend(
 				$(yoodoo.e("button")).attr("type","button").append(
@@ -367,6 +414,7 @@ var kloe_overview = {
 			for(var id in kloe_overview.keyQuestions) this.scores[kloe_overview.keyQuestions[id].displayName()]={
 				Immediate:0,
 				Imminent:0,
+				Expired:0,
 				Score:0,
 				Count:0
 			};
@@ -375,6 +423,7 @@ var kloe_overview = {
 				for(var kqId in scores) {
 					this.scores[kqId].Immediate+=(scores[kqId].Immediate>0)?1:0;
 					this.scores[kqId].Imminent+=(scores[kqId].Imminent>0)?1:0;
+					this.scores[kqId].Expired+=(scores[kqId].Expired>0)?1:0;
 					this.scores[kqId].Score+=scores[kqId].Score;
 					//this.scores[kqId].Count+=scores[kqId].Count;
 					this.scores[kqId].Count++;
@@ -388,6 +437,7 @@ var kloe_overview = {
 //this.keyQuestion[nom].Imminent++;
 						if (this.keyQuestion[nom].Immediate>0) this.scores[nom].Immediate++;
 						if (this.keyQuestion[nom].Imminent>0) this.scores[nom].Imminent++;
+						if (this.keyQuestion[nom].Expired>0) this.scores[nom].Expired++;
 						if (this.keyQuestion[nom].Score>0) this.scores[nom].Score+=this.keyQuestion[nom].Score;
 					}
 					this.scores[nom].Count++;

@@ -8,7 +8,10 @@ var objectName={
 		keyQuestions:'KLOE Key Questions',
 		businessSector:'KLOE Business sector',
 		keyLines:'KLOE Key Lines of Enquiry',
-		subSections:'KLOE Prompts'
+		keyQuestionLines:'KLOE Key Question Lines of Enquiry',
+		subSections:'KLOE Prompts',
+		voiceOvers:'KLOE Voiceovers',
+		displayInformation:'KLOE Key Question Display Information'
 };
 
 var kloe={
@@ -36,6 +39,7 @@ var kloe={
 		objectName.keyQuestions,
 		objectName.businessSector,
 		objectName.keyLines,
+		objectName.keyQuestionLines,
 		objectName.subSections
 	],
 	outputObject:[objectName.responses,objectName.actionPlans,objectName.evidence],
@@ -60,6 +64,7 @@ var kloe={
 			expiryWarningDays:{label:'Expiry warning',initial:7,type:'integer',description:'The number of days before the expiry, for the record to be highlighted.'},
 			help:{label:'Help text',initial:'',type:'textarea',description:'The help text shown on clicking i.'},
 			helpVoice:{label:'Sound file',initial:'',type:'audio',description:'The sound file to accompany the help text.',affectButton:false,required:false,script:'help'},
+			displayInformation:{label:'Display Information',initial:'',type:'object',object:objectName.displayInformation,description:'Select the Display Information record',required:true},
 			businessSector:{label:objectName.businessSector,initial:'',type:'object',object:objectName.businessSector,description:'Select the Business sector',required:true},
 			keyQuestion:{label:'Key Question',initial:'',type:'object',object:objectName.keyQuestions,description:'Select the key question',required:true},
 			suggestedRecordsCount:{label:'The suggested record count',initial:'xlbzu',type:'objectparameter',object:objectName.subSections,description:'The suggested record count is overridden by the value in this parameter.'},
@@ -92,11 +97,13 @@ var kloe={
 			level1Voice:{label:'Guidance level 1 voiceover',initial:'',type:'audio',description:'The voiceover for the top level.',affectButton:false,required:false},
 			level2Voice:{label:'Guidance level 2 voiceover',initial:'',type:'audio',description:'The voiceover for the second level.',affectButton:false,required:false},
 			level3Voice:{label:'Guidance level 3 voiceover',initial:'',type:'audio',description:'The voiceover for the third level.',affectButton:false,required:false},
-			level4Voice:{label:'Guidance level 4 voiceover',initial:'',type:'audio',description:'The voiceover for the bottom level.',affectButton:false,required:false}
+			level4Voice:{label:'Guidance level 4 voiceover',initial:'',type:'audio',description:'The voiceover for the bottom level.',affectButton:false,required:false},
+			voiceovers:{label:'Voiceovers',initial:'',type:'object',object:objectName.voiceOvers,description:'Select the voiceover spec',required:true}
 		},
 		section:{
 			elementType:{className:'sectionForm',selection:'sections'},
 			title:{label:'Section title',initial:'Untitled section',type:'text',description:'The text to display as the section title.',updateTitle:true,updateParent:true},
+			keyLine:{label:'Key Line of Enquiry',initial:'',type:'object',object:objectName.keyQuestionLines,description:'Select the Key Line of Enquiry',required:true},
 			shortDescription:{label:'Short description',initial:'',type:'textarea',description:'The explanatory text displayed within the button.'},
 			helpAction:{label:'Help action',initial:'',type:'textarea',description:'Javascript run when ? is clicked.'},
 			//kloeSection:{label:'KLOE section',initial:'',type:'object',object:objectName.keyLines,description:'Select the KLOE section',required:true},
@@ -953,43 +960,137 @@ var kloe={
 			kloe.defaultObjectProcess(this,o,v,p);
 			var me=this;
 			this.renderSelect=function(obj) {
-				if (this.parent!==null && kloe.value.businessSector>0 && object.objectNames[objectName.businessSector].recordsCache[kloe.value.businessSector*1]!==undefined) {
-					var fullName=object.objectNames[objectName.businessSector].recordsCache[kloe.value.businessSector*1].displayName()+' '+this.parent.value.title;
-					//console.log(fullName);
-					var prompts=object.objectNames[objectName.subSections].recordsCache;
-					var id=null;
-					for(var p in prompts) {
-						if (prompts[p].displayName()==fullName) id=p;
+				if (this.schema.object==objectName.displayInformation) {
+					if (this.value=='') {
+						//console.log(this.schema.objectType);
+						var newRecord=this.schema.objectType.add();
+						if (kloe.value.helpVoice=='') kloe.value.helpVoice={name:'',id:null,url:''};
+						newRecord.value={
+							igxav:{ // Data
+								jkkva:kloe.value.introduction, // Introduction
+								jukkx:kloe.value.help // Help
+							},
+							phqhh:parseInt(kloe.value.expiryWarningDays), // Days to expire
+							uvyvt:{ // Voiceover
+								qvhfv:kloe.value.helpVoice.name, // Name
+								dthuz:kloe.value.helpVoice.id, // Id
+								ajqdl:kloe.value.helpVoice.url // Url
+							},
+							xvvse:kloe.schema.main.keyQuestion.objectType.recordsCache[kloe.value.keyQuestion].displayName()+" - "+kloe.schema.main.businessSector.objectType.recordsCache[kloe.value.businessSector].displayName(), // name
+							ufwrl:kloe.value.keyQuestion, // key question
+							zfyit:kloe.value.businessSector // business sector
+						};
+						object.save([newRecord],function() {
+							me.value=parseInt(newRecord.Id);
+						});
+						console.log("Created display information: ",newRecord);
 					}
-					if (id===null) {
-						console.log(this.parent,this.parent.parent.parent.parent.index(this.parent.parent.parent));
-						var keyLine=null;
-						var keyLineTitle=(1*this.parent.parent.parent.parent.index(this.parent.parent.parent))+1
-						keyLineTitle=keyLineTitle.toString();
-						if (object.objectNames[objectName.keyLines].records.length>0) {
-							for(var r in object.objectNames[objectName.keyLines].records) {
-								if (object.objectNames[objectName.keyLines].records[r].displayName()==keyLineTitle) keyLine=object.objectNames[objectName.keyLines].records[r].Id;
+				}else if (this.schema.object==objectName.voiceOvers) {
+					if (this.value=='') {
+						//console.log(this.parent.schema);
+						var newRecord=this.schema.objectType.add();
+						newRecord.value={
+							rqnws:{ // Level 1
+								mxxmr:kloe.value.level1Voice.name, // Name
+								gpnnp:kloe.value.level1Voice.id, // Id
+								kjsst:kloe.value.level1Voice.url // Url
+							},
+							oybyg:{ // Level 2
+								ulwsb:kloe.value.level2Voice.name, // Name
+								xfxxo:kloe.value.level2Voice.id, // Id
+								lokhc:kloe.value.level2Voice.url // Url
+							},
+							mdsab:{ // Level 3
+								uipza:kloe.value.level3Voice.name, // Name
+								bcofn:kloe.value.level3Voice.id, // Id
+								rzbpx:kloe.value.level3Voice.url // Url
+							},
+							amuqf:{ // Level 4
+								ratqh:kloe.value.level4Voice.name, // Name
+								ozrpt:kloe.value.level4Voice.id, // Id
+								gkgph:kloe.value.level4Voice.url // Url
+							},
+							itdgg:kloe.schema.main.keyQuestion.objectType.recordsCache[kloe.value.keyQuestion].displayName()+" - "+kloe.schema.main.businessSector.objectType.recordsCache[kloe.value.businessSector].displayName(), // name
+							amwfq:kloe.value.keyQuestion, // key question
+							covco:kloe.value.businessSector // business sector
+						};
+						object.save([newRecord],function() {
+							me.value=parseInt(newRecord.Id);
+						});
+						console.log("Created Voiceover: ",newRecord);
+					}
+				}else if (this.schema.object==objectName.keyQuestionLines) {
+					if (this.value=='') {
+						var newRecord=this.schema.objectType.add();
+						newRecord.value={
+							dphdn:{
+								glfdn:this.parent.value.shortDescription, // description
+								ywxsx:this.parent.value.helpAction // help
+							}, // data
+							ngtye:this.parent.value.title, // name
+							vaiqs:kloe.value.keyQuestion, // key question
+							vxyvb:kloe.value.businessSector // business sector
+						};
+						object.save([newRecord],function() {
+							me.value=parseInt(newRecord.Id);
+						});
+						console.log("Created Key Line: "+this.parent.value.title,newRecord);
+					}
+				}else if (this.parent!==null && kloe.value.businessSector>0 && object.objectNames[objectName.businessSector].recordsCache[kloe.value.businessSector*1]!==undefined) {
+					//console.log(this.value);
+					if (this.value=='') {
+						var fullName=object.objectNames[objectName.businessSector].recordsCache[kloe.value.businessSector*1].displayName()+' '+this.parent.value.title;
+						var prompts=object.objectNames[objectName.subSections].recordsCache;
+						var id=null;
+						for(var p in prompts) {
+							if (prompts[p].displayName()==fullName) id=p;
+						}
+						if (id===null) {
+							console.log(this.parent,this.parent.parent.parent.parent.index(this.parent.parent.parent));
+
+
+							var keyLine=null;
+							var keyLineTitle=(1*this.parent.parent.parent.parent.index(this.parent.parent.parent))+1
+							keyLineTitle=keyLineTitle.toString();
+							if (object.objectNames[objectName.keyLines].records.length>0) {
+								for(var r in object.objectNames[objectName.keyLines].records) {
+									if (object.objectNames[objectName.keyLines].records[r].displayName()==keyLineTitle) keyLine=object.objectNames[objectName.keyLines].records[r].Id;
+								}
+							}
+							if (keyLine!==null) {
+								var newRecord=object.objectNames[objectName.subSections].add();
+								newRecord.value={
+									clzyj:fullName,
+									lvzfz:this.parent.value.title,
+									pbyno:kloe.value.businessSector,
+									viign:keyLine,
+									wuthv:kloe.value.keyQuestion,
+									xlbzu:3,
+									zgsux:{}
+								};
+								object.save([newRecord],function() {
+									me.value=parseInt(newRecord.Id);
+								});
+								console.log("Created Prompt: "+this.parent.value.title,newRecord);
+							}else{
+								console.log("Failed to find Key Line "+keyLineTitle);
+							}
+
+						}else{
+							this.value=id;
+						}
+					}else{
+						var p=object.objectNames[objectName.subSections].recordsCache[this.value];
+						if (isNaN(p.value.lqlom) || p.value.lqlom===null) {
+							if (this.parent.parent.parent.value.keyLine>0) {
+								p.value.lqlom=this.parent.parent.parent.value.keyLine;
+								object.save([p],function() {});
+								console.log('Updated prompt: '+p.displayName());
 							}
 						}
-						if (keyLine!==null) {
-							var newRecord=object.objectNames[objectName.subSections].add();
-							newRecord.value={
-								clzyj:fullName,
-								lvzfz:this.parent.value.title,
-								pbyno:kloe.value.businessSector,
-								viign:keyLine,
-								wuthv:kloe.value.keyQuestion,
-								xlbzu:3,
-								zgsux:{}
-							};
-							console.log("Created Prompt: "+this.parent.value.title,newRecord);
-						}else{
-							console.log("Failed to find Key Line "+keyLineTitle);
-						}
 					}
-					this.value=id;
 				}
-				obj.selector(this.value,function(ele) {
+				obj.selector((isNaN(this.value)?null:this.value.toString()),function(ele) {
 					$(me.container).append(ele);
 				},function() {
 					me.value=this.value;
@@ -1000,6 +1101,7 @@ var kloe={
 					this.renderSelect(this.schema.objectType);
 				}else{
 					var schema=this.schema;
+					console.log('Getting '+this.schema.object);
 					object.get(this.schema.object,function(obj) {
 						if (obj.length==1) {
 							schema.objectType=obj[0];

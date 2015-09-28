@@ -210,7 +210,7 @@
 }
 .kloe_matrix .prompt{
 	border:1px solid #EEE;
-	padding:10px;
+	padding:0px;
 	margin:10px;
 }
 .kloe_matrix .prompt .emptyPrompt{
@@ -222,6 +222,7 @@
 .kloe_matrix .response{
 	border:1px solid #EEE;
 	padding:10px;
+	margin:5px;
 }
 .kloe_matrix .response+.response{
 	margin-top:3px;
@@ -251,17 +252,34 @@
 }
 #yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .prompt>p,
 #yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .response>div>p:first-child{
-	padding-left:0px;
 	color:#999;
 }
 #yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix h3+div>div>div:first-child+p{
 	color:#555;
 }
-h3+div>div>div:first-child{
+.keyLine>label{
 	background:#999;
 	color:#fff;
 	padding:5px;
-	font-weight:bold;
+	display:block;
+	font-size:18px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .keyLine>label+p{
+	font-size:12px;
+	color:#999;
+	padding:3px 3px 3px 20px;
+}
+.prompt>label{
+	background:#DDD;
+	color:#555;
+	padding:5px;
+	display:block;
+	font-size:16px;
+}
+#yoodooWidget #yoodooContainerContent .dooitDisplay.kloe_matrix .prompt>label+p{
+	font-size:12px;
+	color:#999;
+	padding:3px 3px 3px 20px;
 }
 h3+div>div+div{
 	padding-top:20px;
@@ -273,6 +291,7 @@ h3+div>div+div{
 	display:inline-block;
 	vertical-align:top;
 	height:100%;
+	overflow-y:auto;
 }
 #yoodooWidget .kloe_matrix .matrices>div{
 	box-sizing:border-box;
@@ -330,9 +349,9 @@ h3+div>div+div{
 #yoodooWidget .kloe_matrix .kloe_summaries button{
 	background:#fdf9e4;
 	border:1px solid #555;
-	border-radius:10px;
-	margin:2%;
-	width:46%;
+	border-radius:5px;
+	margin:1%;
+	width:48%;
 	height:100px;
 	position:relative;
 	padding:10px 0px 40px 0px;
@@ -453,6 +472,14 @@ h3+div>div+div{
 	background:rgb(244, 247, 249);
 	border-radius:5px;
 }
-.evidenceAndPlansRecord label+p{
+#yoodooWidget #yoodooContainerContent .dooitBox .evidenceAndPlansRecord label{
+	font-style:italic;
+}
+#yoodooWidget #yoodooContainerContent .dooitBox label+p{
 	padding-left:20px;
+	color:#084D84;
+}
+.status{
+	text-align:right;
+	padding:2px 10px;
 }

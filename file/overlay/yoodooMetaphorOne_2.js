@@ -2488,9 +2488,14 @@ yoodoo.showEpisodeDooit = function(id) {
 yoodoo.loadDooit = 0;
 yoodoo.closeDooitFunction = function() {
 };
+yoodoo.showDooitCall = {id:0,when:0};
 yoodoo.showDooit = function(id) {
 	if (this.loggedin) {
-		if (this.inBookcase('dooit', id)) {
+		
+		if (this.showDooitCall.id==id && new Date().getTime()-this.showDooitCall.when<3000) {
+			// prevent double call
+		}else if (this.inBookcase('dooit', id)) {
+			this.showDooitCall = {id:id,when:new Date().getTime()};
 			var doit = this.bookcase.byId(id);
 			if (doit.intervention > 0)
 				this.bookcase.showIntervention(doit.intervention, false);

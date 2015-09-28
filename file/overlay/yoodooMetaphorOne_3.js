@@ -1720,7 +1720,7 @@ yoodoo.welcome = function() {
 			o += "height:" + (panelHeight - 22) + "px;padding:5px;' class='scrollStyle'>" + this.notices[n].content + "</div></div>";
 		}
 		o = '<div class="noticesContainer">' + o + '</div>';
-	} else {
+	} else if (yoodoo.option.showTips!==false) {
 		o += "<div class='tipContent' style='height:" + panelHeight + "px;'>" + this.home_left_text + "</div>";
 	}
 	$(yoodoo.welcomeContainers.notices).css({
@@ -2162,6 +2162,30 @@ yoodoo.toPDF = function(obj) {
 	doc.document.close();
 
 };
+yoodoo.toPDFForm = function(filename,obj) {
+	if ( typeof (this.downloader) != "object") {
+		this.downloader = yoodoo.e("iframe");
+		this.widget.appendChild(this.downloader);
+		$(this.downloader).css({
+			display : "none"
+		});
+	}
+	var op = '';
+	op += "<html><head></head><body><form id='yoodooPost' action='" + this.option.yoodooPortal.url + "' method='POST'>";
+	op += "<textarea name='pdffields'>" + Base64.encode(JSON.stringify(obj)) + "</textarea>";
+	op += "<textarea name='pdffilename'>" + filename + "</textarea>";
+	op += "<textarea name='userhash'>" + this.loginCode + "</textarea>";
+	op += "<textarea name='sitehash'>" + this.sitehash + "</textarea>";
+	op += "<textarea name='cmd'>fill_pdf</textarea>";
+	op += "</form>";
+	op += "<script type='text/javascript'>document.getElementById('yoodooPost').submit();</script>";
+	op += "</body></html>";
+	var doc = (this.downloader.contentWindow) ? this.downloader.contentWindow : (this.downloader.contentDocument.document ? this.downloader.contentDocument.document : this.downloader.contentDocument);
+	doc.document.open();
+	doc.document.write(op);
+	doc.document.close();
+
+};
 yoodoo.lastReplyFrame = null;
 
 yoodoo.userlogin=function() {
@@ -2501,9 +2525,13 @@ yoodoo.showEpisodeDooit = function(id) {
 yoodoo.loadDooit = 0;
 yoodoo.closeDooitFunction = function() {
 };
+yoodoo.showDooitCall = {id:0,when:0};
 yoodoo.showDooit = function(id) {
 	if (this.loggedin) {
-		if (this.inBookcase('dooit', id)) {
+		if (this.showDooitCall.id==id && new Date().getTime()-this.showDooitCall.when<3000) {
+			// prevent double call
+		}else if (this.inBookcase('dooit', id)) {
+			this.showDooitCall = {id:id,when:new Date().getTime()};
 			var doit = this.bookcase.byId(id);
 			if (doit.intervention > 0)
 				this.bookcase.showIntervention(doit.intervention, false);
@@ -4162,6 +4190,7 @@ yoodoo.bubble = function(obj, text) {
 			});
 		}
 	});
+	return obj;
 };
 yoodoo.loadingDiv=function() {
 	return $(yoodoo.e("div")).addClass("loading").append(

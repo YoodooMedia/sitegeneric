@@ -1,6 +1,9 @@
 /* sample layout
 {
 	dependencies:[
+		['dooits/compliance/constructor/business_sector.js',true],
+		['dooits/compliance/constructor/key_question.js',true],
+		['dooits/compliance/constructor/kloe_status.js',true],
 		['widgets/js/compliance/kloe_object_widget.js',true],
 		['widgets/css/compliance/kloe_object_widget.css',true]
 	],
@@ -15,39 +18,24 @@
 		 	title:'The intervention id of the KLOE Control Panel',
 			value:204255
 		},
-		prompt_view:{
+		prompts_per_key_question:{
 			type:'view',
-		 	title:'Object view counting the prompts in each Key Question and Business Sector',
-			value:0
+		 	title:'Object view counting the prompts in each Key Question by Business Sector',
+			value:9
 		},
-		attention_view:{
+		responses_by_prompt:{
 			type:'view',
-		 	title:'Object view showing the needing attention counts',
-			value:0
-		},
-		count_view:{
-			type:'view',
-		 	title:'Object view showing the response count',
-			value:09
-		},
-		kloe_prompt_object:{
-			type:'object',
-		 	title:'Object name for the Prompts',
-			value:0
-		},
-		key_questions:{
-			type:'object',
-		 	title:'Object name for the Key Questions',
-			value:0
+		 	title:'Object view showing the status of responses in each prompt',
+			value:10
 		},
 		overview_intervention:{
 			title:'Intervention Id of the Overview',
-			value:'205029'
+			value:'205263'
 		},
 		overview_view:{
 			type:'view',
 			title:'Object view showing the overview by Business Sector',
-			value:0
+			value:36
 		}
 	}
 }
@@ -64,13 +52,14 @@ function kloe_object_widget(src) {
 	this.widget.priority=50;
 	$(this.widget.display).empty();
 	this.prompts={};
-	this.keyQuestions={};
+	this.keyQuestions=null;
 	this.view=null;
 	this.attentionView=null;
 	this.promptView=null;
 	this.dialData={};
 	this.keyQuestionOrder=['Safe','Effective','Caring','Responsive','Well-led'];
 	this.promptTotalsByBusinessSector={};
+	this.promptCountByKeyQuestion={};
 	this.usedBusinessSectorIds={};
 	this.colours={red:{r:171,g:42,b:42},grey:{r:200,g:200,b:200},amber:{r:239,g:146,b:37},green:{r:18,g:201,b:40}};
 	this.dialColourRange={
@@ -130,59 +119,63 @@ function kloe_object_widget(src) {
 			return !this.object.allow_continue;
 		};
 		$(this.widget.container).addClass("kloe_object_widget_parent");
-		$(this.widget.display).append(
+		$(this.widget.display).empty().append(
 			yoodoo.loadingDiv()
 		);
 		this.admin=(yoodoo.user.managerType!==undefined && yoodoo.user.managerType.subManagers instanceof Array && yoodoo.user.managerType.subManagers.length>0);
 		this.templater=this.admin && yoodoo.hasTag("kloe_templater");
-		if (this.admin) {
-			this.detectBusinessSectors();
-			this.adminBuild();
-		}else{
-			this.userBuild();
-		}
-	};
-	this.detectBusinessSectors=function() {
-		this.businessSectors={};
-		var tagNames={};
-		for(var tid in this.widget.data.tags) {
-			tagNames[this.widget.data.tags[tid]]=tid;
-		}
-		this.businessSectorAvailableCount=0;
-		for(var tid in this.widget.data.tags) {
-			if (this.widget.data.tags[tid].match(/^Selectable/)) {
-				var userTag=this.widget.data.tags[tid].replace(/^Selectable/,'User');
-				if (tagNames[userTag]!==undefined && yoodoo.hasTag(this.widget.data.tags[tid])) {
-					this.businessSectors[userTag.replace(/User_Type_/,'').replace(/_/,' ')]={tag:userTag,id:tagNames[userTag],on:yoodoo.hasTag(userTag)};
-					this.businessSectorAvailableCount++;
-				}
+		var me=this;
+		yoodoo.businessSector.check(function() {
+			if (me.admin) {
+				me.adminBuild();
+			}else{
+				me.userBuild();
 			}
-		}
+		});
 	};
 	this.adminBuild=function() {
-		//if (this.businessSectorAvailableCount>1) {
-			//$(this.widget.display).append(this.businessSelector(this.businessSectorAvailableCount>1));
-		//}
-//console.log(this.widget.data.exercise.display.options.overview_view.value);
-		var objectKeyQuestion=this.widget.data.exercise.display.options.key_questions.value;
 		var me=this;
-		yoodoo.object.get(objectKeyQuestion,function(obj) {
-			var kq=me.keyQuestionObject=obj.pop();
+		yoodoo.keyQuestion.get(function(list) {
 			me.keyQuestions={};
-			for(var i in kq.records) {
-				me.keyQuestions[kq.records[i].displayName()]=kq.records[i];
-			}
-			yoodoo.object.getView(me.widget.data.exercise.display.options.overview_view.value,null,function(view) {
-				var keyQuestion={};
-				if (view.results.length>0) {
-					for(var r in view.results) {
-						keyQuestion[me.keyQuestionObject.recordsCache[view.results[r].columns[0]].displayName()]={Immediate:view.results[r].columns[1],Imminent:view.results[r].columns[2]};
-					}
+			me.keyQuestionOrder=[];
+			for(var l in list) {
+				if (list[l].value.qviof>0) {
+					me.keyQuestionOrder.push(list[l]);
+					me.keyQuestions[list[l].Id]={keyQuestion:list[l],prompts:[],Immediate:0,Imminent:0};
 				}
-				$(me.widget.display).empty().append(me.businessSelector(me.businessSectorAvailableCount>1));
-				me.drawWarnings(keyQuestion);
-				$(me.widget.display).append(me.drawTemplateButtons());
-			},function(){});
+			}
+			me.keyQuestionsComplete=true;
+			me.resizeWidget();
+//me.widget.setSize({aspect:me.keyQuestionOrder.length*0.8,complete:function(widget) {
+
+//}});
+			/*me.keyQuestionOrder.sort(function(a,b) {
+				if (a.value.qviof<b.value.qviof) return -1;
+				if (a.value.qviof>b.value.qviof) return 1;
+				return 0;
+			});*/
+			yoodoo.object.getView(
+				me.widget.data.exercise.display.options.overview_view.value,
+				null,
+				function(view) {
+					var keyQuestion={};
+					if (view.results.length>0) {
+						for(var r in view.results) {
+							if (me.keyQuestions[view.results[r].columns[0]]!==undefined) {
+								me.keyQuestions[view.results[r].columns[0]].Immediate=view.results[r].columns[1];
+								me.keyQuestions[view.results[r].columns[0]].Imminent=view.results[r].columns[2];
+								me.keyQuestions[view.results[r].columns[0]].Expired=view.results[r].columns[3];
+							}
+							//keyQuestion[me.keyQuestions[view.results[r].columns[0]].keyQuestion.displayName()]={Immediate:view.results[r].columns[1],Imminent:view.results[r].columns[2]};
+						}
+					}
+					$(me.widget.display).empty().append(me.businessSelector(yoodoo.businessSector.businessSectorAvailableCount>1));
+					me.drawWarnings();
+					$(me.widget.display).append(me.drawTemplateButtons());
+				},function(){
+				},
+				{business_sector:yoodoo.businessSector.selectedBusinessSector}
+			);
 		},function(){},true);
 	};
 	this.drawTemplateButtons=function() {
@@ -190,32 +183,45 @@ function kloe_object_widget(src) {
 		var keyQuestions=['Safe','Effective','Caring','Responsive','Well-led'];
 		var d=$(yoodoo.e("div")).addClass("templateButtons");
 		var me=this;
-		for(var k in keyQuestions) {
-			var nom=keyQuestions[k];
+		var pw=Math.floor(100/me.keyQuestionOrder.length);
+		for(var k in me.keyQuestionOrder) {
+		//for(var k in keyQuestions) {
 			(function() {
-				var interventionId=me.keyQuestions[nom].value.zpaqd;
+				var keyQuestion=me.keyQuestionOrder[k];
+				var interventionId=keyQuestion.value.zpaqd;
 				d.append($(yoodoo.e("button")).attr("type","button").html("templates").click(function(){
-					yoodoo.bookcase.showIntervention(interventionId);
-				}));
+					yoodoo.keyQuestion.select(function() {
+						yoodoo.bookcase.showIntervention(interventionId);
+					},keyQuestion.Id);
+				}).css({width:pw+'%'}));
 			})();
 		}
 		return d;
 	};
-	this.drawWarnings=function(data) {
+	this.drawWarnings=function() {
 		var me=this;
-		var keyQuestions=['Safe','Effective','Caring','Responsive','Well-led'];
 		$(this.widget.display).addClass("kloe_admin_widget");
 		var but=$(yoodoo.e("button")).attr("type","button").addClass("overview_button").click(function() {
 			yoodoo.bookcase.showIntervention(me.widget.data.exercise.display.options.overview_intervention.value);
 		});
-		for(var k in keyQuestions) {
-			var nom=keyQuestions[k];
-			var d=$(yoodoo.e("div")).addClass("keyQuestion").append($(yoodoo.e("div")).html(nom));
-				if (data[nom]!==undefined && data[nom].Immediate>0) {
+		var pw=Math.floor(100/me.keyQuestionOrder.length);
+		for(var k in me.keyQuestionOrder) {
+			var kqid=me.keyQuestionOrder[k].Id;
+			var data=me.keyQuestions[kqid];
+			var d=$(yoodoo.e("div")).addClass("keyQuestion").css({width:pw+'%'}).append($(yoodoo.e("div")).html(data.keyQuestion.displayName()));
+				if (data.Immediate>0 || data.Expired>0) {
+					var expired=null;
+					if (data.Expired>0) {
+						expired=$(yoodoo.e("span")).addClass("expired").html('+'+data.Expired).css({'border-color':'#'+this.colours.red,color:'#'+this.colours.red});
+						yoodoo.bubble(expired.get(0),data.Expired+' location'+(data.Expired==1?' has':'s have')+' one or more expired responses that have not been viewed yet');
+					}
+					var immediate=null;
+					if (data.Immediate>0) {
+						immediate=$(yoodoo.e("span")).html(data.Immediate).addClass("warningCount").css({background:'#'+this.colours.red});
+						yoodoo.bubble(immediate.get(0),data.Immediate+' location'+(data.Immediate==1?' has':'s have')+' one or more responses that are in need of attention');
+					}
 					d.append(
-						$(yoodoo.e("span")).addClass("Immediate").append(
-							$(yoodoo.e("span")).html(data[nom].Immediate).css({background:'#'+this.colours.red})
-						).prepend(
+						$(yoodoo.e("span")).addClass("Immediate").append(immediate).append(expired).prepend(
 							this.icon(this.icons.cross,20,20,100,100,{'4D4D4D':this.colours.red})
 						)
 					);
@@ -226,11 +232,11 @@ function kloe_object_widget(src) {
 						)
 					);
 				}
-				if (data[nom]!==undefined && data[nom].Imminent>0) {
+				if (data.Imminent>0) {
+					var imminent=$(yoodoo.e("span")).html(data.Imminent).addClass("warningCount").css({background:'#'+this.colours.amber});
+					yoodoo.bubble(imminent.get(0),data.Imminent+' location'+(data.Imminent==1?' has':'s have')+' one or more responses that expire within a week');
 					d.append(
-						$(yoodoo.e("span")).addClass("Immediate").append(
-							$(yoodoo.e("span")).html(data[nom].Imminent).css({background:'#'+this.colours.red})
-						).prepend(
+						$(yoodoo.e("span")).addClass("Immediate").append(imminent).prepend(
 							this.icon(this.icons.warning,20,20,100,100,{'4D4D4D':this.colours.amber})
 						)
 					);
@@ -275,14 +281,16 @@ function kloe_object_widget(src) {
 					}
 					dooit.addTag(tagId);
 					this.disabled=true;
-					yoodoo.updateFields({},function() {},{});
+					yoodoo.updateFields({},function() {
+						me.build();
+					},{});
 				}
 			});
 			var sel=$(yoodoo.e("div")).addClass("businessSelector").append(selected).append(selector);
 			var found=false;
-			for(var name in this.businessSectors) {
-				var opt=$(yoodoo.e("option")).html(name).attr("value",this.businessSectors[name].id);
-				if (this.businessSectors[name].on) {
+			for(var name in yoodoo.businessSector.businessSectors) {
+				var opt=$(yoodoo.e("option")).html(name).attr("value",yoodoo.businessSector.businessSectors[name].id);
+				if (yoodoo.businessSector.businessSectors[name].on) {
 					selected.html(name);
 					found=opt.get(0).selected=true;
 					opt.hide();
@@ -296,154 +304,118 @@ function kloe_object_widget(src) {
 			}
 			return sel;
 		}else{
-			for(var name in this.businessSectors) {
-				if (this.businessSectors[name].on) return $(yoodoo.e("div")).addClass("businessSelector").append($(yoodoo.e("span")).html(name));
+			for(var name in yoodoo.businessSector.businessSectors) {
+				if (yoodoo.businessSector.businessSectors[name].on) return $(yoodoo.e("div")).addClass("businessSelector").append($(yoodoo.e("span")).html(name));
 			}
 			return null;
 		}
 	};
 	this.userBuild=function() {
 		this.sections=[];
-		var promptViewId=this.widget.data.exercise.display.options.prompt_view.value;
-		var objectViewId=this.widget.data.exercise.display.options.count_view.value;
-		var objectAttentionViewId=this.widget.data.exercise.display.options.attention_view.value;
-		var objectPrompt=this.widget.data.exercise.display.options.kloe_prompt_object.value;
-		var objectKeyQuestion=this.widget.data.exercise.display.options.key_questions.value;
+		var prompts_per_key_question=this.widget.data.exercise.display.options.prompts_per_key_question.value;
+		var responses_by_prompt=this.widget.data.exercise.display.options.responses_by_prompt.value;
 		var me=this;
-		yoodoo.object.get([objectPrompt,objectKeyQuestion],function(obj) {
+		this.objectPrompt=yoodoo.keyQuestion.promptsObject;
+		this.objectKeyQuestion=yoodoo.keyQuestion.object;
+		/*yoodoo.object.get([objectPrompt,objectKeyQuestion],function(obj) {
 			for(var o in obj) {
 				if (obj[o].schema.Id==objectPrompt) me.objectPrompt=obj[o];
 				if (obj[o].schema.Id==objectKeyQuestion) me.objectKeyQuestion=obj[o];
-			}
+			}*/
 			/*if (obj.length==2) {
 				me.objectPrompt=obj[0];
 				me.objectKeyQuestion=obj[1];
 			}*/
 			//var thisWidget=me;
-			yoodoo.object.getView(promptViewId,null,function(obj) {
+			yoodoo.object.getView(prompts_per_key_question,null,function(obj) {
 				me.promptView=obj;
-				//console.log(me.promptView);
+				me.promptCountByKeyQuestion={};
 				for(var r in me.promptView.results) {
-					for(var c=0;c<me.promptView.columns.length-1;c++) {
+					me.promptCountByKeyQuestion[me.promptView.results[r].columns[1]]=me.promptView.results[r].columns[0];
+					/*for(var c=0;c<me.promptView.columns.length-1;c++) {
 						var bsc=me.promptView.columns.length-1;
 						if (me.promptTotalsByBusinessSector[me.promptView.results[r].columns[bsc]]===undefined) me.promptTotalsByBusinessSector[me.promptView.results[r].columns[bsc]]={};
 						me.promptTotalsByBusinessSector[me.promptView.results[r].columns[bsc]][me.promptView.columns[c]]=me.promptView.results[r].columns[c];
-					}
+					}*/
 				}
-				//console.log(me.promptTotalsByBusinessSector);
-				yoodoo.object.getView(objectViewId,null,function(obj) {
+				//console.log( me.promptCountByKeyQuestion);
+				//console.log(me.promptCountByKeyQuestion);
+				yoodoo.object.getView(responses_by_prompt,null,function(obj) {
 					me.view=obj;
-					var promptIds={};
+					me.promptResults={};
 					for(var r in obj.results) {
-						if (!isNaN(obj.results[r].columns[1])) promptIds[obj.results[r].columns[1]]=true;
-					}
-					var ids=[];
-					for(var pid in promptIds) {
-						ids.push(pid);
-					}
-					me.objectPrompt.get(function(obj) {
-						me.prompts={};
-						for(var o in obj) {
-							var prompt=new me.prompt(obj[o]);
-							me.prompts[prompt.object.Id]=prompt;
-						}
-						me.objectKeyQuestion.get(function(obj) {
-							me.keyQuestions={};
-							for(var o in obj) {
-								var kq=new me.keyQuestion(me,obj[o]);
-								me.keyQuestions[kq.object.Id]=kq;
+						if (!isNaN(obj.results[r].columns[3])) {
+							me.promptResults[obj.results[r].columns[4]]={
+								responses:obj.results[r].columns[0],
+								imminent:obj.results[r].columns[1],
+								immediate:obj.results[r].columns[2]+obj.results[r].columns[3],
+								prompt:obj.results[r].columns[4],
+								suggested:obj.results[r].columns[5],
+								keyQuestion:parseInt(obj.results[r].columns[7][0])
 							}
-							yoodoo.object.getView(objectAttentionViewId,null,function(obj) {
-								me.attentionView=obj;
-								me.loadedObjects();
-							},function(obj) {
-								console.log('failed',obj);
-							});
-						},function() {
-							console.log("Failed to retrieve key questions");
-						},null,{});
-					},function() {
-						console.log("Failed to retrieve prompt records");
-					},0,{
-						pbyno:me.widget.data.exercise.display.options.business_sector.value
-					},ids);
-					//console.log(obj);
-					//$(document.body).append(obj.drawTable(true));
+						}
+					}
+						//console.log(me.promptResults);
+					yoodoo.keyQuestion.get(function(list) {
+						me.keyQuestions={};
+						me.keyQuestionOrder=[];
+						for(var l in list) {
+							if (list[l].value.qviof>0) {
+								me.keyQuestionOrder.push(list[l]);
+								me.keyQuestions[list[l].Id]={keyQuestion:list[l],prompts:[],immediate:0,imminent:0,scores:0,count:(me.promptCountByKeyQuestion[list[l].Id]>0)?me.promptCountByKeyQuestion[list[l].Id]:0,score:0};
+							}
+						}
+	//me.widget.setSize({aspect:this.admin?4:(1+(me.keyQuestionOrder.length*0.8)),complete:function(widget) {
+		
+	//}});
+						//console.log(me.keyQuestionOrder);
+						for(var p in me.promptResults) {
+							var kqid=me.promptResults[p].keyQuestion;
+							if (me.keyQuestions[kqid]!==undefined) {
+								me.keyQuestions[kqid].prompts.push(me.promptResults[p]);
+								me.keyQuestions[kqid].immediate+=me.promptResults[p].immediate;
+								me.keyQuestions[kqid].imminent+=me.promptResults[p].imminent;
+								var s=me.promptResults[p].responses/me.promptResults[p].suggested;
+								if (s>1) s=1;
+								me.keyQuestions[kqid].scores+=s;
+							}
+						}
+						for(var kqid in me.keyQuestions) {
+							if (me.keyQuestions[kqid].count==0) {
+								me.keyQuestions[kqid].score=0;
+							}else{
+								me.keyQuestions[kqid].score=100*(me.keyQuestions[kqid].scores/ me.keyQuestions[kqid].count);
+								if (me.keyQuestions[kqid].score>100) me.keyQuestions[kqid].score=100;
+							}
+						}
+						me.keyQuestionsComplete=true;
+						me.resizeWidget();
+						me.loadedObjects();
+					});
 				},function(obj) {
 					console.log('failed',obj);
-				});
+				},{business_sector:yoodoo.businessSector.selectedBusinessSector});
 			},function(obj) {
 				console.log('failed',obj);
-			});
-		});
-		/*for(var f in this.widget.data.fields) {
-			//console.log(this.widget.data.fields[f][1]);
-			if (this.widget.data.fields[f][1].records!==undefined) this.sections.push(this.widget.data.fields[f][1].records);
-		}*/
+			},{business_sector:yoodoo.businessSector.selectedBusinessSector});
+	};
+	this.sortComplete=false;
+	this.keyQuestionsComplete=false;
+	this.resizeWidget=function() {
+		if (this.keyQuestionsComplete && this.sortComplete)
+		me.widget.setSize({aspect:this.admin?me.keyQuestionOrder.length*0.8:(1+(me.keyQuestionOrder.length*0.8)),complete:function(widget) {
+
+		}});
+	};
+		
+	this.sorted=function() {
+		this.sortComplete=true;
+		this.resizeWidget();
 	};
 	this.dialRescale=function(v) {
 		if (v==100) return v;
 		return Math.round((90*v)/100);
 		return Math.round(Math.pow(v,2)/100);
-	};
-	this.keyQuestion=function(widget,kQ) {
-		this.widget=widget;
-		this.object=kQ;
-		this.attentions=null;
-		this.prompts=[];
-		this.score=0;
-		this.add=function(prompt) {
-			this.prompts.push(prompt);
-		};
-		this.getScore=function() {
-			var promptCount=0;
-			for(var id in this.widget.usedBusinessSectorIds) {
-				if (this.widget.promptTotalsByBusinessSector[id]!==undefined && this.widget.promptTotalsByBusinessSector[id][this.object.displayName()]!==undefined) {
-					promptCount+=this.widget.promptTotalsByBusinessSector[id][this.object.displayName()];
-				}
-			}
-			if (this.prompts.length>0 && promptCount>0) {
-				var t=0;
-				var c=0;
-				for(var p in this.prompts) {
-					t+=this.prompts[p].getScore();
-					c++;
-				}
-				//return this.score=99;
-//console.log(this.object.displayName(),t,c,promptCount);
-				return this.score=Math.round(100*t/promptCount);
-			}
-			return this.score=0;
-		};
-		this.getAttentions=function() {
-			if (this.attentions===null) return {immediate:0,imminent:0,responses:0};
-			//return {responses:10,immediate:1,imminent:0};
-			return {immediate:this.attentions.columns[1],imminent:this.attentions.columns[0],responses:this.attentions.columns[2]};
-		};
-		this.getColour=function() {
-			var att=this.getAttentions();
-			if (att.responses==0) return yoodooStyler.hexToRGB(this.widget.colours.grey);
-			if (att.immediate>0) return yoodooStyler.hexToRGB(this.widget.colours.red);
-			if (att.imminent>0) return yoodooStyler.hexToRGB(this.widget.colours.amber);
-			if (this.score==100) return yoodooStyler.hexToRGB(this.widget.colours.green);
-			return undefined;
-		};
-	};
-	this.getAttentions=function() {
-		var att=null;
-		for(var k in this.keyQuestions) {
-			if (att===null) {
-				att=this.keyQuestions[k].getAttentions();
-				//console.log(att);
-			}else{
-				var newatt=this.keyQuestions[k].getAttentions();
-				//console.log(newatt);
-				for(var a in newatt) {
-					if (att[a]!==undefined) att[a]+=newatt[a];
-				}
-			}
-		}
-		return att;
 	};
 	this.prompt=function(p) {
 		this.object=p;
@@ -459,40 +431,16 @@ function kloe_object_widget(src) {
 					t+=this.results[r].columns[0];
 				}
 				t/=this.object.getValue('Suggested response count');
-//console.log(this.object.displayName(),(t>1)?1:t);
 				return (t>1)?1:t;
 			}
 			return 0;
 		};
 	};
 	this.loadedObjects=function() {
-		this.suggestedResponseKey='xlbzu';
-		this.responsePromptKey=this.objectPrompt.getParameterReferingToObjectId(this.objectKeyQuestion.schema.Id);
 		if (this.view!==null) {
-			for(var p in this.prompts) {
-				var kq=this.prompts[p].object.value[this.responsePromptKey];
-				if (this.prompts[p].object.value.pbyno>0) this.usedBusinessSectorIds[this.prompts[p].object.value.pbyno]=true;
-				if (kq>0 && this.keyQuestions[kq]!==undefined) this.keyQuestions[kq].add(this.prompts[p]);
-			}
-			for(var r in this.view.results) {
-				var pid=this.view.results[r].columns[1];
-
-			
-				if (this.prompts[pid]!==undefined) {
-					this.prompts[pid].results=[];
-					this.prompts[pid].add(this.view.results[r]);
-				}
-			}
-			//console.log(this.keyQuestions);
-			for(var r in this.attentionView.results) {
-				//console.log(this.attentionView.results[r]);
-				var last=this.attentionView.results[r].columns.length-1;
-				if (this.keyQuestions[this.attentionView.results[r].columns[last]]!==undefined) this.keyQuestions[this.attentionView.results[r].columns[last]].attentions=this.attentionView.results[r];
-			}
 			this.dialData={};
 			for(var kq in this.keyQuestions) {
-				this.dialData[this.keyQuestions[kq].object.displayName()]=$.extend({keyQuestion:this.keyQuestions[kq],score:this.keyQuestions[kq].getScore()},this.keyQuestions[kq].getAttentions());
-				//console.log(this.keyQuestions[kq].object.displayName()+' = '+this.keyQuestions[kq].getScore()+' - '+JSON.stringify(this.keyQuestions[kq].getAttentions()));
+				this.dialData[this.keyQuestions[kq].keyQuestion.Id]=this.keyQuestions[kq];
 			}
 			this.drawDials();
 		}
@@ -521,9 +469,13 @@ function kloe_object_widget(src) {
 		}
 		if (total>0) score/=total;
 		score=Math.round(score);
-		//console.log(score);
-		//if (this.widget.title =="REQUIRES IMPROVEMENT") score = 50;
-
+		var aggregate={
+			immediate:0,
+			imminent:0,
+			scores:0,
+			score:0,
+			count:0
+		};
 		var widget=this.widget;
 
 		var w=Math.floor($(this.widget.display).height()*0.8);
@@ -531,24 +483,33 @@ function kloe_object_widget(src) {
 		var ir=r-10;
 		if (ir<0) return false;
 		$(this.widget.display).empty();
+		var me=this;
 		for(var kq in this.keyQuestionOrder) {
-			var d=this.keyQuestionOrder[kq];
+			
+			aggregate.count++;
+			aggregate.immediate+=me.dialData[d].immediate;
+			aggregate.imminent+=me.dialData[d].imminent;
+			aggregate.scores+=me.dialData[d].score;
+			
+			var d=this.keyQuestionOrder[kq].Id;
 			var b=$(yoodoo.e("button")).attr("type","button");
-			var data=this.dialData[d];
 			(function() {
-				var interventionId=data.keyQuestion.object.value.zpaqd;
-				b.css({border:'none'}).click(function() {
-					if (interventionId>0) yoodoo.bookcase.showIntervention(interventionId);
+				var data=me.dialData[d];
+				var interventionId=data.keyQuestion.value.zpaqd;
+				b.click(function() {
+					yoodoo.keyQuestion.select(function() {
+						if (interventionId>0) yoodoo.bookcase.showIntervention(interventionId);
+					},data.keyQuestion.Id);
 				});
 			})();
 			$(b).css({display:"none",width:w}).addClass("kloe_object_widget").append(
 				$(yoodoo.e("div")).html(
-					d
+					this.keyQuestionOrder[kq].displayName()
 				).addClass("widget_label")
 			);
 			this.dialData[d].dial=null;
 			var dir=0;
-			if (this.dialData[d].immediate>0 || this.dialData[d].imminent>0) dir=10;
+			//if (this.dialData[d].immediate>0 || this.dialData[d].imminent>0) dir=10;
 			if (this.doSVG) {
 				this.dialData[d].dial=new yoodoo.ui.graphs.dial({
 					balanced:50,
@@ -561,7 +522,17 @@ function kloe_object_widget(src) {
 			}else{
 				this.dialData[d].dial=new this.nonSVG();
 			}
-			var col=this.dialData[d].keyQuestion.getColour();
+			var col=undefined;
+			
+			if (this.dialData[d].score==0) col= yoodooStyler.hexToRGB(this.colours.grey);
+			if (this.dialData[d].immediate>0) {
+				col= yoodooStyler.hexToRGB(this.colours.red);
+			}else if (this.dialData[d].imminent>0) {
+				col= yoodooStyler.hexToRGB(this.colours.amber);
+			}else if (this.dialData[d].score==100) {
+				col= yoodooStyler.hexToRGB(this.colours.green);
+			}
+			
 //console.log(this.dialData[d].score);
 			$(b).prepend($(this.dialData[d].dial.render(this.dialRescale(this.dialData[d].score),col)).css({display:'inline-block'}));
 			$(this.widget.display).append(b);
@@ -571,19 +542,20 @@ function kloe_object_widget(src) {
 		}
 		
 		
-		
-		var att=this.getAttentions();
+		aggregate.score=aggregate.scores/aggregate.count;
+		if (aggregate.score>100) aggregate.score=100;
+		var att=aggregate;
 		var w=Math.floor($(this.widget.display).height()*1);
 		var r=Math.floor((w-20)/2);
-		var ir=r-20;
+		var ir=r-10;
 		var me=this;
-		var b=$(yoodoo.e("button")).attr("type","button").css({border:'none'}).click(function() {
+		var b=$(yoodoo.e("button")).attr("type","button").click(function() {
 			var interventionId=me.widget.data.exercise.display.options.control_panel_intervention_id.value;
 			if (interventionId>0) yoodoo.bookcase.showIntervention(interventionId);
 		});
 		var dir=0;
 		var col=undefined;
-		if (att.responses==0) {
+		if (att.score==0) {
 			col=this.colours.grey;
 		}else if (att.immediate>0) {
 			col=this.colours.red;
@@ -591,13 +563,14 @@ function kloe_object_widget(src) {
 		}else if (att.imminent>0) {
 			col=this.colours.amber;
 			dir=10;
-		}else if (score==100) {
+		}else if (att.score==100) {
 			col=this.colours.green;
 		}
+		
+		var css={display:"none",width:w};
+		if (col!==undefined) css['border-left']='1px solid #'+col;
 		if (col!==undefined) col=yoodooStyler.hexToRGB(col);
-		
-		
-		$(b).css({display:"none",width:w}).addClass("kloe_object_widget").append(
+		$(b).css(css).addClass("kloe_object_widget").append(
 			$(yoodoo.e("div")).html(
 				dooit.decode((typeof(yoodoo.user.meta['yourService'])=="string" && yoodoo.user.meta['yourService'].length>0)?yoodoo.user.meta['yourService']:'Summary')
 			).addClass("widget_label")
@@ -614,16 +587,16 @@ function kloe_object_widget(src) {
 		}else{
 			this.totaldial=new this.nonSVG();
 		}
-		$(b).prepend($(this.totaldial.render(this.dialRescale(score),col)).css({display:'inline-block'}));
+		$(b).prepend($(this.totaldial.render(this.dialRescale(att.score),col)).css({display:'inline-block'}));
 		$(this.widget.display).append(b);
 		$(b).fadeIn(500,function() {
 
 		});
 	};
-	this.build();
-	this.widget.setSize({aspect:this.admin?4:(1+(5*0.8)),complete:function(widget) {
+	this.widget.setSize({aspect:this.admin?5*0.8:(1+(5*0.8)),complete:function(widget) {
 		widget.readied=true;
 		me.render();
 		widget.readyCallback();
 	}});
+	this.build();
 }

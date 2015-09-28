@@ -267,10 +267,61 @@
 	overflow-y:auto;
 	height:100%;
 }
+.promptSelector>div{
+	
+}
+.promptSelector>div+div{
+	border-top:1px solid #656565;
+}
+#yoodooWidget #yoodooContainerContent .promptSelector>div>h3{
+	color:#fff;
+	padding:0px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font-weight:normal;
+	cursor:pointer;
+	margin:1px 0px;
+	font-size:14px;
+	transition:color 0.3s;
+}
+.promptSelector>div.on{
+	
+}
+.promptSelector>div>div{
+	padding:0px 0px 0px 5px;
+}
+
+#yoodooWidget #yoodooContainerContent .promptSelector>div>div>div{
+	border-top:1px solid #404040;
+}
+#yoodooWidget #yoodooContainerContent .promptSelector>div>div h4{
+	color:#fff;
+	padding:0px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font-weight:normal;
+	cursor:pointer;
+	margin:1px 0px;
+	font-size:14px;
+	transition:color 0.3s;
+}
+#yoodooWidget #yoodooContainerContent .promptSelector>div>h3:hover,#yoodooWidget #yoodooContainerContent .promptSelector>div>div h4:hover{
+	color:#A7CDF1;
+}
+#yoodooWidget #yoodooContainerContent .promptSelector>div>h3>svg,#yoodooWidget #yoodooContainerContent .promptSelector>div>div h4>svg{
+	transform:rotate(-90deg);
+	margin:0px 3px;
+	transition:transform 0.5s;
+}
+#yoodooWidget #yoodooContainerContent .promptSelector>div.on>h3>svg,#yoodooWidget #yoodooContainerContent .promptSelector>div>div>div.on>h4>svg{
+	transform:rotate(0deg);
+}
 .promptDragger{
 	padding:2px 5px;
 	cursor:move;
-	background:#2f2f2f;
+	background:#4A4A4A;
 	transition:background 0.5s,color 0.5s;
 }
 .promptDragger>div{

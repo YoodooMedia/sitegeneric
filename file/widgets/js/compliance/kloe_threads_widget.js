@@ -19,7 +19,7 @@
 function kloe_threads_widget(src) {
 	this.widget=src;
 	this.widget.allow_continue=true;
-	this.widget.priority=0;
+	this.widget.priority=60;
 	this.object=null;
 	this.complete=null;
 	this.threads=[];
@@ -66,30 +66,34 @@ function kloe_threads_widget(src) {
 			yoodoo.loadingDiv()
 		);
 		var me=this;
-		var filter={
-			ypiyt:me.businessSector,
-			alsrj:true
-		};
-		if (this.templater!==true) filter.qepsf=true;
-		this.object.get(function(list){
-			me.threads=list;
-			me.threadIds=[];
-			me.threadsById={};
-			for(var i in me.threads) {
-				me.threadIds.push(me.threads[i].Id);
-				me.threadsById[me.threads[i].Id]=me.threads[i];
-			}
-			//if (me.complete!==null) {
-				var filter={};
-				filter[me.complete.getParameterReferingToObjectId(me.object.schema.Id)]=[me.threadIds.join(','),'in'];
-				me.complete.get(function(list) {
-					me.completedThreads=list;
-					me.drawButton();
-				},function() {},0,filter);
-			//}else{
-			//	me.drawButton();
-			//}
-		},function(){},0,filter);
+		yoodoo.businessSector.check(function(bs) {
+			me.businessSector=bs.Id;
+			var filter={
+				ypiyt:me.businessSector,
+				alsrj:true
+			};
+			if (this.templater!==true) filter.qepsf=true;
+			me.object.get(function(list){
+				me.threads=list;
+				me.threadIds=[];
+				me.threadsById={};
+				for(var i in me.threads) {
+					me.threadIds.push(me.threads[i].Id);
+					me.threadsById[me.threads[i].Id]=me.threads[i];
+				}
+				//if (me.complete!==null) {
+					var filter={};
+					filter[me.complete.getParameterReferingToObjectId(me.object.schema.Id)]=[me.threadIds.join(','),'in'];
+					me.complete.get(function(list) {
+						me.completedThreads=list;
+						me.drawButton();
+					},function() {},0,filter);
+				//}else{
+				//	me.drawButton();
+				//}
+			},function(){},0,filter);
+		
+		});
 		$(this.widget.container).addClass("kloe_threads_widget")
 	};
 	this.bottomManagers=function(manager) {
@@ -180,13 +184,15 @@ function kloe_threads_widget(src) {
 			var completedById={};
 			for(var t in this.completedThreads) {
 				var tid=this.completedThreads[t].value[completeToThread];
-				if (completedById[tid]===undefined) completedById[tid]={completed:false,updated:false,when:null};
-				if (this.threadsById[tid].updated>this.completedThreads[t].updated) {
-					completedById[tid].updated=true;
-					completedById[tid].when=this.threadsById[tid].updated;
-				}else{
-					completedById[tid].completed=true;
-					completedById[tid].when=this.completedThreads[t].updated;
+				if (this.threadsById[tid]!==undefined) {
+					if (completedById[tid]===undefined) completedById[tid]={completed:false,updated:false,when:null};
+					if (this.threadsById[tid].updated>this.completedThreads[t].updated) {
+						completedById[tid].updated=true;
+						completedById[tid].when=this.threadsById[tid].updated;
+					}else{
+						completedById[tid].completed=true;
+						completedById[tid].when=this.completedThreads[t].updated;
+					}
 				}
 			}
 			this.threads.sort(function(a,b) {

@@ -511,8 +511,7 @@ console.log(ft);
 			if (this.removeTags.length>0) {
 				op['removetags']=this.removeTags.join(",");
 			}
-			this.addTags=[];
-			this.removeTags=[];
+			dooit.clearTagCache();
 		}
 		return op;
 	},

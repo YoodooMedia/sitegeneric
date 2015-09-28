@@ -490,7 +490,7 @@ yoodoo.ui = {
 	        fullscreen: {
 	            title: 'Activate the full screen mode for the editable div',
 	            type: 'boolean',
-	            value: false
+	            value: true
 	        },
 	        fullscreenPadding: {
 	            title: 'Set the padding of the textarea when in fullscreen mode',
@@ -557,8 +557,8 @@ yoodoo.ui = {
 	    yoodoo.ui.standard(this, args);
 	    this.processRender = function(value) {
 	        var me = this;
+	        this.value = value;
 	        if (!this.settings.editableDiv.value) {
-	            this.value = value;
 	            if (typeof(this.settings.defaultValue.value) == "string" && this.value == '') this.value = value = this.settings.defaultValue.value;
 	            var me = this;
 	            me.sel = {
@@ -665,7 +665,7 @@ yoodoo.ui = {
 	                'border-radius': '10px'
 	            });
 	            //var fullscreenIcon=$(yoodoo.e("img")).attr('src',yoodoo.option.baseUrl+'uploads/sitegeneric/file/overlay/images/fullscreenIcon.png');
-	            var fullscreenButton = $(yoodoo.e("button")).attr("type", "button").addClass('fullscreenButton').css({
+				var csss={
 	                position: 'absolute',
 	                left: '1px',
 	                bottom: '0px',
@@ -676,9 +676,10 @@ yoodoo.ui = {
 	                'background-repeat': 'no-repeat',
 	                bottom: ' 0px',
 	                padding: '10px',
-	                'background-color': 'transparent',
-	                'background-image': 'url(' + yoodoo.option.baseUrl + 'uploads/sitegeneric/file/overlay/images/fullscreenIcon.png)'
-	            });
+	                'background-color': 'transparent'
+				};
+				if (yoodoo!==undefined && yoodoo.option!==undefined && yoodoo.option.baseUrl!==undefined) csss['background-image']='url(' + yoodoo.option.baseUrl + 'uploads/sitegeneric/file/overlay/images/fullscreenIcon.png)';
+	            var fullscreenButton = $(yoodoo.e("button")).attr("type", "button").addClass('fullscreenButton').css(csss);
 	            this.animatedDiv = $(yoodoo.e("div")).css({
 	                'box-sizing': 'border-box',
 	                'z-index': 3,
@@ -687,7 +688,7 @@ yoodoo.ui = {
 	                padding: '0px 0px 25px 0px',
 	                'background-color': 'transparent',
 	                'border-radius': '10px'
-	            });
+	            }).addClass("contenteditableContainer");
 	            this.editableDiv = $(yoodoo.e("div")).attr('contenteditable', true).css({
 	                'overflow-y': 'auto',
 	                'overflow-x': 'hidden',
@@ -701,7 +702,7 @@ yoodoo.ui = {
 	            this.input = this.editableDiv;
 	            this.input.value = this.value;
 	            this.animatedDiv.append(this.editableDiv);
-	            $(this.editableDiv).html(this.value);
+	            $(this.editableDiv).html(this.value).addClass('contenteditable');
 	            var selstart = 0;
 	            var selected = {
 	                node: null,
@@ -726,90 +727,94 @@ yoodoo.ui = {
 	            	me.settings.onBlur.value();
 	            });
 
-	            fullscreenButton.click(function(e) {
-	                $(me.animatedDiv).toggleClass('fullscreen');
-	                if ($(me.animatedDiv).hasClass('fullscreen')) {
-	                    $(this).css({
-	                        'background-position-y': '-19px',
-	                        bottom: 0
-	                    });
-	                    $(me.animatedDiv).parent().css({
-	                        width: $(me.animatedDiv).parent().width(),
-	                        height: $(me.animatedDiv).parent().height()
-	                    });
-	                    me.animatedDiv.positionMode = $(me.animatedDiv).css("position");
-	                    var os = $(me.animatedDiv).offset();
-	                    me.animatedDiv.l = os.left;
-	                    me.animatedDiv.t = os.top;
-	                    me.animatedDiv.h = $(me.animatedDiv).height();
-	                    me.animatedDiv.w = $(me.animatedDiv).width();
-	                    $(me.animatedDiv).css({
-	                        padding: '4px',
-	                        position: 'fixed',
-	                        left: me.animatedDiv.l,
-	                        top: me.animatedDiv.t,
-	                        height: 60,
-	                        overflow: 'hidden',
-	                        'z-index': 4,
-	                        border: '2px solid rgb(47, 47, 47)',
-	                        'background-color': '#FFF',
-	                    }).animate({
-	                        top: '15px',
-	                        left: '16px',
-	                        height: '90%',
-	                        width: '96%'
-	                    });
-	                    me.settings.onfullscreenIn.value();
-	                } else if (!$(me.animatedDiv).hasClass('fullscreen')) {
-	                    $(this).css({
-	                        'background-position-y': '1px',
-	                        /*bottom: '-20px'*/
-	                    });
-	                    selection = document.createRange();
-	                    if (selected.node !== null) {
-	                        selection.setStart(selected.node, selected.offset);
-	                        selection.setEnd(selected.node, selected.offset);
-	                    }
-	                    $(me.animatedDiv).css({
-	                        padding: 0,
-	                        width: $(me.animatedDiv).width(),
-	                        height: $(me.animatedDiv).height(),
-	                        position: 'absolute',
-	                        left: -me.animatedDiv.l,
-	                        top: -me.animatedDiv.t,
-	                        border: 'none'
-	                    });
-	                    $(me.animatedDiv).animate({
-	                        left: 0,
-	                        top: 0,
-	                        width: me.animatedDiv.w,
-	                        height: me.animatedDiv.h
-	                    }, 500, function() {
-	                        $(me.animatedDiv).css({
-	                            position: me.animatedDiv.positionMode,
-	                            'background-color': 'transparent',
-	                            'z-index': 3,
-	                            overflow: 'visible',
-	                            height:'100%'
-	                        });
-	                         $(me.container).css({
-	                            height:'100%',
-	                            'box-sizing': 'border-box',
-    							'padding-bottom': '25px'
-	                        });
-	                        //console.log(selection);
-	                        if (selection.getClientRects()[0] !== undefined) {
-	                            $(me.editableDiv).animate({
-	                                scrollTop: (selection.getClientRects()[0].top - $(me.editableDiv).offset().top),
-	                            });
-	                        }
-	                    });
-	                    me.settings.onfullscreenOut.value();
-	                }
+	            if (this.settings.fullscreen.value===true) {
+					fullscreenButton.click(function(e) {
+						$(me.animatedDiv).toggleClass('fullscreen');
+						if ($(me.animatedDiv).hasClass('fullscreen')) {
+							$(this).css({
+								'background-position-y': '-19px',
+								bottom: 0
+							});
+							$(me.animatedDiv).parent().css({
+								width: $(me.animatedDiv).parent().width(),
+								height: $(me.animatedDiv).parent().height()
+							});
+							me.animatedDiv.positionMode = $(me.animatedDiv).css("position");
+							var os = $(me.animatedDiv).offset();
+							me.animatedDiv.l = os.left;
+							me.animatedDiv.t = os.top;
+							me.animatedDiv.h = $(me.animatedDiv).height();
+							me.animatedDiv.w = $(me.animatedDiv).width();
+							$(me.animatedDiv).css({
+								padding: '4px',
+								position: 'fixed',
+								left: me.animatedDiv.l,
+								top: me.animatedDiv.t,
+								height: 60,
+								overflow: 'hidden',
+								'z-index': 4,
+								border: '2px solid rgb(47, 47, 47)',
+								'background-color': '#FFF',
+							}).animate({
+								top: '15px',
+								left: '16px',
+								height: '90%',
+								width: '96%'
+							});
+							me.settings.onfullscreenIn.value();
+						} else if (!$(me.animatedDiv).hasClass('fullscreen')) {
+							$(this).css({
+								'background-position-y': '1px',
+								/*bottom: '-20px'*/
+							});
+							selection = document.createRange();
+							if (selected.node !== null) {
+								selection.setStart(selected.node, selected.offset);
+								selection.setEnd(selected.node, selected.offset);
+							}
+							$(me.animatedDiv).css({
+								padding: 0,
+								width: $(me.animatedDiv).width(),
+								height: $(me.animatedDiv).height(),
+								position: 'absolute',
+								left: -me.animatedDiv.l,
+								top: -me.animatedDiv.t,
+								border: 'none'
+							});
+							$(me.animatedDiv).animate({
+								left: 0,
+								top: 0,
+								width: me.animatedDiv.w,
+								height: me.animatedDiv.h
+							}, 500, function() {
+								$(me.animatedDiv).css({
+									position: me.animatedDiv.positionMode,
+									'background-color': 'transparent',
+									'z-index': 3,
+									overflow: 'visible',
+									height:'100%'
+								});
+								 $(me.container).css({
+									height:'100%',
+									'box-sizing': 'border-box',
+									'padding-bottom': '25px'
+								});
+								//console.log(selection);
+								if (selection.getClientRects()[0] !== undefined) {
+									$(me.editableDiv).animate({
+										scrollTop: (selection.getClientRects()[0].top - $(me.editableDiv).offset().top),
+									});
+								}
+							});
+							me.settings.onfullscreenOut.value();
+						}
 
-	            });
-	            this.animatedDiv.append(fullscreenButton);
-	            $(this.container).append(this.animatedDiv);
+					});
+					this.animatedDiv.append(fullscreenButton);
+				}
+	            this.label = yoodoo.e("label");
+	            $(this.label).html(this.settings.label.value + ((this.settings.required.value === true && this.settings.emptyCombine.value !== true) ? '<span>*<span>' : ''));
+	            $(this.container).append(this.animatedDiv).prepend(this.label);
 	            //console.log(this.container);
 	        }
 	        return $(this.container);
@@ -2829,6 +2834,7 @@ yoodoo.ui = {
                 this.options = this.shuffle(this.options);
 
             for (var o in this.options) {
+            	//console.log(value,this.options[o].settings.value.value);
                 var choice = this.options[o].render(value);
                 var n = this.settings.columns.value;
                 var m = this.settings.margin.value;
@@ -3132,6 +3138,14 @@ yoodoo.ui = {
         this.validated = false;
         yoodoo.ui.standard(this, args);
         this.processRender = function(value) {
+        	if (value instanceof Array) {
+        		this.selected=false;
+        		for(var v in value) {
+        			if (value[v]==this.settings.value.value) this.selected=true;
+        		}
+        	}else{
+        		this.selected=value===this.settings.value.value;
+        	}
             var me = this;
             var displayOptions = -1;
             if (me.settings.displayAsCheckbox.value == true && this.settings.setLayout.value >= 0 && this.settings.setLayout.value <= this.settings.setLayout.options.length)
@@ -3156,6 +3170,8 @@ yoodoo.ui = {
 
                 if (this.settings.labelClassName.value !== '' && this.settings.labelClassName.value !== undefined)
                     $(this.label).addClass((this.settings.labelClassName.value));
+                if (this.settings.className.value !== '' && this.settings.className.value !== undefined)
+                    $(this.input).addClass((this.settings.className.value));
 
                 if (this.settings.img.value !== '' && this.settings.img.value !== undefined) {
                     $(this.input).css({
@@ -3171,7 +3187,7 @@ yoodoo.ui = {
                 }
                 if (this.settings.disabled.value === true)
                     $(this.input).prop("disabled", true);
-                if (this.selected.value === true && this.settings.disabled.value !== true)
+                if (this.selected === true && this.settings.disabled.value !== true)
                     $(this.input).removeClass("UIavailable").addClass('UIselected');
                 if (this.settings.radioBehaviour.value === true) {
                     var bgc = this.settings.cssBackgroundColour.value;

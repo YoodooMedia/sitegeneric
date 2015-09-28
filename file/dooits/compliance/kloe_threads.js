@@ -7,11 +7,6 @@
  ],
  dooit:'kloe_threads',
  options:{
-	kloe_prompt_object:{
-		type:'object',
-		title:'Object name for the Prompts',
-		value:6
-	},
 	kloe_response_object:{
 		type:'object',
 		title:'Object name for the Responses',
@@ -27,17 +22,6 @@
 		title:'Object name for the Action Plans',
 		value:6
 	},
-	kloe_status_object:{
-		type:'object',
-		title:'Object name for the Status',
-		value:6
-	},
-	business_sector:{
-		type:'objectrecord',
-		title:'Object and Record defining the Business Sector',
-		object_id:3,
-		value:665
-	},
 	prompt_linkage_complete:{
 		type:'object',
 		title:'Object for the Prompt linkage completion',
@@ -52,7 +36,12 @@
 		type:'object',
 		title:'Object for the Prompt links',
 		value:11
-	}
+	},
+      prompt_object:{  
+         type:'object',
+         title:'Object for the Prompts',
+         value:6
+      }
  }
 }
 */
@@ -61,7 +50,7 @@ var kloe_threads = {
 	objects:{},
 	responsesByPrompt:{},
 	currentLinkage:null,
-	business_sector:dooit.options.business_sector,
+	business_sector:null,
 	start: function() {
 		var me=this;
 		this.containers.linkage_selection=$(yoodoo.e("div")).addClass('linkage_selection on loading');
@@ -85,7 +74,7 @@ var kloe_threads = {
 				$(yoodoo.e("div")).addClass("selection_editor")
 			)
 		);
-		console.log("start");
+		//console.log("start");
 	},
 	failed:function(txt) {
 		console.log(txt);
@@ -93,14 +82,13 @@ var kloe_threads = {
 	warningId:null,
 	displayed: function() {
 		var arr=[
-			dooit.options.kloe_prompt_object.value,
 			dooit.options.prompt_linkage_complete.value,
 			dooit.options.prompt_linkage.value,
 			dooit.options.prompt_links.value,
 			dooit.options.kloe_response_object.value,
 			dooit.options.kloe_evidence_object.value,
 			dooit.options.kloe_actionplan_object.value,
-			dooit.options.kloe_status_object.value
+			dooit.options.prompt_object.value
 		];
 		var me=this;
 
@@ -127,7 +115,7 @@ var kloe_threads = {
 
 		var step2=function() {
 			var filter={};
-			filter[me.objects.linkage.getParameterReferingToObjectId(me.business_sector.object_id)]=me.business_sector.value;
+			filter[me.objects.linkage.getParameterReferingToObjectId(yoodoo.businessSector.object.schema.Id)]=me.business_sector;
 			filter.alsrj=true;
 			filter.qepsf=true;
 			me.objects.linkage.get(function(list) {
@@ -148,29 +136,34 @@ var kloe_threads = {
 			},0,filter);
 		};
 
-		yoodoo.object.get(arr,function(list) {
-			if (list.length>=4) {
-				me.objects.prompts=(list.length>0)?list.shift():null;
-				me.objects.linkage_complete=(list.length>0)?list.shift():null;
-				me.objects.linkage=(list.length>0)?list.shift():null;
-				me.objects.links=(list.length>0)?list.shift():null;
-				me.objects.response=(list.length>0)?list.shift():null;
-				me.objects.evidence=(list.length>0)?list.shift():null;
-				me.objects.actionplan=(list.length>0)?list.shift():null;
-				me.objects.status=(list.length>0)?list.shift():null;
-				if (kloe_response.status===undefined) {
-					kloe_response.status=me.objects.status;
+		yoodoo.keyQuestion.getPromptsObject(function(obj) {
+			yoodoo.object.get(arr,function(list) {
+				if (list.length>=4) {
+					me.objects.linkage_complete=(list.length>0)?list.shift():null;
+					me.objects.linkage=(list.length>0)?list.shift():null;
+					me.objects.links=(list.length>0)?list.shift():null;
+					me.objects.response=(list.length>0)?list.shift():null;
+					me.objects.evidence=(list.length>0)?list.shift():null;
+					me.objects.actionplan=(list.length>0)?list.shift():null;
+					me.objects.prompts=(list.length>0)?list.shift():null;
+					/*if (kloe_response.status===undefined) {
+						yoodoo.kloeStatus.getWarning(function(warning) {
+							kloe_response.status=me.objects.status;
+						});
+					}*/
+					yoodoo.kloeStatus.getWarning(function(warning) {
+						me.warningId=warning.Id
+						yoodoo.businessSector.check(function(bs) {
+							me.business_sector=bs.Id;
+							step2();
+						});
+					});
+				}else{
+					me.failed('Failed to fetch the 7 main objects');
 				}
-				kloe_response.getWarningStatusId(
-					function() {
-						step2();
-					}
-				);
-			}else{
+			},function(){
 				me.failed('Failed to fetch the 7 main objects');
-			}
-		},function(){
-			me.failed('Failed to fetch the 7 main objects');
+			});
 		});
 	},
 	ready:function() {
@@ -197,7 +190,7 @@ var kloe_threads = {
 	drawPrompts:function(selectedIds) {
 		//console.log(selectedIds);
 		var d=$(yoodoo.e("div")).addClass("promptSelector");
-			console.log(this.containers.container);
+			//console.log(this.containers.container);
 		for(var p in this.prompts) {
 			var pd=yoodoo.e("div");
 			pd.id=this.prompts[p].Id;
@@ -237,7 +230,9 @@ var kloe_threads = {
 						if (kloe_threads.currentLinkage!==null) kloe_threads.currentLinkage.complete();
 						kloe_threads.currentLinkage=me;
 						kloe_threads.containers.linkage_selection.removeClass("on");
-						kloe_threads.containers.linkage_editor.append(me.display());
+						kloe_threads.containers.linkage_editor.fadeOut(function() {
+							$(this).empty().append(me.display()).fadeIn();
+						});
 					}
 				).append(
 					(typeof(obj.value.hitph)=="string" && obj.value.hitph!="")?
@@ -342,6 +337,7 @@ var kloe_threads = {
 		this.assignCompletion=function(completionRecord) {
 			this.completionRecord=completionRecord;
 		};
+
 		this.assignLinks=function(list) {
 			this.links=[];
 			var promptId=this.object.value[kloe_threads.objects.linkage.getParameterReferingToObjectId(kloe_threads.objects.prompts.schema.Id)];
@@ -349,7 +345,14 @@ var kloe_threads = {
 				while(list.length>0) {
 					var found=false;
 					for(var l=list.length-1;l>=0;l--) {
-						if (list[l].value.lzptd==promptId) {
+						if (this.links.length==0) {
+							if (list[l].value.lzptd==promptId && list[l].value.gxtxv==promptId) {
+								var link=list.splice(l,1)[0];
+								this.links.push(link);
+								found=true;
+								promptId=link.value.gxtxv;
+							}
+						}else if (list[l].value.lzptd==promptId) {
 							var link=list.splice(l,1)[0];
 							this.links.push(link);
 							found=true;
@@ -359,7 +362,6 @@ var kloe_threads = {
 					if (!found) list=[];
 				}
 			}
-			//console.log(this.links);
 		};
 		this.getPromptIds=function() {
 			var ids=[];

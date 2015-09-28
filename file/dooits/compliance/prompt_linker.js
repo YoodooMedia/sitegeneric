@@ -54,7 +54,26 @@
 
 var prompt_linker = {
 	objects:{},
-	business_sector:dooit.options.business_sector,
+	business_sector:null,
+	doSVG:(document.createElementNS!==undefined),
+	icons:{
+		downarrow:'<polygon fill="#4D4D4D" points="50,70 95,30 5,30 "/>'
+	},
+	icon:function() {
+		if (this.doSVG) {
+			if (typeof(arguments[0])=="object") arguments[0]=arguments[0].svg;
+			return yoodoo.icons.drawSVG.apply(yoodoo.icons,arguments);
+		}else{
+			if (typeof(arguments[0])=="object") arguments[0]=arguments[0].img;
+			var replacer={};
+			if (typeof(arguments[arguments.length-1])=="object") replacer=arguments[arguments.length-1];
+			var url=arguments[0];
+			for(var k in replacer) url=url.replace(k,replacer[k]);
+			var img=yoodoo.e("img");
+			img.src=yoodoo.replaceDomain('domain:'+url);
+			return img;
+		}
+	},
 	start: function() {
 		this.containers.linkage_selection=$(yoodoo.e("div")).addClass('linkage_selection on loading');
 		this.containers.linkage_editor=$(yoodoo.e("div")).addClass('linkage_editor').click(function() {
@@ -64,7 +83,7 @@ var prompt_linker = {
 		);
 		this.containers.prompt_selection=$(yoodoo.e("div")).addClass('prompt_selection');
 
-		this.containers.prompt_list=$(yoodoo.e("div")).addClass('prompt_list');
+		this.containers.prompt_list=$(yoodoo.e("div")).addClass('prompt_list').html('Edit a thread first...');
 		
 		
 		this.containers.container.append(
@@ -172,7 +191,7 @@ var prompt_linker = {
 
 		var step3=function() {
 			var filter={};
-			filter[me.objects.linkage.getParameterReferingToObjectId(me.business_sector.object_id)]=me.business_sector.value;
+			filter[me.objects.linkage.getParameterReferingToObjectId(yoodoo.businessSector.object.schema.Id)]=me.business_sector;
 			me.objects.linkage.get(function(list) {
 				me.linkages=[];
 				me.linkagesIds={};
@@ -196,8 +215,12 @@ var prompt_linker = {
 		};
 
 		var step2=function() {
-			var filter={};
-			filter[me.objects.prompts.getParameterReferingToObjectId(me.business_sector.object_id)]=me.business_sector.value;
+			yoodoo.keyQuestion.getPromptsInKeyLines(function(list) {
+				me.prompts=list;
+				step3();
+			},true);
+			/*var filter={};
+			filter[me.objects.prompts.getParameterReferingToObjectId(yoodoo.businessSector.object_id)]=me.business_sector;
 			me.objects.prompts.get(function(list) {
 				me.prompts=list;
 				me.prompts.sort(function(a,b) {
@@ -208,22 +231,27 @@ var prompt_linker = {
 				step3();
 			},function(){
 				me.failed('Failed to fetch prompts');
-			},0,filter);
+			},0,filter);*/
 		};
-
-		yoodoo.object.get(arr,function(list) {
-			if (list.length>=4) {
-				me.objects.prompts=(list.length>0)?list.shift():null;
-				me.objects.linkage=(list.length>0)?list.shift():null;
-				me.objects.links=(list.length>0)?list.shift():null;
-				me.objects.map=(list.length>0)?list.shift():null;
-				me.objects.responses=(list.length>0)?list.shift():null;
-				step2();
-			}else{
-				me.failed('Failed to fetch the 4 main objects');
-			}
-		},function(){
-			me.failed('Failed to fetch the 4 main objects');
+		yoodoo.businessSector.check(function(bs) {
+			me.business_sector=bs.Id;
+			yoodoo.keyQuestion.get(function(list) {
+				me.keyQuestions=list;
+				yoodoo.object.get(arr,function(list) {
+					if (list.length>=4) {
+						me.objects.prompts=(list.length>0)?list.shift():null;
+						me.objects.linkage=(list.length>0)?list.shift():null;
+						me.objects.links=(list.length>0)?list.shift():null;
+						me.objects.map=(list.length>0)?list.shift():null;
+						me.objects.responses=(list.length>0)?list.shift():null;
+						step2();
+					}else{
+						me.failed('Failed to fetch the 4 main objects');
+					}
+				},function(){
+					me.failed('Failed to fetch the 4 main objects');
+				});
+			});
 		});
 	},
 	ready:function() {
@@ -239,6 +267,7 @@ var prompt_linker = {
 		var me=this;
 		var addButton=$(yoodoo.e("button")).attr("type","button").addClass("addButton").click(function() {
 			var obj=me.objects.linkage.add();
+			obj.value.alsrj=true;
 			var linkage=new me.linkage_item(obj);
 			var but=linkage.render();
 			but.hide();
@@ -256,28 +285,72 @@ var prompt_linker = {
 	drawPrompts:function(selectedIds) {
 		//console.log(selectedIds);
 		var d=$(yoodoo.e("div")).addClass("promptSelector");
-		for(var p in this.prompts) {
-			var pd=yoodoo.e("div");
-			pd.id=this.prompts[p].Id;
-			pd.prompt=this.prompts[p];
-			var description='description';
-			if (this.prompts[p].value[kloe_response.promptParameters.Presentation]!==null && this.prompts[p].value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.Description]!==undefined) description=this.prompts[p].value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.Description];
-			d.append($(pd).addClass("promptDragger").html(this.prompts[p].value[kloe_response.promptParameters.Name]).append(
-				$(yoodoo.e("div")).html(description)
-			).draggable({
-				helper: "clone",
-				appendTo:this.containers.container,
-				revert:'invalid'
-			}).css({
-				display:(selectedIds[this.prompts[p].Id]===true)?'none':'block'
-			}));
+		for(var i in this.keyQuestions) {
+			var k=this.keyQuestions[i].Id;
+			if (this.prompts[k]!==undefined) {
+		//for(var k in this.prompts) {
+				var keyQuestion=yoodoo.keyQuestion.object.recordsCache[k];
+				if (typeof(keyQuestion)!="undefined") {
+					var kqList=$(yoodoo.e("div")).hide();
+					var kq=$(yoodoo.e("div")).append(
+						$(yoodoo.e("h3")).html(keyQuestion.displayName()).click(function() {
+							if ($(this).parent().hasClass("on")) {
+								$(this).parent().removeClass("on");
+								$(this).next().stop().slideUp();
+							}else{
+								$(this).parent().addClass("on");
+								$(this).next().stop().slideDown();
+							}
+						}).prepend(this.icon(this.icons.downarrow,10,10,100,100,{'4D4D4D':'999999'}))
+					).append(kqList);
+					var validKq=false;
+					for(var l in this.prompts[k]) {
+						var klList=$(yoodoo.e("div")).hide();
+						var kl=$(yoodoo.e("div")).append(
+							$(yoodoo.e("h4")).html(this.prompts[k][l].displayName()).click(function() {
+								if ($(this).parent().hasClass("on")) {
+									$(this).parent().removeClass("on");
+									$(this).next().stop().slideUp();
+								}else{
+									$(this).parent().addClass("on");
+									$(this).next().stop().slideDown();
+								}
+							}).prepend(this.icon(this.icons.downarrow,10,10,100,100,{'4D4D4D':'656565'}))
+						).append(klList);
+						var validKl=false;
+						for(var p in this.prompts[k][l].items) {
+							var prompt=this.prompts[k][l].items[p];
+							var pd=yoodoo.e("div");
+							pd.id=prompt.Id;
+							pd.prompt=prompt;
+							var description='description';
+							if (prompt.value[kloe_response.promptParameters.Presentation]!==null && prompt.value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.Description]!==undefined) description=prompt.value[kloe_response.promptParameters.Presentation][kloe_response.promptPresentionParameters.Description];
+							klList.append($(pd).addClass("promptDragger").html(prompt.value[kloe_response.promptParameters.Name]).append(
+								$(yoodoo.e("div")).html(description)
+							).draggable({
+								helper: "clone",
+								appendTo:this.containers.container,
+								revert:'invalid'
+							}).css({
+								display:(selectedIds[prompt.Id]===true)?'none':'block'
+							}));
+							validKl=true;
+						}
+						if (validKl) {
+							kqList.append(kl);
+							validKq=true;
+						}
+					}
+					if (validKq) d.append(kq);
+				}
+			}
 		}
 		this.containers.prompt_list.empty().append(d);
 	},
 	linkages:[],
 	linkage_item:function(obj) {
 		this.object=obj;
-		if (!(this.object.value.ypiyt>0)) this.object.value.ypiyt=dooit.options.business_sector.value;
+		if (!(this.object.value.ypiyt>0)) this.object.value.ypiyt=prompt_linker.business_sector;
 		//if (!(this.object.value.fsuoh>0)) this.object.value.fsuoh=yoodoo.formatDate('Y-m-d',new Date());
 		this.links=[];
 		this.linksByTo={};

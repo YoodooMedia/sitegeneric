@@ -46,6 +46,9 @@ button.kloe_object_widget{
 	background:rgba(255,255,255,0.0);
 	transition:background 0.3s,color 0.3s;
 }
+button.kloe_object_widget:last-child{
+	border-left:1px solid #C0C0C0;
+}
 button.kloe_object_widget:hover{
 	background:#4E74A6;
 	color:#fff;
@@ -86,11 +89,14 @@ button.kloe_object_widget:hover{
 }
 .kloe_admin_widget .keyQuestion>span{
 	position:relative;
-	padding:0px 10px 0px 0px;
+	padding:0px 0px 0px 0px;
 	display:inline-block;
 	height:20px;
 }
-.kloe_admin_widget .keyQuestion>span>span{
+.kloe_admin_widget .keyQuestion>span+span{
+	margin-left:10px;
+}
+.kloe_admin_widget .keyQuestion>span>span.warningCount{
 	position:absolute;
 	border-radius:20px;
 	color:#fff;
@@ -100,6 +106,21 @@ button.kloe_object_widget:hover{
 	min-width:14px;
 	text-align:center;
 	left:13px;
+	border:1px solid #fff;
+}
+.kloe_admin_widget .keyQuestion>span>span.expired{
+	text-shadow: 0px 0px 3px #fff;
+	position:absolute;
+	border-radius:20px;
+	color:#fff;
+	font-size:10px;
+	height:12px;
+	line-height:12px;
+	min-width:12px;
+	text-align:center;
+	left:8px;
+	bottom:-4px;
+	background:#fff;
 	border:1px solid #fff;
 }
 .kloe_admin_widget button.overview_button{
